@@ -162,7 +162,7 @@ TRUST_LOGOS = ["Siemens", "BMW", "Deloitte", "innogy", "und gretel", "TUM"]
 CAPABILITIES = [
     {
         "title": "UX & CRO Audits",
-        "pitch": "5 days, 15–30 prioritized fixes, zero fluff. I tell you exactly what's costing you conversions — and how to fix it.",
+        "pitch": "15–30 prioritized fixes, zero fluff. I tell you exactly what's costing you conversions — and how to fix it.",
         "details": [
             "Full funnel teardown from entry to conversion",
             "Heatmaps, session recordings & analytics review",
@@ -391,7 +391,7 @@ def build_index():
         <div class="about-text" data-reveal>
           <p class="eyebrow">About</p>
           <h2 class="on-dark" style="margin-block: 1rem 1.5rem;">Hi, I'm Imen.</h2>
-          <p>I'm a digital product consultant based in Berlin, originally from Monastir. I've spent 10+ years moving between corporate innovation labs (Deloitte, Siemens, BMW) and scrappy freelance builds, which means I know how to make big-brand thinking work on a startup budget.</p>
+          <p>I'm a digital product consultant based in Berlin. I've spent 10+ years moving between corporate innovation labs (Deloitte, Siemens, BMW) and scrappy freelance builds, which means I know how to make big-brand thinking work on a startup budget.</p>
           <p>I studied IT &amp; Electrical Engineering at TU Munich, trained in neuromarketing at the Deloitte Neuroscience Institute, and now spend my days auditing, designing, and building websites that don't just look good &mdash; they perform.</p>
           <p>Fluent in German, English, French and Arabic, and always up for a project that lets me build something a little different.</p>
           <div class="chip-row">{exp_chips}</div>
