@@ -1,8 +1,9 @@
 # imenbouzouita.com
 
 Static site — plain HTML/CSS/JS, no framework, no build step at deploy time.
-Content (copy, case studies, nav) lives in [`build.py`](build.py) and is generated
-into static HTML files that GitHub Pages serves directly.
+Bilingual (English + German). Copy lives in `content/en.json` and
+`content/de.json`; [`build.py`](build.py) reads both and generates static
+HTML files that GitHub Pages serves directly.
 
 ## Why no Astro/Vite
 
@@ -16,16 +17,47 @@ content collections.
 
 ## Editing content
 
-Don't hand-edit `index.html`, `work/*/index.html`, `terms.html`, `privacy.html`,
-or `impressum.html` directly — they're generated. Edit `build.py` instead
-(case study copy, nav links, capability pillars, legal text, etc.), then
-regenerate:
+Don't hand-edit `index.html`, `work/*/index.html`, `terms.html`,
+`privacy.html`, `impressum.html`, or anything under `de/` — they're all
+generated. Edit `content/en.json` (copy, case studies, nav labels, legal
+text, etc.) — or `content/de.json` for German — then regenerate:
 
 ```bash
 python3 build.py
 ```
 
 Requires only Python 3 (already on macOS by default) — no npm install.
+Structural changes (new sections, new templates) go in `build.py`; wording
+changes go in the JSON files.
+
+## Languages (EN / DE)
+
+The site is generated twice from the same templates in `build.py`: once
+from `content/en.json` at the site root, once from `content/de.json` under
+`/de/`. Every page has a small EN/DE switcher in the nav that links to the
+equivalent page in the other language, plus `hreflang` tags in `<head>`
+and sitemap entries for both, so search engines treat them as language
+variants of the same content rather than duplicates.
+
+**`content/de.json` currently mirrors `content/en.json` word-for-word** —
+it's a structural placeholder, not a translation. To add the real German
+copy:
+
+1. Open `content/de.json`.
+2. Replace the string values with German text — keep every key name and
+   the overall structure (arrays, nested objects) identical to
+   `content/en.json`, since `build.py` reads both by key.
+3. The `impressum` entry is already in German in both files (legally
+   required regardless of site language) — no change needed there.
+4. Remove the top-level `"_translation_status"` key once translation is
+   done (purely a note to self; `build.py` ignores it).
+5. Rerun `python3 build.py` and commit the regenerated `de/` output
+   alongside `content/de.json`.
+
+The contact form's status messages (sent/error/sending/etc.) are also
+localized — they're read from `content/*.json` → `contact.form` and passed
+into the page as `data-msg-*` attributes that `assets/js/main.js` reads at
+submit time, so those will pick up your German text automatically too.
 
 ## Before going live
 
@@ -50,14 +82,17 @@ Requires only Python 3 (already on macOS by default) — no npm install.
 
 ## Local preview
 
-Root-relative URLs (`/assets/...`, `/work/...`) are used throughout, so
-preview via a local server rather than opening files directly:
+All internal links and asset paths are relative (computed per-page from
+real file paths, not hardcoded), so the site works when opened directly
+from disk too — but a local server is still recommended since that's how
+it'll actually be served:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open http://localhost:8000
+Then open http://localhost:8000 (English) or http://localhost:8000/de/
+(German).
 
 ## Deploying to GitHub Pages
 
@@ -84,10 +119,14 @@ local preview — without changes.
 ## Structure
 
 ```
-assets/css/style.css     design system: colors, type, layout, motion
-assets/js/main.js        nav, scroll-reveal, parallax, custom cursor, contact form
-build.py                 content + templates + generator (source of truth)
-index.html               generated
-work/<slug>/index.html   generated, one per case study
-terms.html, privacy.html, impressum.html   generated
+content/en.json, content/de.json   all page copy, per language — edit these
+build.py                           templates + generator (source of truth for markup)
+assets/css/style.css               design system: colors, type, layout, motion
+assets/js/main.js                  nav, scroll-reveal, parallax, custom cursor, contact form
+index.html                         generated (English home)
+work/<slug>/index.html             generated, one per case study (English)
+terms.html, privacy.html, impressum.html   generated (English)
+de/index.html                      generated (German home)
+de/work/<slug>/index.html          generated (German)
+de/terms.html, de/privacy.html, de/impressum.html   generated (German)
 ```

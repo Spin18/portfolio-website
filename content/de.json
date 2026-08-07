@@ -1,0 +1,351 @@
+{
+  "_translation_status": "PLACEHOLDER — mirrors content/en.json word-for-word pending real German translation. Edit the string values in this file (keep keys and structure identical to en.json) and rerun python3 build.py.",
+  "meta": {
+    "site_title": "Imen Bouzouita — Digital Product, UX & CRO Consultant, Berlin",
+    "site_description": "I help e-commerce, wellness, and SaaS brands turn browsers into buyers with research-backed UX audits and interfaces people actually want to use.",
+    "case_study_label": "Case Study",
+    "legal_meta_suffix": "for imenbouzouita.com",
+    "not_found_title": "Page not found — Imen Bouzouita",
+    "not_found_description": "Page not found."
+  },
+  "nav": {
+    "what_i_do": "What I Do",
+    "case_studies": "Case Studies",
+    "about": "About",
+    "contact": "Contact",
+    "book_call": "Book a call"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "impressum": "Impressum"
+  },
+  "hero": {
+    "eyebrow": "Digital Product · UX · CRO Consultant — Berlin",
+    "headline_pre": "Websites that look good and ",
+    "headline_em": "actually work.",
+    "subhead": "I help e-commerce, wellness, and SaaS brands turn browsers into buyers — with fast, research-backed UX audits and interfaces people actually want to use.",
+    "cta_primary": "Book a free discovery call",
+    "cta_secondary": "See the work",
+    "scroll_hint": "Scroll",
+    "trust_label": "10+ years turning traffic into revenue — trusted by teams at"
+  },
+  "capabilities": {
+    "eyebrow": "What I Do",
+    "heading": "Four ways to fix what's costing you customers.",
+    "details_label": "What's included",
+    "items": [
+      {
+        "title": "UX & CRO Audits",
+        "pitch": "15–30 prioritized fixes, zero fluff. I tell you exactly what's costing you conversions — and how to fix it.",
+        "details": [
+          "Full funnel teardown from entry to conversion",
+          "Heatmaps, session recordings & analytics review",
+          "Prioritized fix list scored by impact vs. effort",
+          "Optional A/B test plan for the riskiest changes"
+        ]
+      },
+      {
+        "title": "Landing Page Redesign",
+        "pitch": "From wireframe to live page in a week. Built to convert, not just to look nice.",
+        "details": [
+          "Conversion-first wireframes before visual design",
+          "Copy tightened around a single clear action",
+          "Mobile-first build, ready to launch in days",
+          "Analytics baked in from day one"
+        ]
+      },
+      {
+        "title": "Full Website & Shop Builds",
+        "pitch": "Webflow, Shopify, Framer, WordPress. Structure, design, and build — end to end.",
+        "details": [
+          "Information architecture & content strategy",
+          "Custom visual design system",
+          "Build on the platform that fits your team",
+          "Handover docs so your team can self-serve after launch"
+        ]
+      },
+      {
+        "title": "Neuroscience-Backed Insights",
+        "pitch": "Trained at the Deloitte Neuroscience Institute. I design with how people actually think, not just how they say they behave.",
+        "details": [
+          "Eye-tracking & attention mapping",
+          "Behavioral heuristics applied to layout & copy",
+          "Bridging what users say vs. what they do",
+          "Evidence-backed design rationale for stakeholders"
+        ]
+      }
+    ]
+  },
+  "work": {
+    "eyebrow": "Case Studies",
+    "heading": "Selected work.",
+    "view_project": "View project",
+    "all_work": "All work"
+  },
+  "case_studies": [
+    {
+      "slug": "conversion-engine",
+      "title": "Conversion Engine",
+      "one_liner": "Data-driven growth for a D2C e-commerce brand",
+      "tag": "E-commerce",
+      "role": "UX Audit & CRO",
+      "timeline": "5 weeks",
+      "focus": "Checkout & PDP",
+      "tools": "Hotjar, GA4, Figma",
+      "summary": "A direct-to-consumer retailer had healthy traffic and a leaking checkout. The brief was simple: find out where buyers were dropping off, and fix it without a full rebuild.",
+      "sections": [
+        [
+          "The problem",
+          "Paid traffic was converting well below category benchmarks, and the team couldn't tell whether the issue was pricing, trust, or friction. Every fix so far had been a guess."
+        ],
+        [
+          "The approach",
+          "A structured audit combining session recordings, heatmaps, and a full funnel teardown — from ad landing to order confirmation — scored against conversion heuristics and prioritized by expected lift versus effort."
+        ],
+        [
+          "What shipped",
+          "A ranked list of 22 fixes spanning checkout form design, shipping-cost transparency, and mobile PDP layout, plus three A/B tests to validate the highest-risk changes before a full rollout."
+        ],
+        [
+          "The outcome",
+          "The team shipped the top-priority fixes within two sprints. Checkout abandonment and mobile bounce both moved in the right direction within the first month post-launch."
+        ]
+      ]
+    },
+    {
+      "slug": "frictionless-flow",
+      "title": "Frictionless Flow",
+      "one_liner": "Reimagining a B2B consultancy's digital presence",
+      "tag": "B2B",
+      "role": "Website Redesign",
+      "timeline": "6 weeks",
+      "focus": "IA & Positioning",
+      "tools": "Webflow, Figma",
+      "summary": "A B2B consultancy's site looked like every other consultancy's site — dense text, unclear positioning, no path from visitor to lead. The rebuild had to make the value proposition legible in one scroll.",
+      "sections": [
+        [
+          "The problem",
+          "Prospects were bouncing before reaching the services section. The existing IA buried differentiation under generic industry language, and there was no clear next step for a warm visitor."
+        ],
+        [
+          "The approach",
+          "Stakeholder interviews to extract what actually made the firm different, followed by a full information architecture pass and a content-first wireframe before any visual design started."
+        ],
+        [
+          "What shipped",
+          "A restructured site with a sharper homepage narrative, a services section organized around client outcomes instead of internal capabilities, and a single consistent lead-capture path."
+        ],
+        [
+          "The outcome",
+          "Time on the services pages increased and the team reported clearer, better-qualified inbound conversations within the first quarter."
+        ]
+      ]
+    },
+    {
+      "slug": "neuroboost-ux",
+      "title": "NeuroBoost UX",
+      "one_liner": "Product optimization powered by neuroscience & eye-tracking",
+      "tag": "UX Research",
+      "role": "Neuro-UX Research",
+      "timeline": "4 weeks",
+      "focus": "Attention & Trust",
+      "tools": "Eye-tracking, Tobii, Figma",
+      "summary": "A product team suspected users weren't seeing their key trust signals, but standard usability testing wasn't showing why. This called for looking at attention itself, not just stated preference.",
+      "sections": [
+        [
+          "The problem",
+          "Self-reported feedback from usability tests kept contradicting the analytics — users said they noticed trust badges and guarantees, but conversion data suggested otherwise."
+        ],
+        [
+          "The approach",
+          "Eye-tracking sessions layered over task-based usability testing, applying methods from training at the Deloitte Neuroscience Institute to separate what users say from what they actually attend to."
+        ],
+        [
+          "What shipped",
+          "A gaze-pattern map of the key landing pages, revealing which trust elements were genuinely being seen, and a redesigned visual hierarchy that put the ignored signals where attention already was."
+        ],
+        [
+          "The outcome",
+          "The redesigned hierarchy measurably shifted attention toward the intended trust signals in follow-up testing, giving the team evidence-backed confidence in the new layout."
+        ]
+      ]
+    },
+    {
+      "slug": "embedded-excellence",
+      "title": "Embedded Excellence",
+      "one_liner": "Scaling product delivery for automotive systems",
+      "tag": "Automotive",
+      "role": "Product Delivery",
+      "timeline": "Ongoing",
+      "focus": "Process & Tooling",
+      "tools": "Jira, Figma, Design Systems",
+      "summary": "An automotive systems team needed to ship embedded-software interfaces at a faster, more predictable pace without sacrificing the rigor the industry demands.",
+      "sections": [
+        [
+          "The problem",
+          "Design and engineering were working from disconnected specs, causing rework late in each cycle and making timelines hard to trust."
+        ],
+        [
+          "The approach",
+          "Introduced a shared component system and a tighter design-to-dev handoff process, embedded directly with the delivery team rather than consulting from the outside."
+        ],
+        [
+          "What shipped",
+          "A living design system aligned to the embedded UI constraints, plus a revised handoff workflow that caught inconsistencies before development started."
+        ],
+        [
+          "The outcome",
+          "Rework dropped noticeably cycle over cycle, and the team could commit to delivery dates with far more confidence."
+        ]
+      ]
+    },
+    {
+      "slug": "admin-dash",
+      "title": "Admin Dash",
+      "one_liner": "A dashboard that makes analysts' daily work easier",
+      "tag": "SaaS",
+      "role": "Product Design",
+      "timeline": "5 weeks",
+      "focus": "Workflow Design",
+      "tools": "Figma, Notion",
+      "summary": "Internal analysts were spending more time fighting their own tooling than doing analysis. The dashboard had grown feature by feature with no one stepping back to ask how it was actually used.",
+      "sections": [
+        [
+          "The problem",
+          "Every new feature request had been bolted onto the existing dashboard, resulting in a cluttered interface that buried the handful of views analysts used daily."
+        ],
+        [
+          "The approach",
+          "Contextual interviews with the analyst team to map actual daily workflows, followed by an information hierarchy rebuilt around frequency of use rather than feature completeness."
+        ],
+        [
+          "What shipped",
+          "A redesigned dashboard with a task-oriented home view, saved filters for recurring reports, and a much shorter path to the three actions analysts performed most."
+        ],
+        [
+          "The outcome",
+          "Analysts reported completing routine reporting tasks faster, and onboarding a new analyst became a same-day process instead of a multi-day one."
+        ]
+      ]
+    },
+    {
+      "slug": "citysense-mvp",
+      "title": "CitySense MVP",
+      "one_liner": "Smart-city pedestrian recognition, startup challenge",
+      "tag": "Startup",
+      "role": "Product & UX",
+      "timeline": "3 weeks",
+      "focus": "0-to-1 MVP",
+      "tools": "Figma, Prototyping",
+      "summary": "A startup challenge team had a strong technical concept for pedestrian-recognition smart-city infrastructure but no interface for the humans who'd actually operate it.",
+      "sections": [
+        [
+          "The problem",
+          "The core recognition technology worked, but there was no operator-facing interface, and the team was days away from a live pitch."
+        ],
+        [
+          "The approach",
+          "Rapid MVP scoping to identify the single operator workflow worth building first, then a tight prototyping loop to get something testable in front of judges and early users."
+        ],
+        [
+          "What shipped",
+          "A clickable MVP prototype covering the core monitoring workflow, built fast enough to leave time for rehearsal before the pitch."
+        ],
+        [
+          "The outcome",
+          "The team presented a working interface alongside their technical demo instead of slides alone, and placed among the challenge's recognized teams."
+        ]
+      ]
+    },
+    {
+      "slug": "nap-grid",
+      "title": "NAP Grid",
+      "one_liner": "Simplifying new grid applications, end to end",
+      "tag": "Energy",
+      "role": "UX & Service Design",
+      "timeline": "6 weeks",
+      "focus": "Application Flow",
+      "tools": "Figma, User Testing",
+      "summary": "Applying for a new energy grid connection involved a paperwork-heavy process that confused applicants and generated avoidable support tickets for the utility's team.",
+      "sections": [
+        [
+          "The problem",
+          "Applicants regularly submitted incomplete or incorrect grid-connection requests, creating back-and-forth that slowed down every application and burdened support staff."
+        ],
+        [
+          "The approach",
+          "Mapped the entire application journey end to end, identified exactly where applicants got confused, and redesigned the flow as a guided, step-by-step digital process."
+        ],
+        [
+          "What shipped",
+          "A restructured application flow with inline guidance at the exact points where errors used to happen, plus clearer status communication after submission."
+        ],
+        [
+          "The outcome",
+          "Incomplete submissions dropped and support tickets tied to application confusion fell noticeably in the months after launch."
+        ]
+      ]
+    }
+  ],
+  "about": {
+    "eyebrow": "About",
+    "heading": "Hi, I'm Imen.",
+    "paragraphs": [
+      "I'm a digital product consultant based in Berlin. I've spent 10+ years moving between corporate innovation labs (Deloitte, Siemens, BMW) and scrappy freelance builds, which means I know how to make big-brand thinking work on a startup budget.",
+      "I studied IT & Electrical Engineering at TU Munich, trained in neuromarketing at the Deloitte Neuroscience Institute, and now spend my days auditing, designing, and building websites that don't just look good — they perform.",
+      "Fluent in German, English, French and Arabic, and always up for a project that lets me build something a little different."
+    ],
+    "exp_chips": [
+      "10+ years",
+      "Deloitte",
+      "Siemens",
+      "BMW",
+      "TU Munich"
+    ],
+    "lang_chips": [
+      "German",
+      "English",
+      "French",
+      "Arabic"
+    ]
+  },
+  "contact": {
+    "heading": "Let's fix something.",
+    "body": "Book a free discovery call and I'll review your homepage or shop on the spot — three actionable tips, no charge, no pitch.",
+    "cta": "Get 3 quick wins, free",
+    "secondary": "Also open to Figma prototyping, AI-generated art, and full website/webshop builds on Webflow, Shopify, or Wix.",
+    "form": {
+      "name_label": "Name",
+      "email_label": "Email",
+      "message_label": "Message",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "msg_success": "Thanks — got it. I’ll get back to you within a day or two.",
+      "msg_error": "Something went wrong sending that. Try the Calendly link instead?",
+      "msg_network": "Network hiccup — mind trying again, or use the Calendly link?",
+      "msg_not_wired": "Form isn’t wired up yet — add your Formspree endpoint in contact form action."
+    }
+  },
+  "legal": {
+    "terms": {
+      "title": "Terms of Service",
+      "content_html": "<p>These terms govern the use of imenbouzouita.com and any consulting services booked through it. By using this site or booking a call, you agree to the terms below.</p>\n<h2>Services</h2>\n<p>UX audits, CRO reviews, landing page and website builds, and related consulting are scoped individually per engagement. Specific deliverables, timelines, and fees are confirmed in writing before work begins.</p>\n<h2>Discovery calls</h2>\n<p>Free discovery calls are offered as an introduction and light-touch review, not a substitute for a full audit or paid engagement.</p>\n<h2>Intellectual property</h2>\n<p>Deliverables produced under a paid engagement transfer to the client upon full payment, unless otherwise agreed in writing.</p>\n<h2>Liability</h2>\n<p>Recommendations are provided in good faith based on available data; outcomes depend on implementation and factors outside this consultancy's control.</p>\n<p><em>Placeholder terms — replace with your reviewed legal text before launch.</em></p>"
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "content_html": "<p>This site collects only what's needed to respond to enquiries: name, email, and message content submitted via the contact form, processed through Formspree. No analytics cookies are set without consent.</p>\n<h2>What's collected</h2>\n<ul>\n  <li>Contact form submissions (name, email, message)</li>\n  <li>Calendly booking details, handled under Calendly's own privacy policy</li>\n</ul>\n<h2>How it's used</h2>\n<p>Solely to respond to enquiries and manage booked calls. Data isn't sold or shared with third parties beyond the services required to operate this site (Formspree, Calendly).</p>\n<h2>Your rights</h2>\n<p>You can request access to or deletion of your data at any time by getting in touch via the contact form.</p>\n<p><em>Placeholder policy — replace with your reviewed legal text (GDPR-compliant, as required for a Berlin-based business) before launch.</em></p>"
+    },
+    "impressum": {
+      "title": "Impressum",
+      "content_html": "<h2>Angaben gemäß § 5 TMG</h2>\n<p>Imen Bouzouita<br/>Mahlower Strasse 14<br/>12049 Berlin<br/>Deutschland</p>\n<h2>Kontakt</h2>\n<p>E-Mail: imenbouzouita@googlemail.com</p>\n<h2>Umsatzsteuer-ID</h2>\n<p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE367654068</p>\n<h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>\n<p>Imen Bouzouita<br/>Mahlower Strasse 14<br/>12049 Berlin<br/>Deutschland</p>\n<h2>EU-Streitschlichtung</h2>\n<p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href=\"https://ec.europa.eu/consumers/odr/\" target=\"_blank\" rel=\"noopener\">https://ec.europa.eu/consumers/odr/</a></p>\n<h2>Verbraucherstreitbeilegung</h2>\n<p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>"
+    }
+  },
+  "not_found": {
+    "eyebrow": "404",
+    "heading": "That page wandered off.",
+    "lede": "Even the best UX has a dead link now and then.",
+    "cta": "Back to home"
+  }
+}

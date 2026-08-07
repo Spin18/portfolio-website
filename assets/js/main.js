@@ -140,20 +140,22 @@
   const form = document.querySelector('#contact-form');
   if (form) {
     const status = form.querySelector('.form-status');
+    const msg = (key, fallback) => form.dataset[key] || fallback;
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const submitBtn = form.querySelector('button[type="submit"]');
       const data = new FormData(form);
 
       if (!form.action || form.action.includes('YOUR_FORM_ID')) {
-        status.textContent = 'Form isn’t wired up yet — add your Formspree endpoint in contact form action.';
+        status.textContent = msg('msgNotWired', 'Form isn’t wired up yet — add your Formspree endpoint in contact form action.');
         status.classList.add('visible');
         return;
       }
 
       submitBtn.disabled = true;
       const originalLabel = submitBtn.textContent;
-      submitBtn.textContent = 'Sending…';
+      submitBtn.textContent = msg('msgSending', 'Sending…');
 
       try {
         const res = await fetch(form.action, {
@@ -162,13 +164,13 @@
           headers: { Accept: 'application/json' },
         });
         if (res.ok) {
-          status.textContent = 'Thanks — got it. I’ll get back to you within a day or two.';
+          status.textContent = msg('msgSuccess', 'Thanks — got it. I’ll get back to you within a day or two.');
           form.reset();
         } else {
-          status.textContent = 'Something went wrong sending that. Try the Calendly link instead?';
+          status.textContent = msg('msgError', 'Something went wrong sending that. Try the Calendly link instead?');
         }
       } catch (err) {
-        status.textContent = 'Network hiccup — mind trying again, or use the Calendly link?';
+        status.textContent = msg('msgNetwork', 'Network hiccup — mind trying again, or use the Calendly link?');
       } finally {
         status.classList.add('visible');
         submitBtn.disabled = false;
