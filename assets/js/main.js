@@ -104,10 +104,10 @@
   const hero = document.querySelector('.hero');
   if (hero && !isTouch && !reduceMotion) {
     const bubbleColors = [
-      'rgba(58,169,196,0.9)',
-      'rgba(255,107,78,0.85)',
-      'rgba(198,183,236,0.92)',
-      'rgba(127,212,230,0.92)',
+      'rgba(58,169,196,0.45)',
+      'rgba(255,107,78,0.425)',
+      'rgba(198,183,236,0.46)',
+      'rgba(127,212,230,0.46)',
     ];
     let lastSpawn = 0;
     const spawnInterval = 55;
@@ -129,7 +129,7 @@
       bubble.style.top = `${y}px`;
       bubble.style.width = `${size}px`;
       bubble.style.height = `${size}px`;
-      bubble.style.background = `radial-gradient(circle at 30% 30%, rgba(255,255,255,1), ${color} 72%, transparent 90%)`;
+      bubble.style.background = `radial-gradient(circle at 30% 30%, rgba(255,255,255,0.5), ${color} 72%, transparent 90%)`;
       hero.appendChild(bubble);
 
       bubble.addEventListener('animationend', () => bubble.remove());

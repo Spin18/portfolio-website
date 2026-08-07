@@ -285,9 +285,9 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   will-change: transform, opacity;
 }
 @keyframes bubble-float {
-  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 1; }
-  15% { transform: translate(-50%, -50%) scale(1.05); opacity: 1; }
-  75% { transform: translate(-50%, -50%) translateY(-60px) scale(1.1); opacity: 0.95; }
+  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+  15% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.5; }
+  75% { transform: translate(-50%, -50%) translateY(-60px) scale(1.1); opacity: 0.475; }
   100% { transform: translate(-50%, -50%) translateY(-100px) scale(1.2); opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
