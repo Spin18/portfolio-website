@@ -61,22 +61,23 @@ Then open http://localhost:8000
 
 ## Deploying to GitHub Pages
 
-1. Create a GitHub repo and push this project (this repo already has `git init` run, no commits yet):
-   ```bash
-   git add -A
-   git commit -m "Initial site"
-   git branch -M main
-   git remote add origin <your-repo-url>
-   git push -u origin main
-   ```
-2. In the repo's Settings → Pages, set the source to the `main` branch, `/ (root)` folder.
-3. `CNAME` (already in the repo root, containing `imenbouzouita.com`) and
-   `.nojekyll` (so GitHub doesn't run Jekyll over the static output) are
-   already in place.
-4. Point your domain's DNS at GitHub Pages (A records to GitHub's IPs, or a
-   CNAME record to `<username>.github.io`) — see GitHub's "Managing a custom
-   domain" docs for current IPs.
-5. No CI/build step is needed — the committed HTML/CSS/JS is the deployed
+Live at: https://github.com/Spin18/portfolio-website, currently served at
+https://spin18.github.io/portfolio-website/ (no custom domain wired up yet
+— the `CNAME` file was removed while testing on the raw `github.io` URL).
+All internal links and asset paths are relative, so the site works
+correctly at any hosting depth — this subpath, a custom domain root, or a
+local preview — without changes.
+
+1. In the repo's Settings → Pages, source is the `main` branch, `/ (root)`
+   folder.
+2. `.nojekyll` is in place so GitHub doesn't run Jekyll over the static
+   output.
+3. **When ready to switch to the imenbouzouita.com domain**: add a `CNAME`
+   file back to the repo root containing `imenbouzouita.com`, then point
+   the domain's DNS at GitHub Pages (A records to GitHub's IPs, or a CNAME
+   record to `spin18.github.io`) — see GitHub's "Managing a custom domain"
+   docs for current IPs.
+4. No CI/build step is needed — the committed HTML/CSS/JS is the deployed
    output. Re-run `python3 build.py` locally and commit whenever you change
    `build.py`.
 
