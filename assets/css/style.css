@@ -215,7 +215,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
     radial-gradient(60% 50% at 85% 15%, rgba(58,169,196,0.30), transparent 70%),
     radial-gradient(45% 40% at 10% 85%, rgba(198,183,236,0.32), transparent 70%),
     linear-gradient(rgba(247,245,240,0.86), rgba(247,245,240,0.93)),
-    url('/assets/img/texture-bg-mobile.jpg') center 30% / cover no-repeat,
+    url('../img/texture-bg-mobile.jpg') center 30% / cover no-repeat,
     var(--bone);
 }
 @media (min-width: 760px) {
@@ -223,7 +223,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
     radial-gradient(60% 50% at 85% 15%, rgba(58,169,196,0.30), transparent 70%),
     radial-gradient(45% 40% at 10% 85%, rgba(198,183,236,0.32), transparent 70%),
     linear-gradient(rgba(247,245,240,0.84), rgba(247,245,240,0.92)),
-    url('/assets/img/texture-bg.jpg');
+    url('../img/texture-bg.jpg');
     background-position: center, center, center, center 30%;
     background-size: auto, auto, auto, cover;
     background-repeat: no-repeat;

@@ -14,14 +14,26 @@ import re
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SITE_URL = "https://imenbouzouita.com"
 CALENDLY = "https://calendly.com/imenbouzouita/1-1-discovery-call"
-FORMSPREE_ACTION = "https://formspree.io/f/YOUR_FORM_ID"  # replace after creating a Formspree form
+FORMSPREE_ACTION = "https://formspree.io/f/xdenkldz"
 
 NAV_LINKS = [
-    ("What I Do", "/#work-do"),
-    ("Case Studies", "/#work"),
-    ("About", "/#about"),
-    ("Contact", "/#contact"),
+    ("What I Do", "#work-do"),
+    ("Case Studies", "#work"),
+    ("About", "#about"),
+    ("Contact", "#contact"),
 ]
+
+
+def rel(depth):
+    """Path prefix to the site root from a page `depth` directories deep.
+
+    Root-relative paths ("/assets/...") only work when the site is served
+    from a domain root. GitHub Pages project sites are served under
+    "/<repo-name>/", so everything here is generated relative instead —
+    this makes the output work at any hosting depth (custom domain,
+    project page, local preview) without changes.
+    """
+    return "../" * depth if depth else "./"
 
 CASE_STUDIES = [
     {
@@ -198,8 +210,9 @@ def esc(s):
     return s
 
 
-def head(title, description, path="/"):
+def head(title, description, path="/", depth=0):
     og_url = f"{SITE_URL}{path}"
+    base = rel(depth)
     return f"""<meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
@@ -211,18 +224,19 @@ def head(title, description, path="/"):
   <meta property="og:url" content="{og_url}" />
   <meta property="og:image" content="{SITE_URL}/assets/img/og-cover.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="icon" href="{base}assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="{base}assets/css/style.css" />
   <meta name="theme-color" content="#0E1B1F" />"""
 
 
-def header_html(active=""):
+def header_html(depth=0):
+    base = rel(depth)
     links = "\n      ".join(
-        f'<li><a href="{href}">{label}</a></li>' for label, href in NAV_LINKS
+        f'<li><a href="{base}{href}">{label}</a></li>' for label, href in NAV_LINKS
     )
     return f"""<header class="site-header">
     <div class="container">
-      <a href="/" class="logo" aria-label="Imen Bouzouita — home">Imen<span class="dot">.</span></a>
+      <a href="{base}" class="logo" aria-label="Imen Bouzouita — home">Imen<span class="dot">.</span></a>
       <nav>
         <ul class="nav-links">
           {links}
@@ -234,18 +248,19 @@ def header_html(active=""):
   </header>"""
 
 
-def footer_html():
+def footer_html(depth=0):
+    base = rel(depth)
     return f"""<footer class="site-footer">
     <div class="container">
       <div class="footer-top">
         <div>
-          <a href="/" class="logo" aria-label="Imen Bouzouita — home">Imen<span class="dot">.</span></a>
+          <a href="{base}" class="logo" aria-label="Imen Bouzouita — home">Imen<span class="dot">.</span></a>
         </div>
         <nav class="footer-nav">
-          <a href="/#work-do">What I Do</a>
-          <a href="/#work">Case Studies</a>
-          <a href="/#about">About</a>
-          <a href="/#contact">Contact</a>
+          <a href="{base}#work-do">What I Do</a>
+          <a href="{base}#work">Case Studies</a>
+          <a href="{base}#about">About</a>
+          <a href="{base}#contact">Contact</a>
         </nav>
         <div class="footer-social">
           <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
@@ -255,27 +270,27 @@ def footer_html():
       <div class="footer-bottom">
         <span>&copy; {2026} Imen Bouzouita. All rights reserved.</span>
         <div class="legal-links">
-          <a href="/terms.html">Terms</a>
-          <a href="/privacy.html">Privacy</a>
-          <a href="/impressum.html">Impressum</a>
+          <a href="{base}terms.html">Terms</a>
+          <a href="{base}privacy.html">Privacy</a>
+          <a href="{base}impressum.html">Impressum</a>
         </div>
       </div>
     </div>
   </footer>"""
 
 
-def page_shell(title, description, body, path="/", extra_head=""):
+def page_shell(title, description, body, path="/", depth=0, extra_head=""):
     return f"""<!doctype html>
 <html lang="en">
 <head>
-  {head(title, description, path)}
+  {head(title, description, path, depth)}
   {extra_head}
 </head>
 <body>
-  {header_html()}
+  {header_html(depth)}
   {body}
-  {footer_html()}
-  <script src="/assets/js/main.js" defer></script>
+  {footer_html(depth)}
+  <script src="{rel(depth)}assets/js/main.js" defer></script>
 </body>
 </html>
 """
@@ -304,7 +319,7 @@ def build_index():
     work_cards = ""
     for cs in CASE_STUDIES:
         work_cards += f"""
-        <a class="work-card" href="/work/{cs['slug']}/" data-reveal>
+        <a class="work-card" href="./work/{cs['slug']}/" data-reveal>
           <div class="cover" style="background: linear-gradient(140deg, var(--moonstone), var(--lilac)); position:absolute; inset:0; height:112%;"></div>
           <div class="work-card-body">
             <span class="work-tag">{cs['tag']}</span>
@@ -369,8 +384,8 @@ def build_index():
         <div class="about-portrait-wrap" data-reveal>
           <div class="about-portrait-frame"></div>
           <picture>
-            <source srcset="/assets/img/imen-portrait.webp" type="image/webp" />
-            <img class="about-portrait" src="/assets/img/imen-portrait.jpg" alt="Portrait of Imen Bouzouita" loading="lazy" width="840" height="1120" />
+            <source srcset="./assets/img/imen-portrait.webp" type="image/webp" />
+            <img class="about-portrait" src="./assets/img/imen-portrait.jpg" alt="Portrait of Imen Bouzouita" loading="lazy" width="840" height="1120" />
           </picture>
         </div>
         <div class="about-text" data-reveal>
@@ -381,7 +396,7 @@ def build_index():
           <p>Fluent in German, English, French and Arabic, and always up for a project that lets me build something a little different.</p>
           <div class="chip-row">{exp_chips}</div>
           <div class="chip-row">{lang_chips}</div>
-          <img class="signature" src="/assets/img/logos/logo.png" alt="Imen Bouzouita signature" loading="lazy" />
+          <img class="signature" src="./assets/img/logos/logo.png" alt="Imen Bouzouita signature" loading="lazy" />
         </div>
       </div>
     </section>
@@ -427,6 +442,7 @@ def build_index():
         "I help e-commerce, wellness, and SaaS brands turn browsers into buyers with research-backed UX audits and interfaces people actually want to use.",
         body,
         path="/",
+        depth=0,
     )
     write("index.html", html)
 
@@ -461,9 +477,9 @@ def build_case_study(cs, prev_cs, next_cs):
           {sections_html}
         </div>
         <div class="case-nav">
-          <a href="/work/{prev_cs['slug']}/" class="btn-line">&larr; {prev_cs['title']}</a>
-          <a href="/#work" class="btn btn-ghost">All work</a>
-          <a href="/work/{next_cs['slug']}/" class="btn-line">{next_cs['title']} &rarr;</a>
+          <a href="../{prev_cs['slug']}/" class="btn-line">&larr; {prev_cs['title']}</a>
+          <a href="../../#work" class="btn btn-ghost">All work</a>
+          <a href="../{next_cs['slug']}/" class="btn-line">{next_cs['title']} &rarr;</a>
         </div>
       </div>
     </section>
@@ -474,6 +490,7 @@ def build_case_study(cs, prev_cs, next_cs):
         cs["one_liner"],
         body,
         path=f"/work/{cs['slug']}/",
+        depth=2,
     )
     write(f"work/{cs['slug']}/index.html", html)
 
@@ -492,7 +509,7 @@ def build_legal(slug, title, content_html):
     </section>
   </main>
 """
-    html = page_shell(f"{title} — Imen Bouzouita", f"{title} for imenbouzouita.com", body, path=f"/{slug}.html")
+    html = page_shell(f"{title} — Imen Bouzouita", f"{title} for imenbouzouita.com", body, path=f"/{slug}.html", depth=0)
     write(f"{slug}.html", html)
 
 
@@ -559,13 +576,13 @@ def build_404():
         <h1>That page wandered off.</h1>
         <p class="lede">Even the best UX has a dead link now and then.</p>
         <div class="hero-ctas mt-lg" style="justify-content:center;">
-          <a href="/" class="btn btn-primary">Back to home</a>
+          <a href="./" class="btn btn-primary">Back to home</a>
         </div>
       </div>
     </section>
   </main>
 """
-    html = page_shell("Page not found — Imen Bouzouita", "Page not found.", body, path="/404.html")
+    html = page_shell("Page not found — Imen Bouzouita", "Page not found.", body, path="/404.html", depth=0)
     write("404.html", html)
 
 
