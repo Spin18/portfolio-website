@@ -110,7 +110,7 @@
       'rgba(127,212,230,0.5)',
     ];
     let lastSpawn = 0;
-    const spawnInterval = 45;
+    const spawnInterval = 60;
 
     hero.addEventListener('mousemove', (e) => {
       const now = performance.now();
@@ -120,7 +120,7 @@
       const rect = hero.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      const size = 8 + Math.random() * 16;
+      const size = 28 + Math.random() * 40;
       const color = bubbleColors[Math.floor(Math.random() * bubbleColors.length)];
 
       const bubble = document.createElement('span');
