@@ -100,6 +100,42 @@
     });
   }
 
+  /* ---------- hero mouse bubble trail ---------- */
+  const hero = document.querySelector('.hero');
+  if (hero && !isTouch && !reduceMotion) {
+    const bubbleColors = [
+      'rgba(58,169,196,0.45)',
+      'rgba(255,107,78,0.4)',
+      'rgba(198,183,236,0.5)',
+      'rgba(127,212,230,0.5)',
+    ];
+    let lastSpawn = 0;
+    const spawnInterval = 45;
+
+    hero.addEventListener('mousemove', (e) => {
+      const now = performance.now();
+      if (now - lastSpawn < spawnInterval) return;
+      lastSpawn = now;
+
+      const rect = hero.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const size = 8 + Math.random() * 16;
+      const color = bubbleColors[Math.floor(Math.random() * bubbleColors.length)];
+
+      const bubble = document.createElement('span');
+      bubble.className = 'mouse-bubble';
+      bubble.style.left = `${x}px`;
+      bubble.style.top = `${y}px`;
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+      bubble.style.background = `radial-gradient(circle at 30% 30%, rgba(255,255,255,0.85), ${color} 65%, transparent 78%)`;
+      hero.appendChild(bubble);
+
+      bubble.addEventListener('animationend', () => bubble.remove());
+    });
+  }
+
   /* ---------- contact form (Formspree) ---------- */
   const form = document.querySelector('#contact-form');
   if (form) {
