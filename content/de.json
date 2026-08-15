@@ -196,6 +196,111 @@
       ]
     },
     {
+      "slug": "prima-materia",
+      "title": "Prima Materia",
+      "one_liner": "The Practitioner's Site",
+      "live_url": "https://primamateriacoaching.com/",
+      "card_cover": "work/prima-materia/card-cover.jpg",
+      "tag": "UX/CRO/Branding",
+      "meta": [
+        [
+          "Role",
+          "Everything — positioning, copy, UX, design, development"
+        ],
+        [
+          "Build",
+          "Custom code, Claude Code, GitHub Pages"
+        ],
+        [
+          "Tools",
+          "HTML/CSS/JS, Claude Code, Figma, GitHub Pages"
+        ]
+      ],
+      "summary": "Applying conversion thinking to my own coaching practice.",
+      "sections": [
+        [
+          "The context",
+          "I'm a somatic coach working with the five elements and alchemical frameworks. Most practitioners in this space build websites that speak to peers — dense with modality language, light on structure, and unclear on what a visitor should actually do. I wanted to build mine the way I'd build a client's: conversion-first, with every section earning its place in the funnel."
+        ],
+        [
+          "The decisions",
+          [
+            "The page follows a single narrative arc: recognition → education → credibility → action. It opens with \"You're here because\" — mirroring the visitor's internal state before explaining anything. By the time the Five Elements framework appears, the visitor is already seeing themselves in the work. The about section deliberately leads with my engineering and neuroscience background before somatic training, because the people I want to work with tend to be analytical thinkers who need permission to trust the body. That sequencing is intentional.",
+            "\"Book a Discovery Call\" appears four times. Each placement follows a natural decision point rather than interrupting the reading flow — after the emotional hook, after the framework, after the credibility section, and at the close. One CTA, one action, no ambiguity."
+          ]
+        ],
+        [
+          "The build",
+          "Custom-coded rather than built on a page builder — partly because I wanted full control over performance and structure, and partly because building it with Claude Code was a chance to work the way I advise clients to think: start with the conversion logic, then design to serve it. Hosted on GitHub Pages for speed and simplicity. The visual direction uses black-and-white photography, alchemical symbols, and generous whitespace to signal calm seriousness without the pastel-and-script aesthetic that dominates the wellness space."
+        ],
+        [
+          "Why this matters in my portfolio",
+          "The other case studies in this portfolio show how I think about other people's digital experiences. This one shows I hold myself to the same standard — clear positioning, a defined audience, a structured funnel, and design choices that serve conversion rather than decoration."
+        ]
+      ],
+      "cover": "work/prima-materia/cover.jpg",
+      "gallery": [
+        [
+          "work/prima-materia/gallery-1.jpg",
+          true
+        ],
+        [
+          "work/prima-materia/gallery-2.jpg",
+          true
+        ]
+      ]
+    },
+    {
+      "slug": "neuroboost-ux",
+      "title": "NeuroBoost UX",
+      "one_liner": "Using gaze data to close the gap between what users say they see and what they actually attend to",
+      "tag": "UX Research",
+      "meta": [
+        [
+          "Role",
+          "Neuro-UX Researcher"
+        ],
+        [
+          "Timeline",
+          "4 weeks"
+        ],
+        [
+          "Focus",
+          "Attention & Trust"
+        ],
+        [
+          "Tools",
+          "Eye-tracking, Figma, Custom-Build, A/B Testing"
+        ]
+      ],
+      "summary": "A product team had a conversion problem that standard usability testing couldn't explain. Users self-reported noticing trust signals — badges, guarantees, social proof — but the data told a different story. The brief: go beyond stated preference and measure attention itself.",
+      "sections": [
+        [
+          "The opportunity",
+          "Traditional usability testing captures what users say they experienced. But attention is involuntary — people genuinely believe they've seen something their eyes never landed on. The gap between self-reported awareness and actual gaze behaviour was the likely source of the discrepancy between positive test feedback and underwhelming conversion performance. This wasn't a trust problem or a copy problem — it was a visibility problem hiding inside a testing blind spot."
+        ],
+        [
+          "The approach",
+          "Three design variants of the key landing pages, each with a different visual hierarchy for trust signals — tested simultaneously through eye-tracking sessions layered over task-based usability testing. Applying methods from training at the Deloitte Neuroscience Institute, each session captured both behavioural data (task completion, hesitation points, click paths) and gaze data (fixation duration, scan patterns, areas of interest) across all three variants. The A/B/C structure meant the winner wasn't chosen by opinion or conversion proxy — it was determined by which layout actually captured sustained attention on the elements that mattered."
+        ],
+        [
+          "What shipped",
+          "Comparative gaze-pattern maps across all three variants, showing exactly how each layout directed attention differently — and where the losing variants failed despite looking reasonable on paper. The winning variant wasn't the one the team had expected. The eye-tracking data gave the product team something rare: a design decision backed by physiological evidence rather than preference, removing the usual stakeholder debate about which layout \"feels right.\""
+        ],
+        [
+          "The impact",
+          "Follow-up eye-tracking sessions confirmed the redesigned hierarchy shifted gaze behaviour toward the intended trust signals. The team moved forward with evidence-backed confidence in the new layout — replacing a cycle of A/B tests based on assumptions with a single, physiologically grounded design direction."
+        ]
+      ],
+      "cover": "work/neuroboost-ux/cover.jpg",
+      "gallery": [
+        [
+          "work/neuroboost-ux/gallery-1.jpg",
+          true
+        ]
+      ]
+    },
+    {
       "slug": "conversion-engine",
       "title": "Conversion Engine",
       "one_liner": "Optimising checkout, product pages, and launch strategy from inside the team",
@@ -259,111 +364,6 @@
         [
           "work/conversion-engine/gallery-5.jpg",
           false
-        ]
-      ]
-    },
-    {
-      "slug": "neuroboost-ux",
-      "title": "NeuroBoost UX",
-      "one_liner": "Using gaze data to close the gap between what users say they see and what they actually attend to",
-      "tag": "UX Research",
-      "meta": [
-        [
-          "Role",
-          "Neuro-UX Researcher"
-        ],
-        [
-          "Timeline",
-          "4 weeks"
-        ],
-        [
-          "Focus",
-          "Attention & Trust"
-        ],
-        [
-          "Tools",
-          "Eye-tracking, Figma, Custom-Build, A/B Testing"
-        ]
-      ],
-      "summary": "A product team had a conversion problem that standard usability testing couldn't explain. Users self-reported noticing trust signals — badges, guarantees, social proof — but the data told a different story. The brief: go beyond stated preference and measure attention itself.",
-      "sections": [
-        [
-          "The opportunity",
-          "Traditional usability testing captures what users say they experienced. But attention is involuntary — people genuinely believe they've seen something their eyes never landed on. The gap between self-reported awareness and actual gaze behaviour was the likely source of the discrepancy between positive test feedback and underwhelming conversion performance. This wasn't a trust problem or a copy problem — it was a visibility problem hiding inside a testing blind spot."
-        ],
-        [
-          "The approach",
-          "Three design variants of the key landing pages, each with a different visual hierarchy for trust signals — tested simultaneously through eye-tracking sessions layered over task-based usability testing. Applying methods from training at the Deloitte Neuroscience Institute, each session captured both behavioural data (task completion, hesitation points, click paths) and gaze data (fixation duration, scan patterns, areas of interest) across all three variants. The A/B/C structure meant the winner wasn't chosen by opinion or conversion proxy — it was determined by which layout actually captured sustained attention on the elements that mattered."
-        ],
-        [
-          "What shipped",
-          "Comparative gaze-pattern maps across all three variants, showing exactly how each layout directed attention differently — and where the losing variants failed despite looking reasonable on paper. The winning variant wasn't the one the team had expected. The eye-tracking data gave the product team something rare: a design decision backed by physiological evidence rather than preference, removing the usual stakeholder debate about which layout \"feels right.\""
-        ],
-        [
-          "The impact",
-          "Follow-up eye-tracking sessions confirmed the redesigned hierarchy shifted gaze behaviour toward the intended trust signals. The team moved forward with evidence-backed confidence in the new layout — replacing a cycle of A/B tests based on assumptions with a single, physiologically grounded design direction."
-        ]
-      ],
-      "cover": "work/neuroboost-ux/cover.jpg",
-      "gallery": [
-        [
-          "work/neuroboost-ux/gallery-1.jpg",
-          true
-        ]
-      ]
-    },
-    {
-      "slug": "prima-materia",
-      "title": "Prima Materia",
-      "one_liner": "The Practitioner's Site",
-      "live_url": "https://primamateriacoaching.com/",
-      "card_cover": "work/prima-materia/card-cover.jpg",
-      "tag": "UX/CRO/Branding",
-      "meta": [
-        [
-          "Role",
-          "Everything — positioning, copy, UX, design, development"
-        ],
-        [
-          "Build",
-          "Custom code, Claude Code, GitHub Pages"
-        ],
-        [
-          "Tools",
-          "HTML/CSS/JS, Claude Code, Figma, GitHub Pages"
-        ]
-      ],
-      "summary": "Applying conversion thinking to my own coaching practice.",
-      "sections": [
-        [
-          "The context",
-          "I'm a somatic coach working with the five elements and alchemical frameworks. Most practitioners in this space build websites that speak to peers — dense with modality language, light on structure, and unclear on what a visitor should actually do. I wanted to build mine the way I'd build a client's: conversion-first, with every section earning its place in the funnel."
-        ],
-        [
-          "The decisions",
-          [
-            "The page follows a single narrative arc: recognition → education → credibility → action. It opens with \"You're here because\" — mirroring the visitor's internal state before explaining anything. By the time the Five Elements framework appears, the visitor is already seeing themselves in the work. The about section deliberately leads with my engineering and neuroscience background before somatic training, because the people I want to work with tend to be analytical thinkers who need permission to trust the body. That sequencing is intentional.",
-            "\"Book a Discovery Call\" appears four times. Each placement follows a natural decision point rather than interrupting the reading flow — after the emotional hook, after the framework, after the credibility section, and at the close. One CTA, one action, no ambiguity."
-          ]
-        ],
-        [
-          "The build",
-          "Custom-coded rather than built on a page builder — partly because I wanted full control over performance and structure, and partly because building it with Claude Code was a chance to work the way I advise clients to think: start with the conversion logic, then design to serve it. Hosted on GitHub Pages for speed and simplicity. The visual direction uses black-and-white photography, alchemical symbols, and generous whitespace to signal calm seriousness without the pastel-and-script aesthetic that dominates the wellness space."
-        ],
-        [
-          "Why this matters in my portfolio",
-          "The other case studies in this portfolio show how I think about other people's digital experiences. This one shows I hold myself to the same standard — clear positioning, a defined audience, a structured funnel, and design choices that serve conversion rather than decoration."
-        ]
-      ],
-      "cover": "work/prima-materia/cover.jpg",
-      "gallery": [
-        [
-          "work/prima-materia/gallery-1.jpg",
-          true
-        ],
-        [
-          "work/prima-materia/gallery-2.jpg",
-          true
         ]
       ]
     },

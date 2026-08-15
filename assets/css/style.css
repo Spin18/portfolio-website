@@ -643,6 +643,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .case-cover img { width: 100%; height: 100%; object-fit: cover; }
 .case-gallery {
   max-width: 760px;
+  margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
@@ -685,6 +686,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .case-meta dd { margin: 0; font-weight: 500; }
 .case-body {
   max-width: 760px;
+  margin-inline: auto;
   display: grid;
   gap: 1.4rem;
   font-size: 1.08rem;
