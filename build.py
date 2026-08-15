@@ -23,6 +23,11 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 SITE_URL = "https://imenbouzouita.com"
 CALENDLY = "https://calendly.com/imenbouzouita/1-1-discovery-call"
 FORMSPREE_ACTION = "https://formspree.io/f/xdenkldz"
+# font-display=optional: browser waits ~100ms max for the font, then commits
+# to whichever (fallback or webfont) is ready and never swaps later — this is
+# what avoids CLS. Loaded non-blocking via the media="print" swap trick below,
+# so it never holds up first paint either.
+FONTS_URL = "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=optional"
 
 TRUST_LOGOS = [
     {"name": "Siemens", "file": "siemens.svg"},
@@ -133,7 +138,8 @@ def head(t, lang_code, title, description, current_path, alt_paths):
   <link rel="icon" href="{asset_href(current_path, 'img/favicon.svg')}" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="{FONTS_URL}" media="print" onload="this.media='all'; this.onload=null;" />
+  <noscript><link rel="stylesheet" href="{FONTS_URL}" /></noscript>
   <link rel="stylesheet" href="{asset_href(current_path, 'css/style.css')}" />
   <meta name="theme-color" content="#0E1B1F" />"""
 
