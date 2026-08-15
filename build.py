@@ -24,7 +24,14 @@ SITE_URL = "https://imenbouzouita.com"
 CALENDLY = "https://calendly.com/imenbouzouita/1-1-discovery-call"
 FORMSPREE_ACTION = "https://formspree.io/f/xdenkldz"
 
-TRUST_LOGOS = ["Siemens", "BMW", "Deloitte", "innogy", "und gretel", "TUM"]
+TRUST_LOGOS = [
+    {"name": "Siemens", "file": "siemens.svg"},
+    {"name": "BMW", "file": "bmw.png"},
+    {"name": "Deloitte", "file": "deloitte.svg"},
+    {"name": "innogy", "file": "innogy.svg"},
+    {"name": "und gretel", "file": "und-gretel.svg"},
+    {"name": "TUM", "file": "tum.png"},
+]
 
 LANGUAGES = [
     {"code": "en", "dir": "", "label": "EN"},
@@ -220,7 +227,11 @@ def page_shell(t, title, description, body, current_path, alt_paths, extra_head=
 def build_index(t, lang_code, alt_paths):
     current_path = lang_home_path(lang_code)
 
-    trust_track = " ".join(f'<span class="trust-logo">{n}</span>' for n in TRUST_LOGOS)
+    def _trust_logo_html(logo):
+        src = asset_href(current_path, "img/logos/" + logo["file"])
+        return f'<img class="trust-logo" src="{src}" alt="{logo["name"]}" loading="lazy" />'
+
+    trust_track = " ".join(_trust_logo_html(logo) for logo in TRUST_LOGOS)
     trust_track_full = trust_track + " " + trust_track  # duplicate for seamless marquee
 
     capability_cards = ""

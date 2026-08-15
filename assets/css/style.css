@@ -347,15 +347,16 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   to { transform: translateX(-50%); }
 }
 .trust-logo {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.3rem;
-  color: var(--ink);
+  height: clamp(28px, 4vw, 38px);
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  filter: grayscale(1);
   opacity: 0.45;
-  white-space: nowrap;
-  transition: opacity var(--dur-fast);
+  transition: opacity var(--dur-fast), filter var(--dur-fast);
+  flex-shrink: 0;
 }
-.trust-logo:hover { opacity: 0.9; }
+.trust-logo:hover { opacity: 0.9; filter: grayscale(0); }
 
 /* ---------- capabilities ---------- */
 .section-head { max-width: 640px; margin-bottom: 3.5rem; }
