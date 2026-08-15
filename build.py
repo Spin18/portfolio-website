@@ -22,6 +22,8 @@ import os
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SITE_URL = "https://imenbouzouita.com"
 CALENDLY = "https://calendly.com/imenbouzouita/1-1-discovery-call"
+LINKEDIN_URL = "https://www.linkedin.com/in/imen-bouzouita-b65051107/"
+INSTAGRAM_URL = "https://www.instagram.com/ima_gi_n/"
 FORMSPREE_ACTION = "https://formspree.io/f/xdenkldz"
 # font-display=optional: browser waits ~100ms max for the font, then commits
 # to whichever (fallback or webfont) is ready and never swaps later — this is
@@ -141,10 +143,9 @@ def url_for(current_path):
 
 
 # Real, publicly-disclosed business details (from impressum.html — required by
-# German law to be public) — used for structured data. No pricing, phone, or
-# social-profile URLs are included anywhere below because none are real/live
-# on this site yet (footer social links are still placeholders); adding them
-# to structured data would be inaccurate, so they're left out until real.
+# German law to be public) — used for structured data. No pricing or phone
+# are included below since neither is real/disclosed anywhere on this site;
+# adding them to structured data would be inaccurate.
 BUSINESS_ADDRESS = {
     "@type": "PostalAddress",
     "streetAddress": "Mahlower Strasse 14",
@@ -180,6 +181,7 @@ def build_json_ld_home(t, current_path):
             {"@type": "EducationalOrganization", "name": "Deloitte Neuroscience Institute"},
         ],
         "worksFor": {"@id": f"{SITE_URL}/#business"},
+        "sameAs": [LINKEDIN_URL, INSTAGRAM_URL],
     }
 
     offers = [
@@ -340,8 +342,8 @@ def footer_html(t, current_path):
           <a href="{home}#contact">{t['nav']['contact']}</a>
         </nav>
         <div class="footer-social">
-          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="{INSTAGRAM_URL}" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="{LINKEDIN_URL}" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
         </div>
       </div>
       <div class="footer-bottom">
