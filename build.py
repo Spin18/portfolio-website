@@ -32,7 +32,7 @@ TRUST_LOGOS = [
     {"name": "und gretel", "file": "und-gretel.svg"},
     {"name": "TUM", "file": "tum.png"},
     {"name": "BaliSpirit", "file": "balispirit.png"},
-    {"name": "yogabarn", "file": "yogabarn.png"},
+    {"name": "yogabarn", "file": "yogabarn.png", "size": "lg"},
     {"name": "Rikepa", "file": "rikepa.png"},
 ]
 
@@ -232,7 +232,8 @@ def build_index(t, lang_code, alt_paths):
 
     def _trust_logo_html(logo):
         src = asset_href(current_path, "img/logos/" + logo["file"])
-        return f'<img class="trust-logo" src="{src}" alt="{logo["name"]}" loading="lazy" />'
+        size_class = f" trust-logo--{logo['size']}" if logo.get("size") else ""
+        return f'<img class="trust-logo{size_class}" src="{src}" alt="{logo["name"]}" loading="lazy" />'
 
     trust_track = " ".join(_trust_logo_html(logo) for logo in TRUST_LOGOS)
     trust_track_full = trust_track + " " + trust_track  # duplicate for seamless marquee

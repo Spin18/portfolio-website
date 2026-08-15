@@ -325,6 +325,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--ink-soft);
+  margin-top: 0.5rem;
   margin-bottom: 1.8rem;
 }
 .marquee {
@@ -357,6 +358,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   flex-shrink: 0;
 }
 .trust-logo:hover { opacity: 0.9; filter: grayscale(0); }
+.trust-logo--lg { height: clamp(44px, 6vw, 58px); }
 
 /* ---------- capabilities ---------- */
 .section-head { max-width: 640px; margin-bottom: 3.5rem; }
