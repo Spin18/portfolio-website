@@ -653,6 +653,12 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.4rem;
 }
+.case-gallery.case-gallery--pair {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 520px) {
+  .case-gallery.case-gallery--pair { grid-template-columns: 1fr; }
+}
 .case-gallery img {
   width: 100%;
   height: auto;

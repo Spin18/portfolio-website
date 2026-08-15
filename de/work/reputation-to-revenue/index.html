@@ -675,6 +675,12 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.4rem;
 }
+.case-gallery.case-gallery--pair {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 520px) {
+  .case-gallery.case-gallery--pair { grid-template-columns: 1fr; }
+}
 .case-gallery img {
   width: 100%;
   height: auto;
@@ -832,9 +838,9 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
         
         </div>
         
-        <div class="case-gallery" data-reveal>
-          <img class="wide" src="../../../assets/img/work/reputation-to-revenue/gallery-1.jpg" alt="From Reputation to Revenue" loading="lazy" />
-          <img class="wide" src="../../../assets/img/work/reputation-to-revenue/gallery-2.jpg" alt="From Reputation to Revenue" loading="lazy" />
+        <div class="case-gallery case-gallery--pair" data-reveal>
+          <img src="../../../assets/img/work/reputation-to-revenue/gallery-1.jpg" alt="From Reputation to Revenue" loading="lazy" />
+          <img src="../../../assets/img/work/reputation-to-revenue/gallery-2.jpg" alt="From Reputation to Revenue" loading="lazy" />
         </div>
         <div class="case-nav">
           <a href="../resonance-tunes/" class="btn-line">&larr; Resonance Tunes</a>
