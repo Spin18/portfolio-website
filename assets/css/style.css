@@ -370,6 +370,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+  align-items: start;
 }
 @media (max-width: 760px) { .capabilities-grid { grid-template-columns: 1fr; } }
 .capability-card {
