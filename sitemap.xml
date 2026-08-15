@@ -81,16 +81,6 @@
       <xhtml:link rel="alternate" hreflang="de" href="https://imenbouzouita.com/de/work/neuroboost-ux/" />
   </url>
   <url>
-    <loc>https://imenbouzouita.com/work/resonance-tunes/</loc>
-      <xhtml:link rel="alternate" hreflang="en" href="https://imenbouzouita.com/work/resonance-tunes/" />
-      <xhtml:link rel="alternate" hreflang="de" href="https://imenbouzouita.com/de/work/resonance-tunes/" />
-  </url>
-  <url>
-    <loc>https://imenbouzouita.com/de/work/resonance-tunes/</loc>
-      <xhtml:link rel="alternate" hreflang="en" href="https://imenbouzouita.com/work/resonance-tunes/" />
-      <xhtml:link rel="alternate" hreflang="de" href="https://imenbouzouita.com/de/work/resonance-tunes/" />
-  </url>
-  <url>
     <loc>https://imenbouzouita.com/work/prima-materia/</loc>
       <xhtml:link rel="alternate" hreflang="en" href="https://imenbouzouita.com/work/prima-materia/" />
       <xhtml:link rel="alternate" hreflang="de" href="https://imenbouzouita.com/de/work/prima-materia/" />
@@ -99,5 +89,15 @@
     <loc>https://imenbouzouita.com/de/work/prima-materia/</loc>
       <xhtml:link rel="alternate" hreflang="en" href="https://imenbouzouita.com/work/prima-materia/" />
       <xhtml:link rel="alternate" hreflang="de" href="https://imenbouzouita.com/de/work/prima-materia/" />
+  </url>
+  <url>
+    <loc>https://imenbouzouita.com/work/resonance-tunes/</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://imenbouzouita.com/work/resonance-tunes/" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://imenbouzouita.com/de/work/resonance-tunes/" />
+  </url>
+  <url>
+    <loc>https://imenbouzouita.com/de/work/resonance-tunes/</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://imenbouzouita.com/work/resonance-tunes/" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://imenbouzouita.com/de/work/resonance-tunes/" />
   </url>
 </urlset>
