@@ -31,6 +31,9 @@ TRUST_LOGOS = [
     {"name": "innogy", "file": "innogy.svg"},
     {"name": "und gretel", "file": "und-gretel.svg"},
     {"name": "TUM", "file": "tum.png"},
+    {"name": "BaliSpirit", "file": "balispirit.png"},
+    {"name": "yogabarn", "file": "yogabarn.png"},
+    {"name": "Rikepa", "file": "rikepa.png"},
 ]
 
 LANGUAGES = [
