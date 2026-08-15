@@ -638,6 +638,19 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   background: linear-gradient(135deg, var(--moonstone), var(--lilac));
 }
 .case-cover img { width: 100%; height: 100%; object-fit: cover; }
+.case-gallery {
+  max-width: 760px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 0.6rem;
+}
+.case-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  display: block;
+}
 .case-meta {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

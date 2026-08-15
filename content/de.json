@@ -126,6 +126,11 @@
           "The impact",
           "Within weeks of delivery, the security hardening recommendations proved their value when the team needed to respond to a platform incident — the remediation steps were already documented and actionable. The audit gave the team an evidence-based foundation for prioritising work across UX, SEO, design, and technical infrastructure simultaneously, replacing ad hoc fixes with a sequenced strategy tied to measurable outcomes."
         ]
+      ],
+      "cover": "work/reputation-to-revenue/cover.jpg",
+      "gallery": [
+        "work/reputation-to-revenue/gallery-1.jpg",
+        "work/reputation-to-revenue/gallery-2.jpg"
       ]
     },
     {
@@ -170,6 +175,11 @@
           "The impact",
           "The audit reframed the internal conversation from \"what do we do with this site\" to \"this site is the connective tissue of the ecosystem.\" The strategic direction gave the client a decision framework — three specific Phase 0 decisions — rather than an open-ended list of improvements. The redesign and visual unification unlocked the highest-value SEO opportunity available: ecosystem cross-linking between two high-authority domains that no amount of external link building could replicate. The project manager's immediate response to the community model: \"Love the community ideas\" — followed by tactical questions about implementation, confirming the direction landed as actionable rather than aspirational."
         ]
+      ],
+      "cover": "work/the-collective/cover.jpg",
+      "gallery": [
+        "work/the-collective/gallery-1.jpg",
+        "work/the-collective/gallery-2.jpg"
       ]
     },
     {
@@ -214,7 +224,15 @@
           "Checkout abandonment and mobile bounce both improved within the first month of the priority fixes going live. More importantly, the shop moved from gut-feel fixes to a repeatable optimisation process — structured measurement, prioritised backlog, test-before-commit — that continued producing gains beyond the initial round of changes."
         ]
       ],
-      "live_url": "https://undgretel.com/"
+      "live_url": "https://undgretel.com/",
+      "cover": "work/conversion-engine/cover.jpg",
+      "gallery": [
+        "work/conversion-engine/gallery-1.jpg",
+        "work/conversion-engine/gallery-2.jpg",
+        "work/conversion-engine/gallery-3.jpg",
+        "work/conversion-engine/gallery-4.jpg",
+        "work/conversion-engine/gallery-5.jpg"
+      ]
     },
     {
       "slug": "neuroboost-ux",
@@ -257,6 +275,10 @@
           "The impact",
           "Follow-up eye-tracking sessions confirmed the redesigned hierarchy shifted gaze behaviour toward the intended trust signals. The team moved forward with evidence-backed confidence in the new layout — replacing a cycle of A/B tests based on assumptions with a single, physiologically grounded design direction."
         ]
+      ],
+      "cover": "work/neuroboost-ux/cover.jpg",
+      "gallery": [
+        "work/neuroboost-ux/gallery-1.jpg"
       ]
     },
     {
@@ -300,7 +322,8 @@
           "Why this matters in my portfolio",
           "The other case studies in this portfolio show how I think about other people's digital experiences. This one shows I hold myself to the same standard — clear positioning, a defined audience, a structured funnel, and design choices that serve conversion rather than decoration."
         ]
-      ]
+      ],
+      "cover": "work/prima-materia/cover.jpg"
     },
     {
       "slug": "resonance-tunes",
@@ -359,7 +382,8 @@
           "What I'd recommend next",
           "Working within the team's existing copy surfaced a tension I'd prioritise in the next iteration: the site introduces too many complex concepts simultaneously (somatic science, archetypal psychology, regenerative design, ethical AI, gamified learning) before the visitor understands what the product concretely does. Above-fold messaging should lead with what the platform offers in plain language before explaining why it matters philosophically. CTAs like \"Access The Portal\" and \"Connect\" should be replaced with specific conversion actions — a waitlist, a demo, or a newsletter signup — so the site's visual clarity and structural logic can convert the attention it earns."
         ]
-      ]
+      ],
+      "cover": "work/resonance-tunes/cover.jpg"
     }
   ],
   "about": {

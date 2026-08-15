@@ -257,9 +257,13 @@ def build_index(t, lang_code, alt_paths):
     work_cards = ""
     for cs in t["case_studies"]:
         cs_path = lang_case_study_path(lang_code, cs["slug"])
+        if cs.get("cover"):
+            cover_html = f'<img class="cover" src="{asset_href(current_path, "img/" + cs["cover"])}" alt="" loading="lazy" />'
+        else:
+            cover_html = '<div class="cover" style="background: linear-gradient(140deg, var(--moonstone), var(--lilac)); position:absolute; inset:0; height:112%;"></div>'
         work_cards += f"""
         <a class="work-card" href="{href_to(current_path, cs_path)}" data-reveal>
-          <div class="cover" style="background: linear-gradient(140deg, var(--moonstone), var(--lilac)); position:absolute; inset:0; height:112%;"></div>
+          {cover_html}
           <div class="work-card-body">
             <span class="work-tag">{cs['tag']}</span>
             <h3>{cs['title']}</h3>
@@ -409,6 +413,23 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
     if cs.get("live_url"):
         live_url_html = f'<a href="{cs["live_url"]}" class="btn btn-ghost case-live-link" target="_blank" rel="noopener">Visit live site &nearr;</a>'
 
+    if cs.get("cover"):
+        cover_src = asset_href(current_path, "img/" + cs["cover"])
+        cover_html = f'<img src="{cover_src}" alt="{cs["title"]}" loading="eager" />'
+    else:
+        cover_html = '<div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:rgba(14,27,31,0.35); font-family:var(--font-display);">Cover image placeholder</div>'
+
+    gallery_html = ""
+    if cs.get("gallery"):
+        gallery_items = "\n          ".join(
+            f'<img src="{asset_href(current_path, "img/" + g)}" alt="{cs["title"]}" loading="lazy" />'
+            for g in cs["gallery"]
+        )
+        gallery_html = f"""
+        <div class="case-gallery" data-reveal>
+          {gallery_items}
+        </div>"""
+
     prev_href = href_to(current_path, lang_case_study_path(lang_code, prev_cs["slug"]))
     next_href = href_to(current_path, lang_case_study_path(lang_code, next_cs["slug"]))
     home_href = href_to(current_path, lang_home_path(lang_code))
@@ -423,7 +444,7 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
         <p class="lede">{cs['one_liner']}</p>
         {live_url_html}
         <div class="case-cover" data-reveal>
-          <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:rgba(14,27,31,0.35); font-family:var(--font-display);">Cover image placeholder</div>
+          {cover_html}
         </div>
         <dl class="case-meta" data-reveal>
           {meta_html}
@@ -433,6 +454,7 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
           {highlight_html}
           {sections_html}
         </div>
+        {gallery_html}
         <div class="case-nav">
           <a href="{prev_href}" class="btn-line">&larr; {prev_cs['title']}</a>
           <a href="{home_href}#work" class="btn btn-ghost">{t['work']['all_work']}</a>
