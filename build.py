@@ -131,6 +131,9 @@ def head(t, lang_code, title, description, current_path, alt_paths):
   <meta property="og:image" content="{SITE_URL}/assets/img/og-cover.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="{asset_href(current_path, 'img/favicon.svg')}" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="{asset_href(current_path, 'css/style.css')}" />
   <meta name="theme-color" content="#0E1B1F" />"""
 
