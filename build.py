@@ -266,8 +266,9 @@ def build_index(t, lang_code, alt_paths):
     work_cards = ""
     for cs in t["case_studies"]:
         cs_path = lang_case_study_path(lang_code, cs["slug"])
-        if cs.get("cover"):
-            cover_html = f'<img class="cover" src="{asset_href(current_path, "img/" + cs["cover"])}" alt="" loading="lazy" />'
+        card_image = cs.get("card_cover") or cs.get("cover")
+        if card_image:
+            cover_html = f'<img class="cover" src="{asset_href(current_path, "img/" + card_image)}" alt="" loading="lazy" />'
         else:
             cover_html = '<div class="cover" style="background: linear-gradient(140deg, var(--moonstone), var(--lilac)); position:absolute; inset:0; height:112%;"></div>'
         work_cards += f"""
@@ -282,9 +283,6 @@ def build_index(t, lang_code, alt_paths):
         </a>"""
 
     about = t["about"]
-    lang_chips = " ".join(f'<span class="chip">{c}</span>' for c in about["lang_chips"])
-    exp_chips = " ".join(f'<span class="chip accent">{c}</span>' for c in about["exp_chips"][:1]) + \
-                " ".join(f'<span class="chip">{c}</span>' for c in about["exp_chips"][1:])
     about_paragraphs = "\n          ".join(f"<p>{p}</p>" for p in about["paragraphs"])
 
     contact = t["contact"]
@@ -349,8 +347,6 @@ def build_index(t, lang_code, alt_paths):
           <p class="eyebrow">{about['eyebrow']}</p>
           <h2 class="on-dark" style="margin-block: 1rem 1.5rem;">{about['heading']}</h2>
           {about_paragraphs}
-          <div class="chip-row">{exp_chips}</div>
-          <div class="chip-row">{lang_chips}</div>
           <img class="signature" src="{asset_href(current_path, 'img/logos/logo.png')}" alt="Imen Bouzouita signature" loading="lazy" />
         </div>
       </div>

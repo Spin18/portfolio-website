@@ -29,7 +29,7 @@
 
   /* rhythm */
   --gutter: clamp(1.25rem, 4vw, 3rem);
-  --section-pad: clamp(4rem, 10vw, 8rem);
+  --section-pad: clamp(3rem, 5vw, 5rem);
   --radius-sm: 10px;
   --radius-md: 20px;
   --radius-lg: 32px;
@@ -322,7 +322,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 }
 
 /* trust strip */
-.trust-strip { padding-block: 2.5rem var(--section-pad); }
+.trust-strip { padding-block: 2.5rem; }
 .trust-strip .label {
   text-align: center;
   font-size: 0.85rem;

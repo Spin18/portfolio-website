@@ -286,6 +286,7 @@
       "title": "Prima Materia",
       "one_liner": "The Practitioner's Site",
       "live_url": "https://primamateriacoaching.com/",
+      "card_cover": "work/prima-materia/card-cover.jpg",
       "tag": "UX/CRO",
       "meta": [
         [
@@ -397,19 +398,6 @@
       "I've spent 10+ years moving between corporate innovation and independent work. At Deloitte, Siemens, and BMW I learned how large organisations approach product, research, and scale. On my own, I learned how to ship fast, prioritise ruthlessly, and make every recommendation something a small team can actually implement. I bring both.",
       "My background is technical — IT and Electrical Engineering at TU Munich — and I trained in neuromarketing at the Deloitte Neuroscience Institute, which means I don't just look at heatmaps and analytics. I understand how attention, trust, and decision-making work at a cognitive level, and I design for that.",
       "Fluent in German, English, French, and Arabic. Based in Berlin, working internationally."
-    ],
-    "exp_chips": [
-      "10+ years",
-      "Deloitte",
-      "Siemens",
-      "BMW",
-      "TU Munich"
-    ],
-    "lang_chips": [
-      "German",
-      "English",
-      "French",
-      "Arabic"
     ]
   },
   "contact": {
