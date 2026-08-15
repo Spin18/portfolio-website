@@ -396,6 +396,10 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
         paras_html = "\n        ".join(f"<p>{p}</p>" for p in paragraphs)
         sections_html += f"<h2>{heading}</h2>\n        {paras_html}\n        "
 
+    meta_html = "\n          ".join(
+        f"<div><dt>{label}</dt><dd>{value}</dd></div>" for label, value in cs["meta"]
+    )
+
     highlight_html = ""
     if cs.get("highlight"):
         highlight_html = f'<p class="case-highlight">{cs["highlight"]}</p>'
@@ -421,10 +425,7 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
           <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:rgba(14,27,31,0.35); font-family:var(--font-display);">Cover image placeholder</div>
         </div>
         <dl class="case-meta" data-reveal>
-          <div><dt>Role</dt><dd>{cs['role']}</dd></div>
-          <div><dt>Timeline</dt><dd>{cs['timeline']}</dd></div>
-          <div><dt>Focus</dt><dd>{cs['focus']}</dd></div>
-          <div><dt>Tools</dt><dd>{cs['tools']}</dd></div>
+          {meta_html}
         </dl>
         <div class="case-body" data-reveal>
           <p class="lede" style="color: var(--ink);">{cs['summary']}</p>

@@ -89,16 +89,42 @@
       "title": "From Reputation to Revenue",
       "one_liner": "Closing the conversion gap for a 20-year wellness brand",
       "tag": "Wellness",
-      "role": "UX & CRO Consultant",
-      "timeline": "3 weeks",
-      "focus": "Conversion, SEO & AI Visibility",
-      "tools": "GA4, Ahrefs, Crazy Egg, Lighthouse, ChatGPT (AI visibility testing), Figma, WordPress",
+      "meta": [
+        [
+          "Role",
+          "UX & CRO Consultant"
+        ],
+        [
+          "Timeline",
+          "3 weeks"
+        ],
+        [
+          "Focus",
+          "Conversion, SEO & AI Visibility"
+        ],
+        [
+          "Tools",
+          "GA4, Ahrefs, Crazy Egg, Lighthouse, ChatGPT (AI visibility testing), Figma, WordPress"
+        ]
+      ],
       "summary": "A 20-year-old wellness brand in Ubud, Bali with strong organic traffic, genuine guest loyalty, and a domain rating of 62 backed by 13.5K backlinks. The brief: modernise the digital experience, close the gap between offline reputation and online conversion, and assess AI search readiness.",
       "sections": [
-        ["The opportunity", "Guest sentiment was overwhelmingly positive — \"lush green oasis,\" \"feels less like a studio and more like a community\" — but the website led with schedules and logistics rather than the atmosphere that actually drives bookings. The brand had significant digital equity that wasn't being fully leveraged: strong organic positions, loyal repeat visitors, and a product guests already loved. The question was how to make the website work as hard as the experience itself."],
-        ["The approach", "Six detailed UX flow walkthroughs (Homepage, Schedule, Workshops/Ecstatic Dance, Retreats, Accommodation, Wellness) with heuristic scoring and annotated wireframes. Crazy Egg session recordings and heatmaps to validate UX findings with observed user behaviour. Full technical audit covering Core Web Vitals, platform security, and migration risk analysis for a schedule page carrying 41% of all organic sessions. SEO health assessment and Google Business Profile competitive benchmarking. AI search visibility testing across five ChatGPT queries, confirming top-3 positioning. AISO/GEO foundational layer assessment. End-to-end measurement architecture review across both booking systems and GA4."],
-        ["What shipped", "An 81-page audit document with approximately 90 PIE-scored findings, a phased action roadmap across four phases and seven workstreams, and annotated Figma wireframes for all six flows. The roadmap sequenced work across security hardening, measurement foundations, CTA alignment, redirect mapping, and design refresh — each phase unlocking the next. Visual direction recommendations preserved Balinese cultural identity while moving toward a lighter, nature-grounded wellness aesthetic."],
-        ["The impact", "Within weeks of delivery, the security hardening recommendations proved their value when the team needed to respond to a platform incident — the remediation steps were already documented and actionable. The audit gave the team an evidence-based foundation for prioritising work across UX, SEO, design, and technical infrastructure simultaneously, replacing ad hoc fixes with a sequenced strategy tied to measurable outcomes."]
+        [
+          "The opportunity",
+          "Guest sentiment was overwhelmingly positive — \"lush green oasis,\" \"feels less like a studio and more like a community\" — but the website led with schedules and logistics rather than the atmosphere that actually drives bookings. The brand had significant digital equity that wasn't being fully leveraged: strong organic positions, loyal repeat visitors, and a product guests already loved. The question was how to make the website work as hard as the experience itself."
+        ],
+        [
+          "The approach",
+          "Six detailed UX flow walkthroughs (Homepage, Schedule, Workshops/Ecstatic Dance, Retreats, Accommodation, Wellness) with heuristic scoring and annotated wireframes. Crazy Egg session recordings and heatmaps to validate UX findings with observed user behaviour. Full technical audit covering Core Web Vitals, platform security, and migration risk analysis for a schedule page carrying 41% of all organic sessions. SEO health assessment and Google Business Profile competitive benchmarking. AI search visibility testing across five ChatGPT queries, confirming top-3 positioning. AISO/GEO foundational layer assessment. End-to-end measurement architecture review across both booking systems and GA4."
+        ],
+        [
+          "What shipped",
+          "An 81-page audit document with approximately 90 PIE-scored findings, a phased action roadmap across four phases and seven workstreams, and annotated Figma wireframes for all six flows. The roadmap sequenced work across security hardening, measurement foundations, CTA alignment, redirect mapping, and design refresh — each phase unlocking the next. Visual direction recommendations preserved Balinese cultural identity while moving toward a lighter, nature-grounded wellness aesthetic."
+        ],
+        [
+          "The impact",
+          "Within weeks of delivery, the security hardening recommendations proved their value when the team needed to respond to a platform incident — the remediation steps were already documented and actionable. The audit gave the team an evidence-based foundation for prioritising work across UX, SEO, design, and technical infrastructure simultaneously, replacing ad hoc fixes with a sequenced strategy tied to measurable outcomes."
+        ]
       ]
     },
     {
@@ -107,16 +133,42 @@
       "one_liner": "From Directory to Community Platform",
       "highlight": "Turning a high-authority wellness directory into the year-round heartbeat of a three-property ecosystem",
       "tag": "Strategy",
-      "role": "UX, CRO & Digital Strategy Consultant",
-      "timeline": "4 weeks",
-      "focus": "Strategic Direction, Conversion, UX, SEO & AI Visibility",
-      "tools": "GA4, Ahrefs, Crazy Egg, Lighthouse, ChatGPT (AI visibility testing), Google Rich Results, Figma, WordPress",
+      "meta": [
+        [
+          "Role",
+          "UX, CRO & Digital Strategy Consultant"
+        ],
+        [
+          "Timeline",
+          "4 weeks"
+        ],
+        [
+          "Focus",
+          "Strategic Direction, Conversion, UX, SEO & AI Visibility"
+        ],
+        [
+          "Tools",
+          "GA4, Ahrefs, Crazy Egg, Lighthouse, ChatGPT (AI visibility testing), Google Rich Results, Figma, WordPress"
+        ]
+      ],
       "summary": "A decade-old wellness directory in Bali with 885 referring domains, Wikipedia citations on its cultural content, and a position in 165 Google AI Overviews — operating within a three-property ecosystem that included a physical yoga studio and an annual wellness festival under the same ownership. The site had significant domain authority and editorial assets, but no defined strategic role within the ecosystem. The brief: assess the site's current state, define a strategic direction for the platform, and deliver a conversion-ready roadmap that connects it to the broader ecosystem.",
       "sections": [
-        ["The opportunity", "The site's editorial content was quietly outperforming its directory function — three of the top five pages by traffic were blog articles, not listings. A single ceremony page had earned backlinks from three Wikipedia articles. The retreat and accommodation directories showed the longest session durations on the site (above one minute), confirming visitor intent to compare and decide. This was a platform with proven editorial authority and engaged audiences, ready for a strategic model that could channel that attention into something more purposeful. The competitor landscape revealed white space: established publishers owned the content lane, booking platforms owned the transaction lane, but no one held the community position — connecting practitioners, travellers, and locals year-round."],
-        ["The approach", "Stakeholder interview covering site history, team capabilities, competitor positioning, CMS constraints, and ecosystem dynamics. Strategic direction analysis evaluating four alternatives (tourist guide, cultural storytelling, curated marketplace, community platform) against current assets and available resources. UX/CRO walkthroughs of the five highest-traffic pages with heuristic scoring, annotated wireframes, and Crazy Egg behavioural validation. Full technical audit including Core Web Vitals, site health scoring, and CMS migration assessment. Backlink profile analysis and anchor text quality review. SEO keyword analysis confirming cultural content as the site's ranking strength over commercial terms. AI visibility testing across four commercial queries, mapping the gap between the site's existing AI citations (cultural content) and the queries the new strategic direction would need to own. Rebrand and visual direction with a shared colour system across the three-property ecosystem."],
-        ["What shipped", "A 50-page audit document with approximately 40 PIE-scored findings, a phased roadmap across five phases (direction decision, foundation launch, community growth, monetisation, ecosystem maturity), and annotated Figma wireframes for all five flows. The centrepiece was a strategic direction recommendation: reposition the site as a curated community platform anchored by a WhatsApp Community, a newsletter, and a member directory — with a website application form gating entry and ecosystem integration giving members tangible benefits across all three properties. The roadmap included a CMS migration plan with plugin stack, a tiered redirect strategy protecting the site's highest-value URLs, a community onboarding flow, and a monetisation model built on promoted listings and paid membership tiers. Visual direction established a shared terracotta colour system across the ecosystem, with distinct accent colours differentiating each property. The naming recommendation gave the community a verbal identity designed for belonging rather than consumption."],
-        ["The impact", "The audit reframed the internal conversation from \"what do we do with this site\" to \"this site is the connective tissue of the ecosystem.\" The strategic direction gave the client a decision framework — three specific Phase 0 decisions — rather than an open-ended list of improvements. The redesign and visual unification unlocked the highest-value SEO opportunity available: ecosystem cross-linking between two high-authority domains that no amount of external link building could replicate. The project manager's immediate response to the community model: \"Love the community ideas\" — followed by tactical questions about implementation, confirming the direction landed as actionable rather than aspirational."]
+        [
+          "The opportunity",
+          "The site's editorial content was quietly outperforming its directory function — three of the top five pages by traffic were blog articles, not listings. A single ceremony page had earned backlinks from three Wikipedia articles. The retreat and accommodation directories showed the longest session durations on the site (above one minute), confirming visitor intent to compare and decide. This was a platform with proven editorial authority and engaged audiences, ready for a strategic model that could channel that attention into something more purposeful. The competitor landscape revealed white space: established publishers owned the content lane, booking platforms owned the transaction lane, but no one held the community position — connecting practitioners, travellers, and locals year-round."
+        ],
+        [
+          "The approach",
+          "Stakeholder interview covering site history, team capabilities, competitor positioning, CMS constraints, and ecosystem dynamics. Strategic direction analysis evaluating four alternatives (tourist guide, cultural storytelling, curated marketplace, community platform) against current assets and available resources. UX/CRO walkthroughs of the five highest-traffic pages with heuristic scoring, annotated wireframes, and Crazy Egg behavioural validation. Full technical audit including Core Web Vitals, site health scoring, and CMS migration assessment. Backlink profile analysis and anchor text quality review. SEO keyword analysis confirming cultural content as the site's ranking strength over commercial terms. AI visibility testing across four commercial queries, mapping the gap between the site's existing AI citations (cultural content) and the queries the new strategic direction would need to own. Rebrand and visual direction with a shared colour system across the three-property ecosystem."
+        ],
+        [
+          "What shipped",
+          "A 50-page audit document with approximately 40 PIE-scored findings, a phased roadmap across five phases (direction decision, foundation launch, community growth, monetisation, ecosystem maturity), and annotated Figma wireframes for all five flows. The centrepiece was a strategic direction recommendation: reposition the site as a curated community platform anchored by a WhatsApp Community, a newsletter, and a member directory — with a website application form gating entry and ecosystem integration giving members tangible benefits across all three properties. The roadmap included a CMS migration plan with plugin stack, a tiered redirect strategy protecting the site's highest-value URLs, a community onboarding flow, and a monetisation model built on promoted listings and paid membership tiers. Visual direction established a shared terracotta colour system across the ecosystem, with distinct accent colours differentiating each property. The naming recommendation gave the community a verbal identity designed for belonging rather than consumption."
+        ],
+        [
+          "The impact",
+          "The audit reframed the internal conversation from \"what do we do with this site\" to \"this site is the connective tissue of the ecosystem.\" The strategic direction gave the client a decision framework — three specific Phase 0 decisions — rather than an open-ended list of improvements. The redesign and visual unification unlocked the highest-value SEO opportunity available: ecosystem cross-linking between two high-authority domains that no amount of external link building could replicate. The project manager's immediate response to the community model: \"Love the community ideas\" — followed by tactical questions about implementation, confirming the direction landed as actionable rather than aspirational."
+        ]
       ]
     },
     {
@@ -124,16 +176,42 @@
       "title": "Conversion Engine",
       "one_liner": "Data-driven growth for a D2C e-commerce brand",
       "tag": "E-commerce",
-      "role": "UX Audit & CRO",
-      "timeline": "5 weeks",
-      "focus": "Checkout & PDP",
-      "tools": "Hotjar, GA4, Figma",
+      "meta": [
+        [
+          "Role",
+          "UX Audit & CRO"
+        ],
+        [
+          "Timeline",
+          "5 weeks"
+        ],
+        [
+          "Focus",
+          "Checkout & PDP"
+        ],
+        [
+          "Tools",
+          "Hotjar, GA4, Figma"
+        ]
+      ],
       "summary": "A direct-to-consumer retailer had healthy traffic and a leaking checkout. The brief was simple: find out where buyers were dropping off, and fix it without a full rebuild.",
       "sections": [
-        ["The problem", "Paid traffic was converting well below category benchmarks, and the team couldn't tell whether the issue was pricing, trust, or friction. Every fix so far had been a guess."],
-        ["The approach", "A structured audit combining session recordings, heatmaps, and a full funnel teardown — from ad landing to order confirmation — scored against conversion heuristics and prioritized by expected lift versus effort."],
-        ["What shipped", "A ranked list of 22 fixes spanning checkout form design, shipping-cost transparency, and mobile PDP layout, plus three A/B tests to validate the highest-risk changes before a full rollout."],
-        ["The outcome", "The team shipped the top-priority fixes within two sprints. Checkout abandonment and mobile bounce both moved in the right direction within the first month post-launch."]
+        [
+          "The problem",
+          "Paid traffic was converting well below category benchmarks, and the team couldn't tell whether the issue was pricing, trust, or friction. Every fix so far had been a guess."
+        ],
+        [
+          "The approach",
+          "A structured audit combining session recordings, heatmaps, and a full funnel teardown — from ad landing to order confirmation — scored against conversion heuristics and prioritized by expected lift versus effort."
+        ],
+        [
+          "What shipped",
+          "A ranked list of 22 fixes spanning checkout form design, shipping-cost transparency, and mobile PDP layout, plus three A/B tests to validate the highest-risk changes before a full rollout."
+        ],
+        [
+          "The outcome",
+          "The team shipped the top-priority fixes within two sprints. Checkout abandonment and mobile bounce both moved in the right direction within the first month post-launch."
+        ]
       ]
     },
     {
@@ -141,16 +219,42 @@
       "title": "Frictionless Flow",
       "one_liner": "Reimagining a B2B consultancy's digital presence",
       "tag": "B2B",
-      "role": "Website Redesign",
-      "timeline": "6 weeks",
-      "focus": "IA & Positioning",
-      "tools": "Webflow, Figma",
+      "meta": [
+        [
+          "Role",
+          "Website Redesign"
+        ],
+        [
+          "Timeline",
+          "6 weeks"
+        ],
+        [
+          "Focus",
+          "IA & Positioning"
+        ],
+        [
+          "Tools",
+          "Webflow, Figma"
+        ]
+      ],
       "summary": "A B2B consultancy's site looked like every other consultancy's site — dense text, unclear positioning, no path from visitor to lead. The rebuild had to make the value proposition legible in one scroll.",
       "sections": [
-        ["The problem", "Prospects were bouncing before reaching the services section. The existing IA buried differentiation under generic industry language, and there was no clear next step for a warm visitor."],
-        ["The approach", "Stakeholder interviews to extract what actually made the firm different, followed by a full information architecture pass and a content-first wireframe before any visual design started."],
-        ["What shipped", "A restructured site with a sharper homepage narrative, a services section organized around client outcomes instead of internal capabilities, and a single consistent lead-capture path."],
-        ["The outcome", "Time on the services pages increased and the team reported clearer, better-qualified inbound conversations within the first quarter."]
+        [
+          "The problem",
+          "Prospects were bouncing before reaching the services section. The existing IA buried differentiation under generic industry language, and there was no clear next step for a warm visitor."
+        ],
+        [
+          "The approach",
+          "Stakeholder interviews to extract what actually made the firm different, followed by a full information architecture pass and a content-first wireframe before any visual design started."
+        ],
+        [
+          "What shipped",
+          "A restructured site with a sharper homepage narrative, a services section organized around client outcomes instead of internal capabilities, and a single consistent lead-capture path."
+        ],
+        [
+          "The outcome",
+          "Time on the services pages increased and the team reported clearer, better-qualified inbound conversations within the first quarter."
+        ]
       ]
     },
     {
@@ -158,16 +262,42 @@
       "title": "NeuroBoost UX",
       "one_liner": "Product optimization powered by neuroscience & eye-tracking",
       "tag": "UX Research",
-      "role": "Neuro-UX Research",
-      "timeline": "4 weeks",
-      "focus": "Attention & Trust",
-      "tools": "Eye-tracking, Tobii, Figma",
+      "meta": [
+        [
+          "Role",
+          "Neuro-UX Research"
+        ],
+        [
+          "Timeline",
+          "4 weeks"
+        ],
+        [
+          "Focus",
+          "Attention & Trust"
+        ],
+        [
+          "Tools",
+          "Eye-tracking, Tobii, Figma"
+        ]
+      ],
       "summary": "A product team suspected users weren't seeing their key trust signals, but standard usability testing wasn't showing why. This called for looking at attention itself, not just stated preference.",
       "sections": [
-        ["The problem", "Self-reported feedback from usability tests kept contradicting the analytics — users said they noticed trust badges and guarantees, but conversion data suggested otherwise."],
-        ["The approach", "Eye-tracking sessions layered over task-based usability testing, applying methods from training at the Deloitte Neuroscience Institute to separate what users say from what they actually attend to."],
-        ["What shipped", "A gaze-pattern map of the key landing pages, revealing which trust elements were genuinely being seen, and a redesigned visual hierarchy that put the ignored signals where attention already was."],
-        ["The outcome", "The redesigned hierarchy measurably shifted attention toward the intended trust signals in follow-up testing, giving the team evidence-backed confidence in the new layout."]
+        [
+          "The problem",
+          "Self-reported feedback from usability tests kept contradicting the analytics — users said they noticed trust badges and guarantees, but conversion data suggested otherwise."
+        ],
+        [
+          "The approach",
+          "Eye-tracking sessions layered over task-based usability testing, applying methods from training at the Deloitte Neuroscience Institute to separate what users say from what they actually attend to."
+        ],
+        [
+          "What shipped",
+          "A gaze-pattern map of the key landing pages, revealing which trust elements were genuinely being seen, and a redesigned visual hierarchy that put the ignored signals where attention already was."
+        ],
+        [
+          "The outcome",
+          "The redesigned hierarchy measurably shifted attention toward the intended trust signals in follow-up testing, giving the team evidence-backed confidence in the new layout."
+        ]
       ]
     },
     {
@@ -175,16 +305,42 @@
       "title": "Embedded Excellence",
       "one_liner": "Scaling product delivery for automotive systems",
       "tag": "Automotive",
-      "role": "Product Delivery",
-      "timeline": "Ongoing",
-      "focus": "Process & Tooling",
-      "tools": "Jira, Figma, Design Systems",
+      "meta": [
+        [
+          "Role",
+          "Product Delivery"
+        ],
+        [
+          "Timeline",
+          "Ongoing"
+        ],
+        [
+          "Focus",
+          "Process & Tooling"
+        ],
+        [
+          "Tools",
+          "Jira, Figma, Design Systems"
+        ]
+      ],
       "summary": "An automotive systems team needed to ship embedded-software interfaces at a faster, more predictable pace without sacrificing the rigor the industry demands.",
       "sections": [
-        ["The problem", "Design and engineering were working from disconnected specs, causing rework late in each cycle and making timelines hard to trust."],
-        ["The approach", "Introduced a shared component system and a tighter design-to-dev handoff process, embedded directly with the delivery team rather than consulting from the outside."],
-        ["What shipped", "A living design system aligned to the embedded UI constraints, plus a revised handoff workflow that caught inconsistencies before development started."],
-        ["The outcome", "Rework dropped noticeably cycle over cycle, and the team could commit to delivery dates with far more confidence."]
+        [
+          "The problem",
+          "Design and engineering were working from disconnected specs, causing rework late in each cycle and making timelines hard to trust."
+        ],
+        [
+          "The approach",
+          "Introduced a shared component system and a tighter design-to-dev handoff process, embedded directly with the delivery team rather than consulting from the outside."
+        ],
+        [
+          "What shipped",
+          "A living design system aligned to the embedded UI constraints, plus a revised handoff workflow that caught inconsistencies before development started."
+        ],
+        [
+          "The outcome",
+          "Rework dropped noticeably cycle over cycle, and the team could commit to delivery dates with far more confidence."
+        ]
       ]
     },
     {
@@ -193,18 +349,57 @@
       "one_liner": "Conscious Tech, Grounded",
       "live_url": "https://resonancetunes.webflow.io/",
       "tag": "Design/Build",
-      "role": "Product & Technology Innovation Lead",
-      "timeline": "Early-stage, ongoing",
-      "focus": "Information Architecture, UX/UI Design & Webflow Development",
-      "tools": "Webflow, Figma",
+      "meta": [
+        [
+          "Role",
+          "Product & Technology Innovation Lead"
+        ],
+        [
+          "Timeline",
+          "Early-stage, ongoing"
+        ],
+        [
+          "Focus",
+          "Information Architecture, UX/UI Design & Webflow Development"
+        ],
+        [
+          "Tools",
+          "Webflow, Figma"
+        ]
+      ],
       "summary": "Designing and building the digital identity for an ethical-AI wellness platform from scratch.",
       "sections": [
-        ["The context", "Resonance Tunes is an ethical-AI and consciousness technology startup combining somatic science, archetypal psychology, and regenerative systems design. The platform targets two distinct audiences — individuals seeking nervous system regulation and organisations pursuing DEI-integrated wellness — each with different entry points and different levels of familiarity with the concepts. As Product & Technology Innovation Lead within a C-level team, I owned the information architecture, UX/UI design, and full Webflow build. Copy and brand messaging were provided by the founding team."],
-        ["The design challenge", ["Consciousness technology is a hard sell visually. Lean too far into tech aesthetics and you lose the somatic, human-centred audience. Lean too far into wellness and you lose credibility with organisational buyers and investors. The site needed to hold both — grounding complex ideas in clean visual hierarchy while signalling that this is a serious platform, not a mood board.", "The information architecture had to serve three jobs simultaneously: explain what Resonance Tunes is (brand storytelling), show what it does (product clarity for individuals and groups), and establish legitimacy (testimonials, team, and market positioning) — all without overwhelming a first-time visitor who may have no reference point for \"ethical-AI consciousness technology.\""]],
-        ["The approach", ["I started with the messaging hierarchy: what does someone need to understand in what order? The homepage opens with the mission, moves to the three market problems the platform addresses (each grounded with a specific statistic), then breaks into audience-specific value propositions before social proof and a blog section. The structure is intentionally conventional — familiar patterns doing the heavy lifting so the unfamiliar content can breathe.", "The visual direction balances nature imagery with geometric elements and a calming colour palette that reads as both tech-forward and human-centred. Typography and spacing do most of the work: generous whitespace gives dense concepts room, and clear section breaks prevent the cognitive overload that concept-heavy sites tend to create.", "The dual-audience problem was solved with distinct content blocks — \"For Individuals\" and \"For Groups\" — each with their own language register and CTAs, so neither audience has to wade through content meant for the other."]],
-        ["The build", "The site was built entirely in Webflow, with responsive layouts, CMS-driven blog content, and interaction design that reinforces the brand's emphasis on coherence and flow. The build prioritised clean, maintainable structure over visual complexity — important for an early-stage venture where the site will evolve as the product matures."],
-        ["Scope of ownership", "This was a zero-to-one build within a founding team. Working alongside the CEO and C-level leadership, I translated the company's vision into a structured digital experience: information architecture, visual design system, page design across all sections, and a production Webflow build — giving a pre-revenue startup the credibility to open conversations with practitioners, organisations, and investors."],
-        ["What I'd recommend next", "Working within the team's existing copy surfaced a tension I'd prioritise in the next iteration: the site introduces too many complex concepts simultaneously (somatic science, archetypal psychology, regenerative design, ethical AI, gamified learning) before the visitor understands what the product concretely does. Above-fold messaging should lead with what the platform offers in plain language before explaining why it matters philosophically. CTAs like \"Access The Portal\" and \"Connect\" should be replaced with specific conversion actions — a waitlist, a demo, or a newsletter signup — so the site's visual clarity and structural logic can convert the attention it earns."]
+        [
+          "The context",
+          "Resonance Tunes is an ethical-AI and consciousness technology startup combining somatic science, archetypal psychology, and regenerative systems design. The platform targets two distinct audiences — individuals seeking nervous system regulation and organisations pursuing DEI-integrated wellness — each with different entry points and different levels of familiarity with the concepts. As Product & Technology Innovation Lead within a C-level team, I owned the information architecture, UX/UI design, and full Webflow build. Copy and brand messaging were provided by the founding team."
+        ],
+        [
+          "The design challenge",
+          [
+            "Consciousness technology is a hard sell visually. Lean too far into tech aesthetics and you lose the somatic, human-centred audience. Lean too far into wellness and you lose credibility with organisational buyers and investors. The site needed to hold both — grounding complex ideas in clean visual hierarchy while signalling that this is a serious platform, not a mood board.",
+            "The information architecture had to serve three jobs simultaneously: explain what Resonance Tunes is (brand storytelling), show what it does (product clarity for individuals and groups), and establish legitimacy (testimonials, team, and market positioning) — all without overwhelming a first-time visitor who may have no reference point for \"ethical-AI consciousness technology.\""
+          ]
+        ],
+        [
+          "The approach",
+          [
+            "I started with the messaging hierarchy: what does someone need to understand in what order? The homepage opens with the mission, moves to the three market problems the platform addresses (each grounded with a specific statistic), then breaks into audience-specific value propositions before social proof and a blog section. The structure is intentionally conventional — familiar patterns doing the heavy lifting so the unfamiliar content can breathe.",
+            "The visual direction balances nature imagery with geometric elements and a calming colour palette that reads as both tech-forward and human-centred. Typography and spacing do most of the work: generous whitespace gives dense concepts room, and clear section breaks prevent the cognitive overload that concept-heavy sites tend to create.",
+            "The dual-audience problem was solved with distinct content blocks — \"For Individuals\" and \"For Groups\" — each with their own language register and CTAs, so neither audience has to wade through content meant for the other."
+          ]
+        ],
+        [
+          "The build",
+          "The site was built entirely in Webflow, with responsive layouts, CMS-driven blog content, and interaction design that reinforces the brand's emphasis on coherence and flow. The build prioritised clean, maintainable structure over visual complexity — important for an early-stage venture where the site will evolve as the product matures."
+        ],
+        [
+          "Scope of ownership",
+          "This was a zero-to-one build within a founding team. Working alongside the CEO and C-level leadership, I translated the company's vision into a structured digital experience: information architecture, visual design system, page design across all sections, and a production Webflow build — giving a pre-revenue startup the credibility to open conversations with practitioners, organisations, and investors."
+        ],
+        [
+          "What I'd recommend next",
+          "Working within the team's existing copy surfaced a tension I'd prioritise in the next iteration: the site introduces too many complex concepts simultaneously (somatic science, archetypal psychology, regenerative design, ethical AI, gamified learning) before the visitor understands what the product concretely does. Above-fold messaging should lead with what the platform offers in plain language before explaining why it matters philosophically. CTAs like \"Access The Portal\" and \"Connect\" should be replaced with specific conversion actions — a waitlist, a demo, or a newsletter signup — so the site's visual clarity and structural logic can convert the attention it earns."
+        ]
       ]
     },
     {
@@ -212,33 +407,85 @@
       "title": "CitySense MVP",
       "one_liner": "Smart-city pedestrian recognition, startup challenge",
       "tag": "Startup",
-      "role": "Product & UX",
-      "timeline": "3 weeks",
-      "focus": "0-to-1 MVP",
-      "tools": "Figma, Prototyping",
+      "meta": [
+        [
+          "Role",
+          "Product & UX"
+        ],
+        [
+          "Timeline",
+          "3 weeks"
+        ],
+        [
+          "Focus",
+          "0-to-1 MVP"
+        ],
+        [
+          "Tools",
+          "Figma, Prototyping"
+        ]
+      ],
       "summary": "A startup challenge team had a strong technical concept for pedestrian-recognition smart-city infrastructure but no interface for the humans who'd actually operate it.",
       "sections": [
-        ["The problem", "The core recognition technology worked, but there was no operator-facing interface, and the team was days away from a live pitch."],
-        ["The approach", "Rapid MVP scoping to identify the single operator workflow worth building first, then a tight prototyping loop to get something testable in front of judges and early users."],
-        ["What shipped", "A clickable MVP prototype covering the core monitoring workflow, built fast enough to leave time for rehearsal before the pitch."],
-        ["The outcome", "The team presented a working interface alongside their technical demo instead of slides alone, and placed among the challenge's recognized teams."]
+        [
+          "The problem",
+          "The core recognition technology worked, but there was no operator-facing interface, and the team was days away from a live pitch."
+        ],
+        [
+          "The approach",
+          "Rapid MVP scoping to identify the single operator workflow worth building first, then a tight prototyping loop to get something testable in front of judges and early users."
+        ],
+        [
+          "What shipped",
+          "A clickable MVP prototype covering the core monitoring workflow, built fast enough to leave time for rehearsal before the pitch."
+        ],
+        [
+          "The outcome",
+          "The team presented a working interface alongside their technical demo instead of slides alone, and placed among the challenge's recognized teams."
+        ]
       ]
     },
     {
-      "slug": "nap-grid",
-      "title": "NAP Grid",
-      "one_liner": "Simplifying new grid applications, end to end",
-      "tag": "Energy",
-      "role": "UX & Service Design",
-      "timeline": "6 weeks",
-      "focus": "Application Flow",
-      "tools": "Figma, User Testing",
-      "summary": "Applying for a new energy grid connection involved a paperwork-heavy process that confused applicants and generated avoidable support tickets for the utility's team.",
+      "slug": "prima-materia",
+      "title": "Prima Materia",
+      "one_liner": "The Practitioner's Site",
+      "live_url": "https://primamateriacoaching.com/",
+      "tag": "UX/CRO",
+      "meta": [
+        [
+          "Role",
+          "Everything — positioning, copy, UX, design, development"
+        ],
+        [
+          "Build",
+          "Custom code, Claude Code, GitHub Pages"
+        ],
+        [
+          "Tools",
+          "HTML/CSS/JS, Claude Code, Figma, GitHub Pages"
+        ]
+      ],
+      "summary": "Applying conversion thinking to my own coaching practice.",
       "sections": [
-        ["The problem", "Applicants regularly submitted incomplete or incorrect grid-connection requests, creating back-and-forth that slowed down every application and burdened support staff."],
-        ["The approach", "Mapped the entire application journey end to end, identified exactly where applicants got confused, and redesigned the flow as a guided, step-by-step digital process."],
-        ["What shipped", "A restructured application flow with inline guidance at the exact points where errors used to happen, plus clearer status communication after submission."],
-        ["The outcome", "Incomplete submissions dropped and support tickets tied to application confusion fell noticeably in the months after launch."]
+        [
+          "The context",
+          "I'm a somatic coach working with the five elements and alchemical frameworks. Most practitioners in this space build websites that speak to peers — dense with modality language, light on structure, and unclear on what a visitor should actually do. I wanted to build mine the way I'd build a client's: conversion-first, with every section earning its place in the funnel."
+        ],
+        [
+          "The decisions",
+          [
+            "The page follows a single narrative arc: recognition → education → credibility → action. It opens with \"You're here because\" — mirroring the visitor's internal state before explaining anything. By the time the Five Elements framework appears, the visitor is already seeing themselves in the work. The about section deliberately leads with my engineering and neuroscience background before somatic training, because the people I want to work with tend to be analytical thinkers who need permission to trust the body. That sequencing is intentional.",
+            "\"Book a Discovery Call\" appears four times. Each placement follows a natural decision point rather than interrupting the reading flow — after the emotional hook, after the framework, after the credibility section, and at the close. One CTA, one action, no ambiguity."
+          ]
+        ],
+        [
+          "The build",
+          "Custom-coded rather than built on a page builder — partly because I wanted full control over performance and structure, and partly because building it with Claude Code was a chance to work the way I advise clients to think: start with the conversion logic, then design to serve it. Hosted on GitHub Pages for speed and simplicity. The visual direction uses black-and-white photography, alchemical symbols, and generous whitespace to signal calm seriousness without the pastel-and-script aesthetic that dominates the wellness space."
+        ],
+        [
+          "Why this matters in my portfolio",
+          "The other case studies in this portfolio show how I think about other people's digital experiences. This one shows I hold myself to the same standard — clear positioning, a defined audience, a structured funnel, and design choices that serve conversion rather than decoration."
+        ]
       ]
     }
   ],
@@ -250,8 +497,19 @@
       "I studied IT & Electrical Engineering at TU Munich, trained in neuromarketing at the Deloitte Neuroscience Institute, and now spend my days auditing, designing, and building websites that don't just look good — they perform.",
       "Fluent in German, English, French and Arabic, and always up for a project that lets me build something a little different."
     ],
-    "exp_chips": ["10+ years", "Deloitte", "Siemens", "BMW", "TU Munich"],
-    "lang_chips": ["German", "English", "French", "Arabic"]
+    "exp_chips": [
+      "10+ years",
+      "Deloitte",
+      "Siemens",
+      "BMW",
+      "TU Munich"
+    ],
+    "lang_chips": [
+      "German",
+      "English",
+      "French",
+      "Arabic"
+    ]
   },
   "contact": {
     "heading": "Let's fix something.",
