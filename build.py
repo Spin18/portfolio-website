@@ -32,15 +32,15 @@ FORMSPREE_ACTION = "https://formspree.io/f/xdenkldz"
 FONTS_URL = "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=optional"
 
 TRUST_LOGOS = [
-    {"name": "Siemens", "file": "siemens.svg"},
-    {"name": "BMW", "file": "bmw.webp"},
-    {"name": "Deloitte", "file": "deloitte.svg"},
-    {"name": "innogy", "file": "innogy.svg"},
-    {"name": "und gretel", "file": "und-gretel.svg"},
-    {"name": "TUM", "file": "tum.webp"},
-    {"name": "BaliSpirit", "file": "balispirit.webp"},
-    {"name": "yogabarn", "file": "yogabarn.webp", "size": "lg"},
-    {"name": "Rikepa", "file": "rikepa.webp"},
+    {"name": "Siemens", "file": "siemens.svg", "w": 1200, "h": 800},
+    {"name": "BMW", "file": "bmw.webp", "w": 100, "h": 100},
+    {"name": "Deloitte", "file": "deloitte.svg", "w": 2500, "h": 543},
+    {"name": "innogy", "file": "innogy.svg", "w": 442, "h": 652},
+    {"name": "und gretel", "file": "und-gretel.svg", "w": 152, "h": 84},
+    {"name": "TUM", "file": "tum.webp", "w": 300, "h": 97},
+    {"name": "BaliSpirit", "file": "balispirit.webp", "w": 100, "h": 100},
+    {"name": "yogabarn", "file": "yogabarn.webp", "size": "lg", "w": 145, "h": 155},
+    {"name": "Rikepa", "file": "rikepa.webp", "w": 99, "h": 98},
 ]
 
 LANGUAGES = [
@@ -386,7 +386,10 @@ def build_index(t, lang_code, alt_paths):
     def _trust_logo_html(logo):
         src = asset_href(current_path, "img/logos/" + logo["file"])
         size_class = f" trust-logo--{logo['size']}" if logo.get("size") else ""
-        return f'<img class="trust-logo{size_class}" src="{src}" alt="{logo["name"]}" loading="lazy" />'
+        return (
+            f'<img class="trust-logo{size_class}" src="{src}" alt="{logo["name"]}" '
+            f'width="{logo["w"]}" height="{logo["h"]}" loading="lazy" />'
+        )
 
     trust_track = " ".join(_trust_logo_html(logo) for logo in TRUST_LOGOS)
     trust_track_full = trust_track + " " + trust_track  # duplicate for seamless marquee
@@ -491,7 +494,7 @@ def build_index(t, lang_code, alt_paths):
           <p class="eyebrow">{about['eyebrow']}</p>
           <h2 class="on-dark" style="margin-block: 1rem 1.5rem;">{about['heading']}</h2>
           {about_paragraphs}
-          <img class="signature" src="{asset_href(current_path, 'img/logos/logo.png')}" alt="Imen Bouzouita signature" loading="lazy" />
+          <img class="signature" src="{asset_href(current_path, 'img/logos/logo.png')}" alt="Imen Bouzouita signature" width="724" height="208" loading="lazy" />
         </div>
       </div>
     </section>
