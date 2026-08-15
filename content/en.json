@@ -182,6 +182,7 @@
         ]
       ],
       "cover": "work/the-collective/cover.jpg",
+      "gallery_large": true,
       "gallery": [
         [
           "work/the-collective/gallery-1.jpg",
