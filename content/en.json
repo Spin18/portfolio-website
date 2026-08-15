@@ -366,7 +366,8 @@
           "work/conversion-engine/gallery-5.jpg",
           false
         ]
-      ]
+      ],
+      "card_cover": "work/conversion-engine/card-cover.webp"
     },
     {
       "slug": "resonance-tunes",
