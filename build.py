@@ -33,14 +33,14 @@ FONTS_URL = "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,
 
 TRUST_LOGOS = [
     {"name": "Siemens", "file": "siemens.svg"},
-    {"name": "BMW", "file": "bmw.png"},
+    {"name": "BMW", "file": "bmw.webp"},
     {"name": "Deloitte", "file": "deloitte.svg"},
     {"name": "innogy", "file": "innogy.svg"},
     {"name": "und gretel", "file": "und-gretel.svg"},
-    {"name": "TUM", "file": "tum.png"},
-    {"name": "BaliSpirit", "file": "balispirit.png"},
-    {"name": "yogabarn", "file": "yogabarn.png", "size": "lg"},
-    {"name": "Rikepa", "file": "rikepa.png"},
+    {"name": "TUM", "file": "tum.webp"},
+    {"name": "BaliSpirit", "file": "balispirit.webp"},
+    {"name": "yogabarn", "file": "yogabarn.webp", "size": "lg"},
+    {"name": "Rikepa", "file": "rikepa.webp"},
 ]
 
 LANGUAGES = [

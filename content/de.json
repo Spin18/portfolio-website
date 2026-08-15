@@ -137,7 +137,8 @@
           "work/reputation-to-revenue/gallery-2.jpg",
           true
         ]
-      ]
+      ],
+      "card_cover": "work/reputation-to-revenue/card-cover.webp"
     },
     {
       "slug": "the-collective",
@@ -193,14 +194,15 @@
           "work/the-collective/gallery-2.jpg",
           true
         ]
-      ]
+      ],
+      "card_cover": "work/the-collective/card-cover.webp"
     },
     {
       "slug": "prima-materia",
       "title": "Prima Materia",
       "one_liner": "The Practitioner's Site",
       "live_url": "https://primamateriacoaching.com/",
-      "card_cover": "work/prima-materia/card-cover.jpg",
+      "card_cover": "work/prima-materia/card-cover.webp",
       "tag": "UX/CRO/Branding",
       "meta": [
         [
