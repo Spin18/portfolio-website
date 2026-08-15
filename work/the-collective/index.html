@@ -619,13 +619,12 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 
 /* ---------- scroll reveal ---------- */
 [data-reveal] {
-  opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+  transition: transform 0.7s var(--ease-out);
 }
-[data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+[data-reveal].is-visible { transform: translateY(0); }
 @media (prefers-reduced-motion: reduce) {
-  [data-reveal] { opacity: 1; transform: none; transition: none; }
+  [data-reveal] { transform: none; transition: none; }
 }
 
 /* ---------- custom cursor ---------- */
@@ -845,7 +844,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <img src="../../assets/img/work/the-collective/gallery-2.jpg" alt="The Collective" loading="lazy" />
         </div>
         <div class="case-nav">
-          <a href="../reputation-to-revenue/" class="btn-line">&larr; From Reputation to Revenue</a>
+          <a href="../reputation-to-revenue/" class="btn-line">&larr; Sacred Metrics</a>
           <a href="../../#work" class="btn btn-ghost">All work</a>
           <a href="../prima-materia/" class="btn-line">Prima Materia &rarr;</a>
         </div>

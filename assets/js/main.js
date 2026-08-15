@@ -52,6 +52,32 @@
     revealEls.forEach((el) => el.classList.add('is-visible'));
   }
 
+  /* ---------- robust same-page anchor scrolling ----------
+     Fonts load non-blocking (media="print" swap) for performance, so a
+     click right after page load can compute a scroll target against
+     fallback-font text metrics, then land short/long once the real font
+     swaps in and text reflows mid-scroll. Waiting for document.fonts.ready
+     before scrolling avoids that without reintroducing render-blocking
+     fonts (only the scroll is delayed, not the initial paint). */
+  document.querySelectorAll('a[href*="#"]').forEach((link) => {
+    let url;
+    try {
+      url = new URL(link.getAttribute('href'), location.href);
+    } catch (err) {
+      return;
+    }
+    if (url.pathname !== location.pathname || !url.hash) return;
+    link.addEventListener('click', (e) => {
+      const target = document.querySelector(url.hash);
+      if (!target) return;
+      e.preventDefault();
+      const go = () => target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      const ready = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+      ready.then(go);
+      history.pushState(null, '', url.hash);
+    });
+  });
+
   /* ---------- parallax (hero blobs + case cards) ---------- */
   if (!reduceMotion && !isTouch) {
     const parallaxEls = document.querySelectorAll('[data-parallax]');
@@ -98,6 +124,10 @@
       card.addEventListener('mouseenter', () => cursor.classList.add('is-active'));
       card.addEventListener('mouseleave', () => cursor.classList.remove('is-active'));
     });
+
+    // mouseleave doesn't fire when a card scrolls out from under a stationary
+    // pointer, so the dot can get stuck active — clear it on scroll.
+    window.addEventListener('scroll', () => cursor.classList.remove('is-active'), { passive: true });
   }
 
   /* ---------- hero mouse bubble trail ---------- */
