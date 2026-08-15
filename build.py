@@ -85,6 +85,38 @@ def asset_href(current_path, sub_path):
     return href_to(current_path, f"assets/{sub_path}")
 
 
+_CSS_TEMPLATE = None
+
+
+_CSS_IMG_FILES = ["texture-bg-mobile.jpg", "texture-bg.jpg"]
+
+
+def _load_css_template():
+    """Read style.css once and cache it. Its url('../img/<file>') refs are
+    left as per-file placeholders so inline_css() can substitute the correct
+    relative path per page depth — the raw text can't be used as-is once
+    it's embedded in HTML instead of served from assets/css/."""
+    global _CSS_TEMPLATE
+    if _CSS_TEMPLATE is None:
+        with open(os.path.join(ROOT, "assets", "css", "style.css"), encoding="utf-8") as f:
+            css = f.read()
+        for fname in _CSS_IMG_FILES:
+            css = css.replace(f"url('../img/{fname}')", f"url('__IMG_{fname}__')")
+        _CSS_TEMPLATE = css
+    return _CSS_TEMPLATE
+
+
+def inline_css(current_path):
+    """style.css content (6KB) inlined into <head>, with its background-image
+    url()s rewritten to this page's correct relative path — eliminates the
+    external stylesheet request from the critical rendering path entirely."""
+    css = _load_css_template()
+    for fname in _CSS_IMG_FILES:
+        href = asset_href(current_path, f"img/{fname}")
+        css = css.replace(f"__IMG_{fname}__", href)
+    return css
+
+
 def lang_home_path(lang_code):
     d = next(l["dir"] for l in LANGUAGES if l["code"] == lang_code)
     return f"{d}index.html"
@@ -140,7 +172,7 @@ def head(t, lang_code, title, description, current_path, alt_paths):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="{FONTS_URL}" media="print" onload="this.media='all'; this.onload=null;" />
   <noscript><link rel="stylesheet" href="{FONTS_URL}" /></noscript>
-  <link rel="stylesheet" href="{asset_href(current_path, 'css/style.css')}" />
+  <style>{inline_css(current_path)}</style>
   <meta name="theme-color" content="#0E1B1F" />"""
 
 
