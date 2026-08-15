@@ -394,6 +394,10 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
     for heading, text in cs["sections"]:
         sections_html += f"<h2>{heading}</h2>\n        <p>{text}</p>\n        "
 
+    highlight_html = ""
+    if cs.get("highlight"):
+        highlight_html = f'<p class="case-highlight">{cs["highlight"]}</p>'
+
     prev_href = href_to(current_path, lang_case_study_path(lang_code, prev_cs["slug"]))
     next_href = href_to(current_path, lang_case_study_path(lang_code, next_cs["slug"]))
     home_href = href_to(current_path, lang_home_path(lang_code))
@@ -417,6 +421,7 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
         </dl>
         <div class="case-body" data-reveal>
           <p class="lede" style="color: var(--ink);">{cs['summary']}</p>
+          {highlight_html}
           {sections_html}
         </div>
         <div class="case-nav">

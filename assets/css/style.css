@@ -655,6 +655,16 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   color: var(--ink-soft);
 }
 .case-body h2 { color: var(--ink); margin-top: 1.4rem; font-size: clamp(1.5rem, 2.6vw, 2rem); }
+.case-highlight {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  line-height: 1.4;
+  color: var(--moonstone-deep);
+  border-left: 3px solid var(--moonstone);
+  padding-left: 1.2rem;
+  margin-block: 0.4rem;
+}
 .case-nav {
   display: flex; justify-content: space-between; align-items: center;
   margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(14,27,31,0.1);
