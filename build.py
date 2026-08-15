@@ -400,6 +400,10 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
     if cs.get("highlight"):
         highlight_html = f'<p class="case-highlight">{cs["highlight"]}</p>'
 
+    live_url_html = ""
+    if cs.get("live_url"):
+        live_url_html = f'<a href="{cs["live_url"]}" class="btn btn-ghost case-live-link" target="_blank" rel="noopener">Visit live site &nearr;</a>'
+
     prev_href = href_to(current_path, lang_case_study_path(lang_code, prev_cs["slug"]))
     next_href = href_to(current_path, lang_case_study_path(lang_code, next_cs["slug"]))
     home_href = href_to(current_path, lang_home_path(lang_code))
@@ -412,6 +416,7 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
         <p class="eyebrow">{t['meta']['case_study_label']}</p>
         <h1>{cs['title']}</h1>
         <p class="lede">{cs['one_liner']}</p>
+        {live_url_html}
         <div class="case-cover" data-reveal>
           <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:rgba(14,27,31,0.35); font-family:var(--font-display);">Cover image placeholder</div>
         </div>
