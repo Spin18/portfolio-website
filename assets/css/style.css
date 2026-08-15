@@ -654,6 +654,12 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   border-radius: var(--radius-md);
   display: block;
 }
+.case-gallery img.wide {
+  grid-column: span 2;
+}
+@media (max-width: 520px) {
+  .case-gallery img.wide { grid-column: span 1; }
+}
 .case-meta {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

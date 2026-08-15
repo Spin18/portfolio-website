@@ -568,10 +568,12 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
 
     gallery_html = ""
     if cs.get("gallery"):
-        gallery_items = "\n          ".join(
-            f'<img src="{asset_href(current_path, "img/" + g)}" alt="{cs["title"]}" loading="lazy" />'
-            for g in cs["gallery"]
-        )
+        def _gallery_img(entry):
+            src, wide = entry if isinstance(entry, list) else (entry, False)
+            cls = ' class="wide"' if wide else ""
+            return f'<img{cls} src="{asset_href(current_path, "img/" + src)}" alt="{cs["title"]}" loading="lazy" />'
+
+        gallery_items = "\n          ".join(_gallery_img(g) for g in cs["gallery"])
         gallery_html = f"""
         <div class="case-gallery" data-reveal>
           {gallery_items}

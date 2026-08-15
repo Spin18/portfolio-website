@@ -128,8 +128,14 @@
       ],
       "cover": "work/reputation-to-revenue/cover.jpg",
       "gallery": [
-        "work/reputation-to-revenue/gallery-1.jpg",
-        "work/reputation-to-revenue/gallery-2.jpg"
+        [
+          "work/reputation-to-revenue/gallery-1.jpg",
+          true
+        ],
+        [
+          "work/reputation-to-revenue/gallery-2.jpg",
+          true
+        ]
       ]
     },
     {
@@ -177,8 +183,14 @@
       ],
       "cover": "work/the-collective/cover.jpg",
       "gallery": [
-        "work/the-collective/gallery-1.jpg",
-        "work/the-collective/gallery-2.jpg"
+        [
+          "work/the-collective/gallery-1.jpg",
+          false
+        ],
+        [
+          "work/the-collective/gallery-2.jpg",
+          true
+        ]
       ]
     },
     {
@@ -226,11 +238,26 @@
       "live_url": "https://undgretel.com/",
       "cover": "work/conversion-engine/cover.jpg",
       "gallery": [
-        "work/conversion-engine/gallery-1.jpg",
-        "work/conversion-engine/gallery-2.jpg",
-        "work/conversion-engine/gallery-3.jpg",
-        "work/conversion-engine/gallery-4.jpg",
-        "work/conversion-engine/gallery-5.jpg"
+        [
+          "work/conversion-engine/gallery-1.jpg",
+          true
+        ],
+        [
+          "work/conversion-engine/gallery-2.jpg",
+          false
+        ],
+        [
+          "work/conversion-engine/gallery-3.jpg",
+          false
+        ],
+        [
+          "work/conversion-engine/gallery-4.jpg",
+          false
+        ],
+        [
+          "work/conversion-engine/gallery-5.jpg",
+          false
+        ]
       ]
     },
     {
@@ -277,7 +304,10 @@
       ],
       "cover": "work/neuroboost-ux/cover.jpg",
       "gallery": [
-        "work/neuroboost-ux/gallery-1.jpg"
+        [
+          "work/neuroboost-ux/gallery-1.jpg",
+          true
+        ]
       ]
     },
     {
@@ -325,8 +355,14 @@
       ],
       "cover": "work/prima-materia/cover.jpg",
       "gallery": [
-        "work/prima-materia/gallery-1.jpg",
-        "work/prima-materia/gallery-2.jpg"
+        [
+          "work/prima-materia/gallery-1.jpg",
+          true
+        ],
+        [
+          "work/prima-materia/gallery-2.jpg",
+          true
+        ]
       ]
     },
     {

@@ -676,6 +676,12 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   border-radius: var(--radius-md);
   display: block;
 }
+.case-gallery img.wide {
+  grid-column: span 2;
+}
+@media (max-width: 520px) {
+  .case-gallery img.wide { grid-column: span 1; }
+}
 .case-meta {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -822,7 +828,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
         </div>
         
         <div class="case-gallery" data-reveal>
-          <img src="../../assets/img/work/conversion-engine/gallery-1.jpg" alt="Conversion Engine" loading="lazy" />
+          <img class="wide" src="../../assets/img/work/conversion-engine/gallery-1.jpg" alt="Conversion Engine" loading="lazy" />
           <img src="../../assets/img/work/conversion-engine/gallery-2.jpg" alt="Conversion Engine" loading="lazy" />
           <img src="../../assets/img/work/conversion-engine/gallery-3.jpg" alt="Conversion Engine" loading="lazy" />
           <img src="../../assets/img/work/conversion-engine/gallery-4.jpg" alt="Conversion Engine" loading="lazy" />
