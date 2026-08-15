@@ -586,6 +586,54 @@ def build_robots_sitemap(content):
     write("sitemap.xml", sitemap)
 
 
+def build_llms_txt(content):
+    """llms.txt (https://llmstxt.org/) — a plain-markdown site summary aimed
+    at LLMs/AI crawlers, generated from the same English content data as the
+    rest of the site so it can't drift out of sync with real copy edits."""
+    t = content["en"]
+    hero = t["hero"]
+    about = t["about"]
+
+    lines = [
+        f"# {t['meta']['site_title']}",
+        "",
+        f"> {t['meta']['site_description']}",
+        "",
+        f"{hero['eyebrow']}. {about['paragraphs'][0]}",
+        "",
+        "## What I Do",
+        "",
+    ]
+    for cap in t["capabilities"]["items"]:
+        lines.append(f"- [{cap['title']}]({url_for(lang_home_path('en'))}#work-do): {cap['pitch']}")
+
+    lines += ["", "## Case Studies", ""]
+    for cs in t["case_studies"]:
+        cs_url = url_for(lang_case_study_path("en", cs["slug"]))
+        lines.append(f"- [{cs['title']}]({cs_url}): {cs['one_liner']} — {cs['summary']}")
+
+    lines += [
+        "",
+        "## About",
+        "",
+        f"- [About]({url_for(lang_home_path('en'))}#about): {about['paragraphs'][1]}",
+        "",
+        "## Contact",
+        "",
+        f"- [Book a free discovery call]({CALENDLY})",
+        f"- [Contact form]({url_for(lang_home_path('en'))}#contact)",
+        "",
+        "## Optional",
+        "",
+        f"- [Terms]({url_for(lang_legal_path('en', 'terms'))})",
+        f"- [Privacy]({url_for(lang_legal_path('en', 'privacy'))})",
+        f"- [Impressum]({url_for(lang_legal_path('en', 'impressum'))})",
+        f"- [Deutsch]({url_for(lang_home_path('de'))}): German-language version of this site",
+        "",
+    ]
+    write("llms.txt", "\n".join(lines))
+
+
 def write(rel_path, content):
     full = os.path.join(ROOT, rel_path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
@@ -618,6 +666,7 @@ def main():
 
     build_404(content["en"])
     build_robots_sitemap(content)
+    build_llms_txt(content)
     print("\nBuild complete.")
 
 
