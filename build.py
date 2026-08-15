@@ -140,6 +140,116 @@ def url_for(current_path):
     return f"{SITE_URL}/{current_path}"
 
 
+# Real, publicly-disclosed business details (from impressum.html — required by
+# German law to be public) — used for structured data. No pricing, phone, or
+# social-profile URLs are included anywhere below because none are real/live
+# on this site yet (footer social links are still placeholders); adding them
+# to structured data would be inaccurate, so they're left out until real.
+BUSINESS_ADDRESS = {
+    "@type": "PostalAddress",
+    "streetAddress": "Mahlower Strasse 14",
+    "postalCode": "12049",
+    "addressLocality": "Berlin",
+    "addressCountry": "DE",
+}
+BUSINESS_EMAIL = "imenbouzouita@googlemail.com"
+
+
+def _json_ld_script(graph):
+    payload = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, indent=2)
+    return f'<script type="application/ld+json">\n{payload}\n</script>'
+
+
+def build_json_ld_home(t, current_path):
+    lang_code = _lang_of(current_path)
+    portrait_url = f"{SITE_URL}/assets/img/imen-portrait.jpg"
+
+    person = {
+        "@type": "Person",
+        "@id": f"{SITE_URL}/#person",
+        "name": "Imen Bouzouita",
+        "jobTitle": "UX, CRO & Digital Strategy Consultant",
+        "description": t["about"]["paragraphs"][0],
+        "url": SITE_URL,
+        "image": portrait_url,
+        "email": BUSINESS_EMAIL,
+        "address": BUSINESS_ADDRESS,
+        "knowsLanguage": ["German", "English", "French", "Arabic"],
+        "alumniOf": [
+            {"@type": "CollegeOrUniversity", "name": "Technical University of Munich"},
+            {"@type": "EducationalOrganization", "name": "Deloitte Neuroscience Institute"},
+        ],
+        "worksFor": {"@id": f"{SITE_URL}/#business"},
+    }
+
+    offers = [
+        {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": cap["title"],
+                "description": cap["pitch"],
+            },
+        }
+        for cap in t["capabilities"]["items"]
+    ]
+
+    business = {
+        "@type": "ProfessionalService",
+        "@id": f"{SITE_URL}/#business",
+        "name": "Imen Bouzouita — Digital Product, UX & CRO Consultant",
+        "description": t["meta"]["site_description"],
+        "url": SITE_URL,
+        "image": portrait_url,
+        "email": BUSINESS_EMAIL,
+        "address": BUSINESS_ADDRESS,
+        "areaServed": "Worldwide",
+        "founder": {"@id": f"{SITE_URL}/#person"},
+        "makesOffer": offers,
+    }
+
+    website = {
+        "@type": "WebSite",
+        "@id": f"{SITE_URL}/#website",
+        "url": SITE_URL,
+        "name": t["meta"]["site_title"],
+        "inLanguage": lang_code,
+        "publisher": {"@id": f"{SITE_URL}/#business"},
+    }
+
+    return _json_ld_script([website, person, business])
+
+
+def build_json_ld_case_study(t, cs, current_path):
+    lang_code = _lang_of(current_path)
+    page_url = url_for(current_path)
+    home_url = url_for(lang_home_path(lang_code))
+
+    breadcrumb = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": home_url},
+            {"@type": "ListItem", "position": 2, "name": t["work"]["heading"], "item": f"{home_url}#work"},
+            {"@type": "ListItem", "position": 3, "name": cs["title"], "item": page_url},
+        ],
+    }
+
+    work = {
+        "@type": "CreativeWork",
+        "name": cs["title"],
+        "headline": cs["one_liner"],
+        "description": cs["summary"],
+        "url": page_url,
+        "author": {"@id": f"{SITE_URL}/#person"},
+        "about": cs["tag"],
+        "inLanguage": lang_code,
+    }
+    if cs.get("cover"):
+        work["image"] = f"{SITE_URL}/assets/img/{cs['cover']}"
+
+    return _json_ld_script([breadcrumb, work])
+
+
 def head(t, lang_code, title, description, current_path, alt_paths):
     canonical = url_for(current_path)
 
@@ -425,7 +535,7 @@ def build_index(t, lang_code, alt_paths):
     </section>
   </main>
 """
-    html = page_shell(t, t["meta"]["site_title"], t["meta"]["site_description"], body, current_path, alt_paths)
+    html = page_shell(t, t["meta"]["site_title"], t["meta"]["site_description"], body, current_path, alt_paths, extra_head=build_json_ld_home(t, current_path))
     write(current_path, html)
 
 
@@ -502,7 +612,7 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
   </main>
 """
     title = f"{cs['title']} — {t['meta']['case_study_label']} — Imen Bouzouita"
-    html = page_shell(t, title, cs["one_liner"], body, current_path, alt_paths)
+    html = page_shell(t, title, cs["one_liner"], body, current_path, alt_paths, extra_head=build_json_ld_case_study(t, cs, current_path))
     write(current_path, html)
 
 
