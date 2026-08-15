@@ -323,7 +323,10 @@
           "The other case studies in this portfolio show how I think about other people's digital experiences. This one shows I hold myself to the same standard — clear positioning, a defined audience, a structured funnel, and design choices that serve conversion rather than decoration."
         ]
       ],
-      "cover": "work/prima-materia/cover.jpg"
+      "cover": "work/prima-materia/cover.jpg",
+      "gallery": [
+        "work/prima-materia/gallery-1.jpg"
+      ]
     },
     {
       "slug": "resonance-tunes",
