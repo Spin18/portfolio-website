@@ -174,88 +174,46 @@
     {
       "slug": "conversion-engine",
       "title": "Conversion Engine",
-      "one_liner": "Data-driven growth for a D2C e-commerce brand",
+      "one_liner": "Optimising checkout, product pages, and launch strategy from inside the team",
       "tag": "E-commerce",
       "meta": [
         [
           "Role",
-          "UX Audit & CRO"
+          "Shop Manager & Developer"
         ],
         [
           "Timeline",
-          "5 weeks"
+          "Ongoing"
         ],
         [
           "Focus",
-          "Checkout & PDP"
+          "Checkout, PDP & Product Launches"
         ],
         [
           "Tools",
-          "Hotjar, GA4, Figma"
+          "Hotjar, GA4, Shopify, A/B testing, Figma"
         ]
       ],
-      "summary": "A direct-to-consumer retailer had healthy traffic and a leaking checkout. The brief was simple: find out where buyers were dropping off, and fix it without a full rebuild.",
+      "summary": "A direct-to-consumer brand with healthy traffic but underperforming conversion. As shop manager and developer, I owned the full e-commerce operation — from product launches and shop optimisation to A/B testing and checkout improvements.",
       "sections": [
         [
-          "The problem",
-          "Paid traffic was converting well below category benchmarks, and the team couldn't tell whether the issue was pricing, trust, or friction. Every fix so far had been a guess."
+          "The opportunity",
+          "Paid traffic was converting below category benchmarks, but the team had been treating symptoms without diagnosis — each fix was a guess. The checkout, product detail pages, and mobile experience all had friction, but without structured measurement it was impossible to tell which changes would actually move revenue."
         ],
         [
           "The approach",
-          "A structured audit combining session recordings, heatmaps, and a full funnel teardown — from ad landing to order confirmation — scored against conversion heuristics and prioritized by expected lift versus effort."
+          "I combined session recordings and heatmaps with a full funnel teardown — from ad landing to order confirmation — to identify where buyers were actually dropping off versus where the team assumed they were. Rather than auditing from outside and handing over recommendations, I prioritised findings by expected lift versus effort and owned the implementation directly: shipping fixes, setting up A/B tests to validate higher-risk changes before full rollout, and managing product launches alongside the ongoing optimisation work."
         ],
         [
           "What shipped",
-          "A ranked list of 22 fixes spanning checkout form design, shipping-cost transparency, and mobile PDP layout, plus three A/B tests to validate the highest-risk changes before a full rollout."
+          "A systematic programme of improvements spanning checkout form design, shipping-cost transparency, and mobile PDP layout — prioritised, tested, and deployed. Three A/B tests validated the highest-risk changes before full rollout. New product launches were integrated into the optimisation cycle, each one informed by what the data was showing about user behaviour on existing pages."
         ],
         [
-          "The outcome",
-          "The team shipped the top-priority fixes within two sprints. Checkout abandonment and mobile bounce both moved in the right direction within the first month post-launch."
-        ]
-      ]
-    },
-    {
-      "slug": "frictionless-flow",
-      "title": "Frictionless Flow",
-      "one_liner": "Reimagining a B2B consultancy's digital presence",
-      "tag": "B2B",
-      "meta": [
-        [
-          "Role",
-          "Website Redesign"
-        ],
-        [
-          "Timeline",
-          "6 weeks"
-        ],
-        [
-          "Focus",
-          "IA & Positioning"
-        ],
-        [
-          "Tools",
-          "Webflow, Figma"
+          "The impact",
+          "Checkout abandonment and mobile bounce both improved within the first month of the priority fixes going live. More importantly, the shop moved from gut-feel fixes to a repeatable optimisation process — structured measurement, prioritised backlog, test-before-commit — that continued producing gains beyond the initial round of changes."
         ]
       ],
-      "summary": "A B2B consultancy's site looked like every other consultancy's site — dense text, unclear positioning, no path from visitor to lead. The rebuild had to make the value proposition legible in one scroll.",
-      "sections": [
-        [
-          "The problem",
-          "Prospects were bouncing before reaching the services section. The existing IA buried differentiation under generic industry language, and there was no clear next step for a warm visitor."
-        ],
-        [
-          "The approach",
-          "Stakeholder interviews to extract what actually made the firm different, followed by a full information architecture pass and a content-first wireframe before any visual design started."
-        ],
-        [
-          "What shipped",
-          "A restructured site with a sharper homepage narrative, a services section organized around client outcomes instead of internal capabilities, and a single consistent lead-capture path."
-        ],
-        [
-          "The outcome",
-          "Time on the services pages increased and the team reported clearer, better-qualified inbound conversations within the first quarter."
-        ]
-      ]
+      "live_url": "https://undgretel.com/"
     },
     {
       "slug": "neuroboost-ux",
@@ -297,49 +255,6 @@
         [
           "The outcome",
           "The redesigned hierarchy measurably shifted attention toward the intended trust signals in follow-up testing, giving the team evidence-backed confidence in the new layout."
-        ]
-      ]
-    },
-    {
-      "slug": "embedded-excellence",
-      "title": "Embedded Excellence",
-      "one_liner": "Scaling product delivery for automotive systems",
-      "tag": "Project Management",
-      "meta": [
-        [
-          "Role",
-          "Product Delivery"
-        ],
-        [
-          "Timeline",
-          "Ongoing"
-        ],
-        [
-          "Focus",
-          "Process & Tooling"
-        ],
-        [
-          "Tools",
-          "Jira, Figma, Design Systems"
-        ]
-      ],
-      "summary": "An automotive systems team needed to ship embedded-software interfaces at a faster, more predictable pace without sacrificing the rigor the industry demands.",
-      "sections": [
-        [
-          "The problem",
-          "Design and engineering were working from disconnected specs, causing rework late in each cycle and making timelines hard to trust."
-        ],
-        [
-          "The approach",
-          "Introduced a shared component system and a tighter design-to-dev handoff process, embedded directly with the delivery team rather than consulting from the outside."
-        ],
-        [
-          "What shipped",
-          "A living design system aligned to the embedded UI constraints, plus a revised handoff workflow that caught inconsistencies before development started."
-        ],
-        [
-          "The outcome",
-          "Rework dropped noticeably cycle over cycle, and the team could commit to delivery dates with far more confidence."
         ]
       ]
     },
@@ -399,49 +314,6 @@
         [
           "What I'd recommend next",
           "Working within the team's existing copy surfaced a tension I'd prioritise in the next iteration: the site introduces too many complex concepts simultaneously (somatic science, archetypal psychology, regenerative design, ethical AI, gamified learning) before the visitor understands what the product concretely does. Above-fold messaging should lead with what the platform offers in plain language before explaining why it matters philosophically. CTAs like \"Access The Portal\" and \"Connect\" should be replaced with specific conversion actions — a waitlist, a demo, or a newsletter signup — so the site's visual clarity and structural logic can convert the attention it earns."
-        ]
-      ]
-    },
-    {
-      "slug": "citysense-mvp",
-      "title": "CitySense MVP",
-      "one_liner": "Smart-city pedestrian recognition, startup challenge",
-      "tag": "Startup",
-      "meta": [
-        [
-          "Role",
-          "Product & UX"
-        ],
-        [
-          "Timeline",
-          "3 weeks"
-        ],
-        [
-          "Focus",
-          "0-to-1 MVP"
-        ],
-        [
-          "Tools",
-          "Figma, Prototyping"
-        ]
-      ],
-      "summary": "A startup challenge team had a strong technical concept for pedestrian-recognition smart-city infrastructure but no interface for the humans who'd actually operate it.",
-      "sections": [
-        [
-          "The problem",
-          "The core recognition technology worked, but there was no operator-facing interface, and the team was days away from a live pitch."
-        ],
-        [
-          "The approach",
-          "Rapid MVP scoping to identify the single operator workflow worth building first, then a tight prototyping loop to get something testable in front of judges and early users."
-        ],
-        [
-          "What shipped",
-          "A clickable MVP prototype covering the core monitoring workflow, built fast enough to leave time for rehearsal before the pitch."
-        ],
-        [
-          "The outcome",
-          "The team presented a working interface alongside their technical demo instead of slides alone, and placed among the challenge's recognized teams."
         ]
       ]
     },
