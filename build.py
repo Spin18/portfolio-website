@@ -391,8 +391,10 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
     current_path = lang_case_study_path(lang_code, cs["slug"])
 
     sections_html = ""
-    for heading, text in cs["sections"]:
-        sections_html += f"<h2>{heading}</h2>\n        <p>{text}</p>\n        "
+    for heading, content in cs["sections"]:
+        paragraphs = content if isinstance(content, list) else [content]
+        paras_html = "\n        ".join(f"<p>{p}</p>" for p in paragraphs)
+        sections_html += f"<h2>{heading}</h2>\n        {paras_html}\n        "
 
     highlight_html = ""
     if cs.get("highlight"):
