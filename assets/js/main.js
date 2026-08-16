@@ -14,6 +14,15 @@
     el.replaceWith(link);
   });
 
+  /* ---------- obfuscated phone (same idea as the email above) ---------- */
+  document.querySelectorAll('.js-phone').forEach((el) => {
+    const link = document.createElement('a');
+    const phone = `${el.dataset.cc} ${el.dataset.n}`;
+    link.href = `tel:${el.dataset.cc}${el.dataset.n}`;
+    link.textContent = phone;
+    el.replaceWith(link);
+  });
+
   /* ---------- header scroll state ---------- */
   const header = document.querySelector('.site-header');
   if (header) {
