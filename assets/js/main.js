@@ -202,6 +202,17 @@
         return;
       }
 
+      // Second honeypot, checked client-side under a name that doesn't
+      // signal "trap" — a bot filling every field in gets a fake success
+      // instead of a rejection that would tip it off.
+      const decoy = form.querySelector('.hp-decoy');
+      if (decoy && decoy.value) {
+        status.textContent = msg('msgSuccess', 'Thanks — got it. I’ll get back to you within a day or two.');
+        status.classList.add('visible');
+        form.reset();
+        return;
+      }
+
       if (window.grecaptcha && form.querySelector('.g-recaptcha') && !grecaptcha.getResponse()) {
         status.textContent = msg('msgRecaptcha', "Please confirm you're not a robot before sending.");
         status.classList.add('visible');
