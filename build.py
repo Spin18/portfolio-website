@@ -524,6 +524,7 @@ def build_index(t, lang_code, alt_paths):
                 data-msg-error="{form['msg_error']}"
                 data-msg-network="{form['msg_network']}"
                 data-msg-recaptcha="{form['msg_recaptcha']}">
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
                 <div class="form-field">
                   <label for="name">{form['name_label']}</label>
                   <input type="text" id="name" name="name" required />
