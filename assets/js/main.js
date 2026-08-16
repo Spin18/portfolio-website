@@ -4,6 +4,16 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
 
+  /* ---------- obfuscated email (defeats basic scrapers; the raw
+     address never appears in page source, only assembled here) ---------- */
+  document.querySelectorAll('.js-email').forEach((el) => {
+    const link = document.createElement('a');
+    const email = `${el.dataset.u}@${el.dataset.d}`;
+    link.href = `mailto:${email}`;
+    link.textContent = email;
+    el.replaceWith(link);
+  });
+
   /* ---------- header scroll state ---------- */
   const header = document.querySelector('.site-header');
   if (header) {
@@ -183,6 +193,12 @@
         return;
       }
 
+      if (window.grecaptcha && form.querySelector('.g-recaptcha') && !grecaptcha.getResponse()) {
+        status.textContent = msg('msgRecaptcha', "Please confirm you're not a robot before sending.");
+        status.classList.add('visible');
+        return;
+      }
+
       submitBtn.disabled = true;
       const originalLabel = submitBtn.textContent;
       submitBtn.textContent = msg('msgSending', 'Sending…');
@@ -205,6 +221,7 @@
         status.classList.add('visible');
         submitBtn.disabled = false;
         submitBtn.textContent = originalLabel;
+        if (window.grecaptcha && form.querySelector('.g-recaptcha')) grecaptcha.reset();
       }
     });
   }
