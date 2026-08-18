@@ -454,8 +454,7 @@
       "msg_success": "Thanks — got it. I’ll get back to you within a day or two.",
       "msg_error": "Something went wrong sending that. Try the Calendly link instead?",
       "msg_network": "Network hiccup — mind trying again, or use the Calendly link?",
-      "msg_not_wired": "Form isn’t wired up yet — add your Formspree endpoint in contact form action.",
-      "msg_recaptcha": "Please confirm you're not a robot before sending."
+      "msg_not_wired": "Form isn’t wired up yet — add your Formspree endpoint in contact form action."
     }
   },
   "legal": {
@@ -465,7 +464,7 @@
     },
     "privacy": {
       "title": "Privacy Policy",
-      "content_html": "<p>This site collects only what's needed to respond to enquiries: name, email, and message content submitted via the contact form, processed through Formspree and screened for spam via Google reCAPTCHA. No analytics cookies are set without consent.</p>\n<h2>What's collected</h2>\n<ul>\n  <li>Contact form submissions (name, email, message)</li>\n  <li>Calendly booking details, handled under Calendly's own privacy policy</li>\n  <li>Google reCAPTCHA, used on the contact form for spam prevention — see Google's privacy policy</li>\n</ul>\n<h2>How it's used</h2>\n<p>Solely to respond to enquiries and manage booked calls. Data isn't sold or shared with third parties beyond the services required to operate this site (Formspree, Calendly, Google reCAPTCHA).</p>\n<h2>Your rights</h2>\n<p>You can request access to or deletion of your data at any time by getting in touch via the contact form.</p>\n<p><em>Placeholder policy — replace with your reviewed legal text (GDPR-compliant, as required for a Berlin-based business) before launch.</em></p>"
+      "content_html": "<p>This site collects only what's needed to respond to enquiries: name, email, and message content submitted via the contact form, processed through Formspree. No analytics cookies are set without consent.</p>\n<h2>What's collected</h2>\n<ul>\n  <li>Contact form submissions (name, email, message)</li>\n  <li>Calendly booking details, handled under Calendly's own privacy policy</li>\n</ul>\n<h2>How it's used</h2>\n<p>Solely to respond to enquiries and manage booked calls. Data isn't sold or shared with third parties beyond the services required to operate this site (Formspree, Calendly).</p>\n<h2>Your rights</h2>\n<p>You can request access to or deletion of your data at any time by getting in touch via the contact form.</p>\n<p><em>Placeholder policy — replace with your reviewed legal text (GDPR-compliant, as required for a Berlin-based business) before launch.</em></p>"
     },
     "impressum": {
       "title": "Impressum",

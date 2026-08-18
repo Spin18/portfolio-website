@@ -25,11 +25,6 @@ CALENDLY = "https://calendly.com/imenbouzouita/1-1-discovery-call"
 LINKEDIN_URL = "https://www.linkedin.com/in/imen-bouzouita-b65051107/"
 INSTAGRAM_URL = "https://www.instagram.com/ima_gi_n/"
 FORMSPREE_ACTION = "https://formspree.io/f/xdenkldz"
-# Replace with the real site key from google.com/recaptcha (v2 "I'm not a
-# robot" checkbox) — and enable reCAPTCHA verification for this form in the
-# Formspree dashboard using the matching secret key, or Formspree won't
-# actually check it server-side.
-RECAPTCHA_SITE_KEY = "YOUR_RECAPTCHA_SITE_KEY"
 # font-display=optional: browser waits ~100ms max for the font, then commits
 # to whichever (fallback or webfont) is ready and never swaps later — this is
 # what avoids CLS. Loaded non-blocking via the media="print" swap trick below,
@@ -522,8 +517,7 @@ def build_index(t, lang_code, alt_paths):
                 data-msg-sending="{form['sending']}"
                 data-msg-success="{form['msg_success']}"
                 data-msg-error="{form['msg_error']}"
-                data-msg-network="{form['msg_network']}"
-                data-msg-recaptcha="{form['msg_recaptcha']}">
+                data-msg-network="{form['msg_network']}">
                 <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
                 <input type="text" name="company" class="hp-decoy" style="display:none" tabindex="-1" autocomplete="off" />
                 <div class="form-field">
@@ -538,7 +532,6 @@ def build_index(t, lang_code, alt_paths):
                   <label for="message">{form['message_label']}</label>
                   <textarea id="message" name="message" rows="4" required></textarea>
                 </div>
-                <div class="g-recaptcha" data-sitekey="{RECAPTCHA_SITE_KEY}"></div>
                 <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">{form['submit']}</button>
                 <p class="form-status" role="status"></p>
               </form>
@@ -549,9 +542,7 @@ def build_index(t, lang_code, alt_paths):
     </section>
   </main>
 """
-    recaptcha_script = '<script src="https://www.google.com/recaptcha/api.js" async defer></script>'
-    extra_head = build_json_ld_home(t, current_path) + recaptcha_script
-    html = page_shell(t, t["meta"]["site_title"], t["meta"]["site_description"], body, current_path, alt_paths, extra_head=extra_head)
+    html = page_shell(t, t["meta"]["site_title"], t["meta"]["site_description"], body, current_path, alt_paths, extra_head=build_json_ld_home(t, current_path))
     write(current_path, html)
 
 

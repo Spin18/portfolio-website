@@ -593,7 +593,6 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   background: var(--white);
 }
 .form-status { margin-top: 1rem; font-size: 0.9rem; font-weight: 600; display: none; }
-.g-recaptcha { margin-bottom: 1.1rem; transform: scale(1); transform-origin: 0 0; }
 .form-status.visible { display: block; }
 
 /* ---------- footer ---------- */
@@ -860,7 +859,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
     }
   ]
 }
-</script><script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</script>
 </head>
 <body>
   <header class="site-header">
@@ -1074,8 +1073,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
                 data-msg-sending="Sending…"
                 data-msg-success="Thanks — got it. I’ll get back to you within a day or two."
                 data-msg-error="Something went wrong sending that. Try the Calendly link instead?"
-                data-msg-network="Network hiccup — mind trying again, or use the Calendly link?"
-                data-msg-recaptcha="Please confirm you're not a robot before sending.">
+                data-msg-network="Network hiccup — mind trying again, or use the Calendly link?">
                 <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
                 <input type="text" name="company" class="hp-decoy" style="display:none" tabindex="-1" autocomplete="off" />
                 <div class="form-field">
@@ -1090,7 +1088,6 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
                   <label for="message">Message</label>
                   <textarea id="message" name="message" rows="4" required></textarea>
                 </div>
-                <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
                 <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send message</button>
                 <p class="form-status" role="status"></p>
               </form>

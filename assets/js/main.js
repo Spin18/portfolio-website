@@ -213,12 +213,6 @@
         return;
       }
 
-      if (window.grecaptcha && form.querySelector('.g-recaptcha') && !grecaptcha.getResponse()) {
-        status.textContent = msg('msgRecaptcha', "Please confirm you're not a robot before sending.");
-        status.classList.add('visible');
-        return;
-      }
-
       submitBtn.disabled = true;
       const originalLabel = submitBtn.textContent;
       submitBtn.textContent = msg('msgSending', 'Sending…');
@@ -241,7 +235,6 @@
         status.classList.add('visible');
         submitBtn.disabled = false;
         submitBtn.textContent = originalLabel;
-        if (window.grecaptcha && form.querySelector('.g-recaptcha')) grecaptcha.reset();
       }
     });
   }
