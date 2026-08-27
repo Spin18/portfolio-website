@@ -116,7 +116,7 @@
         ],
         [
           "The approach",
-          "Six detailed UX flow walkthroughs (Homepage, Schedule, Workshops/Ecstatic Dance, Retreats, Accommodation, Wellness) with heuristic scoring and annotated wireframes. Crazy Egg session recordings and heatmaps to validate UX findings with observed user behaviour. Full technical audit covering Core Web Vitals, platform security, and migration risk analysis for a schedule page carrying 41% of all organic sessions. SEO health assessment and Google Business Profile competitive benchmarking. AI search visibility testing across five ChatGPT queries, confirming top-3 positioning. AISO/GEO foundational layer assessment. End-to-end measurement architecture review across both booking systems and GA4."
+          "Six detailed UX/CRO flow walkthroughs (Homepage, Schedule, Workshops/Ecstatic Dance, Retreats, Accommodation, Wellness) with heuristic scoring and annotated wireframes. Crazy Egg session recordings and heatmaps to validate UX/CRO findings with observed user behaviour. Full technical audit covering Core Web Vitals, platform security, and migration risk analysis for a schedule page carrying 41% of all organic sessions. SEO health assessment and Google Business Profile competitive benchmarking. AI search visibility testing across five ChatGPT queries, confirming top-3 positioning. AISO/GEO foundational layer assessment. End-to-end measurement architecture review across both booking systems and GA4."
         ],
         [
           "What shipped",
