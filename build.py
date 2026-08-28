@@ -442,7 +442,7 @@ def build_index(t, lang_code, alt_paths):
       <div class="hero-blob b2" data-parallax="0.15"></div>
       <div class="container hero-inner">
         <p class="eyebrow hero-eyebrow">{t['hero']['eyebrow']}</p>
-        <h1>{t['hero']['headline_pre']}<em>{t['hero']['headline_em']}</em></h1>
+        <h1>{t['hero']['headline_pre']}<em>{t['hero']['headline_em']}</em>{t['hero'].get('headline_post', '')}</h1>
         <p class="lede">{t['hero']['subhead']}</p>
         <div class="hero-ctas">
           <a href="{CALENDLY}" class="btn btn-primary" target="_blank" rel="noopener">{t['hero']['cta_primary']}</a>
