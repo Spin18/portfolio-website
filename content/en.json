@@ -359,7 +359,7 @@
         ],
         [
           "The impact",
-          "Cart abandonment and mobile bounce both improved within the first month of the priority fixes going live. More importantly, the shop moved from ad-hoc fixes to a repeatable optimisation process: structured measurement, prioritised backlog, test before you commit. That process kept producing gains well beyond the initial round of changes."
+          "The shop moved from ad-hoc fixes to a repeatable optimisation process: structured measurement, a prioritised backlog, and testing before committing. The priority fixes targeted the two places where the funnel was leaking most, cart abandonment and mobile drop-off, and the process kept producing gains well beyond the initial round of changes. Owning both the analysis and the implementation meant findings turned into shipped changes in days rather than sitting in a report."
         ]
       ],
       "live_url": "https://undgretel.com/",
