@@ -170,6 +170,10 @@ BUSINESS_ADDRESS = {
     "addressCountry": "DE",
 }
 BUSINESS_VAT_ID = "DE367654068"  # from impressum.html, § 27 a UStG
+# Backfilled once for all existing case studies (they didn't carry a real
+# publish date before this). Give a case study its own date here if/when
+# one actually needs to differ.
+CASE_STUDIES_DATE_PUBLISHED = "2026-08-28"
 
 
 def _json_ld_script(graph):
@@ -274,6 +278,7 @@ def build_json_ld_case_study(t, cs, current_path):
         "author": {"@id": f"{SITE_URL}/#person"},
         "about": cs["tag"],
         "inLanguage": lang_code,
+        "datePublished": CASE_STUDIES_DATE_PUBLISHED,
     }
     if cs.get("cover"):
         work["image"] = f"{SITE_URL}/assets/img/{cs['cover']}"
