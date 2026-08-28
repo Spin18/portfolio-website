@@ -169,6 +169,7 @@ BUSINESS_ADDRESS = {
     "addressLocality": "Berlin",
     "addressCountry": "DE",
 }
+BUSINESS_VAT_ID = "DE367654068"  # from impressum.html, § 27 a UStG
 
 
 def _json_ld_script(graph):
@@ -218,6 +219,7 @@ def build_json_ld_home(t, current_path):
         "url": SITE_URL,
         "image": portrait_url,
         "address": BUSINESS_ADDRESS,
+        "vatID": BUSINESS_VAT_ID,
         "areaServed": "Worldwide",
         "founder": {"@id": f"{SITE_URL}/#person"},
         "makesOffer": offers,
