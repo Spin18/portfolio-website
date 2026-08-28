@@ -643,7 +643,7 @@ def build_legal(t, lang_code, slug, alt_paths):
   <main>
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow">Legal</p>
+        <p class="eyebrow">{t['meta']['legal_label']}</p>
         <h1>{entry['title']}</h1>
         <div class="legal-content mt-lg">
           {entry['content_html']}
