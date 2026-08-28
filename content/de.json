@@ -1,13 +1,14 @@
 {
-  "_translation_status": "Homepage sections (nav, footer, hero, capabilities, work eyebrow/heading, about, contact incl. form labels), each case study's homepage-facing tag/one_liner, meta.legal_label, and legal.terms/legal.privacy (real German AGB and Datenschutzerklärung, translated in tandem with the English versions in en.json) are now real German. Still PLACEHOLDER, mirroring content/en.json word-for-word pending translation: each case study's full page content (summary, sections, meta), meta.site_title/site_description, work.all_work, and the contact form's dynamic status messages (sending/success/error/network/not_wired). Edit the string values in this file (keep keys and structure identical to en.json) and rerun python3 build.py.",
+  "_translation_status": "Homepage sections (nav, footer, hero, capabilities, work eyebrow/heading, about, contact incl. form labels), each case study's homepage-facing tag/one_liner, meta.legal_label/case_study_label/visit_live_site_label, legal.terms/legal.privacy, and the full case study pages for conversion-engine and resonance-tunes (meta, summary, sections) are now real German. Still PLACEHOLDER, mirroring content/en.json word-for-word pending translation: the full page content (summary, sections, meta) for sacred-metrics/the-collective/prima-materia/neuroboost-ux, meta.site_title/site_description, work.all_work, and the contact form's dynamic status messages (sending/success/error/network/not_wired). Edit the string values in this file (keep keys and structure identical to en.json) and rerun python3 build.py.",
   "meta": {
     "site_title": "Imen Bouzouita — Digital Product, UX & CRO Consultant, Berlin",
     "site_description": "I help e-commerce, wellness, and SaaS brands turn browsers into buyers with research-backed UX audits and interfaces people actually want to use.",
-    "case_study_label": "Case Study",
+    "case_study_label": "Fallstudie",
     "legal_meta_suffix": "for imenbouzouita.com",
     "not_found_title": "Page not found — Imen Bouzouita",
     "not_found_description": "Page not found.",
-    "legal_label": "Rechtliches"
+    "legal_label": "Rechtliches",
+    "visit_live_site_label": "Live-Website ansehen"
   },
   "nav": {
     "what_i_do": "Was ich mache",
@@ -325,42 +326,42 @@
       "tag": "E-Commerce",
       "meta": [
         [
-          "Role",
-          "Shop Manager & Developer"
+          "Rolle",
+          "Shop-Managerin & Entwicklerin"
         ],
         [
-          "Timeline",
-          "4 months"
+          "Zeitraum",
+          "4 Monate"
         ],
         [
-          "Focus",
-          "Checkout, Cart, Homepage PDP & Product Launches"
+          "Schwerpunkt",
+          "Checkout, Warenkorb, Startseite, Produktdetailseiten & Produktlaunches"
         ],
         [
           "Tools",
-          "Hotjar, GA4, Shopify, A/B testing (Google Optimize), Figma"
+          "Hotjar, GA4, Shopify, A/B-Testing (Google Optimize), Figma"
         ]
       ],
-      "summary": "A direct-to-consumer brand with healthy traffic but underperforming conversion. As shop manager and developer, I owned the full e-commerce operation — from product launches and shop optimisation to A/B testing and checkout improvements.",
+      "summary": "Eine Direct-to-Consumer-Marke mit gesundem Traffic, aber unterdurchschnittlicher Conversion. Als Shop-Managerin und Entwicklerin verantwortete ich den gesamten E-Commerce-Betrieb — von Produktlaunches und Shop-Optimierung bis hin zu A/B-Testing und Checkout-Verbesserungen.",
       "sections": [
         [
-          "The opportunity",
-          "A direct-to-consumer brand with a solid e-commerce operation: healthy traffic, steady sales, a product that resonated. Nothing was broken. But the team knew there was room to convert more of the traffic they were already paying for. The shop had grown organically without a structured optimisation process, which meant small friction points in the cart, checkout, product pages, and mobile experience had accumulated without anyone measuring their actual impact."
+          "Die Chance",
+          "Eine Direct-to-Consumer-Marke mit einem soliden E-Commerce-Betrieb: gesunder Traffic, stetige Verkäufe, ein Produkt, das ankam. Nichts war kaputt. Aber das Team wusste, dass es Potenzial gab, mehr des Traffics zu konvertieren, für den bereits bezahlt wurde. Der Shop war organisch gewachsen, ohne einen strukturierten Optimierungsprozess — was bedeutete, dass sich kleine Reibungspunkte im Warenkorb, Checkout, auf den Produktseiten und in der mobilen Erfahrung angesammelt hatten, ohne dass jemand deren tatsächliche Auswirkung gemessen hätte."
         ],
         [
-          "The approach",
+          "Der Ansatz",
           [
-            "As shop manager and developer, I owned the full e-commerce operation, not just the analysis. I combined session recordings and heatmaps with a full funnel teardown, from ad landing to order confirmation, to pinpoint where the real conversion gaps were versus where the team assumed they might be.",
-            "Instead of auditing from outside and handing over a report, I prioritised findings by expected lift versus effort and shipped the fixes myself: checkout form improvements, shipping-cost transparency, mobile PDP layout adjustments. For higher-risk changes, I set up A/B tests to validate before full rollout. New product launches ran in parallel, each one informed by what the data was showing about user behaviour on existing pages."
+            "Als Shop-Managerin und Entwicklerin verantwortete ich den gesamten E-Commerce-Betrieb — nicht nur die Analyse. Ich kombinierte Session-Recordings und Heatmaps mit einer vollständigen Funnel-Analyse, von der Anzeigen-Landingpage bis zur Bestellbestätigung, um zu ermitteln, wo die tatsächlichen Conversion-Lücken lagen — im Vergleich zu dem, wo das Team sie vermutete.",
+            "Statt von außen zu auditieren und einen Bericht zu übergeben, priorisierte ich die Ergebnisse nach erwartetem Uplift versus Aufwand und setzte die Maßnahmen selbst um: Verbesserungen am Checkout-Formular, Transparenz bei den Versandkosten, Layoutanpassungen der mobilen Produktdetailseiten. Für risikoreichere Änderungen richtete ich A/B-Tests ein, um sie vor dem vollständigen Rollout zu validieren. Neue Produktlaunches liefen parallel, jeder einzelne informiert durch das, was die Daten über das Nutzerverhalten auf bestehenden Seiten zeigten."
           ]
         ],
         [
-          "What shipped",
-          "A systematic programme of improvements across homepage, cart, checkout, product detail pages, team page, and mobile experience, prioritised, tested, and deployed. Three A/B tests validated the highest-risk changes before committing. Product launches were integrated into the optimisation cycle rather than treated as separate events."
+          "Was geliefert wurde",
+          "Ein systematisches Verbesserungsprogramm über Startseite, Warenkorb, Checkout, Produktdetailseiten, Teamseite und mobile Erfahrung hinweg — priorisiert, getestet und ausgerollt. Drei A/B-Tests validierten die risikoreichsten Änderungen vor der endgültigen Umsetzung. Produktlaunches wurden in den Optimierungszyklus integriert, statt als separate Ereignisse behandelt zu werden."
         ],
         [
-          "The impact",
-          "Cart abandonment and mobile bounce both improved within the first month of the priority fixes going live. More importantly, the shop moved from ad-hoc fixes to a repeatable optimisation process: structured measurement, prioritised backlog, test before you commit. That process kept producing gains well beyond the initial round of changes."
+          "Die Wirkung",
+          "Warenkorbabbrüche und mobile Absprungrate verbesserten sich bereits im ersten Monat nach Livegang der priorisierten Maßnahmen. Wichtiger noch: Der Shop wechselte von Ad-hoc-Korrekturen zu einem wiederholbaren Optimierungsprozess — strukturierte Messung, priorisiertes Backlog, testen vor dem Umsetzen. Dieser Prozess brachte auch weit über die erste Maßnahmenrunde hinaus kontinuierliche Verbesserungen."
         ]
       ],
       "live_url": "https://undgretel.com/",
@@ -397,50 +398,50 @@
       "tag": "Design/Build",
       "meta": [
         [
-          "Role",
+          "Rolle",
           "Product & Technology Innovation Lead"
         ],
         [
-          "Timeline",
-          "Early-stage, ongoing"
+          "Zeitraum",
+          "Frühphase, laufend"
         ],
         [
-          "Focus",
-          "Information Architecture, UX/UI Design & Webflow Development"
+          "Schwerpunkt",
+          "Informationsarchitektur, UX/UI-Design & Webflow-Entwicklung"
         ],
         [
           "Tools",
           "Webflow, Figma"
         ]
       ],
-      "summary": "Designing and building the business website for an ethical-AI wellness platform from scratch.",
+      "summary": "Design und Entwicklung der Unternehmenswebsite für eine Ethical-AI-Wellness-Plattform von Grund auf.",
       "sections": [
         [
-          "The context",
-          "Resonance Tunes is an ethical-AI and consciousness technology startup combining somatic science, archetypal psychology, and regenerative systems design. The platform targets two distinct audiences — individuals seeking nervous system regulation and organisations pursuing DEI-integrated wellness — each with different entry points and different levels of familiarity with the concepts. As Product & Technology Innovation Lead within a C-level team, I owned the information architecture, UX/UI design, and full Webflow build. Copy and brand messaging were provided by the founding team."
+          "Der Kontext",
+          "Resonance Tunes ist ein Startup im Bereich Ethical AI und Bewusstseinstechnologie, das somatische Wissenschaft, archetypische Psychologie und regeneratives Systemdesign vereint. Die Plattform richtet sich an zwei unterschiedliche Zielgruppen — Einzelpersonen, die Nervensystemregulation suchen, und Organisationen, die DEI-integriertes Wohlbefinden verfolgen — jeweils mit unterschiedlichen Einstiegspunkten und unterschiedlichem Vertrautheitsgrad mit den Konzepten. Als Product & Technology Innovation Lead innerhalb eines C-Level-Teams verantwortete ich die Informationsarchitektur, das UX/UI-Design und den kompletten Webflow-Build. Text und Markenbotschaften wurden vom Gründungsteam bereitgestellt."
         ],
         [
-          "The design challenge",
+          "Die Design-Herausforderung",
           [
-            "Consciousness technology is a hard sell visually. Lean too far into tech aesthetics and you lose the somatic, human-centred audience. Lean too far into wellness and you lose credibility with organisational buyers and investors. The site needed to hold both — grounding complex ideas in clean visual hierarchy while signalling that this is a serious platform, not a mood board.",
-            "The information architecture had to serve three jobs simultaneously: explain what Resonance Tunes is (brand storytelling), show what it does (product clarity for individuals and groups), and establish legitimacy (testimonials, team, and market positioning) — all without overwhelming a first-time visitor who may have no reference point for \"ethical-AI consciousness technology.\""
+            "Bewusstseinstechnologie ist visuell schwer zu vermitteln. Geht man zu weit in Richtung Tech-Ästhetik, verliert man das somatische, menschenzentrierte Publikum. Geht man zu weit in Richtung Wellness, verliert man Glaubwürdigkeit bei Unternehmenskäufern und Investoren. Die Website musste beides vereinen — komplexe Ideen in einer klaren visuellen Hierarchie verankern und gleichzeitig signalisieren, dass es sich um eine seriöse Plattform handelt, nicht um ein Moodboard.",
+            "Die Informationsarchitektur musste drei Aufgaben gleichzeitig erfüllen: erklären, was Resonance Tunes ist (Marken-Storytelling), zeigen, was es tut (Produktklarheit für Einzelpersonen und Gruppen) und Legitimität herstellen (Testimonials, Team und Marktpositionierung) — und das alles, ohne einen erstmaligen Besucher zu überfordern, der möglicherweise keinen Bezugsrahmen für „Ethical-AI-Bewusstseinstechnologie\" hat."
           ]
         ],
         [
-          "The approach",
+          "Der Ansatz",
           [
-            "I started with the messaging hierarchy: what does someone need to understand in what order? The homepage opens with the mission, moves to the three market problems the platform addresses (each grounded with a specific statistic), then breaks into audience-specific value propositions before social proof and a blog section. The structure is intentionally conventional — familiar patterns doing the heavy lifting so the unfamiliar content can breathe.",
-            "The visual direction balances nature imagery with geometric elements and a calming colour palette that reads as both tech-forward and human-centred. Typography and spacing do most of the work: generous whitespace gives dense concepts room, and clear section breaks prevent the cognitive overload that concept-heavy sites tend to create.",
-            "The dual-audience problem was solved with distinct content blocks — \"For Individuals\" and \"For Groups\" — each with their own language register and CTAs, so neither audience has to wade through content meant for the other."
+            "Ich begann mit der Messaging-Hierarchie: Was muss jemand in welcher Reihenfolge verstehen? Die Startseite eröffnet mit der Mission, geht zu den drei Marktproblemen über, die die Plattform adressiert (jeweils mit einer konkreten Statistik untermauert), und teilt sich dann in zielgruppenspezifische Wertversprechen auf, bevor Social Proof und ein Blog-Bereich folgen. Die Struktur ist bewusst konventionell — vertraute Muster übernehmen die Schwerstarbeit, damit die unvertrauten Inhalte atmen können.",
+            "Die visuelle Ausrichtung balanciert Naturbilder mit geometrischen Elementen und einer beruhigenden Farbpalette, die sowohl technisch fortschrittlich als auch menschenzentriert wirkt. Typografie und Abstände leisten den Großteil der Arbeit: großzügiger Weißraum gibt dichten Konzepten Raum, und klare Abschnittstrenner verhindern die kognitive Überlastung, die konzeptlastige Websites typischerweise erzeugen.",
+            "Das Zwei-Zielgruppen-Problem wurde mit eigenständigen Inhaltsblöcken gelöst — „Für Einzelpersonen\" und „Für Gruppen\" — jeweils mit eigenem Sprachregister und eigenen CTAs, sodass keine der Zielgruppen sich durch Inhalte kämpfen muss, die für die andere gedacht sind."
           ]
         ],
         [
-          "The build",
-          "The site was built entirely in Webflow, with responsive layouts, CMS-driven blog content, and interaction design that reinforces the brand's emphasis on coherence and flow. The build prioritised clean, maintainable structure over visual complexity — important for an early-stage venture where the site will evolve as the product matures."
+          "Die Umsetzung",
+          "Die Website wurde vollständig in Webflow erstellt, mit responsiven Layouts, CMS-gesteuerten Blog-Inhalten und Interaktionsdesign, das den Markenakzent auf Kohärenz und Flow unterstreicht. Der Build priorisierte eine saubere, wartbare Struktur gegenüber visueller Komplexität — wichtig für ein Frühphasen-Unternehmen, bei dem sich die Website mit der Produktreife weiterentwickeln wird."
         ],
         [
-          "Scope of ownership",
-          "This was a zero-to-one build within a founding team. Working alongside the CEO and C-level leadership, I translated the company's vision into a structured digital experience: information architecture, visual design system, page design across all sections, and a production Webflow build — giving a pre-revenue startup the credibility to open conversations with practitioners, organisations, and investors."
+          "Verantwortungsumfang",
+          "Dies war ein Zero-to-One-Build innerhalb eines Gründungsteams. In Zusammenarbeit mit dem CEO und der C-Level-Führung übersetzte ich die Vision des Unternehmens in ein strukturiertes digitales Erlebnis: Informationsarchitektur, visuelles Designsystem, Seitendesign über alle Bereiche hinweg und ein produktionsreifer Webflow-Build — der einem Pre-Revenue-Startup die Glaubwürdigkeit gab, Gespräche mit Praktizierenden, Organisationen und Investoren zu eröffnen."
         ]
       ],
       "cover": "work/resonance-tunes/cover.jpg"

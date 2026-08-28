@@ -565,7 +565,7 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
 
     live_url_html = ""
     if cs.get("live_url"):
-        live_url_html = f'<a href="{cs["live_url"]}" class="btn btn-ghost case-live-link" target="_blank" rel="noopener">Visit live site &nearr;</a>'
+        live_url_html = f'<a href="{cs["live_url"]}" class="btn btn-ghost case-live-link" target="_blank" rel="noopener">{t["meta"]["visit_live_site_label"]} &nearr;</a>'
 
     if cs.get("cover"):
         cover_src = asset_href(current_path, "img/" + cs["cover"])
