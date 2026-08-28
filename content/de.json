@@ -344,19 +344,22 @@
       "sections": [
         [
           "The opportunity",
-          "Paid traffic was converting below category benchmarks, but the team had been treating symptoms without diagnosis — each fix was a guess. The checkout, product detail pages, and mobile experience all had friction, but without structured measurement it was impossible to tell which changes would actually move revenue."
+          "A direct-to-consumer brand with a solid e-commerce operation: healthy traffic, steady sales, a product that resonated. Nothing was broken. But the team knew there was room to convert more of the traffic they were already paying for. The shop had grown organically without a structured optimisation process, which meant small friction points in the cart, checkout, product pages, and mobile experience had accumulated without anyone measuring their actual impact."
         ],
         [
           "The approach",
-          "I combined session recordings and heatmaps with a full funnel teardown — from ad landing to order confirmation — to identify where buyers were actually dropping off versus where the team assumed they were. Rather than auditing from outside and handing over recommendations, I prioritised findings by expected lift versus effort and owned the implementation directly: shipping fixes, setting up A/B tests to validate higher-risk changes before full rollout, and managing product launches alongside the ongoing optimisation work."
+          [
+            "As shop manager and developer, I owned the full e-commerce operation, not just the analysis. I combined session recordings and heatmaps with a full funnel teardown, from ad landing to order confirmation, to pinpoint where the real conversion gaps were versus where the team assumed they might be.",
+            "Instead of auditing from outside and handing over a report, I prioritised findings by expected lift versus effort and shipped the fixes myself: checkout form improvements, shipping-cost transparency, mobile PDP layout adjustments. For higher-risk changes, I set up A/B tests to validate before full rollout. New product launches ran in parallel, each one informed by what the data was showing about user behaviour on existing pages."
+          ]
         ],
         [
           "What shipped",
-          "A systematic programme of improvements spanning checkout form design, shipping-cost transparency, and mobile PDP layout — prioritised, tested, and deployed. Three A/B tests validated the highest-risk changes before full rollout. New product launches were integrated into the optimisation cycle, each one informed by what the data was showing about user behaviour on existing pages."
+          "A systematic programme of improvements across homepage, cart, checkout, product detail pages, team page, and mobile experience, prioritised, tested, and deployed. Three A/B tests validated the highest-risk changes before committing. Product launches were integrated into the optimisation cycle rather than treated as separate events."
         ],
         [
           "The impact",
-          "Checkout abandonment and mobile bounce both improved within the first month of the priority fixes going live. More importantly, the shop moved from gut-feel fixes to a repeatable optimisation process — structured measurement, prioritised backlog, test-before-commit — that continued producing gains beyond the initial round of changes."
+          "Cart abandonment and mobile bounce both improved within the first month of the priority fixes going live. More importantly, the shop moved from ad-hoc fixes to a repeatable optimisation process: structured measurement, prioritised backlog, test before you commit. That process kept producing gains well beyond the initial round of changes."
         ]
       ],
       "live_url": "https://undgretel.com/",
