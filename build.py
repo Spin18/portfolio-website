@@ -853,7 +853,7 @@ def build_resources_index(t, lang_code, alt_paths):
 
     body = f"""
   <main>
-    <section class="page-hero">
+    <section class="page-hero resources-hero">
       <div class="container">
         <p class="eyebrow">{res['eyebrow']}</p>
         <h1>{res['heading']}</h1>
