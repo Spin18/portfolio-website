@@ -621,7 +621,30 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   font-size: 0.82rem;
   color: var(--ink-soft);
 }
-.footer-bottom .legal-links { display: flex; gap: 1.4rem; }
+.footer-bottom .legal-links { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+.link-button { background: none; border: none; padding: 0; margin: 0; color: inherit; font: inherit; }
+
+/* ---------- cookie consent banner ---------- */
+.cookie-banner {
+  position: fixed;
+  left: 1rem; right: 1rem; bottom: 1rem;
+  z-index: 300;
+  max-width: 620px;
+  margin-inline: auto;
+  background: var(--ink);
+  color: var(--bone);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.7rem;
+  box-shadow: 0 24px 48px -24px rgba(14,27,31,0.5);
+}
+.cookie-banner[hidden] { display: none; }
+.cookie-banner p { margin: 0 0 1.1rem; font-size: 0.9rem; line-height: 1.5; color: rgba(247,245,240,0.85); }
+.cookie-banner a { text-decoration: underline; color: var(--bone); }
+.cookie-banner-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+.cookie-banner .btn { padding: 0.7em 1.4em; }
+@media (max-width: 520px) {
+  .cookie-banner { left: 0.6rem; right: 0.6rem; bottom: 0.6rem; padding: 1.2rem 1.3rem; }
+}
 
 /* ---------- scroll reveal ---------- */
 [data-reveal] {
@@ -754,7 +777,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   <meta name="theme-color" content="#0E1B1F" />
   
 </head>
-<body>
+<body data-ga4-id="G-XXXXXXXXXX">
   <header class="site-header">
     <div class="container">
       <a href="./" class="logo" aria-label="Imen Bouzouita — home">Imen<span class="dot">.</span></a>
@@ -865,10 +888,20 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <a href="terms.html">AGB</a>
           <a href="privacy.html">Datenschutz</a>
           <a href="impressum.html">Impressum</a>
+          <button type="button" class="link-button" data-cookie-settings>Cookie-Einstellungen</button>
         </div>
       </div>
     </div>
   </footer>
-  <script src="../assets/js/main.js" defer></script>
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+    <div class="cookie-banner-inner">
+      <p>Wir möchten Analyse-Cookies verwenden, um zu verstehen, wie Besucher diese Website nutzen. Wir setzen sie nur mit Ihrer Einwilligung — Sie können Ihre Entscheidung jederzeit ändern. <a href="privacy.html">Datenschutz</a></p>
+      <div class="cookie-banner-actions">
+        <button type="button" class="btn btn-ghost" data-cookie-decline>Ablehnen</button>
+        <button type="button" class="btn btn-primary" data-cookie-accept>Akzeptieren</button>
+      </div>
+    </div>
+  </div>
+  <script src="../assets/js/main.js?v=ed490c71" defer></script>
 </body>
 </html>

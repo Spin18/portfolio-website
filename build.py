@@ -16,6 +16,7 @@ same keys as en.json) and rerun this script.
 
 Run: python3 build.py
 """
+import hashlib
 import json
 import os
 
@@ -25,11 +26,22 @@ CALENDLY = "https://calendly.com/imenbouzouita/1-1-discovery-call"
 LINKEDIN_URL = "https://www.linkedin.com/in/imen-bouzouita-b65051107/"
 INSTAGRAM_URL = "https://www.instagram.com/ima_gi_n/"
 FORMSPREE_ACTION = "https://formspree.io/f/xdenkldz"
+# Replace with the real Measurement ID from analytics.google.com (Admin >
+# Data Streams > your stream). GA4 is never loaded until a visitor accepts
+# the cookie banner — see the consent logic in assets/js/main.js.
+GA4_MEASUREMENT_ID = "G-XXXXXXXXXX"
 # font-display=optional: browser waits ~100ms max for the font, then commits
 # to whichever (fallback or webfont) is ready and never swaps later — this is
 # what avoids CLS. Loaded non-blocking via the media="print" swap trick below,
 # so it never holds up first paint either.
 FONTS_URL = "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=optional"
+
+# Cache-busting query param for main.js: browsers cache external scripts
+# aggressively (unlike our CSS, which is inlined and sidesteps this
+# entirely), so without this, a visitor with a warm cache could keep
+# running stale JS after a deploy until their cache happens to expire.
+with open(os.path.join(ROOT, "assets/js/main.js"), "rb") as _f:
+    MAIN_JS_VERSION = hashlib.md5(_f.read()).hexdigest()[:8]
 
 TRUST_LOGOS = [
     {"name": "Siemens", "file": "siemens.svg", "w": 1200, "h": 800},
@@ -352,6 +364,7 @@ def footer_html(t, current_path):
           <a href="{terms}">{t['footer']['terms']}</a>
           <a href="{privacy}">{t['footer']['privacy']}</a>
           <a href="{impressum}">{t['footer']['impressum']}</a>
+          <button type="button" class="link-button" data-cookie-settings>{t['cookie_banner']['settings_link']}</button>
         </div>
       </div>
     </div>
@@ -364,17 +377,29 @@ def _lang_of(current_path):
 
 def page_shell(t, title, description, body, current_path, alt_paths, extra_head=""):
     lang_code = _lang_of(current_path)
+    privacy_href = href_to(current_path, lang_legal_path(lang_code, "privacy"))
+    cb = t["cookie_banner"]
+    cookie_banner_html = f"""<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+    <div class="cookie-banner-inner">
+      <p>{cb['text']} <a href="{privacy_href}">{t['footer']['privacy']}</a></p>
+      <div class="cookie-banner-actions">
+        <button type="button" class="btn btn-ghost" data-cookie-decline>{cb['decline']}</button>
+        <button type="button" class="btn btn-primary" data-cookie-accept>{cb['accept']}</button>
+      </div>
+    </div>
+  </div>"""
     return f"""<!doctype html>
 <html lang="{lang_code}">
 <head>
   {head(t, lang_code, title, description, current_path, alt_paths)}
   {extra_head}
 </head>
-<body>
+<body data-ga4-id="{GA4_MEASUREMENT_ID}">
   {header_html(t, current_path, alt_paths)}
   {body}
   {footer_html(t, current_path)}
-  <script src="{asset_href(current_path, 'js/main.js')}" defer></script>
+  {cookie_banner_html}
+  <script src="{asset_href(current_path, 'js/main.js')}?v={MAIN_JS_VERSION}" defer></script>
 </body>
 </html>
 """

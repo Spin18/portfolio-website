@@ -4,6 +4,76 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
 
+  /* ---------- cookie consent + consent-gated GA4 ----------
+     GA4 is never requested from Google until a visitor explicitly
+     accepts — no script tag, no request, nothing set — until then. This
+     is deliberately stricter than Google's own "Consent Mode" (which
+     still pings Google with consent state before an accept/reject
+     decision); a fully static site with modest traffic doesn't need
+     that, and not-loading-at-all is the least ambiguous way to honour
+     "no cookies without consent". */
+  (() => {
+    const ga4Id = document.body.dataset.ga4Id;
+    const CONSENT_KEY = 'cookie-consent';
+    const banner = document.getElementById('cookie-banner');
+
+    const getConsent = () => {
+      try {
+        return localStorage.getItem(CONSENT_KEY);
+      } catch (err) {
+        return null;
+      }
+    };
+    const setConsent = (value) => {
+      try {
+        localStorage.setItem(CONSENT_KEY, value);
+      } catch (err) {
+        /* localStorage unavailable (private mode, blocked storage) —
+           the banner will just reappear next visit, which is safe. */
+      }
+    };
+
+    const loadGA4 = () => {
+      if (!ga4Id || ga4Id.includes('XXXX') || window.__ga4Loaded) return;
+      window.__ga4Loaded = true;
+      const script = document.createElement('script');
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${ga4Id}`;
+      script.async = true;
+      document.head.appendChild(script);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function gtag() {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag('js', new Date());
+      window.gtag('config', ga4Id, { anonymize_ip: true });
+    };
+
+    const consent = getConsent();
+    if (consent === 'granted') {
+      loadGA4();
+    } else if (consent !== 'denied' && banner) {
+      banner.hidden = false;
+    }
+
+    if (banner) {
+      banner.querySelector('[data-cookie-accept]')?.addEventListener('click', () => {
+        setConsent('granted');
+        banner.hidden = true;
+        loadGA4();
+      });
+      banner.querySelector('[data-cookie-decline]')?.addEventListener('click', () => {
+        setConsent('denied');
+        banner.hidden = true;
+      });
+    }
+
+    document.querySelectorAll('[data-cookie-settings]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (banner) banner.hidden = false;
+      });
+    });
+  })();
+
   /* ---------- obfuscated email (defeats basic scrapers; the raw
      address never appears in page source, only assembled here) ---------- */
   document.querySelectorAll('.js-email').forEach((el) => {
