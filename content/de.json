@@ -1,5 +1,5 @@
 {
-  "_translation_status": "PLACEHOLDER — mirrors content/en.json word-for-word pending real German translation, EXCEPT legal.terms: this is a real German AGB, translated in tandem with the English GTC in en.json's legal.terms — these two fields are the only genuinely bilingual pair on the site so far. Edit the string values in this file (keep keys and structure identical to en.json) and rerun python3 build.py.",
+  "_translation_status": "Homepage sections (nav, footer, hero, capabilities, work eyebrow/heading, about, contact incl. form labels) and each case study's homepage-facing tag/one_liner are now real German translations. legal.terms is a real German AGB (translated in tandem with the English GTC in en.json). Still PLACEHOLDER, mirroring content/en.json word-for-word pending translation: each case study's full page content (summary, sections, meta), legal.privacy, meta.site_title/site_description, work.all_work, and the contact form's dynamic status messages (sending/success/error/network/not_wired). Edit the string values in this file (keep keys and structure identical to en.json) and rerun python3 build.py.",
   "meta": {
     "site_title": "Imen Bouzouita — Digital Product, UX & CRO Consultant, Berlin",
     "site_description": "I help e-commerce, wellness, and SaaS brands turn browsers into buyers with research-backed UX audits and interfaces people actually want to use.",
@@ -9,86 +9,86 @@
     "not_found_description": "Page not found."
   },
   "nav": {
-    "what_i_do": "What I Do",
-    "case_studies": "Case Studies",
-    "about": "About",
-    "contact": "Contact",
-    "book_call": "Book a call"
+    "what_i_do": "Was ich mache",
+    "case_studies": "Fallstudien",
+    "about": "Über mich",
+    "contact": "Kontakt",
+    "book_call": "Gespräch buchen"
   },
   "footer": {
-    "rights": "All rights reserved.",
-    "terms": "Terms",
-    "privacy": "Privacy",
+    "rights": "Alle Rechte vorbehalten.",
+    "terms": "AGB",
+    "privacy": "Datenschutz",
     "impressum": "Impressum"
   },
   "hero": {
-    "eyebrow": "Digital Product · UX · CRO Consultant — Berlin",
-    "headline_pre": "Websites that look good and ",
-    "headline_em": "actually work.",
-    "subhead": "I help e-commerce, wellness, and SaaS brands turn browsers into buyers — with fast, research-backed UX & CRO audits and user interfaces people actually want to use.",
-    "cta_primary": "Book a free discovery call",
-    "cta_secondary": "See the work",
-    "scroll_hint": "Scroll",
-    "trust_label": "10+ years turning traffic into revenue — trusted by teams at"
+    "eyebrow": "Digitales Produkt · UX · CRO Beraterin — Berlin",
+    "headline_pre": "Websites, die gut aussehen und ",
+    "headline_em": "tatsächlich funktionieren.",
+    "subhead": "Ich helfe E-Commerce-, Wellness- und SaaS-Marken, Besucher in Käufer zu verwandeln — mit schnellen, datengestützten UX- & CRO-Audits und Benutzeroberflächen, die Menschen wirklich nutzen wollen.",
+    "cta_primary": "Kostenloses Erstgespräch buchen",
+    "cta_secondary": "Zur Arbeit",
+    "scroll_hint": "Scrollen",
+    "trust_label": "Seit über 10 Jahren verwandle ich Traffic in Umsatz — das Vertrauen von Teams bei"
   },
   "capabilities": {
-    "eyebrow": "What I Do",
-    "heading": "Four ways to fix what's costing you customers.",
-    "details_label": "What's included",
+    "eyebrow": "Was ich mache",
+    "heading": "Vier Wege, um das zu beheben, was euch Kunden kostet.",
+    "details_label": "Was enthalten ist",
     "items": [
       {
-        "title": "UX/CRO and SEO Audits",
-        "pitch": "15–30 prioritized fixes. I tell you exactly what's costing you conversions — and how to fix it.",
+        "title": "UX/CRO- und SEO-Audits",
+        "pitch": "15–30 priorisierte Maßnahmen. Ich sage euch genau, was euch Conversions kostet — und wie ihr es behebt.",
         "details": [
-          "Full funnel teardown from entry to conversion",
-          "Heatmaps, session recordings & analytics review",
-          "Prioritized fix list scored by impact vs. effort",
-          "Optional A/B test plan for the riskiest changes"
+          "Vollständige Funnel-Analyse vom Einstieg bis zur Conversion",
+          "Heatmaps, Session-Recordings & Analytics-Auswertung",
+          "Priorisierte Maßnahmenliste nach Wirkung vs. Aufwand bewertet",
+          "Optionaler A/B-Testplan für die risikoreichsten Änderungen"
         ]
       },
       {
-        "title": "Landing Page Redesign",
-        "pitch": "From wireframe to live page in a week. Built to convert, not just to look nice.",
+        "title": "Landing-Page-Redesign",
+        "pitch": "Vom Wireframe zur fertigen Seite in einer Woche. Gebaut für Conversions, nicht nur um schön auszusehen.",
         "details": [
-          "Conversion-first wireframes before visual design",
-          "Copy tightened around a single clear action",
-          "Mobile-first build, ready to launch in days",
-          "Analytics baked in from day one"
+          "Conversion-orientierte Wireframes vor dem visuellen Design",
+          "Text auf eine einzige klare Handlung ausgerichtet",
+          "Mobile-First-Build, startbereit in wenigen Tagen",
+          "Analytics von Tag eins an integriert"
         ]
       },
       {
-        "title": "Full Website & Shop Builds",
-        "pitch": "Webflow, Shopify, Framer, WordPress. Structure, UX design, and build — end to end.",
+        "title": "Komplette Website- & Shop-Erstellung",
+        "pitch": "Webflow, Shopify, Framer, WordPress. Struktur, UX-Design und Umsetzung — von Anfang bis Ende.",
         "details": [
-          "Information architecture & content strategy",
-          "Custom visual design system",
-          "Build on the platform that fits your team",
-          "Handover docs so your team can self-serve after launch"
+          "Informationsarchitektur & Content-Strategie",
+          "Individuelles visuelles Designsystem",
+          "Umsetzung auf der Plattform, die zu eurem Team passt",
+          "Übergabedokumentation, damit euer Team nach dem Launch eigenständig arbeiten kann"
         ]
       },
       {
-        "title": "Neuroscience-Backed Insights",
-        "pitch": "Worked at the Deloitte Neuroscience Institute. I design with how people actually think, not just how they say they behave.",
+        "title": "Neurowissenschaftlich fundierte Erkenntnisse",
+        "pitch": "Ich habe am Deloitte Neuroscience Institute gearbeitet. Ich gestalte auf Basis dessen, wie Menschen wirklich denken — nicht nur, wie sie sagen, dass sie sich verhalten.",
         "details": [
-          "Eye-tracking & attention mapping",
-          "Behavioral heuristics applied to layout & copy",
-          "Bridging what users say vs. what they do",
-          "Evidence-backed design rationale for stakeholders"
+          "Eye-Tracking & Aufmerksamkeitsanalyse",
+          "Verhaltensbasierte Heuristiken für Layout & Text",
+          "Brücke zwischen dem, was Nutzer sagen, und dem, was sie tun",
+          "Evidenzbasierte Designbegründung für Stakeholder"
         ]
       }
     ]
   },
   "work": {
-    "eyebrow": "Case Studies",
-    "heading": "Selected work.",
-    "view_project": "View project",
+    "eyebrow": "Fallstudien",
+    "heading": "Ausgewählte Arbeiten.",
+    "view_project": "Projekt ansehen",
     "all_work": "All work"
   },
   "case_studies": [
     {
       "slug": "sacred-metrics",
       "title": "Sacred Metrics",
-      "one_liner": "Closing the conversion gap for a 20-year wellness brand",
+      "one_liner": "Die Conversion-Lücke einer 20 Jahre alten Wellness-Marke schließen",
       "tag": "UX/CRO/SEO",
       "meta": [
         [
@@ -143,9 +143,9 @@
     {
       "slug": "the-collective",
       "title": "The Collective",
-      "one_liner": "From Directory to Community Platform",
+      "one_liner": "Vom Verzeichnis zur Community-Plattform",
       "highlight": "Turning a high-authority wellness directory into the year-round heartbeat of a three-property ecosystem",
-      "tag": "Digital Strategy",
+      "tag": "Digitale Strategie",
       "meta": [
         [
           "Role",
@@ -200,7 +200,7 @@
     {
       "slug": "prima-materia",
       "title": "Prima Materia",
-      "one_liner": "The Practitioner's Site",
+      "one_liner": "Die Website für Praktizierende",
       "live_url": "https://primamateriacoaching.com/",
       "card_cover": "work/prima-materia/card-cover.webp",
       "tag": "UX/CRO/Branding",
@@ -255,8 +255,8 @@
     {
       "slug": "neuroboost-ux",
       "title": "NeuroBoost UX",
-      "one_liner": "Uncovering what drives user decisions when surveys and click data can't",
-      "tag": "UX Research",
+      "one_liner": "Herausfinden, was Nutzerentscheidungen antreibt, wenn Umfragen und Klickdaten nicht reichen",
+      "tag": "UX-Research",
       "meta": [
         [
           "Role",
@@ -320,8 +320,8 @@
     {
       "slug": "conversion-engine",
       "title": "Conversion Engine",
-      "one_liner": "Optimising checkout, product pages, and launch strategy from inside the team",
-      "tag": "E-commerce",
+      "one_liner": "Checkout, Produktseiten und Launch-Strategie von innen heraus optimieren",
+      "tag": "E-Commerce",
       "meta": [
         [
           "Role",
@@ -391,7 +391,7 @@
     {
       "slug": "resonance-tunes",
       "title": "Resonance Tunes",
-      "one_liner": "Conscious Tech, Grounded Design",
+      "one_liner": "Bewusste Technologie, geerdetes Design",
       "live_url": "https://resonancetunes.webflow.io/",
       "tag": "Design/Build",
       "meta": [
@@ -446,25 +446,25 @@
     }
   ],
   "about": {
-    "eyebrow": "About",
-    "heading": "Hi, I'm Imen.",
+    "eyebrow": "Über mich",
+    "heading": "Hallo, ich bin Imen.",
     "paragraphs": [
-      "I'm a UX, CRO, and digital strategy consultant based in Berlin. I work with e-commerce, wellness, and SaaS brands that know their product is strong but suspect their website is leaving money on the table. My job is to find out where and fix it — through conversion audits, UX redesigns, landing page builds, and structured A/B testing.",
-      "I've spent 10+ years moving between corporate innovation and independent work. At Deloitte, Siemens, and BMW I learned how large organisations approach product, research, and scale. On my own, I learned how to ship fast, prioritise ruthlessly, and make every recommendation something a small team can actually implement. I bring both.",
-      "My background is technical — IT and Electrical Engineering at TU Munich — and I worked in neuromarketing at the Deloitte Neuroscience Institute, which means I don't just look at heatmaps and analytics. I understand how attention, trust, and decision-making work at a cognitive level, and I design for that.",
-      "Fluent in German, English, French, and Arabic. Based in Berlin, working internationally."
+      "Ich bin UX-, CRO- und Digital-Strategy-Beraterin mit Sitz in Berlin. Ich arbeite mit E-Commerce-, Wellness- und SaaS-Marken, die wissen, dass ihr Produkt stark ist, aber vermuten, dass ihre Website Umsatz liegen lässt. Meine Aufgabe ist es herauszufinden, wo — und es zu beheben: durch Conversion-Audits, UX-Redesigns, Landing-Page-Erstellung und strukturiertes A/B-Testing.",
+      "Ich habe über 10 Jahre Erfahrung zwischen Unternehmensinnovation und selbstständiger Arbeit. Bei Deloitte, Siemens und BMW habe ich gelernt, wie große Organisationen Produkt, Research und Skalierung angehen. Auf eigene Faust habe ich gelernt, schnell zu liefern, radikal zu priorisieren und jede Empfehlung so zu formulieren, dass ein kleines Team sie tatsächlich umsetzen kann. Ich bringe beides mit.",
+      "Mein Hintergrund ist technisch — Informatik und Elektrotechnik an der TU München — und ich habe im Bereich Neuromarketing am Deloitte Neuroscience Institute gearbeitet. Das bedeutet, ich schaue nicht nur auf Heatmaps und Analytics. Ich verstehe, wie Aufmerksamkeit, Vertrauen und Entscheidungsfindung auf kognitiver Ebene funktionieren, und ich gestalte danach.",
+      "Fließend in Deutsch, Englisch, Französisch und Arabisch. Standort Berlin, international tätig."
     ]
   },
   "contact": {
-    "heading": "Let's fix something.",
-    "body": "Book a non-binding discovery call and I'll review your homepage or shop on the spot and give you three actionable tips.",
-    "cta": "Get 3 quick wins",
-    "secondary": "Also open to Figma prototyping, website/onlineshop audits and full website/onlineshop builds on Webflow, Shopify, Framer or Squarespace.",
+    "heading": "Lass uns etwas verbessern.",
+    "body": "Buche ein unverbindliches Erstgespräch und ich schaue mir deine Homepage oder deinen Shop direkt an und gebe dir drei umsetzbare Tipps.",
+    "cta": "3 Quick Wins sichern",
+    "secondary": "Auch offen für Figma-Prototyping, Website-/Onlineshop-Audits und komplette Website-/Onlineshop-Erstellung auf Webflow, Shopify, Framer oder Squarespace.",
     "form": {
       "name_label": "Name",
-      "email_label": "Email",
-      "message_label": "Message",
-      "submit": "Send message",
+      "email_label": "E-Mail",
+      "message_label": "Nachricht",
+      "submit": "Nachricht senden",
       "sending": "Sending…",
       "msg_success": "Thanks — got it. I’ll get back to you within a day or two.",
       "msg_error": "Something went wrong sending that. Try the Calendly link instead?",
