@@ -48,11 +48,25 @@
       window.gtag('config', ga4Id, { anonymize_ip: true });
     };
 
+    const analyticsToggle = banner?.querySelector('[data-cookie-toggle-analytics]');
+    const manageBtn = banner?.querySelector('[data-cookie-manage]');
+    const managePanel = banner?.querySelector('.cookie-manage-panel');
+
+    const syncAnalyticsToggle = () => {
+      if (analyticsToggle) analyticsToggle.checked = getConsent() === 'granted';
+    };
+
+    const openBanner = () => {
+      if (!banner) return;
+      banner.hidden = false;
+      syncAnalyticsToggle();
+    };
+
     const consent = getConsent();
     if (consent === 'granted') {
       loadGA4();
     } else if (consent !== 'denied' && banner) {
-      banner.hidden = false;
+      openBanner();
     }
 
     if (banner) {
@@ -65,12 +79,30 @@
         setConsent('denied');
         banner.hidden = true;
       });
+      banner.querySelector('[data-cookie-close]')?.addEventListener('click', () => {
+        // No decision recorded — nothing is set either way, so the
+        // banner will simply reappear on the next visit.
+        banner.hidden = true;
+      });
+      banner.querySelector('[data-cookie-confirm]')?.addEventListener('click', () => {
+        if (analyticsToggle?.checked) {
+          setConsent('granted');
+          loadGA4();
+        } else {
+          setConsent('denied');
+        }
+        banner.hidden = true;
+      });
+      manageBtn?.addEventListener('click', () => {
+        const expanded = manageBtn.getAttribute('aria-expanded') === 'true';
+        manageBtn.setAttribute('aria-expanded', String(!expanded));
+        if (managePanel) managePanel.hidden = expanded;
+        if (!expanded) syncAnalyticsToggle();
+      });
     }
 
     document.querySelectorAll('[data-cookie-settings]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        if (banner) banner.hidden = false;
-      });
+      btn.addEventListener('click', openBanner);
     });
   })();
 

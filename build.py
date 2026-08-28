@@ -380,11 +380,45 @@ def page_shell(t, title, description, body, current_path, alt_paths, extra_head=
     privacy_href = href_to(current_path, lang_legal_path(lang_code, "privacy"))
     cb = t["cookie_banner"]
     cookie_banner_html = f"""<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+    <button type="button" class="cookie-banner-close" data-cookie-close aria-label="{cb['close']}">&times;</button>
     <div class="cookie-banner-inner">
       <p>{cb['text']} <a href="{privacy_href}">{t['footer']['privacy']}</a></p>
       <div class="cookie-banner-actions">
         <button type="button" class="btn btn-ghost" data-cookie-decline>{cb['decline']}</button>
         <button type="button" class="btn btn-primary" data-cookie-accept>{cb['accept']}</button>
+      </div>
+      <button type="button" class="cookie-manage-toggle" data-cookie-manage aria-expanded="false">
+        {cb['manage_label']} <span class="chevron">&#9662;</span>
+      </button>
+      <div class="cookie-manage-panel" hidden>
+        <p class="cookie-purposes-label">{cb['purposes_label']}</p>
+        <div class="cookie-purpose">
+          <div class="cookie-purpose-head">
+            <div>
+              <h3>{cb['analytics_label']}</h3>
+              <p class="cookie-legal-basis">{cb['analytics_legal_basis']}</p>
+            </div>
+            <label class="cookie-toggle">
+              <input type="checkbox" data-cookie-toggle-analytics />
+              <span class="cookie-toggle-track"></span>
+            </label>
+          </div>
+          <p class="cookie-purpose-desc">{cb['analytics_desc']}</p>
+        </div>
+        <div class="cookie-purpose">
+          <div class="cookie-purpose-head">
+            <div>
+              <h3>{cb['essential_label']}</h3>
+              <p class="cookie-legal-basis">{cb['essential_legal_basis']}</p>
+            </div>
+            <label class="cookie-toggle cookie-toggle--disabled">
+              <input type="checkbox" checked disabled />
+              <span class="cookie-toggle-track"></span>
+            </label>
+          </div>
+          <p class="cookie-purpose-desc">{cb['essential_desc']}</p>
+        </div>
+        <button type="button" class="btn btn-primary" data-cookie-confirm>{cb['confirm']}</button>
       </div>
     </div>
   </div>"""

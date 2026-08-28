@@ -497,6 +497,16 @@
     "text": "We'd like to use analytics cookies to understand how visitors use this site. We only set them with your consent — you can change your mind anytime.",
     "accept": "Accept",
     "decline": "Decline",
-    "settings_link": "Cookie settings"
+    "settings_link": "Cookie settings",
+    "manage_label": "Manage preferences",
+    "purposes_label": "Purposes",
+    "analytics_label": "Analytics",
+    "analytics_legal_basis": "Legal basis: Consent — opt-in",
+    "analytics_desc": "Google Analytics, used to understand how visitors use this site. Nothing is loaded or set unless you opt in.",
+    "essential_label": "Essential",
+    "essential_legal_basis": "Legal basis: Legitimate interest — always active",
+    "essential_desc": "Basic hosting and security logs required to serve this website reliably.",
+    "confirm": "Confirm",
+    "close": "Close"
   }
 }

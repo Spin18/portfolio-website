@@ -498,6 +498,16 @@
     "text": "Wir möchten Analyse-Cookies verwenden, um zu verstehen, wie Besucher diese Website nutzen. Wir setzen sie nur mit Ihrer Einwilligung — Sie können Ihre Entscheidung jederzeit ändern.",
     "accept": "Akzeptieren",
     "decline": "Ablehnen",
-    "settings_link": "Cookie-Einstellungen"
+    "settings_link": "Cookie-Einstellungen",
+    "manage_label": "Einstellungen verwalten",
+    "purposes_label": "Zwecke",
+    "analytics_label": "Analyse",
+    "analytics_legal_basis": "Rechtsgrundlage: Einwilligung — Opt-in",
+    "analytics_desc": "Google Analytics, verwendet um zu verstehen, wie Besucher diese Website nutzen. Es wird nichts geladen oder gesetzt, außer Sie stimmen zu.",
+    "essential_label": "Erforderlich",
+    "essential_legal_basis": "Rechtsgrundlage: Berechtigtes Interesse — immer aktiv",
+    "essential_desc": "Grundlegende Hosting- und Sicherheitsprotokolle, die für einen zuverlässigen Betrieb dieser Website erforderlich sind.",
+    "confirm": "Bestätigen",
+    "close": "Schließen"
   }
 }
