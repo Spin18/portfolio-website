@@ -1,5 +1,5 @@
 {
-  "_translation_status": "PLACEHOLDER — mirrors content/en.json word-for-word pending real German translation, EXCEPT legal.terms (real German AGB, intentionally diverged from en.json's English Terms of Service). Edit the string values in this file (keep keys and structure identical to en.json) and rerun python3 build.py.",
+  "_translation_status": "PLACEHOLDER — mirrors content/en.json word-for-word pending real German translation, EXCEPT legal.terms: this is a real German AGB, translated in tandem with the English GTC in en.json's legal.terms — these two fields are the only genuinely bilingual pair on the site so far. Edit the string values in this file (keep keys and structure identical to en.json) and rerun python3 build.py.",
   "meta": {
     "site_title": "Imen Bouzouita — Digital Product, UX & CRO Consultant, Berlin",
     "site_description": "I help e-commerce, wellness, and SaaS brands turn browsers into buyers with research-backed UX audits and interfaces people actually want to use.",
