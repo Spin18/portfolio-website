@@ -23,6 +23,7 @@ Digital Product · UX · CRO Consultant — Berlin. I'm a UX, CRO, and digital s
 ## Resources
 
 - [CRO Audit Checklist: 20 Things to Check Before You Redesign Anything](https://www.imenbouzouita.com/resources/cro-audit-checklist/): A practical, 20-point checklist covering analytics, homepage clarity, checkout friction, and mobile UX — everything worth auditing before committing to a redesign.
+- [What Neuromarketing Actually Is (And Isn't)](https://www.imenbouzouita.com/resources/what-neuromarketing-actually-is/): What neuromarketing actually measures, and the assumptions people most often get wrong about it, from someone who's used eye tracking, implicit testing, and biometric methods professionally.
 
 ## About
 

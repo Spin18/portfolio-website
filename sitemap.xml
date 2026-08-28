@@ -120,4 +120,8 @@
       <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/resources/cro-audit-checklist/" />
       <xhtml:link rel="alternate" hreflang="de" href="https://www.imenbouzouita.com/de/resources/cro-audit-checklist/" />
   </url>
+  <url>
+    <loc>https://www.imenbouzouita.com/resources/what-neuromarketing-actually-is/</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/resources/what-neuromarketing-actually-is/" />
+  </url>
 </urlset>
