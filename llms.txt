@@ -20,6 +20,10 @@ Digital Product · UX · CRO Consultant — Berlin. I'm a UX, CRO, and digital s
 - [Conversion Engine](https://www.imenbouzouita.com/work/conversion-engine/): Optimising checkout, product pages, and launch strategy from inside the team — A direct-to-consumer brand with healthy traffic but underperforming conversion. As shop manager and developer, I owned the full e-commerce operation — from product launches and shop optimisation to A/B testing and checkout improvements.
 - [Resonance Tunes](https://www.imenbouzouita.com/work/resonance-tunes/): Conscious Tech, Grounded Design — Designing and building the business website for an ethical-AI wellness platform from scratch.
 
+## Resources
+
+- [CRO Audit Checklist: 20 Things to Check Before You Redesign Anything](https://www.imenbouzouita.com/resources/cro-audit-checklist/): A practical, 20-point checklist covering analytics, homepage clarity, checkout friction, and mobile UX — everything worth auditing before committing to a redesign.
+
 ## About
 
 - [About](https://www.imenbouzouita.com/#about): I've spent 10+ years moving between corporate innovation and independent work. At Deloitte, Siemens, and BMW I learned how large organisations approach product, research, and scale. On my own, I learned how to ship fast, prioritise ruthlessly, and make every recommendation something a small team can actually implement. I bring both.

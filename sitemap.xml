@@ -110,4 +110,8 @@
       <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/resources/" />
       <xhtml:link rel="alternate" hreflang="de" href="https://www.imenbouzouita.com/de/resources/" />
   </url>
+  <url>
+    <loc>https://www.imenbouzouita.com/resources/cro-audit-checklist/</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/resources/cro-audit-checklist/" />
+  </url>
 </urlset>

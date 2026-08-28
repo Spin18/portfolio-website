@@ -183,15 +183,28 @@ def format_date(iso_date, lang_code):
     return f"{month} {d.day}, {d.year}"
 
 
+def _count_words(text):
+    return len(re.sub("<[^>]+>", "", text).split())
+
+
 def estimate_read_minutes(article):
     """~200 wpm, counted from the article's own section text (tags stripped)
     so a displayed reading time can never drift from the actual content."""
     word_count = 0
-    for _, content in article["sections"]:
-        paragraphs = content if isinstance(content, list) else [content]
-        for p in paragraphs:
-            word_count += len(re.sub("<[^>]+>", "", p).split())
+    for section in article["sections"]:
+        for p in _as_list(section.get("body")):
+            word_count += _count_words(p)
+        for item in section.get("items", []):
+            word_count += _count_words(item["heading"])
+            for p in _as_list(item.get("body")):
+                word_count += _count_words(p)
     return max(1, round(word_count / 200))
+
+
+def _as_list(value):
+    if value is None:
+        return []
+    return value if isinstance(value, list) else [value]
 
 
 def url_for(current_path):
@@ -860,10 +873,14 @@ def build_resource_article(t, lang_code, article, alt_paths):
     res = t["resources"]
 
     sections_html = ""
-    for heading, content in article["sections"]:
-        paragraphs = content if isinstance(content, list) else [content]
-        paras_html = "\n        ".join(f"<p>{p}</p>" for p in paragraphs)
-        sections_html += f"<h2>{heading}</h2>\n        {paras_html}\n        "
+    for section in article["sections"]:
+        heading_html = f"<h2>{section['heading']}</h2>\n        " if section.get("heading") else ""
+        body_html = "\n        ".join(f"<p>{p}</p>" for p in _as_list(section.get("body")))
+        items_html = ""
+        for item in section.get("items", []):
+            item_body = "\n          ".join(f"<p>{p}</p>" for p in _as_list(item.get("body")))
+            items_html += f"<h3>{item['heading']}</h3>\n          {item_body}\n        "
+        sections_html += f"{heading_html}{body_html}{items_html}\n        "
 
     read_time = res["read_time_label"].format(n=estimate_read_minutes(article))
     date_display = format_date(article["date"], lang_code)
@@ -1157,7 +1174,15 @@ def main():
         build_resources_index(t, code, resources_alt)
 
         for article in t["resources"]["items"]:
-            article_alt = {l["code"]: lang_resource_path(l["code"], article["slug"]) for l in LANGUAGES}
+            # Only link a language as an hreflang alternate if that language
+            # actually has this slug — an article can go live in one
+            # language before it's translated, and a real page has to exist
+            # at the other end of every alternate link.
+            article_alt = {
+                l["code"]: lang_resource_path(l["code"], article["slug"])
+                for l in LANGUAGES
+                if any(a["slug"] == article["slug"] for a in content[l["code"]]["resources"]["items"])
+            }
             build_resource_article(t, code, article, article_alt)
 
     build_404(content["en"])
