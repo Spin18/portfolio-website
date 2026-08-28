@@ -1,5 +1,5 @@
 {
-  "_translation_status": "Homepage sections (nav, footer, hero, capabilities, work eyebrow/heading, about, contact incl. form labels), meta.legal_label/case_study_label/visit_live_site_label, legal.terms/legal.privacy, and the full page content (meta, summary, sections) for all six case studies are now real German. Still PLACEHOLDER, mirroring content/en.json word-for-word pending translation: meta.site_title/site_description, work.all_work, and the contact form's dynamic status messages (sending/success/error/network/not_wired). Edit the string values in this file (keep keys and structure identical to en.json) and rerun python3 build.py.",
+  "_translation_status": "The entire site is now real German content, except: meta.site_title/site_description (SEO/meta tags) and the contact form's dynamic status messages (sending/success/error/network/not_wired). Edit the string values in this file (keep keys and structure identical to en.json) and rerun python3 build.py.",
   "meta": {
     "site_title": "Imen Bouzouita — Digital Product, UX & CRO Consultant, Berlin",
     "site_description": "I help e-commerce, wellness, and SaaS brands turn browsers into buyers with research-backed UX audits and interfaces people actually want to use.",
@@ -84,7 +84,7 @@
     "eyebrow": "Fallstudien",
     "heading": "Ausgewählte Arbeiten.",
     "view_project": "Projekt ansehen",
-    "all_work": "All work"
+    "all_work": "Alle Arbeiten"
   },
   "case_studies": [
     {
