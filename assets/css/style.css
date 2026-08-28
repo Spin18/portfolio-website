@@ -290,7 +290,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .hero-ctas { display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap; }
 .hero-scroll-hint {
   position: absolute;
-  bottom: 2.2rem; left: 50%;
+  bottom: 1.2rem; left: 50%;
   transform: translateX(-50%);
   font-size: 0.8rem;
   font-weight: 600;
