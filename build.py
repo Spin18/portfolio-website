@@ -883,7 +883,6 @@ def build_resource_article(t, lang_code, article, alt_paths):
         sections_html += f"{heading_html}{body_html}{items_html}\n        "
 
     read_time = res["read_time_label"].format(n=estimate_read_minutes(article))
-    date_display = format_date(article["date"], lang_code)
     category_html = (
         f'<span class="resource-category">{article["category"]}</span>' if article.get("category") else ""
     )
@@ -899,7 +898,7 @@ def build_resource_article(t, lang_code, article, alt_paths):
   <main>
     <section class="page-hero resources-hero">
       <div class="container">
-        <div class="tag-row">{category_html}<span class="resource-date">{date_display}</span><span class="resource-date">{read_time}</span></div>
+        <div class="tag-row">{category_html}<span class="resource-date">{read_time}</span></div>
         <h1>{article['title']}</h1>
         <p class="lede">{article['excerpt']}</p>
         {cover_html}
