@@ -903,9 +903,9 @@ def build_resource_article(t, lang_code, article, alt_paths):
       <div class="container">
         <div class="tag-row">{category_html}<span class="resource-date">{read_time}</span></div>
         <h1>{article['title']}</h1>
-        <p class="lede">{article['excerpt']}</p>
         {cover_html}
         <div class="case-body" data-reveal>
+          <p class="lede">{article['excerpt']}</p>
           {sections_html}
         </div>
         <div class="case-nav" style="justify-content:flex-start;">
