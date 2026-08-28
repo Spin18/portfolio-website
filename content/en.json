@@ -456,9 +456,9 @@
   },
   "contact": {
     "heading": "Let's fix something.",
-    "body": "Book a free discovery call and I'll review your homepage or shop on the spot — three actionable tips, no charge, no pitch.",
-    "cta": "Get 3 quick wins, free",
-    "secondary": "Also open to Figma prototyping, AI-generated art, and full website/webshop builds on Webflow, Shopify, or Wix.",
+    "body": "Book a non-binding discovery call and I'll review your homepage or shop on the spot and give you three actionable tips.",
+    "cta": "Get 3 quick wins",
+    "secondary": "Also open to Figma prototyping, website/onlineshop audits and full website/onlineshop builds on Webflow, Shopify, Framer or Squarespace.",
     "form": {
       "name_label": "Name",
       "email_label": "Email",
