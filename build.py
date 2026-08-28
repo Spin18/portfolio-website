@@ -166,23 +166,6 @@ def lang_resource_path(lang_code, slug):
     return f"{d}resources/{slug}/index.html"
 
 
-_MONTH_NAMES = {
-    "en": ["January", "February", "March", "April", "May", "June", "July",
-           "August", "September", "October", "November", "December"],
-    "de": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli",
-           "August", "September", "Oktober", "November", "Dezember"],
-}
-
-
-def format_date(iso_date, lang_code):
-    import datetime
-    d = datetime.date.fromisoformat(iso_date)
-    month = _MONTH_NAMES[lang_code][d.month - 1]
-    if lang_code == "de":
-        return f"{d.day}. {month} {d.year}"
-    return f"{month} {d.day}, {d.year}"
-
-
 def _count_words(text):
     return len(re.sub("<[^>]+>", "", text).split())
 
@@ -836,7 +819,6 @@ def build_resources_index(t, lang_code, alt_paths):
         for article in res["items"]:
             article_path = lang_resource_path(lang_code, article["slug"])
             read_time = res["read_time_label"].format(n=estimate_read_minutes(article))
-            date_display = format_date(article["date"], lang_code)
             category_html = (
                 f'<span class="resource-category">{article["category"]}</span>' if article.get("category") else ""
             )
@@ -844,7 +826,6 @@ def build_resources_index(t, lang_code, alt_paths):
         <a class="resource-card" href="{href_to(current_path, article_path)}" data-reveal>
           <div class="resource-card-meta">
             {category_html}
-            <span class="resource-date">{date_display}</span>
           </div>
           <h2>{article['title']}</h2>
           <p>{article['excerpt']}</p>
