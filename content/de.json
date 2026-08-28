@@ -255,7 +255,7 @@
     {
       "slug": "neuroboost-ux",
       "title": "NeuroBoost UX",
-      "one_liner": "Using gaze data to close the gap between what users say they see and what they actually attend to",
+      "one_liner": "Uncovering what drives user decisions when surveys and click data can't",
       "tag": "UX Research",
       "meta": [
         [
@@ -264,34 +264,49 @@
         ],
         [
           "Timeline",
-          "4 weeks"
+          "1 year"
         ],
         [
           "Focus",
-          "Attention & Trust"
+          "Attention & Subconscious Drivers"
         ],
         [
           "Tools",
-          "Eye-tracking, Figma, Custom-Build, A/B Testing"
+          "Eye-tracking, Angular, HTML/CSS, A/B Testing"
         ]
       ],
-      "summary": "A product team had a conversion problem that standard usability testing couldn't explain. Users self-reported noticing trust signals — badges, guarantees, social proof — but the data told a different story. The brief: go beyond stated preference and measure attention itself.",
+      "summary": "Two unrelated projects, the same blind spot: teams making product and marketing decisions based on what users said they wanted, while the numbers kept disagreeing. A digital product team's adoption metrics didn't match glowing survey feedback. An automotive brand couldn't settle on a newsletter layout from stakeholder opinion alone. The brief in both cases: measure what users can't self-report.",
       "sections": [
         [
-          "The opportunity",
-          "Traditional usability testing captures what users say they experienced. But attention is involuntary — people genuinely believe they've seen something their eyes never landed on. The gap between self-reported awareness and actual gaze behaviour was the likely source of the discrepancy between positive test feedback and underwhelming conversion performance. This wasn't a trust problem or a copy problem — it was a visibility problem hiding inside a testing blind spot."
+          "The problem",
+          [
+            "Two projects, same blind spot. In both cases, teams were making product and marketing decisions based on what users said they wanted, and the numbers kept disagreeing.",
+            "Project 1: a digital product team struggling with engagement. Users completed surveys, gave feedback, clicked through prototypes. Everything looked fine on paper. But adoption metrics told a different story. The team suspected the disconnect was somewhere between what users consciously reported and what actually drove their behaviour, but they had no way to see it.",
+            "Project 2: an automotive brand preparing a newsletter relaunch. Three layout variants looked equally strong in internal review. Stakeholders had opinions. Nobody had evidence."
+          ]
         ],
         [
-          "The approach",
-          "Three design variants of the key landing pages, each with a different visual hierarchy for trust signals — tested simultaneously through eye-tracking sessions layered over task-based usability testing. Applying methods from training at the Deloitte Neuroscience Institute, each session captured both behavioural data (task completion, hesitation points, click paths) and gaze data (fixation duration, scan patterns, areas of interest) across all three variants. The A/B/C structure meant the winner wasn't chosen by opinion or conversion proxy — it was determined by which layout actually captured sustained attention on the elements that mattered."
+          "What I did",
+          [
+            "<strong>Online neuromarketing studies (Project 1)</strong>",
+            "I designed and ran online studies that bypassed self-reported preference entirely. Instead of asking users what they wanted, I measured what was happening underneath: implicit attention patterns, reaction-time-based association tasks, and structured decision games that surface subconscious drivers (the needs and motivations users act on but can't articulate in a survey).",
+            "The raw output wasn't a single \"winner.\" It was clusters. Users grouped into distinct segments based on which subconscious needs were actually steering their decisions: security, novelty, status, autonomy, belonging. Each cluster responded to different triggers, different framings, different value propositions.",
+            "From those clusters, a set of concrete adaptation recommendations was developed: how to adjust the product's messaging, onboarding flow, and feature hierarchy to speak to each group's actual motivators rather than their stated ones.",
+            "<strong>A/B/C eye-tracking study (Project 2)</strong>",
+            "For the automotive client, I built three newsletter variants in HTML/CSS and ran a controlled eye-tracking study across all three. Each participant worked through a realistic reading scenario while gaze data captured fixation duration, scan paths, and which content blocks actually held attention versus which ones users scrolled past.",
+            "The study didn't just pick a winner. It showed why one variant outperformed. Heatmaps revealed that the best-converting layout wasn't the one with the strongest hero image or the boldest CTA. It was the one where the visual hierarchy guided the eye through a specific content sequence: context first, then proof, then action. The other two variants scattered attention across competing elements and lost readers before they reached the conversion point."
+          ]
         ],
         [
           "What shipped",
-          "Comparative gaze-pattern maps across all three variants, showing exactly how each layout directed attention differently — and where the losing variants failed despite looking reasonable on paper. The winning variant wasn't the one the team had expected. The eye-tracking data gave the product team something rare: a design decision backed by physiological evidence rather than preference, removing the usual stakeholder debate about which layout \"feels right.\""
+          [
+            "Project 1: A segmentation framework mapping user clusters to their subconscious need profiles, paired with prioritised design and copy recommendations for each segment. The product team stopped guessing which value proposition to lead with and started matching messaging to the actual drivers behind user decisions.",
+            "Project 2: A clear recommendation backed by physiological data, not stakeholder preference. The winning newsletter variant, annotated with gaze-pattern analysis showing exactly which layout decisions created the attention flow that drove conversion. The two losing variants got the same treatment: specific, visual evidence of where and why they failed."
+          ]
         ],
         [
-          "The impact",
-          "Follow-up eye-tracking sessions confirmed the redesigned hierarchy shifted gaze behaviour toward the intended trust signals. The team moved forward with evidence-backed confidence in the new layout — replacing a cycle of A/B tests based on assumptions with a single, physiologically grounded design direction."
+          "The takeaway",
+          "Standard testing captures what people are willing and able to tell you. Neuromarketing methods capture what they can't. In both projects, the gap between those two was exactly where the problem lived, and exactly where the solution came from."
         ]
       ],
       "cover": "work/neuroboost-ux/cover.jpg",
