@@ -3,7 +3,7 @@
   "meta": {
     "site_title": "Imen Bouzouita — Digital Product, UX & CRO Consultant, Berlin",
     "site_description": "I help e-commerce, wellness, and SaaS brands turn browsers into buyers with research-backed UX audits and interfaces people actually want to use.",
-    "case_study_label": "Fallstudie",
+    "case_study_label": "Referenz",
     "legal_meta_suffix": "for imenbouzouita.com",
     "not_found_title": "Page not found — Imen Bouzouita",
     "not_found_description": "Page not found.",
@@ -12,7 +12,7 @@
   },
   "nav": {
     "what_i_do": "Was ich mache",
-    "case_studies": "Fallstudien",
+    "case_studies": "Referenzen",
     "about": "Über mich",
     "contact": "Kontakt",
     "book_call": "Gespräch buchen"
@@ -81,10 +81,10 @@
     ]
   },
   "work": {
-    "eyebrow": "Fallstudien",
+    "eyebrow": "Referenzen",
     "heading": "Ausgewählte Projekte.",
     "view_project": "Projekt ansehen",
-    "all_work": "Alle Fallstudien"
+    "all_work": "Alle Referenzen"
   },
   "case_studies": [
     {
@@ -239,7 +239,7 @@
         ],
         [
           "Warum das in meinem Portfolio wichtig ist",
-          "Die anderen Fallstudien in diesem Portfolio zeigen, wie ich über die digitalen Erlebnisse anderer Menschen denke. Diese hier zeigt, dass ich mich selbst am gleichen Maßstab messe — klare Positionierung, eine definierte Zielgruppe, ein strukturierter Funnel und Designentscheidungen, die der Conversion dienen statt der Dekoration."
+          "Die anderen Referenzen in diesem Portfolio zeigen, wie ich über die digitalen Erlebnisse anderer Menschen denke. Diese hier zeigt, dass ich mich selbst am gleichen Maßstab messe — klare Positionierung, eine definierte Zielgruppe, ein strukturierter Funnel und Designentscheidungen, die der Conversion dienen statt der Dekoration."
         ]
       ],
       "cover": "work/prima-materia/cover.jpg",
