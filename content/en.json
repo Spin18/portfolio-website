@@ -132,16 +132,6 @@
         ]
       ],
       "cover": "work/sacred-metrics/cover.jpg",
-      "gallery": [
-        [
-          "work/sacred-metrics/gallery-1.jpg",
-          true
-        ],
-        [
-          "work/sacred-metrics/gallery-2.jpg",
-          true
-        ]
-      ],
       "card_cover": "work/sacred-metrics/card-cover.webp"
     },
     {
