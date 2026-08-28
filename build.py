@@ -21,7 +21,7 @@ import json
 import os
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-SITE_URL = "https://imenbouzouita.com"
+SITE_URL = "https://www.imenbouzouita.com"
 CALENDLY = "https://calendly.com/imenbouzouita/1-1-discovery-call"
 LINKEDIN_URL = "https://www.linkedin.com/in/imen-bouzouita-b65051107/"
 INSTAGRAM_URL = "https://www.instagram.com/ima_gi_n/"
