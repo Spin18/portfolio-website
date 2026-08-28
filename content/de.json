@@ -1,5 +1,5 @@
 {
-  "_translation_status": "Homepage sections (nav, footer, hero, capabilities, work eyebrow/heading, about, contact incl. form labels), each case study's homepage-facing tag/one_liner, meta.legal_label/case_study_label/visit_live_site_label, legal.terms/legal.privacy, and the full case study pages for conversion-engine, resonance-tunes, prima-materia, and neuroboost-ux (meta, summary, sections) are now real German. Still PLACEHOLDER, mirroring content/en.json word-for-word pending translation: the full page content (summary, sections, meta) for sacred-metrics and the-collective, meta.site_title/site_description, work.all_work, and the contact form's dynamic status messages (sending/success/error/network/not_wired). Edit the string values in this file (keep keys and structure identical to en.json) and rerun python3 build.py.",
+  "_translation_status": "Homepage sections (nav, footer, hero, capabilities, work eyebrow/heading, about, contact incl. form labels), meta.legal_label/case_study_label/visit_live_site_label, legal.terms/legal.privacy, and the full page content (meta, summary, sections) for all six case studies are now real German. Still PLACEHOLDER, mirroring content/en.json word-for-word pending translation: meta.site_title/site_description, work.all_work, and the contact form's dynamic status messages (sending/success/error/network/not_wired). Edit the string values in this file (keep keys and structure identical to en.json) and rerun python3 build.py.",
   "meta": {
     "site_title": "Imen Bouzouita — Digital Product, UX & CRO Consultant, Berlin",
     "site_description": "I help e-commerce, wellness, and SaaS brands turn browsers into buyers with research-backed UX audits and interfaces people actually want to use.",
@@ -94,39 +94,39 @@
       "tag": "UX/CRO/SEO",
       "meta": [
         [
-          "Role",
-          "UX, CRO & SEO Consultant"
+          "Rolle",
+          "UX-, CRO- & SEO-Beraterin"
         ],
         [
-          "Timeline",
-          "3 weeks"
+          "Zeitraum",
+          "3 Wochen"
         ],
         [
-          "Focus",
-          "Conversion, SEO & AI Visibility"
+          "Schwerpunkt",
+          "Conversion, SEO & KI-Sichtbarkeit"
         ],
         [
           "Tools",
-          "GA4, Ahrefs, Crazy Egg, Lighthouse, ChatGPT (AI visibility testing), Figma, WordPress"
+          "GA4, Ahrefs, Crazy Egg, Lighthouse, ChatGPT (KI-Sichtbarkeitstests), Figma, WordPress"
         ]
       ],
-      "summary": "A 20-year-old wellness brand in Ubud, Bali with strong organic traffic, genuine guest loyalty, and a domain rating of 62 backed by 13.5K backlinks. The brief: modernise the digital experience, close the gap between offline reputation and online conversion, and assess AI search readiness.",
+      "summary": "Eine 20 Jahre alte Wellness-Marke in Ubud, Bali — mit starkem organischen Traffic, echter Gästetreue und einem Domain Rating von 62, gestützt auf 13.500 Backlinks. Der Auftrag: das digitale Erlebnis modernisieren, die Lücke zwischen Offline-Reputation und Online-Conversion schließen und die Bereitschaft für KI-gestützte Suche bewerten.",
       "sections": [
         [
-          "The opportunity",
-          "Guest sentiment was overwhelmingly positive — \"lush green oasis,\" \"feels less like a studio and more like a community\" — but the website led with schedules and logistics rather than the atmosphere that actually drives bookings. The brand had significant digital equity that wasn't being fully leveraged: strong organic positions, loyal repeat visitors, and a product guests already loved. The question was how to make the website work as hard as the experience itself."
+          "Die Chance",
+          "Das Gästefeedback war überwältigend positiv — „üppige grüne Oase\", „fühlt sich weniger wie ein Studio an und mehr wie eine Community\" — doch die Website stellte Stundenpläne und Logistik in den Vordergrund statt der Atmosphäre, die tatsächlich zu Buchungen führt. Die Marke verfügte über erhebliches digitales Kapital, das nicht voll ausgeschöpft wurde: starke organische Platzierungen, treue Stammbesucher und ein Produkt, das die Gäste bereits liebten. Die Frage war, wie die Website genauso überzeugen kann wie das Erlebnis selbst."
         ],
         [
-          "The approach",
-          "Six detailed UX/CRO flow walkthroughs (Homepage, Schedule, Workshops/Ecstatic Dance, Retreats, Accommodation, Wellness) with heuristic scoring and annotated wireframes. Crazy Egg session recordings and heatmaps to validate UX/CRO findings with observed user behaviour. Full technical audit covering Core Web Vitals, platform security, and migration risk analysis for a schedule page carrying 41% of all organic sessions. SEO health assessment and Google Business Profile competitive benchmarking. AI search visibility testing across five ChatGPT queries, confirming top-3 positioning. AISO/GEO foundational layer assessment. End-to-end measurement architecture review across both booking systems and GA4."
+          "Der Ansatz",
+          "Sechs detaillierte UX/CRO-Flow-Analysen (Startseite, Stundenplan, Workshops/Ecstatic Dance, Retreats, Unterkünfte, Wellness) mit heuristischer Bewertung und annotierten Wireframes. Crazy-Egg-Session-Recordings und Heatmaps zur Validierung der UX/CRO-Ergebnisse anhand beobachteten Nutzerverhaltens. Umfassendes technisches Audit zu Core Web Vitals, Plattformsicherheit und Migrationsrisikoanalyse für eine Stundenplan-Seite, die 41 % aller organischen Sitzungen ausmachte. SEO-Gesundheitscheck und Wettbewerbsbenchmarking des Google-Unternehmensprofils. KI-Suchsichtbarkeitstests über fünf ChatGPT-Anfragen mit Bestätigung einer Top-3-Positionierung. Bewertung der AISO/GEO-Grundlagenebene. Durchgängige Überprüfung der Messarchitektur über beide Buchungssysteme und GA4 hinweg."
         ],
         [
-          "What shipped",
-          "An 81-page audit document with approximately 90 PIE-scored findings, a phased action roadmap across four phases and seven workstreams, and annotated Figma wireframes for all six flows. The roadmap sequenced work across security hardening, measurement foundations, CTA alignment, redirect mapping, and design refresh — each phase unlocking the next. Visual direction recommendations preserved Balinese cultural identity while moving toward a lighter, nature-grounded wellness aesthetic."
+          "Was geliefert wurde",
+          "Ein 81-seitiges Audit-Dokument mit rund 90 nach PIE bewerteten Ergebnissen, eine phasenbasierte Maßnahmen-Roadmap über vier Phasen und sieben Arbeitsstränge sowie annotierte Figma-Wireframes für alle sechs Flows. Die Roadmap ordnete die Arbeit über Sicherheitshärtung, Mess-Grundlagen, CTA-Ausrichtung, Redirect-Mapping und Design-Refresh — wobei jede Phase die nächste freischaltete. Empfehlungen zur visuellen Ausrichtung bewahrten die balinesische kulturelle Identität und bewegten sich gleichzeitig in Richtung einer leichteren, naturverbundenen Wellness-Ästhetik."
         ],
         [
-          "The impact",
-          "Within weeks of delivery, the security hardening recommendations proved their value when the team needed to respond to a platform incident — the remediation steps were already documented and actionable. The audit gave the team an evidence-based foundation for prioritising work across UX, CRO, SEO, design, and technical infrastructure simultaneously, replacing ad hoc fixes with a sequenced strategy tied to measurable outcomes."
+          "Die Wirkung",
+          "Innerhalb weniger Wochen nach Lieferung bewiesen die Empfehlungen zur Sicherheitshärtung ihren Wert, als das Team auf einen Plattformvorfall reagieren musste — die Behebungsschritte waren bereits dokumentiert und umsetzbar. Das Audit gab dem Team eine evidenzbasierte Grundlage, um Arbeit über UX, CRO, SEO, Design und technische Infrastruktur gleichzeitig zu priorisieren und Ad-hoc-Maßnahmen durch eine strukturierte Strategie mit messbaren Ergebnissen zu ersetzen."
         ]
       ],
       "cover": "work/sacred-metrics/cover.jpg",
@@ -146,43 +146,43 @@
       "slug": "the-collective",
       "title": "The Collective",
       "one_liner": "Vom Verzeichnis zur Community-Plattform",
-      "highlight": "Turning a high-authority wellness directory into the year-round heartbeat of a three-property ecosystem",
+      "highlight": "Ein hochautoritäres Wellness-Verzeichnis in das ganzjährige Herzstück eines Drei-Marken-Ökosystems verwandeln",
       "tag": "Digitale Strategie",
       "meta": [
         [
-          "Role",
-          "UX, CRO & Digital Strategy Consultant"
+          "Rolle",
+          "UX-, CRO- & Digital-Strategy-Beraterin"
         ],
         [
-          "Timeline",
-          "4 weeks"
+          "Zeitraum",
+          "4 Wochen"
         ],
         [
-          "Focus",
-          "Strategic Direction, Conversion, UX, SEO & AI Visibility"
+          "Schwerpunkt",
+          "Strategische Ausrichtung, Conversion, UX, SEO & KI-Sichtbarkeit"
         ],
         [
           "Tools",
-          "GA4, Ahrefs, Crazy Egg, Lighthouse, ChatGPT (AI visibility testing), Google Rich Results, Figma, WordPress"
+          "GA4, Ahrefs, Crazy Egg, Lighthouse, ChatGPT (KI-Sichtbarkeitstests), Google Rich Results, Figma, WordPress"
         ]
       ],
-      "summary": "A decade-old wellness directory in Bali with 885 referring domains, Wikipedia citations on its cultural content, and a position in 165 Google AI Overviews — operating within a three-property ecosystem that included a physical yoga studio and an annual wellness festival under the same ownership. The site had significant domain authority and editorial assets, but no defined strategic role within the ecosystem. The brief: assess the site's current state, define a strategic direction for the platform, and deliver a conversion-ready roadmap that connects it to the broader ecosystem.",
+      "summary": "Ein zehn Jahre altes Wellness-Verzeichnis auf Bali mit 885 verweisenden Domains, Wikipedia-Zitierungen auf seinen kulturellen Inhalten und einer Positionierung in 165 Google-KI-Übersichten — eingebettet in ein Drei-Marken-Ökosystem bestehend aus einem physischen Yogastudio und einem jährlichen Wellness-Festival unter derselben Leitung. Die Website verfügte über erhebliche Domain-Autorität und redaktionelle Inhalte, aber keine definierte strategische Rolle innerhalb des Ökosystems. Der Auftrag: den aktuellen Zustand der Website bewerten, eine strategische Ausrichtung für die Plattform definieren und eine conversion-orientierte Roadmap liefern, die sie mit dem breiteren Ökosystem verbindet.",
       "sections": [
         [
-          "The opportunity",
-          "The site's editorial content was quietly outperforming its directory function — three of the top five pages by traffic were blog articles, not listings. A single ceremony page had earned backlinks from three Wikipedia articles. The retreat and accommodation directories showed the longest session durations on the site (above one minute), confirming visitor intent to compare and decide. This was a platform with proven editorial authority and engaged audiences, ready for a strategic model that could channel that attention into something more purposeful. The competitor landscape revealed white space: established publishers owned the content lane, booking platforms owned the transaction lane, but no one held the community position — connecting practitioners, travellers, and locals year-round."
+          "Die Chance",
+          "Die redaktionellen Inhalte der Website übertrafen still und leise ihre Verzeichnisfunktion — drei der fünf meistbesuchten Seiten waren Blogartikel, keine Einträge. Eine einzelne Zeremonie-Seite hatte Backlinks aus drei Wikipedia-Artikeln gewonnen. Die Retreat- und Unterkunftsverzeichnisse zeigten die längsten Sitzungsdauern auf der Website (über eine Minute), was die Absicht der Besucher bestätigte, zu vergleichen und zu entscheiden. Es handelte sich um eine Plattform mit nachgewiesener redaktioneller Autorität und engagiertem Publikum, bereit für ein strategisches Modell, das diese Aufmerksamkeit in etwas Zielgerichteteres lenken konnte. Die Wettbewerbslandschaft offenbarte eine Lücke: Etablierte Publisher besetzten die Content-Schiene, Buchungsplattformen die Transaktionsschiene — aber niemand hielt die Community-Position: Praktizierende, Reisende und Einheimische ganzjährig miteinander zu verbinden."
         ],
         [
-          "The approach",
-          "Stakeholder interview covering site history, team capabilities, competitor positioning, CMS constraints, and ecosystem dynamics. Strategic direction analysis evaluating four alternatives (tourist guide, cultural storytelling, curated marketplace, community platform) against current assets and available resources. UX/CRO walkthroughs of the five highest-traffic pages with heuristic scoring, annotated wireframes, and Crazy Egg behavioural validation. Full technical audit including Core Web Vitals, site health scoring, and CMS migration assessment. Backlink profile analysis and anchor text quality review. SEO keyword analysis confirming cultural content as the site's ranking strength over commercial terms. AI visibility testing across four commercial queries, mapping the gap between the site's existing AI citations (cultural content) and the queries the new strategic direction would need to own. Rebrand and visual direction with a shared colour system across the three-property ecosystem."
+          "Der Ansatz",
+          "Stakeholder-Interview zu Website-Historie, Teamkapazitäten, Wettbewerbspositionierung, CMS-Einschränkungen und Ökosystem-Dynamiken. Strategische Richtungsanalyse mit Bewertung von vier Alternativen (Touristenführer, kulturelles Storytelling, kuratierter Marktplatz, Community-Plattform) anhand vorhandener Assets und verfügbarer Ressourcen. UX/CRO-Flow-Analysen der fünf meistbesuchten Seiten mit heuristischer Bewertung, annotierten Wireframes und Crazy-Egg-Verhaltensvalidierung. Umfassendes technisches Audit einschließlich Core Web Vitals, Website-Gesundheitsbewertung und CMS-Migrationsbewertung. Backlink-Profilanalyse und Überprüfung der Ankertextqualität. SEO-Keyword-Analyse mit Bestätigung, dass kulturelle Inhalte die Ranking-Stärke der Website gegenüber kommerziellen Begriffen darstellen. KI-Sichtbarkeitstests über vier kommerzielle Suchanfragen, mit Kartierung der Lücke zwischen den bestehenden KI-Zitierungen der Website (kulturelle Inhalte) und den Suchanfragen, die die neue strategische Ausrichtung besetzen müsste. Rebranding und visuelle Ausrichtung mit einem gemeinsamen Farbsystem über das gesamte Drei-Marken-Ökosystem."
         ],
         [
-          "What shipped",
-          "A 50-page audit document with approximately 40 PIE-scored findings, a phased roadmap across five phases (direction decision, foundation launch, community growth, monetisation, ecosystem maturity), and annotated Figma wireframes for all five flows. The centrepiece was a strategic direction recommendation: reposition the site as a curated community platform anchored by a WhatsApp Community, a newsletter, and a member directory — with a website application form gating entry and ecosystem integration giving members tangible benefits across all three properties. The roadmap included a CMS migration plan with plugin stack, a tiered redirect strategy protecting the site's highest-value URLs, a community onboarding flow, and a monetisation model built on promoted listings and paid membership tiers. Visual direction established a shared terracotta colour system across the ecosystem, with distinct accent colours differentiating each property. The naming recommendation gave the community a verbal identity designed for belonging rather than consumption."
+          "Was geliefert wurde",
+          "Ein 50-seitiges Audit-Dokument mit rund 40 nach PIE bewerteten Ergebnissen, eine phasenbasierte Roadmap über fünf Phasen (Richtungsentscheidung, Grundlagen-Launch, Community-Wachstum, Monetarisierung, Ökosystem-Reife) sowie annotierte Figma-Wireframes für alle fünf Flows. Das Herzstück war eine strategische Ausrichtungsempfehlung: die Website als kuratierte Community-Plattform zu repositionieren, verankert durch eine WhatsApp-Community, einen Newsletter und ein Mitgliederverzeichnis — mit einem Bewerbungsformular auf der Website als Zugangsschranke und einer Ökosystem-Integration, die Mitgliedern greifbare Vorteile über alle drei Marken hinweg bietet. Die Roadmap umfasste einen CMS-Migrationsplan mit Plugin-Stack, eine gestufte Redirect-Strategie zum Schutz der wertvollsten URLs der Website, einen Community-Onboarding-Flow und ein Monetarisierungsmodell basierend auf hervorgehobenen Einträgen und kostenpflichtigen Mitgliedschaftsstufen. Die visuelle Ausrichtung etablierte ein gemeinsames Terracotta-Farbsystem über das gesamte Ökosystem, mit eigenständigen Akzentfarben zur Differenzierung jeder Marke. Die Namensempfehlung gab der Community eine verbale Identität, die auf Zugehörigkeit statt auf Konsum ausgerichtet war."
         ],
         [
-          "The impact",
-          "The audit reframed the internal conversation from \"what do we do with this site\" to \"this site is the connective tissue of the ecosystem.\" The strategic direction gave the client a decision framework — three specific Phase 0 decisions — rather than an open-ended list of improvements. The redesign and visual unification unlocked the highest-value SEO opportunity available: ecosystem cross-linking between two high-authority domains that no amount of external link building could replicate. The project manager's immediate response to the community model: \"Love the community ideas\" — followed by tactical questions about implementation, confirming the direction landed as actionable rather than aspirational."
+          "Die Wirkung",
+          "Das Audit veränderte die interne Diskussion von „Was machen wir mit dieser Website?\" zu „Diese Website ist das Bindegewebe des Ökosystems.\" Die strategische Ausrichtung gab dem Kunden einen Entscheidungsrahmen — drei konkrete Phase-0-Entscheidungen — anstelle einer offenen Liste von Verbesserungen. Das Redesign und die visuelle Vereinheitlichung erschlossen die wertvollste verfügbare SEO-Chance: Ökosystem-übergreifende Verlinkung zwischen zwei hochautoritären Domains, die durch kein externes Linkbuilding replizierbar wäre. Die unmittelbare Reaktion der Projektmanagerin auf das Community-Modell: „Liebe die Community-Ideen\" — gefolgt von taktischen Fragen zur Umsetzung, was bestätigte, dass die Richtung als umsetzbar und nicht als bloße Vision ankam."
         ]
       ],
       "cover": "work/the-collective/cover.jpg",
