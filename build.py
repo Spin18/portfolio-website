@@ -372,7 +372,7 @@ def build_json_ld_case_study(t, cs, current_path):
     return _json_ld_script([breadcrumb, webpage, work])
 
 
-def head(t, lang_code, title, description, current_path, alt_paths):
+def head(t, lang_code, title, description, current_path, alt_paths, article_date=None):
     canonical = url_for(current_path)
 
     hreflang_links = "\n  ".join(
@@ -386,6 +386,9 @@ def head(t, lang_code, title, description, current_path, alt_paths):
         else ""
     )
 
+    og_type = "article" if article_date else "website"
+    article_meta = f'\n  <meta property="article:published_time" content="{article_date}" />' if article_date else ""
+
     return f"""<meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
@@ -393,11 +396,11 @@ def head(t, lang_code, title, description, current_path, alt_paths):
   <link rel="canonical" href="{canonical}" />
   {hreflang_links}
   {x_default_link}
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="{og_type}" />
   <meta property="og:title" content="{title}" />
   <meta property="og:description" content="{description}" />
   <meta property="og:url" content="{canonical}" />
-  <meta property="og:image" content="{SITE_URL}/assets/img/og-cover.jpg" />
+  <meta property="og:image" content="{SITE_URL}/assets/img/og-cover.jpg" />{article_meta}
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="{asset_href(current_path, 'img/favicon.svg')}" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -485,7 +488,7 @@ def _lang_of(current_path):
     return "de" if current_path.startswith("de/") else "en"
 
 
-def page_shell(t, title, description, body, current_path, alt_paths, extra_head=""):
+def page_shell(t, title, description, body, current_path, alt_paths, extra_head="", article_date=None):
     lang_code = _lang_of(current_path)
     privacy_href = href_to(current_path, lang_legal_path(lang_code, "privacy"))
     cb = t["cookie_banner"]
@@ -535,7 +538,7 @@ def page_shell(t, title, description, body, current_path, alt_paths, extra_head=
     return f"""<!doctype html>
 <html lang="{lang_code}">
 <head>
-  {head(t, lang_code, title, description, current_path, alt_paths)}
+  {head(t, lang_code, title, description, current_path, alt_paths, article_date=article_date)}
   {extra_head}
 </head>
 <body data-ga4-id="{GA4_MEASUREMENT_ID}">
@@ -913,7 +916,7 @@ def build_resource_article(t, lang_code, article, alt_paths):
   </main>
 """
     title = f"{article['title']} — {res['eyebrow']} — Imen Bouzouita"
-    html = page_shell(t, title, article["excerpt"], body, current_path, alt_paths, extra_head=build_json_ld_resource_article(t, article, current_path))
+    html = page_shell(t, title, article["excerpt"], body, current_path, alt_paths, extra_head=build_json_ld_resource_article(t, article, current_path), article_date=article["date"])
     write(current_path, html)
 
 
