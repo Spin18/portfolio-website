@@ -685,7 +685,6 @@ def build_index(t, lang_code, alt_paths):
               <div class="hero-ctas mt-lg">
                 <a href="{CALENDLY}" class="btn btn-primary" target="_blank" rel="noopener">{contact['cta']}</a>
               </div>
-              <p class="contact-secondary">{contact['secondary']}</p>
             </div>
             <div>
               <form id="contact-form" action="{FORMSPREE_ACTION}" method="POST"
