@@ -268,10 +268,6 @@
           "Neuro-UX-Researcherin"
         ],
         [
-          "Zeitraum",
-          "1 Jahr"
-        ],
-        [
           "Schwerpunkt",
           "Aufmerksamkeit & unbewusste Entscheidungstreiber"
         ],
@@ -295,7 +291,7 @@
           [
             "<strong>Online-Neuromarketing-Studien (Projekt 1)</strong>",
             "Ich entwarf und führte Online-Studien durch, die selbstberichtete Präferenzen komplett umgingen. Statt Nutzer zu fragen, was sie wollen, maß ich, was darunter passierte: implizite Aufmerksamkeitsmuster, reaktionszeitbasierte Assoziationsaufgaben und strukturierte Entscheidungsspiele, die unbewusste Treiber sichtbar machen — die Bedürfnisse und Motivationen, nach denen Nutzer handeln, die sie aber in einer Umfrage nicht artikulieren können.",
-            "Das Rohergebnis war kein einzelner „Gewinner\". Es waren Cluster. Nutzer gruppierten sich in unterschiedliche Segmente basierend darauf, welche unbewussten Bedürfnisse ihre Entscheidungen tatsächlich steuerten: Sicherheit, Neuheit, Status, Autonomie, Zugehörigkeit. Jedes Cluster reagierte auf andere Auslöser, andere Rahmungen, andere Wertversprechen.",
+            "Das Rohergebnis war kein einzelner „Gewinner\". Es waren Cluster. Nutzer gruppierten sich in unterschiedliche Segmente basierend darauf, welche unbewussten Bedürfnisse ihre Entscheidungen tatsächlich steuerten. Jedes Cluster reagierte auf andere Auslöser, andere Rahmungen, andere Wertversprechen.",
             "Aus diesen Clustern wurde eine Reihe konkreter Anpassungsempfehlungen entwickelt: wie Messaging, Onboarding-Flow und Feature-Hierarchie des Produkts angepasst werden können, um die tatsächlichen Motivatoren jeder Gruppe anzusprechen — statt der genannten.",
             "<strong>A/B/C-Eye-Tracking-Studie (Projekt 2)</strong>",
             "Für den Kunden erstellte ich drei Newsletter-Varianten in HTML/CSS und führte eine kontrollierte Eye-Tracking-Studie über alle drei durch. Jeder Teilnehmer arbeitete sich durch ein realistisches Leseszenario, während die Blickdaten Fixationsdauer, Scanpfade und die Frage erfassten, welche Inhaltsblöcke tatsächlich Aufmerksamkeit hielten und welche die Nutzer überscrollten.",

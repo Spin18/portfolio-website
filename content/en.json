@@ -267,10 +267,6 @@
           "Neuro-UX Researcher"
         ],
         [
-          "Timeline",
-          "1 year"
-        ],
-        [
           "Focus",
           "Attention & Subconscious Drivers"
         ],
@@ -294,7 +290,7 @@
           [
             "<strong>Online neuromarketing studies (Project 1)</strong>",
             "I designed and ran online studies that bypassed self-reported preference entirely. Instead of asking users what they wanted, I measured what was happening underneath: implicit attention patterns, reaction-time-based association tasks, and structured decision games that surface subconscious drivers (the needs and motivations users act on but can't articulate in a survey).",
-            "The raw output wasn't a single \"winner.\" It was clusters. Users grouped into distinct segments based on which subconscious needs were actually steering their decisions: security, novelty, status, autonomy, belonging. Each cluster responded to different triggers, different framings, different value propositions.",
+            "The raw output wasn't a single \"winner.\" It was clusters. Users grouped into distinct segments based on which subconscious needs were actually steering their decisions. Each cluster responded to different triggers, different framings, different value propositions.",
             "From those clusters, a set of concrete adaptation recommendations was developed: how to adjust the product's messaging, onboarding flow, and feature hierarchy to speak to each group's actual motivators rather than their stated ones.",
             "<strong>A/B/C eye-tracking study (Project 2)</strong>",
             "For the client, I built three newsletter variants in HTML/CSS and ran a controlled eye-tracking study across all three. Each participant worked through a realistic reading scenario while gaze data captured fixation duration, scan paths, and which content blocks actually held attention versus which ones users scrolled past.",
