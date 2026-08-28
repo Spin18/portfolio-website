@@ -897,7 +897,7 @@ def build_resource_article(t, lang_code, article, alt_paths):
 
     body = f"""
   <main>
-    <section class="page-hero">
+    <section class="page-hero resources-hero">
       <div class="container">
         <div class="tag-row">{category_html}<span class="resource-date">{date_display}</span><span class="resource-date">{read_time}</span></div>
         <h1>{article['title']}</h1>
