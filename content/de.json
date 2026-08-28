@@ -1,5 +1,5 @@
 {
-  "_translation_status": "Homepage sections (nav, footer, hero, capabilities, work eyebrow/heading, about, contact incl. form labels), each case study's homepage-facing tag/one_liner, meta.legal_label/case_study_label/visit_live_site_label, legal.terms/legal.privacy, and the full case study pages for conversion-engine and resonance-tunes (meta, summary, sections) are now real German. Still PLACEHOLDER, mirroring content/en.json word-for-word pending translation: the full page content (summary, sections, meta) for sacred-metrics/the-collective/prima-materia/neuroboost-ux, meta.site_title/site_description, work.all_work, and the contact form's dynamic status messages (sending/success/error/network/not_wired). Edit the string values in this file (keep keys and structure identical to en.json) and rerun python3 build.py.",
+  "_translation_status": "Homepage sections (nav, footer, hero, capabilities, work eyebrow/heading, about, contact incl. form labels), each case study's homepage-facing tag/one_liner, meta.legal_label/case_study_label/visit_live_site_label, legal.terms/legal.privacy, and the full case study pages for conversion-engine, resonance-tunes, prima-materia, and neuroboost-ux (meta, summary, sections) are now real German. Still PLACEHOLDER, mirroring content/en.json word-for-word pending translation: the full page content (summary, sections, meta) for sacred-metrics and the-collective, meta.site_title/site_description, work.all_work, and the contact form's dynamic status messages (sending/success/error/network/not_wired). Edit the string values in this file (keep keys and structure identical to en.json) and rerun python3 build.py.",
   "meta": {
     "site_title": "Imen Bouzouita — Digital Product, UX & CRO Consultant, Berlin",
     "site_description": "I help e-commerce, wellness, and SaaS brands turn browsers into buyers with research-backed UX audits and interfaces people actually want to use.",
@@ -208,38 +208,38 @@
       "tag": "UX/CRO/Branding",
       "meta": [
         [
-          "Role",
-          "Everything — positioning, copy, UX, design, development"
+          "Rolle",
+          "Alles — Positionierung, Text, UX, Design, Entwicklung"
         ],
         [
-          "Build",
-          "Custom code, Claude Code, GitHub Pages"
+          "Umsetzung",
+          "Custom Code, Claude Code, GitHub Pages"
         ],
         [
           "Tools",
           "HTML/CSS/JS, Claude Code, Figma, GitHub Pages"
         ]
       ],
-      "summary": "Applying conversion thinking to my own coaching practice.",
+      "summary": "Conversion-Denken auf meine eigene Coaching-Praxis anwenden.",
       "sections": [
         [
-          "The context",
-          "I'm a somatic coach working with the five elements and alchemical frameworks. Most practitioners in this space build websites that speak to peers — dense with modality language, light on structure, and unclear on what a visitor should actually do. I wanted to build mine the way I'd build a client's: conversion-first, with every section earning its place in the funnel."
+          "Der Kontext",
+          "Ich bin somatischer Coach und arbeite mit den fünf Elementen und alchemistischen Rahmenwerken. Die meisten Praktizierenden in diesem Bereich bauen Websites, die zu Kolleginnen und Kollegen sprechen — dicht an Fachsprache, wenig Struktur und unklar darin, was ein Besucher eigentlich tun soll. Ich wollte meine Website so aufbauen, wie ich es für einen Kunden tun würde: Conversion-first, mit jedem Abschnitt, der seinen Platz im Funnel verdient."
         ],
         [
-          "The decisions",
+          "Die Entscheidungen",
           [
-            "The page follows a single narrative arc: recognition → education → credibility → action. It opens with \"You're here because\" — mirroring the visitor's internal state before explaining anything. By the time the Five Elements framework appears, the visitor is already seeing themselves in the work. The about section deliberately leads with my engineering and neuroscience background before somatic training, because the people I want to work with tend to be analytical thinkers who need permission to trust the body. That sequencing is intentional.",
-            "\"Book a Discovery Call\" appears four times. Each placement follows a natural decision point rather than interrupting the reading flow — after the emotional hook, after the framework, after the credibility section, and at the close. One CTA, one action, no ambiguity."
+            "Die Seite folgt einem einzigen Erzählbogen: Wiedererkennung → Wissensvermittlung → Glaubwürdigkeit → Handlung. Sie beginnt mit „Du bist hier, weil\" — und spiegelt den inneren Zustand des Besuchers wider, bevor irgendetwas erklärt wird. Wenn das Fünf-Elemente-Rahmenwerk erscheint, sieht sich der Besucher bereits selbst in der Arbeit. Der Über-mich-Abschnitt führt bewusst mit meinem Hintergrund in Ingenieurwesen und Neurowissenschaften, bevor die somatische Ausbildung kommt — weil die Menschen, mit denen ich arbeiten möchte, tendenziell analytische Denker sind, die die Erlaubnis brauchen, dem Körper zu vertrauen. Diese Reihenfolge ist beabsichtigt.",
+            "„Entdeckungsgespräch buchen\" erscheint viermal. Jede Platzierung folgt einem natürlichen Entscheidungspunkt, anstatt den Lesefluss zu unterbrechen — nach dem emotionalen Einstieg, nach dem Rahmenwerk, nach dem Glaubwürdigkeitsabschnitt und am Schluss. Ein CTA, eine Handlung, keine Mehrdeutigkeit."
           ]
         ],
         [
-          "The build",
-          "Custom-coded rather than built on a page builder — partly because I wanted full control over performance and structure, and partly because building it with Claude Code was a chance to work the way I advise clients to think: start with the conversion logic, then design to serve it. Hosted on GitHub Pages for speed and simplicity. The visual direction uses black-and-white photography, alchemical symbols, and generous whitespace to signal calm seriousness without the pastel-and-script aesthetic that dominates the wellness space."
+          "Die Umsetzung",
+          "Individuell programmiert statt mit einem Baukastensystem erstellt — zum einen, weil ich die volle Kontrolle über Performance und Struktur wollte, und zum anderen, weil der Bau mit Claude Code eine Gelegenheit war, so zu arbeiten, wie ich meinen Kunden empfehle zu denken: mit der Conversion-Logik beginnen, dann das Design danach ausrichten. Gehostet auf GitHub Pages für Geschwindigkeit und Einfachheit. Die visuelle Ausrichtung setzt auf Schwarz-Weiß-Fotografie, alchemistische Symbole und großzügigen Weißraum, um ruhige Ernsthaftigkeit zu signalisieren — ohne die Pastell-und-Schreibschrift-Ästhetik, die den Wellness-Bereich dominiert."
         ],
         [
-          "Why this matters in my portfolio",
-          "The other case studies in this portfolio show how I think about other people's digital experiences. This one shows I hold myself to the same standard — clear positioning, a defined audience, a structured funnel, and design choices that serve conversion rather than decoration."
+          "Warum das in meinem Portfolio wichtig ist",
+          "Die anderen Fallstudien in diesem Portfolio zeigen, wie ich über die digitalen Erlebnisse anderer Menschen denke. Diese hier zeigt, dass ich mich selbst am gleichen Maßstab messe — klare Positionierung, eine definierte Zielgruppe, ein strukturierter Funnel und Designentscheidungen, die der Conversion dienen statt der Dekoration."
         ]
       ],
       "cover": "work/prima-materia/cover.jpg",
@@ -261,54 +261,54 @@
       "tag": "UX-Research",
       "meta": [
         [
-          "Role",
-          "Neuro-UX Researcher"
+          "Rolle",
+          "Neuro-UX-Researcherin"
         ],
         [
-          "Timeline",
-          "1 year"
+          "Zeitraum",
+          "1 Jahr"
         ],
         [
-          "Focus",
-          "Attention & Subconscious Drivers"
+          "Schwerpunkt",
+          "Aufmerksamkeit & unbewusste Entscheidungstreiber"
         ],
         [
           "Tools",
-          "Eye-tracking, Angular, HTML/CSS, A/B Testing"
+          "Eye-Tracking, Angular, HTML/CSS, A/B-Testing"
         ]
       ],
-      "summary": "Two unrelated projects, the same blind spot: teams making product and marketing decisions based on what users said they wanted, while the numbers kept disagreeing. A digital product team's adoption metrics didn't match glowing survey feedback. An automotive brand couldn't settle on a newsletter layout from stakeholder opinion alone. The brief in both cases: measure what users can't self-report.",
+      "summary": "Zwei voneinander unabhängige Projekte, derselbe blinde Fleck: Teams, die Produkt- und Marketingentscheidungen auf Basis dessen trafen, was Nutzer sagten, dass sie wollen — während die Zahlen immer wieder widersprachen. Die Adoptionskennzahlen eines digitalen Produktteams stimmten nicht mit dem positiven Umfragefeedback überein. Eine Automobilmarke konnte sich allein auf Basis von Stakeholder-Meinungen nicht auf ein Newsletter-Layout einigen. Der Auftrag in beiden Fällen: messen, was Nutzer nicht selbst berichten können.",
       "sections": [
         [
-          "The problem",
+          "Das Problem",
           [
-            "Two projects, same blind spot. In both cases, teams were making product and marketing decisions based on what users said they wanted, and the numbers kept disagreeing.",
-            "Project 1: a digital product team struggling with engagement. Users completed surveys, gave feedback, clicked through prototypes. Everything looked fine on paper. But adoption metrics told a different story. The team suspected the disconnect was somewhere between what users consciously reported and what actually drove their behaviour, but they had no way to see it.",
-            "Project 2: an automotive brand preparing a newsletter relaunch. Three layout variants looked equally strong in internal review. Stakeholders had opinions. Nobody had evidence."
+            "Zwei Projekte, derselbe blinde Fleck. In beiden Fällen trafen Teams Produkt- und Marketingentscheidungen auf Basis dessen, was Nutzer sagten, dass sie wollen — und die Zahlen widersprachen immer wieder.",
+            "Projekt 1: ein digitales Produktteam mit Engagement-Problemen. Nutzer füllten Umfragen aus, gaben Feedback, klickten sich durch Prototypen. Auf dem Papier sah alles gut aus. Aber die Adoptionskennzahlen erzählten eine andere Geschichte. Das Team vermutete, dass die Diskrepanz irgendwo zwischen dem lag, was Nutzer bewusst berichteten, und dem, was ihr Verhalten tatsächlich steuerte — aber es gab keine Möglichkeit, das sichtbar zu machen.",
+            "Projekt 2: eine Automobilmarke, die einen Newsletter-Relaunch vorbereitete. Drei Layoutvarianten sahen in der internen Bewertung gleich stark aus. Stakeholder hatten Meinungen. Niemand hatte Evidenz."
           ]
         ],
         [
-          "What I did",
+          "Was ich gemacht habe",
           [
-            "<strong>Online neuromarketing studies (Project 1)</strong>",
-            "I designed and ran online studies that bypassed self-reported preference entirely. Instead of asking users what they wanted, I measured what was happening underneath: implicit attention patterns, reaction-time-based association tasks, and structured decision games that surface subconscious drivers (the needs and motivations users act on but can't articulate in a survey).",
-            "The raw output wasn't a single \"winner.\" It was clusters. Users grouped into distinct segments based on which subconscious needs were actually steering their decisions: security, novelty, status, autonomy, belonging. Each cluster responded to different triggers, different framings, different value propositions.",
-            "From those clusters, a set of concrete adaptation recommendations was developed: how to adjust the product's messaging, onboarding flow, and feature hierarchy to speak to each group's actual motivators rather than their stated ones.",
-            "<strong>A/B/C eye-tracking study (Project 2)</strong>",
-            "For the automotive client, I built three newsletter variants in HTML/CSS and ran a controlled eye-tracking study across all three. Each participant worked through a realistic reading scenario while gaze data captured fixation duration, scan paths, and which content blocks actually held attention versus which ones users scrolled past.",
-            "The study didn't just pick a winner. It showed why one variant outperformed. Heatmaps revealed that the best-converting layout wasn't the one with the strongest hero image or the boldest CTA. It was the one where the visual hierarchy guided the eye through a specific content sequence: context first, then proof, then action. The other two variants scattered attention across competing elements and lost readers before they reached the conversion point."
+            "<strong>Online-Neuromarketing-Studien (Projekt 1)</strong>",
+            "Ich entwarf und führte Online-Studien durch, die selbstberichtete Präferenzen komplett umgingen. Statt Nutzer zu fragen, was sie wollen, maß ich, was darunter passierte: implizite Aufmerksamkeitsmuster, reaktionszeitbasierte Assoziationsaufgaben und strukturierte Entscheidungsspiele, die unbewusste Treiber sichtbar machen — die Bedürfnisse und Motivationen, nach denen Nutzer handeln, die sie aber in einer Umfrage nicht artikulieren können.",
+            "Das Rohergebnis war kein einzelner „Gewinner\". Es waren Cluster. Nutzer gruppierten sich in unterschiedliche Segmente basierend darauf, welche unbewussten Bedürfnisse ihre Entscheidungen tatsächlich steuerten: Sicherheit, Neuheit, Status, Autonomie, Zugehörigkeit. Jedes Cluster reagierte auf andere Auslöser, andere Rahmungen, andere Wertversprechen.",
+            "Aus diesen Clustern wurde eine Reihe konkreter Anpassungsempfehlungen entwickelt: wie Messaging, Onboarding-Flow und Feature-Hierarchie des Produkts angepasst werden können, um die tatsächlichen Motivatoren jeder Gruppe anzusprechen — statt der genannten.",
+            "<strong>A/B/C-Eye-Tracking-Studie (Projekt 2)</strong>",
+            "Für den Automobilkunden erstellte ich drei Newsletter-Varianten in HTML/CSS und führte eine kontrollierte Eye-Tracking-Studie über alle drei durch. Jeder Teilnehmer arbeitete sich durch ein realistisches Leseszenario, während die Blickdaten Fixationsdauer, Scanpfade und die Frage erfassten, welche Inhaltsblöcke tatsächlich Aufmerksamkeit hielten und welche die Nutzer überscrollten.",
+            "Die Studie wählte nicht einfach einen Gewinner. Sie zeigte, warum eine Variante besser abschnitt. Heatmaps zeigten, dass das am besten konvertierende Layout nicht dasjenige mit dem stärksten Hero-Bild oder dem auffälligsten CTA war. Es war dasjenige, bei dem die visuelle Hierarchie das Auge durch eine bestimmte Inhaltssequenz führte: zuerst Kontext, dann Beweis, dann Handlung. Die anderen beiden Varianten verteilten die Aufmerksamkeit auf konkurrierende Elemente und verloren die Leser, bevor sie den Conversion-Punkt erreichten."
           ]
         ],
         [
-          "What shipped",
+          "Was geliefert wurde",
           [
-            "Project 1: A segmentation framework mapping user clusters to their subconscious need profiles, paired with prioritised design and copy recommendations for each segment. The product team stopped guessing which value proposition to lead with and started matching messaging to the actual drivers behind user decisions.",
-            "Project 2: A clear recommendation backed by physiological data, not stakeholder preference. The winning newsletter variant, annotated with gaze-pattern analysis showing exactly which layout decisions created the attention flow that drove conversion. The two losing variants got the same treatment: specific, visual evidence of where and why they failed."
+            "Projekt 1: Ein Segmentierungsrahmen, der Nutzercluster ihren unbewussten Bedürfnisprofilen zuordnet, gepaart mit priorisierten Design- und Textempfehlungen für jedes Segment. Das Produktteam hörte auf zu raten, mit welchem Wertversprechen es führen sollte, und begann, das Messaging an die tatsächlichen Treiber hinter den Nutzerentscheidungen anzupassen.",
+            "Projekt 2: Eine klare Empfehlung, gestützt auf physiologische Daten statt auf Stakeholder-Präferenzen. Die Gewinner-Newsletter-Variante, annotiert mit Blickmusteranalysen, die genau zeigten, welche Layoutentscheidungen den Aufmerksamkeitsfluss erzeugten, der zur Conversion führte. Die beiden unterlegenen Varianten erhielten dieselbe Behandlung: spezifische, visuelle Evidenz dafür, wo und warum sie scheiterten."
           ]
         ],
         [
-          "The takeaway",
-          "Standard testing captures what people are willing and able to tell you. Neuromarketing methods capture what they can't. In both projects, the gap between those two was exactly where the problem lived, and exactly where the solution came from."
+          "Die Erkenntnis",
+          "Standardtests erfassen, was Menschen bereit und in der Lage sind, einem zu sagen. Neuromarketing-Methoden erfassen, was sie nicht können. In beiden Projekten lag die Lücke zwischen diesen beiden genau dort, wo das Problem saß — und genau dort, wo die Lösung herkam."
         ]
       ],
       "cover": "work/neuroboost-ux/cover.jpg",
