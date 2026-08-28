@@ -13,6 +13,7 @@
   "nav": {
     "what_i_do": "What I Do",
     "case_studies": "Case Studies",
+    "resources": "Resources",
     "about": "About",
     "faq": "FAQ",
     "contact": "Contact",
@@ -457,6 +458,16 @@
       "My background is technical — IT and Electrical Engineering at TU Munich — and I worked in neuromarketing at the Deloitte Neuroscience Institute, which means I don't just look at heatmaps and analytics. I understand how attention, trust, and decision-making work at a cognitive level, and I design for that.",
       "Fluent in German, English, French, and Arabic. Based in Berlin, working internationally."
     ]
+  },
+  "resources": {
+    "eyebrow": "Resources",
+    "heading": "Notes on UX, CRO, and digital strategy.",
+    "intro": "Practical write-ups on what actually moves conversion — pulled from real audits and builds, not theory.",
+    "empty_state": "New articles are on the way — check back soon.",
+    "read_more": "Read article",
+    "all_resources": "All resources",
+    "read_time_label": "{n} min read",
+    "items": []
   },
   "faq": {
     "eyebrow": "FAQ",

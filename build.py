@@ -19,6 +19,7 @@ Run: python3 build.py
 import hashlib
 import json
 import os
+import re
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SITE_URL = "https://www.imenbouzouita.com"
@@ -64,13 +65,18 @@ LANGUAGES = [
     {"code": "de", "dir": "de/", "label": "DE"},
 ]
 
-NAV_ITEMS = [
-    ("what_i_do", "#work-do"),
-    ("case_studies", "#work"),
-    ("about", "#about"),
-    ("faq", "#faq"),
-    ("contact", "#contact"),
-]
+def _nav_entries(t, current_path):
+    lang_code = _lang_of(current_path)
+    home = href_to(current_path, lang_home_path(lang_code))
+    resources_href = href_to(current_path, lang_resources_index_path(lang_code))
+    return [
+        (t["nav"]["what_i_do"], f"{home}#work-do"),
+        (t["nav"]["case_studies"], f"{home}#work"),
+        (t["nav"]["resources"], resources_href),
+        (t["nav"]["about"], f"{home}#about"),
+        (t["nav"]["faq"], f"{home}#faq"),
+        (t["nav"]["contact"], f"{home}#contact"),
+    ]
 
 
 def load_content():
@@ -149,6 +155,44 @@ def lang_case_study_path(lang_code, slug):
 def lang_legal_path(lang_code, slug):
     d = next(l["dir"] for l in LANGUAGES if l["code"] == lang_code)
     return f"{d}{slug}.html"
+
+
+def lang_resources_index_path(lang_code):
+    d = next(l["dir"] for l in LANGUAGES if l["code"] == lang_code)
+    return f"{d}resources/index.html"
+
+
+def lang_resource_path(lang_code, slug):
+    d = next(l["dir"] for l in LANGUAGES if l["code"] == lang_code)
+    return f"{d}resources/{slug}/index.html"
+
+
+_MONTH_NAMES = {
+    "en": ["January", "February", "March", "April", "May", "June", "July",
+           "August", "September", "October", "November", "December"],
+    "de": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli",
+           "August", "September", "Oktober", "November", "Dezember"],
+}
+
+
+def format_date(iso_date, lang_code):
+    import datetime
+    d = datetime.date.fromisoformat(iso_date)
+    month = _MONTH_NAMES[lang_code][d.month - 1]
+    if lang_code == "de":
+        return f"{d.day}. {month} {d.year}"
+    return f"{month} {d.day}, {d.year}"
+
+
+def estimate_read_minutes(article):
+    """~200 wpm, counted from the article's own section text (tags stripped)
+    so a displayed reading time can never drift from the actual content."""
+    word_count = 0
+    for _, content in article["sections"]:
+        paragraphs = content if isinstance(content, list) else [content]
+        for p in paragraphs:
+            word_count += len(re.sub("<[^>]+>", "", p).split())
+    return max(1, round(word_count / 200))
 
 
 def url_for(current_path):
@@ -370,7 +414,7 @@ def lang_switcher_html(current_path, alt_paths):
 def header_html(t, current_path, alt_paths):
     home = href_to(current_path, lang_home_path(_lang_of(current_path)))
     links = "\n      ".join(
-        f'<li><a href="{home}{frag}">{t["nav"][key]}</a></li>' for key, frag in NAV_ITEMS
+        f'<li><a href="{href}">{label}</a></li>' for label, href in _nav_entries(t, current_path)
     )
     return f"""<header class="site-header">
     <div class="container">
@@ -402,6 +446,7 @@ def footer_html(t, current_path):
         <nav class="footer-nav">
           <a href="{home}#work-do">{t['nav']['what_i_do']}</a>
           <a href="{home}#work">{t['nav']['case_studies']}</a>
+          <a href="{href_to(current_path, lang_resources_index_path(lang_code))}">{t['nav']['resources']}</a>
           <a href="{home}#about">{t['nav']['about']}</a>
           <a href="{home}#faq">{t['nav']['faq']}</a>
           <a href="{home}#contact">{t['nav']['contact']}</a>
@@ -768,6 +813,96 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
     write(current_path, html)
 
 
+def build_resources_index(t, lang_code, alt_paths):
+    current_path = lang_resources_index_path(lang_code)
+    res = t["resources"]
+
+    if res["items"]:
+        cards = ""
+        for article in res["items"]:
+            article_path = lang_resource_path(lang_code, article["slug"])
+            read_time = res["read_time_label"].format(n=estimate_read_minutes(article))
+            date_display = format_date(article["date"], lang_code)
+            category_html = (
+                f'<span class="resource-category">{article["category"]}</span>' if article.get("category") else ""
+            )
+            cards += f"""
+        <a class="resource-card" href="{href_to(current_path, article_path)}" data-reveal>
+          <div class="resource-card-meta">
+            {category_html}
+            <span class="resource-date">{date_display}</span>
+          </div>
+          <h2>{article['title']}</h2>
+          <p>{article['excerpt']}</p>
+          <span class="resource-read-more">{res['read_more']} &middot; {read_time} &rarr;</span>
+        </a>"""
+        list_html = f'<div class="resource-list">{cards}\n        </div>'
+    else:
+        list_html = f'<p class="resource-empty">{res["empty_state"]}</p>'
+
+    body = f"""
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">{res['eyebrow']}</p>
+        <h1>{res['heading']}</h1>
+        <p class="lede">{res['intro']}</p>
+        <div class="mt-lg">{list_html}</div>
+      </div>
+    </section>
+  </main>
+"""
+    title = f"{res['heading']} — Imen Bouzouita"
+    html = page_shell(t, title, res["intro"], body, current_path, alt_paths, extra_head=build_json_ld_resources_index(t, current_path))
+    write(current_path, html)
+
+
+def build_resource_article(t, lang_code, article, alt_paths):
+    current_path = lang_resource_path(lang_code, article["slug"])
+    res = t["resources"]
+
+    sections_html = ""
+    for heading, content in article["sections"]:
+        paragraphs = content if isinstance(content, list) else [content]
+        paras_html = "\n        ".join(f"<p>{p}</p>" for p in paragraphs)
+        sections_html += f"<h2>{heading}</h2>\n        {paras_html}\n        "
+
+    read_time = res["read_time_label"].format(n=estimate_read_minutes(article))
+    date_display = format_date(article["date"], lang_code)
+    category_html = (
+        f'<span class="resource-category">{article["category"]}</span>' if article.get("category") else ""
+    )
+
+    cover_html = ""
+    if article.get("cover"):
+        cover_src = asset_href(current_path, "img/" + article["cover"])
+        cover_html = f'<div class="case-cover" data-reveal><img src="{cover_src}" alt="{article["title"]}" loading="eager" /></div>'
+
+    resources_href = href_to(current_path, lang_resources_index_path(lang_code))
+
+    body = f"""
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="tag-row">{category_html}<span class="resource-date">{date_display}</span><span class="resource-date">{read_time}</span></div>
+        <h1>{article['title']}</h1>
+        <p class="lede">{article['excerpt']}</p>
+        {cover_html}
+        <div class="case-body" data-reveal>
+          {sections_html}
+        </div>
+        <div class="case-nav" style="justify-content:flex-start;">
+          <a href="{resources_href}" class="btn btn-ghost">&larr; {res['all_resources']}</a>
+        </div>
+      </div>
+    </section>
+  </main>
+"""
+    title = f"{article['title']} — {res['eyebrow']} — Imen Bouzouita"
+    html = page_shell(t, title, article["excerpt"], body, current_path, alt_paths, extra_head=build_json_ld_resource_article(t, article, current_path))
+    write(current_path, html)
+
+
 def build_legal(t, lang_code, slug, alt_paths):
     current_path = lang_legal_path(lang_code, slug)
     entry = t["legal"][slug]
@@ -805,6 +940,77 @@ def build_json_ld_legal(t, entry, current_path):
     return _json_ld_script([webpage])
 
 
+def build_json_ld_resources_index(t, current_path):
+    lang_code = _lang_of(current_path)
+    page_url = url_for(current_path)
+    blog = {
+        "@type": "Blog",
+        "@id": f"{page_url}#blog",
+        "name": t["resources"]["heading"],
+        "url": page_url,
+        "inLanguage": lang_code,
+        "isPartOf": {"@id": f"{SITE_URL}/#website"},
+        "publisher": {"@id": f"{SITE_URL}/#business"},
+    }
+    webpage = {
+        "@type": "WebPage",
+        "@id": f"{page_url}#webpage",
+        "url": page_url,
+        "name": t["resources"]["heading"],
+        "description": t["resources"]["intro"],
+        "inLanguage": lang_code,
+        "isPartOf": {"@id": f"{SITE_URL}/#website"},
+        "about": {"@id": f"{SITE_URL}/#business"},
+    }
+    return _json_ld_script([webpage, blog])
+
+
+def build_json_ld_resource_article(t, article, current_path):
+    lang_code = _lang_of(current_path)
+    page_url = url_for(current_path)
+    home_url = url_for(lang_home_path(lang_code))
+    resources_url = url_for(lang_resources_index_path(lang_code))
+
+    breadcrumb = {
+        "@type": "BreadcrumbList",
+        "@id": f"{page_url}#breadcrumb",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": home_url},
+            {"@type": "ListItem", "position": 2, "name": t["resources"]["eyebrow"], "item": resources_url},
+            {"@type": "ListItem", "position": 3, "name": article["title"], "item": page_url},
+        ],
+    }
+
+    post = {
+        "@type": "BlogPosting",
+        "@id": f"{page_url}#article",
+        "headline": article["title"],
+        "description": article["excerpt"],
+        "url": page_url,
+        "author": {"@id": f"{SITE_URL}/#person"},
+        "publisher": {"@id": f"{SITE_URL}/#business"},
+        "inLanguage": lang_code,
+        "datePublished": article["date"],
+        "mainEntityOfPage": {"@id": f"{page_url}#webpage"},
+    }
+    if article.get("cover"):
+        post["image"] = f"{SITE_URL}/assets/img/{article['cover']}"
+
+    webpage = {
+        "@type": "WebPage",
+        "@id": f"{page_url}#webpage",
+        "url": page_url,
+        "name": article["title"],
+        "description": article["excerpt"],
+        "inLanguage": lang_code,
+        "isPartOf": {"@id": f"{SITE_URL}/#website"},
+        "mainEntity": {"@id": f"{page_url}#article"},
+        "breadcrumb": {"@id": f"{page_url}#breadcrumb"},
+    }
+
+    return _json_ld_script([breadcrumb, webpage, post])
+
+
 def build_404(t):
     current_path = "404.html"
     nf = t["not_found"]
@@ -835,7 +1041,9 @@ def build_robots_sitemap(content):
         t = content[code]
         paths = [lang_home_path(code)] + [
             lang_legal_path(code, slug) for slug in ("terms", "privacy", "impressum")
-        ] + [lang_case_study_path(code, cs["slug"]) for cs in t["case_studies"]]
+        ] + [lang_case_study_path(code, cs["slug"]) for cs in t["case_studies"]] + [
+            lang_resources_index_path(code)
+        ] + [lang_resource_path(code, a["slug"]) for a in t["resources"]["items"]]
         all_paths.extend((code, p) for p in paths)
 
     # group by "page family" (path with language prefix stripped) so we can
@@ -889,6 +1097,12 @@ def build_llms_txt(content):
         cs_url = url_for(lang_case_study_path("en", cs["slug"]))
         lines.append(f"- [{cs['title']}]({cs_url}): {cs['one_liner']} — {cs['summary']}")
 
+    if t["resources"]["items"]:
+        lines += ["", "## Resources", ""]
+        for article in t["resources"]["items"]:
+            article_url = url_for(lang_resource_path("en", article["slug"]))
+            lines.append(f"- [{article['title']}]({article_url}): {article['excerpt']}")
+
     lines += [
         "",
         "## About",
@@ -940,6 +1154,13 @@ def main():
         for slug in legal_slugs:
             legal_alt = {l["code"]: lang_legal_path(l["code"], slug) for l in LANGUAGES}
             build_legal(t, code, slug, legal_alt)
+
+        resources_alt = {l["code"]: lang_resources_index_path(l["code"]) for l in LANGUAGES}
+        build_resources_index(t, code, resources_alt)
+
+        for article in t["resources"]["items"]:
+            article_alt = {l["code"]: lang_resource_path(l["code"], article["slug"]) for l in LANGUAGES}
+            build_resource_article(t, code, article, article_alt)
 
     build_404(content["en"])
     build_robots_sitemap(content)

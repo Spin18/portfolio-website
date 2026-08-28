@@ -100,4 +100,14 @@
       <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/work/resonance-tunes/" />
       <xhtml:link rel="alternate" hreflang="de" href="https://www.imenbouzouita.com/de/work/resonance-tunes/" />
   </url>
+  <url>
+    <loc>https://www.imenbouzouita.com/resources/</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/resources/" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://www.imenbouzouita.com/de/resources/" />
+  </url>
+  <url>
+    <loc>https://www.imenbouzouita.com/de/resources/</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/resources/" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://www.imenbouzouita.com/de/resources/" />
+  </url>
 </urlset>

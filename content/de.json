@@ -14,6 +14,7 @@
   "nav": {
     "what_i_do": "Was ich mache",
     "case_studies": "Referenzen",
+    "resources": "Ressourcen",
     "about": "Über mich",
     "faq": "FAQ",
     "contact": "Kontakt",
@@ -458,6 +459,16 @@
       "Mein Hintergrund ist technisch — Informatik und Elektrotechnik an der TU München — und ich habe im Bereich Neuromarketing am Deloitte Neuroscience Institute gearbeitet. Das bedeutet, ich schaue nicht nur auf Heatmaps und Analytics. Ich verstehe, wie Aufmerksamkeit, Vertrauen und Entscheidungsfindung auf kognitiver Ebene funktionieren, und ich gestalte danach.",
       "Fließend in Deutsch, Englisch, Französisch und Arabisch. Standort Berlin, international tätig."
     ]
+  },
+  "resources": {
+    "eyebrow": "Ressourcen",
+    "heading": "Beiträge zu UX, CRO und Digitalstrategie.",
+    "intro": "Praxisnahe Beiträge zu dem, was Conversion wirklich bewegt — aus echten Audits und Projekten, nicht aus der Theorie.",
+    "empty_state": "Neue Beiträge folgen in Kürze.",
+    "read_more": "Artikel lesen",
+    "all_resources": "Alle Ressourcen",
+    "read_time_label": "{n} Min. Lesezeit",
+    "items": []
   },
   "faq": {
     "eyebrow": "FAQ",
