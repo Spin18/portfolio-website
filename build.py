@@ -30,6 +30,10 @@ FORMSPREE_ACTION = "https://formspree.io/f/xdenkldz"
 # Data Streams > your stream). GA4 is never loaded until a visitor accepts
 # the cookie banner — see the consent logic in assets/js/main.js.
 GA4_MEASUREMENT_ID = "G-G78M71MS8D"
+# Cloudflare Web Analytics: cookieless, no persistent identifiers, so unlike
+# GA4 it loads unconditionally — it isn't gated behind the cookie banner
+# because it doesn't need consent under GDPR/ePrivacy in the first place.
+CLOUDFLARE_ANALYTICS_TOKEN = "66edec62f8284619abfb73b524995fad"
 # font-display=optional: browser waits ~100ms max for the font, then commits
 # to whichever (fallback or webfont) is ready and never swaps later — this is
 # what avoids CLS. Loaded non-blocking via the media="print" swap trick below,
@@ -483,6 +487,7 @@ def page_shell(t, title, description, body, current_path, alt_paths, extra_head=
   {footer_html(t, current_path)}
   {cookie_banner_html}
   <script src="{asset_href(current_path, 'js/main.js')}?v={MAIN_JS_VERSION}" defer></script>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "{CLOUDFLARE_ANALYTICS_TOKEN}"}}'></script>
 </body>
 </html>
 """

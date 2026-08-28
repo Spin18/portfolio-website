@@ -944,7 +944,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 <p>We do not sell your personal data. It isn't shared with third parties beyond what's required to operate this site, and only:</p>
 <ul>
   <li>When required by law</li>
-  <li>With service providers under data processing agreements — currently Formspree (contact form processing), Calendly (call booking), Cloudflare (content delivery, DNS, security, and email forwarding), and, only with your consent, Google Analytics (GA4, usage analytics)</li>
+  <li>With service providers under data processing agreements — currently Formspree (contact form processing), Calendly (call booking), Cloudflare (content delivery, DNS, security, email forwarding, and cookieless web analytics), and, only with your consent, Google Analytics (GA4, usage analytics)</li>
   <li>With your explicit consent</li>
 </ul>
 <h2>6. International Data Transfers</h2>
@@ -963,7 +963,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 </ul>
 <p>To exercise your rights, contact us using our contact form.</p>
 <h2>9. Cookies</h2>
-<p>This site uses Google Analytics (GA4) to understand how visitors use it. GA4 is only loaded, and only sets cookies, after you actively accept the cookie banner shown on your first visit — no analytics request is made to Google before that. You can accept, decline, or change your choice at any time via "Cookie settings" in the footer. Separately, Cloudflare, our content delivery and security provider, may set strictly necessary cookies (for example, to detect and block automated abuse) required to operate the site securely — these apply regardless of your cookie banner choice, since they don't require consent under applicable law. No other tracking or advertising cookies are used.</p>
+<p>This site uses Google Analytics (GA4) to understand how visitors use it. GA4 is only loaded, and only sets cookies, after you actively accept the cookie banner shown on your first visit — no analytics request is made to Google before that. You can accept, decline, or change your choice at any time via "Cookie settings" in the footer. Separately, Cloudflare, our content delivery and security provider, may set strictly necessary cookies (for example, to detect and block automated abuse) required to operate the site securely — these apply regardless of your cookie banner choice, since they don't require consent under applicable law. This site also uses Cloudflare Web Analytics for aggregate traffic statistics (e.g. page views, referrers, approximate location). It doesn't use cookies, local storage, or any persistent identifier, and doesn't build a profile of individual visitors, so it runs for all visitors without requiring consent. No other tracking or advertising cookies are used.</p>
 <h2>10. Data Security</h2>
 <p>We implement appropriate technical and organizational measures to protect your data.</p>
 <h2>11. Supervisory Authority</h2>
@@ -1048,5 +1048,6 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
     </div>
   </div>
   <script src="assets/js/main.js?v=1d92ad25" defer></script>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "66edec62f8284619abfb73b524995fad"}'></script>
 </body>
 </html>
