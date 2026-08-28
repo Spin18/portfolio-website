@@ -64,6 +64,7 @@ NAV_ITEMS = [
     ("what_i_do", "#work-do"),
     ("case_studies", "#work"),
     ("about", "#about"),
+    ("faq", "#faq"),
     ("contact", "#contact"),
 ]
 
@@ -250,7 +251,20 @@ def build_json_ld_home(t, current_path):
         "about": {"@id": f"{SITE_URL}/#business"},
     }
 
-    return _json_ld_script([website, webpage, person, business])
+    faq_page = {
+        "@type": "FAQPage",
+        "@id": f"{home_url}#faq",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": item["q"],
+                "acceptedAnswer": {"@type": "Answer", "text": item["a"]},
+            }
+            for item in t["faq"]["items"]
+        ],
+    }
+
+    return _json_ld_script([website, webpage, person, business, faq_page])
 
 
 def build_json_ld_case_study(t, cs, current_path):
@@ -385,6 +399,7 @@ def footer_html(t, current_path):
           <a href="{home}#work-do">{t['nav']['what_i_do']}</a>
           <a href="{home}#work">{t['nav']['case_studies']}</a>
           <a href="{home}#about">{t['nav']['about']}</a>
+          <a href="{home}#faq">{t['nav']['faq']}</a>
           <a href="{home}#contact">{t['nav']['contact']}</a>
         </nav>
         <div class="footer-social">
@@ -525,6 +540,14 @@ def build_index(t, lang_code, alt_paths):
     about = t["about"]
     about_paragraphs = "\n          ".join(f"<p>{p}</p>" for p in about["paragraphs"])
 
+    faq_items = ""
+    for item in t["faq"]["items"]:
+        faq_items += f"""
+        <details class="faq-item" data-reveal>
+          <summary>{item['q']}</summary>
+          <p>{item['a']}</p>
+        </details>"""
+
     contact = t["contact"]
     form = contact["form"]
 
@@ -588,6 +611,17 @@ def build_index(t, lang_code, alt_paths):
           <h2 class="on-dark" style="margin-block: 1rem 1.5rem;">{about['heading']}</h2>
           {about_paragraphs}
           <img class="signature" src="{asset_href(current_path, 'img/logos/logo.png')}" alt="Imen Bouzouita signature" width="724" height="208" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">{t['faq']['eyebrow']}</p>
+          <h2>{t['faq']['heading']}</h2>
+        </div>
+        <div class="faq-list">{faq_items}
         </div>
       </div>
     </section>

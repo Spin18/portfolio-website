@@ -451,6 +451,41 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   background: var(--moonstone);
 }
 
+/* ---------- FAQ ---------- */
+#faq .section-head { margin-inline: auto; text-align: center; }
+.faq-list { max-width: 760px; margin-inline: auto; }
+.faq-item {
+  border-top: 1px solid rgba(14,27,31,0.1);
+  padding: 1.4rem 0;
+}
+.faq-item:last-child { border-bottom: 1px solid rgba(14,27,31,0.1); }
+.faq-item summary {
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  font-weight: 600;
+  color: var(--ink);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  color: var(--moonstone-deep);
+  transition: transform var(--dur-fast);
+}
+.faq-item[open] summary::after { content: '–'; }
+.faq-item p {
+  margin-top: 0.9rem;
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+
 /* ---------- case studies ---------- */
 .work-grid {
   display: grid;
@@ -950,6 +985,68 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           }
         }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://imenbouzouita.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does a typical project start?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every project begins with a free discovery call. I'll review your homepage or shop on the spot, give you three actionable tips, and we'll figure out together whether there's a fit. If there is, you'll get a clear proposal with scope, timeline, and pricing within a few days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a project take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A UX/CRO audit typically takes 2–4 weeks. A landing page redesign can be live within a week. Full website and shop builds run 4–8 weeks depending on scope. I'll give you a realistic timeline in the proposal — and flag it early if anything shifts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What platforms do you work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Webflow, Shopify, Framer, WordPress, and Squarespace. I'll recommend the platform that fits your team's technical comfort and long-term needs — not the one I prefer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on scope. Audits start from a fixed price; design and build projects are scoped individually. You'll always get a clear quote before we start. Payment is split into three milestones: 30% upfront, 40% at interim review, 30% on delivery."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work remotely?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. I'm based in Berlin and work with clients internationally. Communication runs through email, video calls, and shared Figma files. Timezone overlaps have never been a problem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who do you work best with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "E-commerce, wellness, and SaaS brands that already have traffic or a product — but suspect their website isn't converting the way it should. If you're past the \"just need a website\" stage and into \"need the website to perform,\" we'll get along."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after launch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I hand over everything your team needs to maintain the site independently — documentation, logins, and a walkthrough if needed. If you want ongoing optimisation or A/B testing support, we can set that up too."
+          }
+        }
+      ]
     }
   ]
 }
@@ -964,6 +1061,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <li><a href="./#work-do">What I Do</a></li>
       <li><a href="./#work">Case Studies</a></li>
       <li><a href="./#about">About</a></li>
+      <li><a href="./#faq">FAQ</a></li>
       <li><a href="./#contact">Contact</a></li>
           <li class="nav-cta"><a href="https://calendly.com/imenbouzouita/1-1-discovery-call" class="btn btn-primary" target="_blank" rel="noopener">Book a call</a></li>
           <li><div class="lang-switch"><span class="lang-switch-current" aria-current="true">EN</span><a href="de/" class="">DE</a></div></li>
@@ -1149,6 +1247,45 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
       </div>
     </section>
 
+    <section id="faq">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">FAQ</p>
+          <h2>Common questions, answered.</h2>
+        </div>
+        <div class="faq-list">
+        <details class="faq-item" data-reveal>
+          <summary>How does a typical project start?</summary>
+          <p>Every project begins with a free discovery call. I'll review your homepage or shop on the spot, give you three actionable tips, and we'll figure out together whether there's a fit. If there is, you'll get a clear proposal with scope, timeline, and pricing within a few days.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>How long does a project take?</summary>
+          <p>A UX/CRO audit typically takes 2–4 weeks. A landing page redesign can be live within a week. Full website and shop builds run 4–8 weeks depending on scope. I'll give you a realistic timeline in the proposal — and flag it early if anything shifts.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>What platforms do you work with?</summary>
+          <p>Webflow, Shopify, Framer, WordPress, and Squarespace. I'll recommend the platform that fits your team's technical comfort and long-term needs — not the one I prefer.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>How much does it cost?</summary>
+          <p>It depends on scope. Audits start from a fixed price; design and build projects are scoped individually. You'll always get a clear quote before we start. Payment is split into three milestones: 30% upfront, 40% at interim review, 30% on delivery.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>Do you work remotely?</summary>
+          <p>Yes. I'm based in Berlin and work with clients internationally. Communication runs through email, video calls, and shared Figma files. Timezone overlaps have never been a problem.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>Who do you work best with?</summary>
+          <p>E-commerce, wellness, and SaaS brands that already have traffic or a product — but suspect their website isn't converting the way it should. If you're past the "just need a website" stage and into "need the website to perform," we'll get along.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>What happens after launch?</summary>
+          <p>I hand over everything your team needs to maintain the site independently — documentation, logins, and a walkthrough if needed. If you want ongoing optimisation or A/B testing support, we can set that up too.</p>
+        </details>
+        </div>
+      </div>
+    </section>
+
     <section id="contact">
       <div class="contact-section" data-reveal>
         <div class="container contact-inner">
@@ -1202,6 +1339,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <a href="./#work-do">What I Do</a>
           <a href="./#work">Case Studies</a>
           <a href="./#about">About</a>
+          <a href="./#faq">FAQ</a>
           <a href="./#contact">Contact</a>
         </nav>
         <div class="footer-social">

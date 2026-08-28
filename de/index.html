@@ -451,6 +451,41 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   background: var(--moonstone);
 }
 
+/* ---------- FAQ ---------- */
+#faq .section-head { margin-inline: auto; text-align: center; }
+.faq-list { max-width: 760px; margin-inline: auto; }
+.faq-item {
+  border-top: 1px solid rgba(14,27,31,0.1);
+  padding: 1.4rem 0;
+}
+.faq-item:last-child { border-bottom: 1px solid rgba(14,27,31,0.1); }
+.faq-item summary {
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  font-weight: 600;
+  color: var(--ink);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  color: var(--moonstone-deep);
+  transition: transform var(--dur-fast);
+}
+.faq-item[open] summary::after { content: '–'; }
+.faq-item p {
+  margin-top: 0.9rem;
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+
 /* ---------- case studies ---------- */
 .work-grid {
   display: grid;
@@ -950,6 +985,68 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           }
         }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://imenbouzouita.com/de/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie läuft ein Projekt typischerweise ab?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jedes Projekt beginnt mit einem kostenlosen Erstgespräch. Ich schaue mir eure Homepage oder euren Shop direkt an, gebe euch drei umsetzbare Tipps, und wir klären gemeinsam, ob es passt. Wenn ja, bekommt ihr innerhalb weniger Tage ein klares Angebot mit Umfang, Zeitplan und Preis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie lange dauert ein Projekt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ein UX/CRO-Audit dauert in der Regel 2–4 Wochen. Ein Landing-Page-Redesign kann innerhalb einer Woche live sein. Komplette Website- und Shop-Builds laufen je nach Umfang über 4–8 Wochen. Ihr bekommt im Angebot einen realistischen Zeitplan — und ich melde mich frühzeitig, wenn sich etwas verschiebt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mit welchen Plattformen arbeitest du?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Webflow, Shopify, Framer, WordPress und Squarespace. Ich empfehle die Plattform, die zu eurem Team und euren langfristigen Anforderungen passt — nicht die, die ich bevorzuge."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was kostet das?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das hängt vom Umfang ab. Audits starten ab einem Festpreis, Design- und Build-Projekte werden individuell kalkuliert. Ihr bekommt immer ein klares Angebot, bevor es losgeht. Die Zahlung teilt sich in drei Meilensteine: 30 % bei Auftragserteilung, 40 % bei Zwischenabnahme, 30 % bei Fertigstellung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Arbeitest du remote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Ich bin in Berlin und arbeite mit Kunden international. Kommunikation läuft über E-Mail, Videocalls und geteilte Figma-Dateien. Zeitzonen waren noch nie ein Problem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mit wem arbeitest du am liebsten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "E-Commerce-, Wellness- und SaaS-Marken, die bereits Traffic oder ein Produkt haben — aber vermuten, dass ihre Website nicht so konvertiert, wie sie sollte. Wenn ihr über die Phase „brauche einfach eine Website\" hinaus seid und bei „die Website muss performen\" angekommen seid, passen wir gut zusammen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert nach dem Launch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ich übergebe alles, was euer Team braucht, um die Website eigenständig zu pflegen — Dokumentation, Zugänge und bei Bedarf eine Einführung. Wenn ihr laufende Optimierung oder A/B-Testing-Betreuung wollt, können wir das ebenfalls einrichten."
+          }
+        }
+      ]
     }
   ]
 }
@@ -964,6 +1061,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <li><a href="./#work-do">Was ich mache</a></li>
       <li><a href="./#work">Referenzen</a></li>
       <li><a href="./#about">Über mich</a></li>
+      <li><a href="./#faq">FAQ</a></li>
       <li><a href="./#contact">Kontakt</a></li>
           <li class="nav-cta"><a href="https://calendly.com/imenbouzouita/1-1-discovery-call" class="btn btn-primary" target="_blank" rel="noopener">Gespräch buchen</a></li>
           <li><div class="lang-switch"><a href="../" class="">EN</a><span class="lang-switch-current" aria-current="true">DE</span></div></li>
@@ -1149,6 +1247,45 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
       </div>
     </section>
 
+    <section id="faq">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">FAQ</p>
+          <h2>Häufig gestellte Fragen.</h2>
+        </div>
+        <div class="faq-list">
+        <details class="faq-item" data-reveal>
+          <summary>Wie läuft ein Projekt typischerweise ab?</summary>
+          <p>Jedes Projekt beginnt mit einem kostenlosen Erstgespräch. Ich schaue mir eure Homepage oder euren Shop direkt an, gebe euch drei umsetzbare Tipps, und wir klären gemeinsam, ob es passt. Wenn ja, bekommt ihr innerhalb weniger Tage ein klares Angebot mit Umfang, Zeitplan und Preis.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>Wie lange dauert ein Projekt?</summary>
+          <p>Ein UX/CRO-Audit dauert in der Regel 2–4 Wochen. Ein Landing-Page-Redesign kann innerhalb einer Woche live sein. Komplette Website- und Shop-Builds laufen je nach Umfang über 4–8 Wochen. Ihr bekommt im Angebot einen realistischen Zeitplan — und ich melde mich frühzeitig, wenn sich etwas verschiebt.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>Mit welchen Plattformen arbeitest du?</summary>
+          <p>Webflow, Shopify, Framer, WordPress und Squarespace. Ich empfehle die Plattform, die zu eurem Team und euren langfristigen Anforderungen passt — nicht die, die ich bevorzuge.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>Was kostet das?</summary>
+          <p>Das hängt vom Umfang ab. Audits starten ab einem Festpreis, Design- und Build-Projekte werden individuell kalkuliert. Ihr bekommt immer ein klares Angebot, bevor es losgeht. Die Zahlung teilt sich in drei Meilensteine: 30 % bei Auftragserteilung, 40 % bei Zwischenabnahme, 30 % bei Fertigstellung.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>Arbeitest du remote?</summary>
+          <p>Ja. Ich bin in Berlin und arbeite mit Kunden international. Kommunikation läuft über E-Mail, Videocalls und geteilte Figma-Dateien. Zeitzonen waren noch nie ein Problem.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>Mit wem arbeitest du am liebsten?</summary>
+          <p>E-Commerce-, Wellness- und SaaS-Marken, die bereits Traffic oder ein Produkt haben — aber vermuten, dass ihre Website nicht so konvertiert, wie sie sollte. Wenn ihr über die Phase „brauche einfach eine Website" hinaus seid und bei „die Website muss performen" angekommen seid, passen wir gut zusammen.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>Was passiert nach dem Launch?</summary>
+          <p>Ich übergebe alles, was euer Team braucht, um die Website eigenständig zu pflegen — Dokumentation, Zugänge und bei Bedarf eine Einführung. Wenn ihr laufende Optimierung oder A/B-Testing-Betreuung wollt, können wir das ebenfalls einrichten.</p>
+        </details>
+        </div>
+      </div>
+    </section>
+
     <section id="contact">
       <div class="contact-section" data-reveal>
         <div class="container contact-inner">
@@ -1202,6 +1339,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <a href="./#work-do">Was ich mache</a>
           <a href="./#work">Referenzen</a>
           <a href="./#about">Über mich</a>
+          <a href="./#faq">FAQ</a>
           <a href="./#contact">Kontakt</a>
         </nav>
         <div class="footer-social">

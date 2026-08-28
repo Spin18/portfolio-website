@@ -15,6 +15,7 @@
     "what_i_do": "Was ich mache",
     "case_studies": "Referenzen",
     "about": "Über mich",
+    "faq": "FAQ",
     "contact": "Kontakt",
     "book_call": "Gespräch buchen"
   },
@@ -456,6 +457,40 @@
       "Ich habe über 10 Jahre Erfahrung zwischen Unternehmensinnovation und selbstständiger Arbeit. Bei Deloitte, Siemens und BMW habe ich gelernt, wie große Organisationen Produkt, Research und Skalierung angehen. Auf eigene Faust habe ich gelernt, schnell zu liefern, radikal zu priorisieren und jede Empfehlung so zu formulieren, dass ein kleines Team sie tatsächlich umsetzen kann. Ich bringe beides mit.",
       "Mein Hintergrund ist technisch — Informatik und Elektrotechnik an der TU München — und ich habe im Bereich Neuromarketing am Deloitte Neuroscience Institute gearbeitet. Das bedeutet, ich schaue nicht nur auf Heatmaps und Analytics. Ich verstehe, wie Aufmerksamkeit, Vertrauen und Entscheidungsfindung auf kognitiver Ebene funktionieren, und ich gestalte danach.",
       "Fließend in Deutsch, Englisch, Französisch und Arabisch. Standort Berlin, international tätig."
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "heading": "Häufig gestellte Fragen.",
+    "items": [
+      {
+        "q": "Wie läuft ein Projekt typischerweise ab?",
+        "a": "Jedes Projekt beginnt mit einem kostenlosen Erstgespräch. Ich schaue mir eure Homepage oder euren Shop direkt an, gebe euch drei umsetzbare Tipps, und wir klären gemeinsam, ob es passt. Wenn ja, bekommt ihr innerhalb weniger Tage ein klares Angebot mit Umfang, Zeitplan und Preis."
+      },
+      {
+        "q": "Wie lange dauert ein Projekt?",
+        "a": "Ein UX/CRO-Audit dauert in der Regel 2–4 Wochen. Ein Landing-Page-Redesign kann innerhalb einer Woche live sein. Komplette Website- und Shop-Builds laufen je nach Umfang über 4–8 Wochen. Ihr bekommt im Angebot einen realistischen Zeitplan — und ich melde mich frühzeitig, wenn sich etwas verschiebt."
+      },
+      {
+        "q": "Mit welchen Plattformen arbeitest du?",
+        "a": "Webflow, Shopify, Framer, WordPress und Squarespace. Ich empfehle die Plattform, die zu eurem Team und euren langfristigen Anforderungen passt — nicht die, die ich bevorzuge."
+      },
+      {
+        "q": "Was kostet das?",
+        "a": "Das hängt vom Umfang ab. Audits starten ab einem Festpreis, Design- und Build-Projekte werden individuell kalkuliert. Ihr bekommt immer ein klares Angebot, bevor es losgeht. Die Zahlung teilt sich in drei Meilensteine: 30 % bei Auftragserteilung, 40 % bei Zwischenabnahme, 30 % bei Fertigstellung."
+      },
+      {
+        "q": "Arbeitest du remote?",
+        "a": "Ja. Ich bin in Berlin und arbeite mit Kunden international. Kommunikation läuft über E-Mail, Videocalls und geteilte Figma-Dateien. Zeitzonen waren noch nie ein Problem."
+      },
+      {
+        "q": "Mit wem arbeitest du am liebsten?",
+        "a": "E-Commerce-, Wellness- und SaaS-Marken, die bereits Traffic oder ein Produkt haben — aber vermuten, dass ihre Website nicht so konvertiert, wie sie sollte. Wenn ihr über die Phase „brauche einfach eine Website\" hinaus seid und bei „die Website muss performen\" angekommen seid, passen wir gut zusammen."
+      },
+      {
+        "q": "Was passiert nach dem Launch?",
+        "a": "Ich übergebe alles, was euer Team braucht, um die Website eigenständig zu pflegen — Dokumentation, Zugänge und bei Bedarf eine Einführung. Wenn ihr laufende Optimierung oder A/B-Testing-Betreuung wollt, können wir das ebenfalls einrichten."
+      }
     ]
   },
   "contact": {

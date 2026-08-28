@@ -451,6 +451,41 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   background: var(--moonstone);
 }
 
+/* ---------- FAQ ---------- */
+#faq .section-head { margin-inline: auto; text-align: center; }
+.faq-list { max-width: 760px; margin-inline: auto; }
+.faq-item {
+  border-top: 1px solid rgba(14,27,31,0.1);
+  padding: 1.4rem 0;
+}
+.faq-item:last-child { border-bottom: 1px solid rgba(14,27,31,0.1); }
+.faq-item summary {
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  font-weight: 600;
+  color: var(--ink);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  color: var(--moonstone-deep);
+  transition: transform var(--dur-fast);
+}
+.faq-item[open] summary::after { content: '–'; }
+.faq-item p {
+  margin-top: 0.9rem;
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+
 /* ---------- case studies ---------- */
 .work-grid {
   display: grid;
@@ -860,6 +895,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <li><a href="./#work-do">What I Do</a></li>
       <li><a href="./#work">Case Studies</a></li>
       <li><a href="./#about">About</a></li>
+      <li><a href="./#faq">FAQ</a></li>
       <li><a href="./#contact">Contact</a></li>
           <li class="nav-cta"><a href="https://calendly.com/imenbouzouita/1-1-discovery-call" class="btn btn-primary" target="_blank" rel="noopener">Book a call</a></li>
           <li><div class="lang-switch"><span class="lang-switch-current" aria-current="true">EN</span><a href="de/impressum.html" class="">DE</a></div></li>
@@ -903,6 +939,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <a href="./#work-do">What I Do</a>
           <a href="./#work">Case Studies</a>
           <a href="./#about">About</a>
+          <a href="./#faq">FAQ</a>
           <a href="./#contact">Contact</a>
         </nav>
         <div class="footer-social">

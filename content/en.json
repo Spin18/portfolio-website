@@ -14,6 +14,7 @@
     "what_i_do": "What I Do",
     "case_studies": "Case Studies",
     "about": "About",
+    "faq": "FAQ",
     "contact": "Contact",
     "book_call": "Book a call"
   },
@@ -455,6 +456,40 @@
       "I've spent 10+ years moving between corporate innovation and independent work. At Deloitte, Siemens, and BMW I learned how large organisations approach product, research, and scale. On my own, I learned how to ship fast, prioritise ruthlessly, and make every recommendation something a small team can actually implement. I bring both.",
       "My background is technical — IT and Electrical Engineering at TU Munich — and I worked in neuromarketing at the Deloitte Neuroscience Institute, which means I don't just look at heatmaps and analytics. I understand how attention, trust, and decision-making work at a cognitive level, and I design for that.",
       "Fluent in German, English, French, and Arabic. Based in Berlin, working internationally."
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "heading": "Common questions, answered.",
+    "items": [
+      {
+        "q": "How does a typical project start?",
+        "a": "Every project begins with a free discovery call. I'll review your homepage or shop on the spot, give you three actionable tips, and we'll figure out together whether there's a fit. If there is, you'll get a clear proposal with scope, timeline, and pricing within a few days."
+      },
+      {
+        "q": "How long does a project take?",
+        "a": "A UX/CRO audit typically takes 2–4 weeks. A landing page redesign can be live within a week. Full website and shop builds run 4–8 weeks depending on scope. I'll give you a realistic timeline in the proposal — and flag it early if anything shifts."
+      },
+      {
+        "q": "What platforms do you work with?",
+        "a": "Webflow, Shopify, Framer, WordPress, and Squarespace. I'll recommend the platform that fits your team's technical comfort and long-term needs — not the one I prefer."
+      },
+      {
+        "q": "How much does it cost?",
+        "a": "It depends on scope. Audits start from a fixed price; design and build projects are scoped individually. You'll always get a clear quote before we start. Payment is split into three milestones: 30% upfront, 40% at interim review, 30% on delivery."
+      },
+      {
+        "q": "Do you work remotely?",
+        "a": "Yes. I'm based in Berlin and work with clients internationally. Communication runs through email, video calls, and shared Figma files. Timezone overlaps have never been a problem."
+      },
+      {
+        "q": "Who do you work best with?",
+        "a": "E-commerce, wellness, and SaaS brands that already have traffic or a product — but suspect their website isn't converting the way it should. If you're past the \"just need a website\" stage and into \"need the website to perform,\" we'll get along."
+      },
+      {
+        "q": "What happens after launch?",
+        "a": "I hand over everything your team needs to maintain the site independently — documentation, logins, and a walkthrough if needed. If you want ongoing optimisation or A/B testing support, we can set that up too."
+      }
     ]
   },
   "contact": {
