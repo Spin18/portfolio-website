@@ -279,14 +279,14 @@
           "Eye-tracking, Angular, HTML/CSS, A/B Testing"
         ]
       ],
-      "summary": "Two unrelated projects, the same blind spot: teams making product and marketing decisions based on what users said they wanted, while the numbers kept disagreeing. A digital product team's adoption metrics didn't match glowing survey feedback. An automotive brand couldn't settle on a newsletter layout from stakeholder opinion alone. The brief in both cases: measure what users can't self-report.",
+      "summary": "Two unrelated projects, the same blind spot: teams making product and marketing decisions based on what users said they wanted, while the numbers kept disagreeing. A digital product team's adoption metrics didn't match glowing survey feedback. A brand couldn't settle on a newsletter layout from stakeholder opinion alone. The brief in both cases: measure what users can't self-report.",
       "sections": [
         [
           "The problem",
           [
             "Two projects, same blind spot. In both cases, teams were making product and marketing decisions based on what users said they wanted, and the numbers kept disagreeing.",
             "Project 1: a digital product team struggling with engagement. Users completed surveys, gave feedback, clicked through prototypes. Everything looked fine on paper. But adoption metrics told a different story. The team suspected the disconnect was somewhere between what users consciously reported and what actually drove their behaviour, but they had no way to see it.",
-            "Project 2: an automotive brand preparing a newsletter relaunch. Three layout variants looked equally strong in internal review. Stakeholders had opinions. Nobody had evidence."
+            "Project 2: a brand preparing a newsletter relaunch. Three layout variants looked equally strong in internal review. Stakeholders had opinions. Nobody had evidence."
           ]
         ],
         [
@@ -297,7 +297,7 @@
             "The raw output wasn't a single \"winner.\" It was clusters. Users grouped into distinct segments based on which subconscious needs were actually steering their decisions: security, novelty, status, autonomy, belonging. Each cluster responded to different triggers, different framings, different value propositions.",
             "From those clusters, a set of concrete adaptation recommendations was developed: how to adjust the product's messaging, onboarding flow, and feature hierarchy to speak to each group's actual motivators rather than their stated ones.",
             "<strong>A/B/C eye-tracking study (Project 2)</strong>",
-            "For the automotive client, I built three newsletter variants in HTML/CSS and ran a controlled eye-tracking study across all three. Each participant worked through a realistic reading scenario while gaze data captured fixation duration, scan paths, and which content blocks actually held attention versus which ones users scrolled past.",
+            "For the client, I built three newsletter variants in HTML/CSS and ran a controlled eye-tracking study across all three. Each participant worked through a realistic reading scenario while gaze data captured fixation duration, scan paths, and which content blocks actually held attention versus which ones users scrolled past.",
             "The study didn't just pick a winner. It showed why one variant outperformed. Heatmaps revealed that the best-converting layout wasn't the one with the strongest hero image or the boldest CTA. It was the one where the visual hierarchy guided the eye through a specific content sequence: context first, then proof, then action. The other two variants scattered attention across competing elements and lost readers before they reached the conversion point."
           ]
         ],
