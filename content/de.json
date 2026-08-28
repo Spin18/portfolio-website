@@ -412,7 +412,7 @@
           "Webflow, Figma"
         ]
       ],
-      "summary": "Designing and building the digital identity for an ethical-AI wellness platform from scratch.",
+      "summary": "Designing and building the business website for an ethical-AI wellness platform from scratch.",
       "sections": [
         [
           "The context",
@@ -440,10 +440,6 @@
         [
           "Scope of ownership",
           "This was a zero-to-one build within a founding team. Working alongside the CEO and C-level leadership, I translated the company's vision into a structured digital experience: information architecture, visual design system, page design across all sections, and a production Webflow build — giving a pre-revenue startup the credibility to open conversations with practitioners, organisations, and investors."
-        ],
-        [
-          "What I'd recommend next",
-          "Working within the team's existing copy surfaced a tension I'd prioritise in the next iteration: the site introduces too many complex concepts simultaneously (somatic science, archetypal psychology, regenerative design, ethical AI, gamified learning) before the visitor understands what the product concretely does. Above-fold messaging should lead with what the platform offers in plain language before explaining why it matters philosophically. CTAs like \"Access The Portal\" and \"Connect\" should be replaced with specific conversion actions — a waitlist, a demo, or a newsletter signup — so the site's visual clarity and structural logic can convert the attention it earns."
         ]
       ],
       "cover": "work/resonance-tunes/cover.jpg"
