@@ -322,7 +322,7 @@ def header_html(t, current_path, alt_paths):
     )
     return f"""<header class="site-header">
     <div class="container">
-      <a href="{home}" class="logo" aria-label="Imen Bouzouita — home">Imen<span class="dot">.</span></a>
+      <a href="{home}" class="logo" aria-label="{t['meta']['logo_aria_label']}">Imen<span class="dot">.</span></a>
       <nav>
         <ul class="nav-links">
           {links}
@@ -345,7 +345,7 @@ def footer_html(t, current_path):
     <div class="container">
       <div class="footer-top">
         <div>
-          <a href="{home}" class="logo" aria-label="Imen Bouzouita — home">Imen<span class="dot">.</span></a>
+          <a href="{home}" class="logo" aria-label="{t['meta']['logo_aria_label']}">Imen<span class="dot">.</span></a>
         </div>
         <nav class="footer-nav">
           <a href="{home}#work-do">{t['nav']['what_i_do']}</a>
@@ -809,7 +809,7 @@ def build_llms_txt(content):
         "",
         "## Contact",
         "",
-        f"- [Book a free discovery call]({CALENDLY})",
+        f"- [{hero['cta_primary']}]({CALENDLY})",
         f"- [Contact form]({url_for(lang_home_path('en'))}#contact)",
         "",
         "## Optional",

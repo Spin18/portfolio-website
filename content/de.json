@@ -8,7 +8,8 @@
     "not_found_title": "Page not found — Imen Bouzouita",
     "not_found_description": "Page not found.",
     "legal_label": "Rechtliches",
-    "visit_live_site_label": "Live-Website ansehen"
+    "visit_live_site_label": "Live-Website ansehen",
+    "logo_aria_label": "Imen Bouzouita — Startseite"
   },
   "nav": {
     "what_i_do": "Was ich mache",
@@ -496,8 +497,8 @@
   },
   "cookie_banner": {
     "text": "Wir möchten Analyse-Cookies verwenden, um zu verstehen, wie Besucher diese Website nutzen. Wir setzen sie nur mit Ihrer Einwilligung — Sie können Ihre Entscheidung jederzeit ändern.",
-    "accept": "Akzeptieren",
-    "decline": "Ablehnen",
+    "accept": "Alle akzeptieren",
+    "decline": "Nur Notwendige",
     "settings_link": "Cookie-Einstellungen",
     "manage_label": "Einstellungen verwalten",
     "purposes_label": "Zwecke",

@@ -7,7 +7,8 @@
     "not_found_title": "Page not found — Imen Bouzouita",
     "not_found_description": "Page not found.",
     "legal_label": "Legal",
-    "visit_live_site_label": "Visit live site"
+    "visit_live_site_label": "Visit live site",
+    "logo_aria_label": "Imen Bouzouita — home"
   },
   "nav": {
     "what_i_do": "What I Do",
@@ -495,8 +496,8 @@
   },
   "cookie_banner": {
     "text": "We'd like to use analytics cookies to understand how visitors use this site. We only set them with your consent — you can change your mind anytime.",
-    "accept": "Accept",
-    "decline": "Decline",
+    "accept": "Accept All",
+    "decline": "Essential Only",
     "settings_link": "Cookie settings",
     "manage_label": "Manage preferences",
     "purposes_label": "Purposes",
