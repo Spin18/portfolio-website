@@ -154,10 +154,14 @@ def url_for(current_path):
     return f"{SITE_URL}/{current_path}"
 
 
-# Real, publicly-disclosed business details (from impressum.html — required by
-# German law to be public) — used for structured data. No pricing or phone
-# are included below since neither is real/disclosed anywhere on this site;
-# adding them to structured data would be inaccurate.
+# Real, publicly-disclosed business address (from impressum.html —
+# required by German law to be public) — used for structured data. Email
+# and phone are also disclosed on the Impressum, but deliberately excluded
+# here: both are obfuscated in the page's visible HTML specifically to
+# block basic scrapers, and including them in structured data (never
+# obfuscated, always machine-readable) would defeat that entirely. No
+# pricing is included since it isn't disclosed anywhere on this site;
+# adding it to structured data would be inaccurate.
 BUSINESS_ADDRESS = {
     "@type": "PostalAddress",
     "streetAddress": "Mahlower Strasse 14",
@@ -165,7 +169,6 @@ BUSINESS_ADDRESS = {
     "addressLocality": "Berlin",
     "addressCountry": "DE",
 }
-BUSINESS_EMAIL = "imenbouzouita@googlemail.com"
 
 
 def _json_ld_script(graph):
@@ -185,7 +188,6 @@ def build_json_ld_home(t, current_path):
         "description": t["about"]["paragraphs"][0],
         "url": SITE_URL,
         "image": portrait_url,
-        "email": BUSINESS_EMAIL,
         "address": BUSINESS_ADDRESS,
         "knowsLanguage": ["German", "English", "French", "Arabic"],
         "alumniOf": [
@@ -215,7 +217,6 @@ def build_json_ld_home(t, current_path):
         "description": t["meta"]["site_description"],
         "url": SITE_URL,
         "image": portrait_url,
-        "email": BUSINESS_EMAIL,
         "address": BUSINESS_ADDRESS,
         "areaServed": "Worldwide",
         "founder": {"@id": f"{SITE_URL}/#person"},
@@ -231,7 +232,19 @@ def build_json_ld_home(t, current_path):
         "publisher": {"@id": f"{SITE_URL}/#business"},
     }
 
-    return _json_ld_script([website, person, business])
+    home_url = url_for(current_path)
+    webpage = {
+        "@type": "WebPage",
+        "@id": f"{home_url}#webpage",
+        "url": home_url,
+        "name": t["meta"]["site_title"],
+        "description": t["meta"]["site_description"],
+        "inLanguage": lang_code,
+        "isPartOf": {"@id": f"{SITE_URL}/#website"},
+        "about": {"@id": f"{SITE_URL}/#business"},
+    }
+
+    return _json_ld_script([website, webpage, person, business])
 
 
 def build_json_ld_case_study(t, cs, current_path):
@@ -241,6 +254,7 @@ def build_json_ld_case_study(t, cs, current_path):
 
     breadcrumb = {
         "@type": "BreadcrumbList",
+        "@id": f"{page_url}#breadcrumb",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": home_url},
             {"@type": "ListItem", "position": 2, "name": t["work"]["heading"], "item": f"{home_url}#work"},
@@ -250,6 +264,7 @@ def build_json_ld_case_study(t, cs, current_path):
 
     work = {
         "@type": "CreativeWork",
+        "@id": f"{page_url}#creativework",
         "name": cs["title"],
         "headline": cs["one_liner"],
         "description": cs["summary"],
@@ -261,7 +276,19 @@ def build_json_ld_case_study(t, cs, current_path):
     if cs.get("cover"):
         work["image"] = f"{SITE_URL}/assets/img/{cs['cover']}"
 
-    return _json_ld_script([breadcrumb, work])
+    webpage = {
+        "@type": "WebPage",
+        "@id": f"{page_url}#webpage",
+        "url": page_url,
+        "name": cs["title"],
+        "description": cs["summary"],
+        "inLanguage": lang_code,
+        "isPartOf": {"@id": f"{SITE_URL}/#website"},
+        "mainEntity": {"@id": f"{page_url}#creativework"},
+        "breadcrumb": {"@id": f"{page_url}#breadcrumb"},
+    }
+
+    return _json_ld_script([breadcrumb, webpage, work])
 
 
 def head(t, lang_code, title, description, current_path, alt_paths):
@@ -713,8 +740,23 @@ def build_legal(t, lang_code, slug, alt_paths):
 """
     title = f"{entry['title']} — Imen Bouzouita"
     description = f"{entry['title']} {t['meta']['legal_meta_suffix']}"
-    html = page_shell(t, title, description, body, current_path, alt_paths)
+    html = page_shell(t, title, description, body, current_path, alt_paths, extra_head=build_json_ld_legal(t, entry, current_path))
     write(current_path, html)
+
+
+def build_json_ld_legal(t, entry, current_path):
+    lang_code = _lang_of(current_path)
+    page_url = url_for(current_path)
+    webpage = {
+        "@type": "WebPage",
+        "@id": f"{page_url}#webpage",
+        "url": page_url,
+        "name": entry["title"],
+        "inLanguage": lang_code,
+        "isPartOf": {"@id": f"{SITE_URL}/#website"},
+        "about": {"@id": f"{SITE_URL}/#business"},
+    }
+    return _json_ld_script([webpage])
 
 
 def build_404(t):
