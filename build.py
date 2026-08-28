@@ -29,7 +29,7 @@ FORMSPREE_ACTION = "https://formspree.io/f/xdenkldz"
 # Replace with the real Measurement ID from analytics.google.com (Admin >
 # Data Streams > your stream). GA4 is never loaded until a visitor accepts
 # the cookie banner — see the consent logic in assets/js/main.js.
-GA4_MEASUREMENT_ID = "G-XXXXXXXXXX"
+GA4_MEASUREMENT_ID = "G-G78M71MS8D"
 # font-display=optional: browser waits ~100ms max for the font, then commits
 # to whichever (fallback or webfont) is ready and never swaps later — this is
 # what avoids CLS. Loaded non-blocking via the media="print" swap trick below,
