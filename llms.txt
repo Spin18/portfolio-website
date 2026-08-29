@@ -25,6 +25,7 @@ Digital Product · UX · CRO Consultant — Berlin. I'm a UX, CRO, and digital s
 - [CRO Audit Checklist: 20 Things to Check Before You Redesign Anything](https://www.imenbouzouita.com/resources/cro-audit-checklist/): A practical, 20-point checklist covering analytics, homepage clarity, checkout friction, and mobile UX — everything worth auditing before committing to a redesign.
 - [What Neuromarketing Actually Is (And Isn't)](https://www.imenbouzouita.com/resources/what-neuromarketing-actually-is/): What neuromarketing actually measures, and the assumptions people most often get wrong about it, from someone who's used eye tracking, implicit testing, and biometric methods professionally.
 - [Why Users Say They Trust Your Site but Don't Buy](https://www.imenbouzouita.com/resources/why-users-trust-your-site-but-dont-buy/): Testimonials, security badges, and trust signals often test well in usability sessions yet fail to move conversion — because visitors say they saw them without their eyes ever landing there.
+- [Landing Page Review Framework: 10 Questions in 10 Minutes](https://www.imenbouzouita.com/resources/landing-page-review-framework/): A fast, no-audit-required framework: ten questions that surface the most common landing page conversion problems in about ten minutes, ranked by where they sit in the visitor's journey.
 
 ## About
 
