@@ -7,7 +7,7 @@ A 20-year-old wellness brand in Ubud, Bali with strong organic traffic, genuine 
 - **Role:** UX, CRO & SEO Consultant
 - **Timeline:** 3 weeks
 - **Focus:** Conversion, SEO & AI Visibility
-- **Tools:** GA4, Ahrefs, Crazy Egg, Lighthouse, ChatGPT (AI visibility testing), Figma, WordPress
+- **Tools:** GA4, Ahrefs, Crazy Egg, Lighthouse, ChatGPT (AI visibility testing), Figma
 
 ## The opportunity
 

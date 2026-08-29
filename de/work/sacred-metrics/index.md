@@ -7,7 +7,7 @@ Eine 20 Jahre alte Wellness-Marke in Ubud, Bali, mit starkem organischen Traffic
 - **Rolle:** UX-, CRO- & SEO-Beraterin
 - **Zeitraum:** 3 Wochen
 - **Schwerpunkt:** Conversion, SEO & KI-Sichtbarkeit
-- **Tools:** GA4, Ahrefs, Crazy Egg, Lighthouse, ChatGPT (KI-Sichtbarkeitstests), Figma, WordPress
+- **Tools:** GA4, Ahrefs, Crazy Egg, Lighthouse, ChatGPT (KI-Sichtbarkeitstests), Figma
 
 ## Die Chance
 
