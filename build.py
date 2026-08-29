@@ -194,6 +194,16 @@ def _as_list(value):
     return value if isinstance(value, list) else [value]
 
 
+def _inline_to_markdown(text):
+    """The only inline HTML this site's content ever uses is <strong>/<em>
+    for emphasis — converted to real Markdown syntax rather than left as
+    raw tags, since the whole point of a .md sibling is to hand agents
+    clean text instead of markup to parse."""
+    text = re.sub(r"<strong>(.*?)</strong>", r"**\1**", text)
+    text = re.sub(r"<em>(.*?)</em>", r"*\1*", text)
+    return text
+
+
 def url_for(current_path):
     """Absolute canonical URL for a repo-relative output path."""
     if current_path.endswith("index.html"):
@@ -359,7 +369,7 @@ def build_json_ld_case_study(t, cs, current_path):
     return _json_ld_script([breadcrumb, webpage, work])
 
 
-def head(t, lang_code, title, description, current_path, alt_paths, article_date=None):
+def head(t, lang_code, title, description, current_path, alt_paths, article_date=None, markdown_path=None):
     canonical = url_for(current_path)
 
     hreflang_links = "\n  ".join(
@@ -370,6 +380,11 @@ def head(t, lang_code, title, description, current_path, alt_paths, article_date
     x_default_link = (
         f'<link rel="alternate" hreflang="x-default" href="{url_for(x_default)}" />'
         if x_default
+        else ""
+    )
+    markdown_link = (
+        f'<link rel="alternate" type="text/markdown" href="{href_to(current_path, markdown_path)}" />'
+        if markdown_path
         else ""
     )
 
@@ -383,6 +398,7 @@ def head(t, lang_code, title, description, current_path, alt_paths, article_date
   <link rel="canonical" href="{canonical}" />
   {hreflang_links}
   {x_default_link}
+  {markdown_link}
   <meta property="og:type" content="{og_type}" />
   <meta property="og:title" content="{title}" />
   <meta property="og:description" content="{description}" />
@@ -475,7 +491,7 @@ def _lang_of(current_path):
     return "de" if current_path.startswith("de/") else "en"
 
 
-def page_shell(t, title, description, body, current_path, alt_paths, extra_head="", article_date=None):
+def page_shell(t, title, description, body, current_path, alt_paths, extra_head="", article_date=None, markdown_path=None):
     lang_code = _lang_of(current_path)
     privacy_href = href_to(current_path, lang_legal_path(lang_code, "privacy"))
     cb = t["cookie_banner"]
@@ -525,7 +541,7 @@ def page_shell(t, title, description, body, current_path, alt_paths, extra_head=
     return f"""<!doctype html>
 <html lang="{lang_code}">
 <head>
-  {head(t, lang_code, title, description, current_path, alt_paths, article_date=article_date)}
+  {head(t, lang_code, title, description, current_path, alt_paths, article_date=article_date, markdown_path=markdown_path)}
   {extra_head}
 </head>
 <body data-ga4-id="{GA4_MEASUREMENT_ID}" data-contentsquare-src="{CONTENTSQUARE_SRC}">
@@ -720,8 +736,54 @@ def build_index(t, lang_code, alt_paths):
     </section>
   </main>
 """
-    html = page_shell(t, t["meta"]["site_title"], t["meta"]["site_description"], body, current_path, alt_paths, extra_head=build_json_ld_home(t, current_path))
+    # llms.txt is already a clean Markdown summary of the homepage's content
+    # (English-only, by its own design), so the homepage just points its
+    # discovery link at that instead of generating a redundant sibling file.
+    markdown_path = "llms.txt" if lang_code == "en" else None
+    html = page_shell(t, t["meta"]["site_title"], t["meta"]["site_description"], body, current_path, alt_paths, extra_head=build_json_ld_home(t, current_path), markdown_path=markdown_path)
     write(current_path, html)
+
+
+def _md_sibling_path(html_path):
+    assert html_path.endswith("index.html")
+    return html_path[: -len("index.html")] + "index.md"
+
+
+def build_markdown_case_study(t, cs):
+    """Clean Markdown mirror of a case study — discoverable via the page's
+    <link rel="alternate" type="text/markdown">, for agents that would
+    otherwise have to parse the full HTML/CSS/JSON-LD to get the content."""
+    lines = [f"# {cs['title']}", "", cs["one_liner"], "", cs["summary"], ""]
+    if cs.get("highlight"):
+        lines += [f"> {cs['highlight']}", ""]
+    for label, value in cs["meta"]:
+        lines.append(f"- **{label}:** {value}")
+    lines.append("")
+    for heading, content in cs["sections"]:
+        lines.append(f"## {heading}")
+        lines.append("")
+        for p in _as_list(content):
+            lines.append(_inline_to_markdown(p))
+            lines.append("")
+    return "\n".join(lines)
+
+
+def build_markdown_resource_article(t, article):
+    lines = [f"# {article['title']}", "", article["excerpt"], ""]
+    for section in article["sections"]:
+        if section.get("heading"):
+            lines.append(f"## {section['heading']}")
+            lines.append("")
+        for p in _as_list(section.get("body")):
+            lines.append(_inline_to_markdown(p))
+            lines.append("")
+        for item in section.get("items", []):
+            lines.append(f"### {item['heading']}")
+            lines.append("")
+            for p in _as_list(item.get("body")):
+                lines.append(_inline_to_markdown(p))
+                lines.append("")
+    return "\n".join(lines)
 
 
 def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
@@ -809,8 +871,11 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
     </section>
   </main>
 """
+    md_path = _md_sibling_path(current_path)
+    write(md_path, build_markdown_case_study(t, cs))
+
     title = f"{cs['title']} — {t['meta']['case_study_label']} — Imen Bouzouita"
-    html = page_shell(t, title, cs["one_liner"], body, current_path, alt_paths, extra_head=build_json_ld_case_study(t, cs, current_path))
+    html = page_shell(t, title, cs["one_liner"], body, current_path, alt_paths, extra_head=build_json_ld_case_study(t, cs, current_path), markdown_path=md_path)
     write(current_path, html)
 
 
@@ -900,8 +965,11 @@ def build_resource_article(t, lang_code, article, alt_paths):
     </section>
   </main>
 """
+    md_path = _md_sibling_path(current_path)
+    write(md_path, build_markdown_resource_article(t, article))
+
     title = f"{article['title']} — {res['eyebrow']} — Imen Bouzouita"
-    html = page_shell(t, title, article["excerpt"], body, current_path, alt_paths, extra_head=build_json_ld_resource_article(t, article, current_path), article_date=article["date"])
+    html = page_shell(t, title, article["excerpt"], body, current_path, alt_paths, extra_head=build_json_ld_resource_article(t, article, current_path), article_date=article["date"], markdown_path=md_path)
     write(current_path, html)
 
 
