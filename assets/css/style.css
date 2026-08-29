@@ -131,18 +131,31 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .btn-line:hover { transform: none; color: var(--moonstone-deep); }
 
 /* ---------- nav ---------- */
+/* The scrolled state's blur/tint lives on ::before, not .site-header itself:
+   backdrop-filter (like transform/filter) on an ancestor creates a new
+   containing block for position:fixed descendants, which would trap the
+   full-screen mobile nav-links panel inside this header's own small box
+   instead of the viewport. */
 .site-header {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
   padding-block: 1.1rem;
-  transition: background var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast), padding var(--dur-fast);
+  transition: padding var(--dur-fast) var(--ease-out);
+}
+.site-header::before {
+  content: '';
+  position: absolute; inset: 0;
+  z-index: -1;
+  transition: background var(--dur-fast) var(--ease-out), backdrop-filter var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast);
 }
 .site-header.is-scrolled {
+  padding-block: 0.7rem;
+}
+.site-header.is-scrolled::before {
   background: rgba(247,245,240,0.82);
   backdrop-filter: blur(10px);
   box-shadow: 0 1px 0 rgba(14,27,31,0.08);
-  padding-block: 0.7rem;
 }
 .site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .logo {
@@ -207,8 +220,8 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .nav-toggle span::before { position: absolute; top: -7px; }
 .nav-toggle span::after { position: absolute; top: 7px; }
 .nav-toggle[aria-expanded="true"] span { background: transparent; }
-.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
-.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+.nav-toggle[aria-expanded="true"] span::before { background: var(--bone); transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { background: var(--bone); transform: translateY(-7px) rotate(-45deg); }
 
 @media (max-width: 860px) {
   .nav-links {
