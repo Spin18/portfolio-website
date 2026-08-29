@@ -4,8 +4,8 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
 
-  /* ---------- cookie consent + consent-gated GA4 ----------
-     GA4 is never requested from Google until a visitor explicitly
+  /* ---------- cookie consent + consent-gated analytics ----------
+     GA4 and Contentsquare are never requested until a visitor explicitly
      accepts — no script tag, no request, nothing set — until then. This
      is deliberately stricter than Google's own "Consent Mode" (which
      still pings Google with consent state before an accept/reject
@@ -14,6 +14,7 @@
      "no cookies without consent". */
   (() => {
     const ga4Id = document.body.dataset.ga4Id;
+    const contentsquareSrc = document.body.dataset.contentsquareSrc;
     const CONSENT_KEY = 'cookie-consent';
     const banner = document.getElementById('cookie-banner');
 
@@ -48,6 +49,20 @@
       window.gtag('config', ga4Id, { anonymize_ip: true });
     };
 
+    const loadContentsquare = () => {
+      if (!contentsquareSrc || window.__csLoaded) return;
+      window.__csLoaded = true;
+      const script = document.createElement('script');
+      script.src = contentsquareSrc;
+      script.async = true;
+      document.head.appendChild(script);
+    };
+
+    const loadAnalytics = () => {
+      loadGA4();
+      loadContentsquare();
+    };
+
     const analyticsToggle = banner?.querySelector('[data-cookie-toggle-analytics]');
     const manageBtn = banner?.querySelector('[data-cookie-manage]');
     const managePanel = banner?.querySelector('.cookie-manage-panel');
@@ -64,7 +79,7 @@
 
     const consent = getConsent();
     if (consent === 'granted') {
-      loadGA4();
+      loadAnalytics();
     } else if (consent !== 'denied' && banner) {
       openBanner();
     }
@@ -73,7 +88,7 @@
       banner.querySelector('[data-cookie-accept]')?.addEventListener('click', () => {
         setConsent('granted');
         banner.hidden = true;
-        loadGA4();
+        loadAnalytics();
       });
       banner.querySelector('[data-cookie-decline]')?.addEventListener('click', () => {
         setConsent('denied');
@@ -87,7 +102,7 @@
       banner.querySelector('[data-cookie-confirm]')?.addEventListener('click', () => {
         if (analyticsToggle?.checked) {
           setConsent('granted');
-          loadGA4();
+          loadAnalytics();
         } else {
           setConsent('denied');
         }

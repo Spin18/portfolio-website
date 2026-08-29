@@ -35,6 +35,10 @@ GA4_MEASUREMENT_ID = "G-G78M71MS8D"
 # GA4 it loads unconditionally — it isn't gated behind the cookie banner
 # because it doesn't need consent under GDPR/ePrivacy in the first place.
 CLOUDFLARE_ANALYTICS_TOKEN = "66edec62f8284619abfb73b524995fad"
+# Contentsquare: session recordings/heatmaps tied to real visitor behaviour —
+# this IS personal data, so unlike Cloudflare Web Analytics it's gated behind
+# the same cookie-banner "Analytics" consent as GA4. See assets/js/main.js.
+CONTENTSQUARE_SRC = "https://t.contentsquare.net/uxa/eebaa999b0989.js"
 # font-display=optional: browser waits ~100ms max for the font, then commits
 # to whichever (fallback or webfont) is ready and never swaps later — this is
 # what avoids CLS. Loaded non-blocking via the media="print" swap trick below,
@@ -524,7 +528,7 @@ def page_shell(t, title, description, body, current_path, alt_paths, extra_head=
   {head(t, lang_code, title, description, current_path, alt_paths, article_date=article_date)}
   {extra_head}
 </head>
-<body data-ga4-id="{GA4_MEASUREMENT_ID}">
+<body data-ga4-id="{GA4_MEASUREMENT_ID}" data-contentsquare-src="{CONTENTSQUARE_SRC}">
   {header_html(t, current_path, alt_paths)}
   {body}
   {footer_html(t, current_path)}
