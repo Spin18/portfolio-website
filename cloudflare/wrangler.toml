@@ -1,0 +1,3 @@
+name = "markdown-negotiation"
+main = "markdown-negotiation-worker.js"
+compatibility_date = "2026-08-29"
