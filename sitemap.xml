@@ -133,5 +133,11 @@
   <url>
     <loc>https://www.imenbouzouita.com/resources/why-users-trust-your-site-but-dont-buy/</loc>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/resources/why-users-trust-your-site-but-dont-buy/" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://www.imenbouzouita.com/de/resources/why-users-trust-your-site-but-dont-buy/" />
+  </url>
+  <url>
+    <loc>https://www.imenbouzouita.com/de/resources/why-users-trust-your-site-but-dont-buy/</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/resources/why-users-trust-your-site-but-dont-buy/" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://www.imenbouzouita.com/de/resources/why-users-trust-your-site-but-dont-buy/" />
   </url>
 </urlset>
