@@ -243,8 +243,8 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .nav-toggle span::before { position: absolute; top: -7px; }
 .nav-toggle span::after { position: absolute; top: 7px; }
 .nav-toggle[aria-expanded="true"] span { background: transparent; }
-.nav-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
-.nav-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+.nav-toggle[aria-expanded="true"] span::before { background: var(--bone); transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { background: var(--bone); transform: translateY(-7px) rotate(-45deg); }
 
 @media (max-width: 860px) {
   .nav-links {
