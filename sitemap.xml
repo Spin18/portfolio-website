@@ -130,4 +130,8 @@
       <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/resources/what-neuromarketing-actually-is/" />
       <xhtml:link rel="alternate" hreflang="de" href="https://www.imenbouzouita.com/de/resources/what-neuromarketing-actually-is/" />
   </url>
+  <url>
+    <loc>https://www.imenbouzouita.com/resources/why-users-trust-your-site-but-dont-buy/</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/resources/why-users-trust-your-site-but-dont-buy/" />
+  </url>
 </urlset>
