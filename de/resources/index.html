@@ -871,8 +871,49 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 
 /* ---------- resources ---------- */
 .resources-hero h1 { margin-bottom: 1.6rem; }
-.resource-cluster { max-width: 760px; margin-inline: auto; }
+.resources-hero .mt-lg { margin-top: 4.2rem; }
+.resources-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+.resources-sidenav {
+  position: sticky;
+  top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.resources-sidenav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin-bottom: 0.2rem;
+}
+.resources-sidenav a {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+  transition: color var(--dur-fast);
+}
+.resources-sidenav a:hover { color: var(--coral-text); }
+.resources-content { max-width: 760px; }
 .resource-cluster + .resource-cluster { margin-top: 3rem; }
+@media (max-width: 900px) {
+  .resources-layout { grid-template-columns: 1fr; }
+  .resources-sidenav {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1.2rem;
+    row-gap: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .resources-sidenav-label { width: 100%; margin-bottom: 0.4rem; }
+}
 .resource-cluster-heading {
   font-size: clamp(1.1rem, 1.8vw, 1.3rem);
   color: var(--coral-text);
@@ -989,10 +1030,17 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
         <p class="eyebrow">Ressourcen</p>
         <h1>Beiträge zu UX, CRO und Digitalstrategie.</h1>
         <p class="lede">Praxisnahe Beiträge zu dem, was Conversion wirklich bewegt — aus echten Audits und Projekten, nicht aus der Theorie.</p>
-        <div class="mt-lg">
-        <div class="resource-cluster">
-          <h2 class="resource-cluster-heading">CRO-Grundlagen</h2>
-          <div class="resource-list">
+        <div class="mt-lg"><div class="resources-layout">
+          <nav class="resources-sidenav" aria-label="Themen">
+            <p class="resources-sidenav-label">Themen</p>
+          <a href="#cro-fundamentals">CRO-Grundlagen</a>
+          <a href="#neuromarketing-behavioural-ux">Neuromarketing / Behavioral UX</a>
+          <a href="#ecommerce-optimisation">E-Commerce-Optimierung</a>
+          </nav>
+          <div class="resources-content">
+          <div class="resource-cluster" id="cro-fundamentals">
+            <h2 class="resource-cluster-heading">CRO-Grundlagen</h2>
+            <div class="resource-list">
         <a class="resource-card" href="cro-audit-checklist/" data-reveal>
           <div class="resource-card-meta">
             <span class="resource-category">CRO</span>
@@ -1009,11 +1057,11 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <p>Ein schnelles Framework ohne vollständiges Audit: zehn Fragen, die die häufigsten Conversion-Probleme einer Landing Page in rund zehn Minuten sichtbar machen, sortiert danach, wo sie in der Journey des Besuchers liegen.</p>
           <span class="resource-read-more">Artikel lesen &middot; 6 Min. Lesezeit &rarr;</span>
         </a>
+            </div>
           </div>
-        </div>
-        <div class="resource-cluster">
-          <h2 class="resource-cluster-heading">Neuromarketing / Behavioral UX</h2>
-          <div class="resource-list">
+          <div class="resource-cluster" id="neuromarketing-behavioural-ux">
+            <h2 class="resource-cluster-heading">Neuromarketing / Behavioral UX</h2>
+            <div class="resource-list">
         <a class="resource-card" href="what-neuromarketing-actually-is/" data-reveal>
           <div class="resource-card-meta">
             <span class="resource-category">Neuromarketing</span>
@@ -1030,11 +1078,11 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <p>Testimonials, Sicherheitsbadges und Trust Signals schneiden in Usability-Tests oft gut ab, bewegen aber die Conversion nicht, weil Besucher sagen, sie hätten sie gesehen, obwohl ihre Augen nie dort gelandet sind.</p>
           <span class="resource-read-more">Artikel lesen &middot; 7 Min. Lesezeit &rarr;</span>
         </a>
+            </div>
           </div>
-        </div>
-        <div class="resource-cluster">
-          <h2 class="resource-cluster-heading">E-Commerce-Optimierung</h2>
-          <div class="resource-list">
+          <div class="resource-cluster" id="ecommerce-optimisation">
+            <h2 class="resource-cluster-heading">E-Commerce-Optimierung</h2>
+            <div class="resource-list">
         <a class="resource-card" href="shipping-cost-transparency/" data-reveal>
           <div class="resource-card-meta">
             <span class="resource-category">CRO</span>
@@ -1043,6 +1091,8 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <p>Unerwartete Versandkosten sind der häufigste Grund für Warenkorbabbrüche — nicht weil der Betrag unangemessen ist, sondern wegen des Zeitpunkts. Was du an jedem Punkt im Funnel zeigen solltest.</p>
           <span class="resource-read-more">Artikel lesen &middot; 8 Min. Lesezeit &rarr;</span>
         </a>
+            </div>
+          </div>
           </div>
         </div></div>
       </div>

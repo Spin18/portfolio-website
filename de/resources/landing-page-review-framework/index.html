@@ -872,8 +872,49 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 
 /* ---------- resources ---------- */
 .resources-hero h1 { margin-bottom: 1.6rem; }
-.resource-cluster { max-width: 760px; margin-inline: auto; }
+.resources-hero .mt-lg { margin-top: 4.2rem; }
+.resources-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+.resources-sidenav {
+  position: sticky;
+  top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.resources-sidenav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin-bottom: 0.2rem;
+}
+.resources-sidenav a {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+  transition: color var(--dur-fast);
+}
+.resources-sidenav a:hover { color: var(--coral-text); }
+.resources-content { max-width: 760px; }
 .resource-cluster + .resource-cluster { margin-top: 3rem; }
+@media (max-width: 900px) {
+  .resources-layout { grid-template-columns: 1fr; }
+  .resources-sidenav {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1.2rem;
+    row-gap: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .resources-sidenav-label { width: 100%; margin-bottom: 0.4rem; }
+}
 .resource-cluster-heading {
   font-size: clamp(1.1rem, 1.8vw, 1.3rem);
   color: var(--coral-text);

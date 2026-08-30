@@ -903,7 +903,8 @@ def build_resources_index(t, lang_code, alt_paths):
         # Grouped by cluster, in the fixed editorial order defined in
         # content — not every cluster has articles yet, so empty ones are
         # skipped rather than shown as bare headings with nothing under them.
-        list_html = ""
+        clusters_html = ""
+        sidenav_links = ""
         clustered_slugs = set()
         for cluster in res["clusters"]:
             cluster_articles = [a for a in res["items"] if a.get("cluster") == cluster["key"]]
@@ -911,19 +912,28 @@ def build_resources_index(t, lang_code, alt_paths):
                 continue
             clustered_slugs.update(a["slug"] for a in cluster_articles)
             cards = "".join(_render_card(a) for a in cluster_articles)
-            list_html += f"""
-        <div class="resource-cluster">
-          <h2 class="resource-cluster-heading">{cluster['name']}</h2>
-          <div class="resource-list">{cards}
-          </div>
-        </div>"""
+            clusters_html += f"""
+          <div class="resource-cluster" id="{cluster['key']}">
+            <h2 class="resource-cluster-heading">{cluster['name']}</h2>
+            <div class="resource-list">{cards}
+            </div>
+          </div>"""
+            sidenav_links += f'\n          <a href="#{cluster["key"]}">{cluster["name"]}</a>'
         # An article with a missing/mistyped cluster key would otherwise
         # silently vanish from the index while its own page still builds
         # and stays reachable — surface it instead of hiding it.
         stray = [a for a in res["items"] if a["slug"] not in clustered_slugs]
         if stray:
             cards = "".join(_render_card(a) for a in stray)
-            list_html += f'\n        <div class="resource-cluster"><div class="resource-list">{cards}\n          </div></div>'
+            clusters_html += f'\n          <div class="resource-cluster"><div class="resource-list">{cards}\n            </div></div>'
+
+        list_html = f"""<div class="resources-layout">
+          <nav class="resources-sidenav" aria-label="{res['topics_label']}">
+            <p class="resources-sidenav-label">{res['topics_label']}</p>{sidenav_links}
+          </nav>
+          <div class="resources-content">{clusters_html}
+          </div>
+        </div>"""
     else:
         list_html = f'<p class="resource-empty">{res["empty_state"]}</p>'
 

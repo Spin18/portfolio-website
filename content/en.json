@@ -452,6 +452,7 @@
     "read_more": "Read article",
     "all_resources": "All resources",
     "read_time_label": "{n} min read",
+    "topics_label": "Topics",
     "clusters": [
       {
         "key": "cro-fundamentals",
