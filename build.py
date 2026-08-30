@@ -883,24 +883,47 @@ def build_resources_index(t, lang_code, alt_paths):
     current_path = lang_resources_index_path(lang_code)
     res = t["resources"]
 
-    if res["items"]:
-        cards = ""
-        for article in res["items"]:
-            article_path = lang_resource_path(lang_code, article["slug"])
-            read_time = res["read_time_label"].format(n=estimate_read_minutes(article))
-            category_html = (
-                f'<span class="resource-category">{article["category"]}</span>' if article.get("category") else ""
-            )
-            cards += f"""
+    def _render_card(article):
+        article_path = lang_resource_path(lang_code, article["slug"])
+        read_time = res["read_time_label"].format(n=estimate_read_minutes(article))
+        category_html = (
+            f'<span class="resource-category">{article["category"]}</span>' if article.get("category") else ""
+        )
+        return f"""
         <a class="resource-card" href="{href_to(current_path, article_path)}" data-reveal>
           <div class="resource-card-meta">
             {category_html}
           </div>
-          <h2>{article['title']}</h2>
+          <h3>{article['title']}</h3>
           <p>{article['excerpt']}</p>
           <span class="resource-read-more">{res['read_more']} &middot; {read_time} &rarr;</span>
         </a>"""
-        list_html = f'<div class="resource-list">{cards}\n        </div>'
+
+    if res["items"]:
+        # Grouped by cluster, in the fixed editorial order defined in
+        # content — not every cluster has articles yet, so empty ones are
+        # skipped rather than shown as bare headings with nothing under them.
+        list_html = ""
+        clustered_slugs = set()
+        for cluster in res["clusters"]:
+            cluster_articles = [a for a in res["items"] if a.get("cluster") == cluster["key"]]
+            if not cluster_articles:
+                continue
+            clustered_slugs.update(a["slug"] for a in cluster_articles)
+            cards = "".join(_render_card(a) for a in cluster_articles)
+            list_html += f"""
+        <div class="resource-cluster">
+          <h2 class="resource-cluster-heading">{cluster['name']}</h2>
+          <div class="resource-list">{cards}
+          </div>
+        </div>"""
+        # An article with a missing/mistyped cluster key would otherwise
+        # silently vanish from the index while its own page still builds
+        # and stays reachable — surface it instead of hiding it.
+        stray = [a for a in res["items"] if a["slug"] not in clustered_slugs]
+        if stray:
+            cards = "".join(_render_card(a) for a in stray)
+            list_html += f'\n        <div class="resource-cluster"><div class="resource-list">{cards}\n          </div></div>'
     else:
         list_html = f'<p class="resource-empty">{res["empty_state"]}</p>'
 

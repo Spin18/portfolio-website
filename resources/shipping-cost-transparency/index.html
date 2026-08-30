@@ -872,7 +872,14 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 
 /* ---------- resources ---------- */
 .resources-hero h1 { margin-bottom: 1.6rem; }
-.resource-list { max-width: 760px; margin-inline: auto; display: grid; }
+.resource-cluster { max-width: 760px; margin-inline: auto; }
+.resource-cluster + .resource-cluster { margin-top: 3rem; }
+.resource-cluster-heading {
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  color: var(--coral-text);
+  margin-bottom: 0.8rem;
+}
+.resource-list { display: grid; }
 .resource-card {
   display: block;
   padding: 2rem 0;
@@ -894,12 +901,12 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   color: var(--moonstone-deep);
 }
 .resource-date { color: var(--ink-soft); }
-.resource-card h2 {
+.resource-card h3 {
   font-size: clamp(1.3rem, 2.2vw, 1.6rem);
   margin-bottom: 0.6rem;
   transition: color var(--dur-fast);
 }
-.resource-card:hover h2 { color: var(--moonstone-deep); }
+.resource-card:hover h3 { color: var(--moonstone-deep); }
 .resource-card p { color: var(--ink-soft); margin-bottom: 1rem; max-width: 62ch; }
 .resource-read-more { font-weight: 600; color: var(--moonstone-deep); font-size: 0.92rem; }
 .resource-empty {

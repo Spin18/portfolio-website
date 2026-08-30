@@ -871,7 +871,14 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 
 /* ---------- resources ---------- */
 .resources-hero h1 { margin-bottom: 1.6rem; }
-.resource-list { max-width: 760px; margin-inline: auto; display: grid; }
+.resource-cluster { max-width: 760px; margin-inline: auto; }
+.resource-cluster + .resource-cluster { margin-top: 3rem; }
+.resource-cluster-heading {
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  color: var(--coral-text);
+  margin-bottom: 0.8rem;
+}
+.resource-list { display: grid; }
 .resource-card {
   display: block;
   padding: 2rem 0;
@@ -893,12 +900,12 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   color: var(--moonstone-deep);
 }
 .resource-date { color: var(--ink-soft); }
-.resource-card h2 {
+.resource-card h3 {
   font-size: clamp(1.3rem, 2.2vw, 1.6rem);
   margin-bottom: 0.6rem;
   transition: color var(--dur-fast);
 }
-.resource-card:hover h2 { color: var(--moonstone-deep); }
+.resource-card:hover h3 { color: var(--moonstone-deep); }
 .resource-card p { color: var(--ink-soft); margin-bottom: 1rem; max-width: 62ch; }
 .resource-read-more { font-weight: 600; color: var(--moonstone-deep); font-size: 0.92rem; }
 .resource-empty {
@@ -982,20 +989,36 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
         <p class="eyebrow">Resources</p>
         <h1>Notes on UX, CRO, and digital strategy.</h1>
         <p class="lede">Practical write-ups on what actually moves conversion — pulled from real audits and builds, not theory.</p>
-        <div class="mt-lg"><div class="resource-list">
+        <div class="mt-lg">
+        <div class="resource-cluster">
+          <h2 class="resource-cluster-heading">CRO Fundamentals</h2>
+          <div class="resource-list">
         <a class="resource-card" href="cro-audit-checklist/" data-reveal>
           <div class="resource-card-meta">
             <span class="resource-category">CRO</span>
           </div>
-          <h2>CRO Audit Checklist: 20 Things to Check Before You Redesign Anything</h2>
+          <h3>CRO Audit Checklist: 20 Things to Check Before You Redesign Anything</h3>
           <p>A practical, 20-point checklist covering analytics, homepage clarity, checkout friction, and mobile UX — everything worth auditing before committing to a redesign.</p>
           <span class="resource-read-more">Read article &middot; 6 min read &rarr;</span>
         </a>
+        <a class="resource-card" href="landing-page-review-framework/" data-reveal>
+          <div class="resource-card-meta">
+            <span class="resource-category">CRO</span>
+          </div>
+          <h3>Landing Page Review Framework: 10 Questions in 10 Minutes</h3>
+          <p>A fast, no-audit-required framework: ten questions that surface the most common landing page conversion problems in about ten minutes, ranked by where they sit in the visitor's journey.</p>
+          <span class="resource-read-more">Read article &middot; 6 min read &rarr;</span>
+        </a>
+          </div>
+        </div>
+        <div class="resource-cluster">
+          <h2 class="resource-cluster-heading">Neuromarketing / Behavioural UX</h2>
+          <div class="resource-list">
         <a class="resource-card" href="what-neuromarketing-actually-is/" data-reveal>
           <div class="resource-card-meta">
             <span class="resource-category">Neuromarketing</span>
           </div>
-          <h2>What Neuromarketing Actually Is (And Isn't)</h2>
+          <h3>What Neuromarketing Actually Is (And Isn't)</h3>
           <p>What neuromarketing actually measures, and the assumptions people most often get wrong about it, from someone who's used eye tracking, implicit testing, and biometric methods professionally.</p>
           <span class="resource-read-more">Read article &middot; 6 min read &rarr;</span>
         </a>
@@ -1003,26 +1026,24 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <div class="resource-card-meta">
             <span class="resource-category">CRO</span>
           </div>
-          <h2>Why Users Say They Trust Your Site but Don't Buy</h2>
+          <h3>Why Users Say They Trust Your Site but Don't Buy</h3>
           <p>Testimonials, security badges, and trust signals often test well in usability sessions yet fail to move conversion — because visitors say they saw them without their eyes ever landing there.</p>
           <span class="resource-read-more">Read article &middot; 7 min read &rarr;</span>
         </a>
-        <a class="resource-card" href="landing-page-review-framework/" data-reveal>
-          <div class="resource-card-meta">
-            <span class="resource-category">CRO</span>
           </div>
-          <h2>Landing Page Review Framework: 10 Questions in 10 Minutes</h2>
-          <p>A fast, no-audit-required framework: ten questions that surface the most common landing page conversion problems in about ten minutes, ranked by where they sit in the visitor's journey.</p>
-          <span class="resource-read-more">Read article &middot; 6 min read &rarr;</span>
-        </a>
+        </div>
+        <div class="resource-cluster">
+          <h2 class="resource-cluster-heading">E-commerce Optimisation</h2>
+          <div class="resource-list">
         <a class="resource-card" href="shipping-cost-transparency/" data-reveal>
           <div class="resource-card-meta">
             <span class="resource-category">CRO</span>
           </div>
-          <h2>Shipping Cost Transparency: How and When to Show It</h2>
+          <h3>Shipping Cost Transparency: How and When to Show It</h3>
           <p>Unexpected shipping costs are the top reason for cart abandonment — not because the amount is unreasonable, but because of when visitors find out. What to show at each stage of the funnel, and when.</p>
           <span class="resource-read-more">Read article &middot; 8 min read &rarr;</span>
         </a>
+          </div>
         </div></div>
       </div>
     </section>

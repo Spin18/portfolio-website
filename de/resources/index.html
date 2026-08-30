@@ -871,7 +871,14 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 
 /* ---------- resources ---------- */
 .resources-hero h1 { margin-bottom: 1.6rem; }
-.resource-list { max-width: 760px; margin-inline: auto; display: grid; }
+.resource-cluster { max-width: 760px; margin-inline: auto; }
+.resource-cluster + .resource-cluster { margin-top: 3rem; }
+.resource-cluster-heading {
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  color: var(--coral-text);
+  margin-bottom: 0.8rem;
+}
+.resource-list { display: grid; }
 .resource-card {
   display: block;
   padding: 2rem 0;
@@ -893,12 +900,12 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   color: var(--moonstone-deep);
 }
 .resource-date { color: var(--ink-soft); }
-.resource-card h2 {
+.resource-card h3 {
   font-size: clamp(1.3rem, 2.2vw, 1.6rem);
   margin-bottom: 0.6rem;
   transition: color var(--dur-fast);
 }
-.resource-card:hover h2 { color: var(--moonstone-deep); }
+.resource-card:hover h3 { color: var(--moonstone-deep); }
 .resource-card p { color: var(--ink-soft); margin-bottom: 1rem; max-width: 62ch; }
 .resource-read-more { font-weight: 600; color: var(--moonstone-deep); font-size: 0.92rem; }
 .resource-empty {
@@ -982,20 +989,36 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
         <p class="eyebrow">Ressourcen</p>
         <h1>Beiträge zu UX, CRO und Digitalstrategie.</h1>
         <p class="lede">Praxisnahe Beiträge zu dem, was Conversion wirklich bewegt — aus echten Audits und Projekten, nicht aus der Theorie.</p>
-        <div class="mt-lg"><div class="resource-list">
+        <div class="mt-lg">
+        <div class="resource-cluster">
+          <h2 class="resource-cluster-heading">CRO-Grundlagen</h2>
+          <div class="resource-list">
         <a class="resource-card" href="cro-audit-checklist/" data-reveal>
           <div class="resource-card-meta">
             <span class="resource-category">CRO</span>
           </div>
-          <h2>CRO-Audit-Checkliste: 20 Punkte, die du prüfen solltest, bevor du irgendetwas redesignst</h2>
+          <h3>CRO-Audit-Checkliste: 20 Punkte, die du prüfen solltest, bevor du irgendetwas redesignst</h3>
           <p>Eine praktische 20-Punkte-Checkliste zu Analytics, Homepage-Klarheit, Checkout-Friction und Mobile UX — alles, was sich vor einem Redesign zu prüfen lohnt.</p>
           <span class="resource-read-more">Artikel lesen &middot; 6 Min. Lesezeit &rarr;</span>
         </a>
+        <a class="resource-card" href="landing-page-review-framework/" data-reveal>
+          <div class="resource-card-meta">
+            <span class="resource-category">CRO</span>
+          </div>
+          <h3>Landing Page Review Framework: 10 Fragen in 10 Minuten</h3>
+          <p>Ein schnelles Framework ohne vollständiges Audit: zehn Fragen, die die häufigsten Conversion-Probleme einer Landing Page in rund zehn Minuten sichtbar machen, sortiert danach, wo sie in der Journey des Besuchers liegen.</p>
+          <span class="resource-read-more">Artikel lesen &middot; 6 Min. Lesezeit &rarr;</span>
+        </a>
+          </div>
+        </div>
+        <div class="resource-cluster">
+          <h2 class="resource-cluster-heading">Neuromarketing / Behavioral UX</h2>
+          <div class="resource-list">
         <a class="resource-card" href="what-neuromarketing-actually-is/" data-reveal>
           <div class="resource-card-meta">
             <span class="resource-category">Neuromarketing</span>
           </div>
-          <h2>Was Neuromarketing wirklich ist (und was nicht)</h2>
+          <h3>Was Neuromarketing wirklich ist (und was nicht)</h3>
           <p>Was Neuromarketing tatsächlich misst, und welche Annahmen darüber am häufigsten falsch sind, von jemandem, der Eye Tracking, implizite Tests und biometrische Methoden beruflich einsetzt.</p>
           <span class="resource-read-more">Artikel lesen &middot; 6 Min. Lesezeit &rarr;</span>
         </a>
@@ -1003,26 +1026,24 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <div class="resource-card-meta">
             <span class="resource-category">CRO</span>
           </div>
-          <h2>Warum Nutzer sagen, sie vertrauen deiner Seite, aber trotzdem nicht kaufen</h2>
+          <h3>Warum Nutzer sagen, sie vertrauen deiner Seite, aber trotzdem nicht kaufen</h3>
           <p>Testimonials, Sicherheitsbadges und Trust Signals schneiden in Usability-Tests oft gut ab, bewegen aber die Conversion nicht, weil Besucher sagen, sie hätten sie gesehen, obwohl ihre Augen nie dort gelandet sind.</p>
           <span class="resource-read-more">Artikel lesen &middot; 7 Min. Lesezeit &rarr;</span>
         </a>
-        <a class="resource-card" href="landing-page-review-framework/" data-reveal>
-          <div class="resource-card-meta">
-            <span class="resource-category">CRO</span>
           </div>
-          <h2>Landing Page Review Framework: 10 Fragen in 10 Minuten</h2>
-          <p>Ein schnelles Framework ohne vollständiges Audit: zehn Fragen, die die häufigsten Conversion-Probleme einer Landing Page in rund zehn Minuten sichtbar machen, sortiert danach, wo sie in der Journey des Besuchers liegen.</p>
-          <span class="resource-read-more">Artikel lesen &middot; 6 Min. Lesezeit &rarr;</span>
-        </a>
+        </div>
+        <div class="resource-cluster">
+          <h2 class="resource-cluster-heading">E-Commerce-Optimierung</h2>
+          <div class="resource-list">
         <a class="resource-card" href="shipping-cost-transparency/" data-reveal>
           <div class="resource-card-meta">
             <span class="resource-category">CRO</span>
           </div>
-          <h2>Versandkosten-Transparenz: Wie und wann du sie zeigen solltest</h2>
+          <h3>Versandkosten-Transparenz: Wie und wann du sie zeigen solltest</h3>
           <p>Unerwartete Versandkosten sind der häufigste Grund für Warenkorbabbrüche — nicht weil der Betrag unangemessen ist, sondern wegen des Zeitpunkts. Was du an jedem Punkt im Funnel zeigen solltest.</p>
           <span class="resource-read-more">Artikel lesen &middot; 8 Min. Lesezeit &rarr;</span>
         </a>
+          </div>
         </div></div>
       </div>
     </section>

@@ -453,6 +453,28 @@
     "read_more": "Artikel lesen",
     "all_resources": "Alle Ressourcen",
     "read_time_label": "{n} Min. Lesezeit",
+    "clusters": [
+      {
+        "key": "cro-fundamentals",
+        "name": "CRO-Grundlagen"
+      },
+      {
+        "key": "ux-that-converts",
+        "name": "UX, die konvertiert"
+      },
+      {
+        "key": "neuromarketing-behavioural-ux",
+        "name": "Neuromarketing / Behavioral UX"
+      },
+      {
+        "key": "ecommerce-optimisation",
+        "name": "E-Commerce-Optimierung"
+      },
+      {
+        "key": "hiring-a-consultant",
+        "name": "Eine UX/CRO-Beratung beauftragen"
+      }
+    ],
     "items": [
       {
         "slug": "cro-audit-checklist",
@@ -584,7 +606,8 @@
               "Ein Redesign sollte der letzte Ausweg sein, nicht die erste Reaktion. Meistens braucht die Seite keinen neuen Look. Sie braucht fünf gezielte Fixes an den richtigen Stellen."
             ]
           }
-        ]
+        ],
+        "cluster": "cro-fundamentals"
       },
       {
         "slug": "what-neuromarketing-actually-is",
@@ -659,7 +682,8 @@
               "Es gibt dir keinen magischen Knopf. Es gibt dir bessere Daten. Und bei den meisten Produkt- und Marketingentscheidungen sind bessere Daten der Unterschied zwischen Raten und Wissen."
             ]
           }
-        ]
+        ],
+        "cluster": "neuromarketing-behavioural-ux"
       },
       {
         "slug": "why-users-trust-your-site-but-dont-buy",
@@ -745,7 +769,8 @@
               "Der Instinkt ist, zu ändern, was das Element sagt. Die Lösung ist meistens, zu ändern, ob die Augen des Nutzers jemals darauf landen."
             ]
           }
-        ]
+        ],
+        "cluster": "neuromarketing-behavioural-ux"
       },
       {
         "slug": "landing-page-review-framework",
@@ -846,7 +871,8 @@
               "Du musst nicht alles fixen. Fang bei der ersten Frage an, die ein „Nein\" bekommen hat, und arbeite dich von dort nach vorne. Ein klarer Fix am richtigen Punkt im Flow schlägt fünf Änderungen, die über die ganze Seite verstreut sind."
             ]
           }
-        ]
+        ],
+        "cluster": "cro-fundamentals"
       },
       {
         "slug": "shipping-cost-transparency",
@@ -955,7 +981,8 @@
               "Wenn eine dieser Antworten Nein ist, hast du eine Transparenzlücke. Und diese Lücke kostet dich Conversions, die kein Retargeting und kein Rabattcode zurückholen wird, weil die Besucher, die du verlierst, nicht gehen, weil sie das Produkt nicht wollen. Sie gehen, weil du sie mit den Kosten überrascht hast, es zu bekommen."
             ]
           }
-        ]
+        ],
+        "cluster": "ecommerce-optimisation"
       }
     ]
   },

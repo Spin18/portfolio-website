@@ -452,6 +452,28 @@
     "read_more": "Read article",
     "all_resources": "All resources",
     "read_time_label": "{n} min read",
+    "clusters": [
+      {
+        "key": "cro-fundamentals",
+        "name": "CRO Fundamentals"
+      },
+      {
+        "key": "ux-that-converts",
+        "name": "UX That Converts"
+      },
+      {
+        "key": "neuromarketing-behavioural-ux",
+        "name": "Neuromarketing / Behavioural UX"
+      },
+      {
+        "key": "ecommerce-optimisation",
+        "name": "E-commerce Optimisation"
+      },
+      {
+        "key": "hiring-a-consultant",
+        "name": "Hiring a UX/CRO Consultant"
+      }
+    ],
     "items": [
       {
         "slug": "cro-audit-checklist",
@@ -583,7 +605,8 @@
               "A redesign should be the last resort, not the first response. Most of the time, the site doesn't need a new look. It needs five targeted fixes in the right places."
             ]
           }
-        ]
+        ],
+        "cluster": "cro-fundamentals"
       },
       {
         "slug": "what-neuromarketing-actually-is",
@@ -658,7 +681,8 @@
               "It won't give you a magic button. It will give you better data. And in most product and marketing decisions, better data is the difference between guessing and knowing."
             ]
           }
-        ]
+        ],
+        "cluster": "neuromarketing-behavioural-ux"
       },
       {
         "slug": "why-users-trust-your-site-but-dont-buy",
@@ -744,7 +768,8 @@
               "The instinct is to change what the element says. The fix, more often than not, is to change whether the user's eyes ever land on it."
             ]
           }
-        ]
+        ],
+        "cluster": "neuromarketing-behavioural-ux"
       },
       {
         "slug": "landing-page-review-framework",
@@ -845,7 +870,8 @@
               "You don't need to fix everything. Start with the first question that got a \"no\" and work forward from there. One clear fix at the right point in the flow will outperform five changes scattered across the page."
             ]
           }
-        ]
+        ],
+        "cluster": "cro-fundamentals"
       },
       {
         "slug": "shipping-cost-transparency",
@@ -954,7 +980,8 @@
               "If any of those answers is no, you have a transparency gap. And that gap is costing you conversions that no amount of retargeting or discount codes will recover, because the visitors you're losing aren't leaving because they don't want the product. They're leaving because you surprised them with the cost of getting it."
             ]
           }
-        ]
+        ],
+        "cluster": "ecommerce-optimisation"
       }
     ]
   },
