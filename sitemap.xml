@@ -160,4 +160,14 @@
       <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/resources/shipping-cost-transparency/" />
       <xhtml:link rel="alternate" hreflang="de" href="https://www.imenbouzouita.com/de/resources/shipping-cost-transparency/" />
   </url>
+  <url>
+    <loc>https://www.imenbouzouita.com/resources/product-page-anatomy/</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/resources/product-page-anatomy/" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://www.imenbouzouita.com/de/resources/product-page-anatomy/" />
+  </url>
+  <url>
+    <loc>https://www.imenbouzouita.com/de/resources/product-page-anatomy/</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/resources/product-page-anatomy/" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://www.imenbouzouita.com/de/resources/product-page-anatomy/" />
+  </url>
 </urlset>
