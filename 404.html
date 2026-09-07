@@ -402,6 +402,43 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .trust-logo:hover { opacity: 0.9; filter: grayscale(0); }
 .trust-logo--lg { height: clamp(44px, 6vw, 58px); }
 
+/* ---------- approach ---------- */
+.approach-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+}
+#approach h2 { margin-block: 1rem 1.2rem; }
+#approach .lede { max-width: 520px; }
+.approach-practice {
+  background: var(--white);
+  border: 1px solid rgba(14,27,31,0.06);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.6rem, 3vw, 2.2rem);
+}
+.approach-practice-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin-bottom: 1.1rem;
+}
+.approach-list { display: grid; gap: 0.9rem; }
+.approach-list li {
+  padding-left: 1.4rem;
+  position: relative;
+  line-height: 1.5;
+}
+.approach-list li::before {
+  content: '';
+  position: absolute; left: 0; top: 0.55em;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--coral);
+}
+@media (max-width: 760px) { .approach-grid { grid-template-columns: 1fr; } }
+
 /* ---------- capabilities ---------- */
 .section-head { max-width: 640px; margin-bottom: 3.5rem; }
 .section-head .eyebrow { margin-bottom: 1rem; }

@@ -36,6 +36,17 @@
     "scroll_hint": "Scrollen",
     "trust_label": "10+ Jahre in Projekten für"
   },
+  "approach": {
+    "eyebrow": "Ansatz",
+    "heading": "Ich rate nicht, was funktioniert. Ich weiß, wie Menschen entscheiden.",
+    "body": "Als ehemalige Senior Consultant am Deloitte Neuroscience Institute bringe ich Heatmap-Analyse, Behavioral Neuromarketing und Entscheidungspsychologie in jedes Projekt ein. Die meisten Designer verlassen sich auf Best Practices. Ich designe für das, was deine Kunden wirklich denken — nicht für das, was sie sagen.",
+    "practice_heading": "Was das konkret heißt",
+    "items": [
+      "Behavioral Heuristics angewandt auf Layout & Copy",
+      "Die Lücke zwischen dem, was Nutzer sagen und dem, was sie tun",
+      "Evidenzbasierte Design-Argumentation für Stakeholder"
+    ]
+  },
   "capabilities": {
     "eyebrow": "Was ich mache",
     "heading": "Vier Wege, um das zu beheben, was euch Kunden kostet.",

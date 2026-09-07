@@ -643,6 +643,22 @@ def build_index(t, lang_code, alt_paths):
       <div class="marquee"><div class="marquee-track">{trust_track_full}</div></div>
     </section>
 
+    <section id="approach">
+      <div class="container approach-grid">
+        <div data-reveal>
+          <p class="eyebrow">{t['approach']['eyebrow']}</p>
+          <h2>{t['approach']['heading']}</h2>
+          <p class="lede">{t['approach']['body']}</p>
+        </div>
+        <div class="approach-practice" data-reveal>
+          <p class="approach-practice-label">{t['approach']['practice_heading']}</p>
+          <ul class="approach-list">
+            {"".join(f"<li>{item}</li>" for item in t['approach']['items'])}
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section id="work-do">
       <div class="container">
         <div class="section-head" data-reveal>
