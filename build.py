@@ -1225,6 +1225,18 @@ Content-Signal: search=yes, ai-input=yes, ai-train=no
     write("sitemap.xml", sitemap)
 
 
+def build_security_txt():
+    # Fixed (not computed at build time) so rebuilds don't churn this file
+    # on every run — update this date by hand roughly once a year.
+    security_txt = f"""Contact: mailto:contact@imenbouzouita.com
+Expires: 2027-09-07T00:00:00.000Z
+Preferred-Languages: en, de
+Canonical: {SITE_URL}/.well-known/security.txt
+"""
+    write(".well-known/security.txt", security_txt)
+    write("security.txt", security_txt)
+
+
 def build_llms_txt(content):
     """llms.txt (https://llmstxt.org/) — a plain-markdown site summary aimed
     at LLMs/AI crawlers, generated from the same English content data as the
@@ -1326,6 +1338,7 @@ def main():
 
     build_404(content["en"])
     build_robots_sitemap(content)
+    build_security_txt()
     build_llms_txt(content)
     print("\nBuild complete.")
 
