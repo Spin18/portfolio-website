@@ -1,3 +1,53 @@
 User-agent: *
 Allow: /
+
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+# AI-training crawlers are blocked below. Agents that browse or answer
+# questions on behalf of a live user (e.g. when someone asks an AI
+# assistant about this site) are a separate, permitted use — see
+# /ai.txt and the Content-Signal line above.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
 Sitemap: https://www.imenbouzouita.com/sitemap.xml

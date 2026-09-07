@@ -41,7 +41,7 @@ export default {
           headers: {
             'Content-Type': 'text/markdown; charset=utf-8',
             'Vary': 'Accept',
-            'content-signal': 'ai-train=yes, search=yes, ai-input=yes',
+            'content-signal': 'search=yes, ai-input=yes, ai-train=no',
           },
         });
       }

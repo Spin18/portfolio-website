@@ -1135,8 +1135,59 @@ def build_404(t):
     write(current_path, html)
 
 
+AI_TRAINING_BOTS = [
+    "GPTBot",
+    "ClaudeBot",
+    "anthropic-ai",
+    "Google-Extended",
+    "CCBot",
+    "Bytespider",
+    "Meta-ExternalAgent",
+    "Applebot-Extended",
+    "Amazonbot",
+    "Diffbot",
+    "Omgilibot",
+    "Timpibot",
+    "ImagesiftBot",
+    "cohere-ai",
+]
+
+
 def build_robots_sitemap(content):
-    write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
+    bot_blocks = "\n".join(f"User-agent: {bot}\nDisallow: /\n" for bot in AI_TRAINING_BOTS)
+    robots_txt = f"""User-agent: *
+Allow: /
+
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+# AI-training crawlers are blocked below. Agents that browse or answer
+# questions on behalf of a live user (e.g. when someone asks an AI
+# assistant about this site) are a separate, permitted use — see
+# /ai.txt and the Content-Signal line above.
+
+{bot_blocks}
+Sitemap: {SITE_URL}/sitemap.xml
+"""
+    write("robots.txt", robots_txt)
+
+    write("ai.txt", f"""# ai.txt for {SITE_URL}
+#
+# No AI training on this site's content.
+#
+# There is no formal, widely-adopted standard for ai.txt yet. The
+# directives that crawlers actually honour live in /robots.txt, which
+# blocks known AI-training bots by name and declares the same policy
+# below via the Content-Signal convention:
+# https://developers.cloudflare.com/bots/additional-configurations/content-signals-policy/
+
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+# search=yes   -- this content may be indexed for search results
+# ai-input=yes -- AI assistants may read this content to answer a
+#                 user's question about it (RAG, citation, live browsing)
+# ai-train=no  -- this content may NOT be used to train, fine-tune, or
+#                 otherwise improve any AI/ML model
+""")
 
     all_paths = []
     for lang in LANGUAGES:
