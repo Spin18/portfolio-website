@@ -2,7 +2,7 @@
 
 Optimising checkout, product pages, and launch strategy from inside the team
 
-A direct-to-consumer brand with healthy traffic but underperforming conversion. As shop manager and developer, I owned the full e-commerce operation — from product launches and shop optimisation to A/B testing and checkout improvements.
+A direct-to-consumer brand with healthy traffic but underperforming conversion. As shop manager and developer, I owned the full e-commerce operation: from product launches and shop optimisation to A/B testing and checkout improvements.
 
 - **Role:** Shop Manager & Developer
 - **Timeline:** 4 months

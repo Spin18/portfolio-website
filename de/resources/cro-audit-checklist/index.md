@@ -1,6 +1,6 @@
 # CRO-Audit-Checkliste: 20 Punkte, die du prüfen solltest, bevor du irgendetwas redesignst
 
-Eine praktische 20-Punkte-Checkliste zu Analytics, Homepage-Klarheit, Checkout-Friction und Mobile UX — alles, was sich vor einem Redesign zu prüfen lohnt.
+Eine praktische 20-Punkte-Checkliste zu Analytics, Homepage-Klarheit, Checkout-Friction und Mobile UX: alles, was sich vor einem Redesign zu prüfen lohnt.
 
 Die meisten Redesigns beginnen mit einem Bauchgefühl. Die Seite sieht veraltet aus. Die Conversion ist „niedrig." Ein Wettbewerber hat gerade relauncht. Also springt das Team direkt zu Wireframes und neuen Layouts, ohne zu verstehen, was tatsächlich funktioniert, was kaputt ist und was unsichtbar bleibt.
 

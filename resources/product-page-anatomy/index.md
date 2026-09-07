@@ -1,6 +1,6 @@
 # Product Page Anatomy: What Goes Where and Why
 
-A section-by-section breakdown of a high-performing product page — not a template to copy, but a framework for understanding why each element earns its position.
+A section-by-section breakdown of a high-performing product page, not a template to copy, but a framework for understanding why each element earns its position.
 
 A product page has one job: move the visitor from "I'm looking at this" to "I'm buying this." Every element on the page either helps that happen or gets in the way. The difference between a page that converts and one that doesn't is rarely about what's on it. It's about where things are placed and in what order the visitor encounters them.
 

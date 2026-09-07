@@ -1,6 +1,6 @@
 # Versandkosten-Transparenz: Wie und wann du sie zeigen solltest
 
-Unerwartete Versandkosten sind der häufigste Grund für Warenkorbabbrüche — nicht weil der Betrag unangemessen ist, sondern wegen des Zeitpunkts. Was du an jedem Punkt im Funnel zeigen solltest.
+Unerwartete Versandkosten sind der häufigste Grund für Warenkorbabbrüche, nicht weil der Betrag unangemessen ist, sondern wegen des Zeitpunkts. Was du an jedem Punkt im Funnel zeigen solltest.
 
 Unerwartete Versandkosten sind der häufigste Grund, warum Menschen ihren Warenkorb abbrechen. Nicht eine langsame Seite. Nicht ein verwirrendes Layout. Nicht ein fehlendes Feature. In dem Moment, in dem ein Besucher Kosten sieht, mit denen er nicht gerechnet hat, fühlt sich das Produkt, das er bereits zu kaufen beschlossen hatte, plötzlich teurer an als noch zehn Sekunden zuvor, und diese Verschiebung in der Wahrnehmung reicht aus, um den Kauf zu verhindern.
 

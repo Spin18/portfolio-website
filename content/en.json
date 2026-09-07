@@ -29,7 +29,7 @@
     "eyebrow": "Digital Product · UX · CRO Consultant — Berlin",
     "headline_pre": "Websites that look good and ",
     "headline_em": "actually work.",
-    "subhead": "I help e-commerce, wellness, and SaaS brands turn browsers into buyers — with fast, research-backed UX & CRO audits and user interfaces people actually want to use.",
+    "subhead": "I help e-commerce, wellness, and SaaS brands turn browsers into buyers, with fast, research-backed UX & CRO audits and user interfaces people actually want to use.",
     "cta_primary": "Book a non-binding discovery call",
     "cta_secondary": "See the work",
     "scroll_hint": "Scroll",
@@ -38,7 +38,7 @@
   "approach": {
     "eyebrow": "Approach",
     "heading": "I don't guess what works. I know how people decide.",
-    "body": "As a former Senior Consultant at the Deloitte Neuroscience Institute, I apply heatmap analysis, behavioral neuromarketing, and decision psychology to every project. Most designers rely on best practices. I design for how your customers actually think — not how they say they behave.",
+    "body": "As a former Senior Consultant at the Deloitte Neuroscience Institute, I apply heatmap analysis, behavioral neuromarketing, and decision psychology to every project. Most designers rely on best practices. I design for how your customers actually think, not how they say they behave.",
     "practice_heading": "What that means in practice",
     "items": [
       "Behavioural heuristics applied to layout & copy",
@@ -54,18 +54,18 @@
     "items": [
       {
         "title": "UX/CRO and SEO Audits",
-        "pitch": "10–30 prioritized fixes. I tell you exactly what's costing you conversions — and how to fix it.",
+        "pitch": "10–30 prioritized fixes. I tell you exactly what's costing you conversions, and how to fix it.",
         "details": [
           "Full funnel teardown from entry to conversion",
           "Heatmaps, session recordings & analytics review",
           "Prioritized fix list scored by impact vs. effort",
           "Optional A/B test plan for the riskiest changes",
-          "Need the top fixes implemented right away? I can handle that directly in your CMS — no handoff needed."
+          "Need the top fixes implemented right away? I can handle that directly in your CMS. No handoff needed."
         ]
       },
       {
         "title": "UX/CRO Quick Win Sprint",
-        "pitch": "I find what's broken, then fix it — directly in your CMS. No 40-page report. No handoff. Just results.",
+        "pitch": "I find what's broken, then fix it, directly in your CMS. No 40-page report. No handoff. Just results.",
         "details": [
           "Rapid site review focused on the biggest conversion leaks",
           "5–7 highest-impact fixes, prioritized by effort vs. return",
@@ -84,7 +84,7 @@
       },
       {
         "title": "Full Website & Shop Builds",
-        "pitch": "Webflow, Shopify, Framer, WordPress, Wix. Structure, UX design, and build — end to end.",
+        "pitch": "Webflow, Shopify, Framer, WordPress, Wix. Structure, UX design, and build, end to end.",
         "details": [
           "Information architecture & content strategy",
           "Custom visual design system",
@@ -213,7 +213,7 @@
       "meta": [
         [
           "Role",
-          "Everything — positioning, copy, UX, design, development"
+          "Everything: positioning, copy, UX, design, development"
         ],
         [
           "Build",
@@ -228,22 +228,22 @@
       "sections": [
         [
           "The context",
-          "I'm a somatic coach working with the five elements and alchemical frameworks. Most practitioners in this space build websites that speak to peers — dense with modality language, light on structure, and unclear on what a visitor should actually do. I wanted to build mine the way I'd build a client's: conversion-first, with every section earning its place in the funnel."
+          "I'm a somatic coach working with the five elements and alchemical frameworks. Most practitioners in this space build websites that speak to peers: dense with modality language, light on structure, and unclear on what a visitor should actually do. I wanted to build mine the way I'd build a client's: conversion-first, with every section earning its place in the funnel."
         ],
         [
           "The decisions",
           [
-            "The page follows a single narrative arc: recognition → education → credibility → action. It opens with \"You're here because\" — mirroring the visitor's internal state before explaining anything. By the time the Five Elements framework appears, the visitor is already seeing themselves in the work. The about section deliberately leads with my engineering and neuroscience background before somatic training, because the people I want to work with tend to be analytical thinkers who need permission to trust the body. That sequencing is intentional.",
-            "\"Book a Discovery Call\" appears four times. Each placement follows a natural decision point rather than interrupting the reading flow — after the emotional hook, after the framework, after the credibility section, and at the close. One CTA, one action, no ambiguity."
+            "The page follows a single narrative arc: recognition → education → credibility → action. It opens with \"You're here because\", mirroring the visitor's internal state before explaining anything. By the time the Five Elements framework appears, the visitor is already seeing themselves in the work. The about section deliberately leads with my engineering and neuroscience background before somatic training, because the people I want to work with tend to be analytical thinkers who need permission to trust the body. That sequencing is intentional.",
+            "\"Book a Discovery Call\" appears four times. Each placement follows a natural decision point rather than interrupting the reading flow: after the emotional hook, after the framework, after the credibility section, and at the close. One CTA, one action, no ambiguity."
           ]
         ],
         [
           "The build",
-          "Custom-coded rather than built on a page builder — partly because I wanted full control over performance and structure, and partly because building it with Claude Code was a chance to work the way I advise clients to think: start with the conversion logic, then design to serve it. Hosted on GitHub Pages for speed and simplicity. The visual direction uses black-and-white photography, alchemical symbols, and generous whitespace to signal calm seriousness without the pastel-and-script aesthetic that dominates the wellness space."
+          "Custom-coded rather than built on a page builder, partly because I wanted full control over performance and structure, and partly because building it with Claude Code was a chance to work the way I advise clients to think: start with the conversion logic, then design to serve it. Hosted on GitHub Pages for speed and simplicity. The visual direction uses black-and-white photography, alchemical symbols, and generous whitespace to signal calm seriousness without the pastel-and-script aesthetic that dominates the wellness space."
         ],
         [
           "Why this matters in my portfolio",
-          "The other case studies in this portfolio show how I think about other people's digital experiences. This one shows I hold myself to the same standard — clear positioning, a defined audience, a structured funnel, and design choices that serve conversion rather than decoration."
+          "The other case studies in this portfolio show how I think about other people's digital experiences. This one shows I hold myself to the same standard: clear positioning, a defined audience, a structured funnel, and design choices that serve conversion rather than decoration."
         ]
       ],
       "cover": "work/prima-materia/cover.jpg",
@@ -342,7 +342,7 @@
           "Hotjar, GA4, Shopify, A/B testing (Google Optimize), Figma"
         ]
       ],
-      "summary": "A direct-to-consumer brand with healthy traffic but underperforming conversion. As shop manager and developer, I owned the full e-commerce operation — from product launches and shop optimisation to A/B testing and checkout improvements.",
+      "summary": "A direct-to-consumer brand with healthy traffic but underperforming conversion. As shop manager and developer, I owned the full e-commerce operation: from product launches and shop optimisation to A/B testing and checkout improvements.",
       "sections": [
         [
           "The opportunity",
@@ -450,17 +450,17 @@
     "eyebrow": "About",
     "heading": "Hi, I'm Imen.",
     "paragraphs": [
-      "I'm a UX, CRO, and digital strategy consultant based in Berlin. I work with e-commerce, wellness, and SaaS brands that know their product is strong but suspect their website is leaving money on the table. My job is to find out where and fix it — through conversion audits, UX redesigns, landing page builds, and structured A/B testing. I work hands-on in your CMS by implementing changes directly in Webflow, Shopify, WordPress, or Wix etc.",
+      "I'm a UX, CRO, and digital strategy consultant based in Berlin. I work with e-commerce, wellness, and SaaS brands that know their product is strong but suspect their website is leaving money on the table. My job is to find out where and fix it: through conversion audits, UX redesigns, landing page builds, and structured A/B testing. I work hands-on in your CMS by implementing changes directly in Webflow, Shopify, WordPress, or Wix etc.",
       "I've spent 10+ years moving between corporate innovation and independent work. At Deloitte, Siemens, and BMW I learned how large organisations approach product, research, and scale. On my own, I learned how to ship fast, prioritise ruthlessly, and make every recommendation something a small team can actually implement. I bring both.",
-      "My background is technical — IT and Electrical Engineering at TU Munich — and I worked in neuromarketing at the Deloitte Neuroscience Institute, which means I don't just look at heatmaps and analytics. I understand how attention, trust, and decision-making work at a cognitive level, and I design for that.",
+      "My background is technical, IT and Electrical Engineering at TU Munich, and I worked in neuromarketing at the Deloitte Neuroscience Institute, which means I don't just look at heatmaps and analytics. I understand how attention, trust, and decision-making work at a cognitive level, and I design for that.",
       "Fluent in German, English, French, and Arabic. Based in Berlin, working internationally."
     ]
   },
   "resources": {
     "eyebrow": "Resources",
     "heading": "Notes on UX, CRO, and digital strategy.",
-    "intro": "Practical write-ups on what actually moves conversion — pulled from real audits and builds, not theory.",
-    "empty_state": "New articles are on the way — check back soon.",
+    "intro": "Practical write-ups on what actually moves conversion, pulled from real audits and builds, not theory.",
+    "empty_state": "New articles are on the way. Check back soon.",
     "read_more": "Read article",
     "all_resources": "All resources",
     "read_time_label": "{n} min read",
@@ -491,7 +491,7 @@
       {
         "slug": "cro-audit-checklist",
         "title": "CRO Audit Checklist: 20 Things to Check Before You Redesign Anything",
-        "excerpt": "A practical, 20-point checklist covering analytics, homepage clarity, checkout friction, and mobile UX — everything worth auditing before committing to a redesign.",
+        "excerpt": "A practical, 20-point checklist covering analytics, homepage clarity, checkout friction, and mobile UX: everything worth auditing before committing to a redesign.",
         "category": "CRO",
         "date": "2026-08-29",
         "sections": [
@@ -700,7 +700,7 @@
       {
         "slug": "why-users-trust-your-site-but-dont-buy",
         "title": "Why Users Say They Trust Your Site but Don't Buy",
-        "excerpt": "Testimonials, security badges, and trust signals often test well in usability sessions yet fail to move conversion — because visitors say they saw them without their eyes ever landing there.",
+        "excerpt": "Testimonials, security badges, and trust signals often test well in usability sessions yet fail to move conversion, because visitors say they saw them without their eyes ever landing there.",
         "category": "CRO",
         "date": "2026-08-29",
         "sections": [
@@ -889,7 +889,7 @@
       {
         "slug": "shipping-cost-transparency",
         "title": "Shipping Cost Transparency: How and When to Show It",
-        "excerpt": "Unexpected shipping costs are the top reason for cart abandonment — not because the amount is unreasonable, but because of when visitors find out. What to show at each stage of the funnel, and when.",
+        "excerpt": "Unexpected shipping costs are the top reason for cart abandonment, not because the amount is unreasonable, but because of when visitors find out. What to show at each stage of the funnel, and when.",
         "category": "CRO",
         "date": "2026-08-30",
         "sections": [
@@ -999,7 +999,7 @@
       {
         "slug": "product-page-anatomy",
         "title": "Product Page Anatomy: What Goes Where and Why",
-        "excerpt": "A section-by-section breakdown of a high-performing product page — not a template to copy, but a framework for understanding why each element earns its position.",
+        "excerpt": "A section-by-section breakdown of a high-performing product page, not a template to copy, but a framework for understanding why each element earns its position.",
         "category": "CRO",
         "date": "2026-08-30",
         "sections": [
@@ -1144,15 +1144,15 @@
       },
       {
         "q": "How long does a project take?",
-        "a": "A UX/CRO audit typically takes 2–4 weeks. A landing page redesign can be live within a week. Full website and shop builds run 4–8 weeks depending on scope. I'll give you a realistic timeline in the proposal — and flag it early if anything shifts."
+        "a": "A UX/CRO audit typically takes 2–4 weeks. A landing page redesign can be live within a week. Full website and shop builds run 4–8 weeks depending on scope. I'll give you a realistic timeline in the proposal, and flag it early if anything shifts."
       },
       {
         "q": "Can you just fix things instead of doing a full audit?",
-        "a": "Yes — I offer a Quick Win Sprint where I identify and implement the top conversion fixes directly in your site."
+        "a": "Yes, I offer a Quick Win Sprint where I identify and implement the top conversion fixes directly in your site."
       },
       {
         "q": "What platforms do you work with?",
-        "a": "Webflow, Shopify, Framer, WordPress, Squarespace, and Wix. I'll recommend the platform that fits your team's technical comfort and long-term needs — not the one I prefer."
+        "a": "Webflow, Shopify, Framer, WordPress, Squarespace, and Wix. I'll recommend the platform that fits your team's technical comfort and long-term needs, not the one I prefer."
       },
       {
         "q": "How much does it cost?",
@@ -1164,11 +1164,11 @@
       },
       {
         "q": "Who do you work best with?",
-        "a": "E-commerce, wellness, and SaaS brands that already have traffic or a product — but suspect their website isn't converting the way it should. If you're past the \"just need a website\" stage and into \"need the website to perform,\" we'll get along."
+        "a": "E-commerce, wellness, and SaaS brands that already have traffic or a product, but suspect their website isn't converting the way it should. If you're past the \"just need a website\" stage and into \"need the website to perform,\" we'll get along."
       },
       {
         "q": "What happens after launch?",
-        "a": "I hand over everything your team needs to maintain the site independently — documentation, logins, and a walkthrough if needed. If you want ongoing optimisation or A/B testing support, we can set that up too."
+        "a": "I hand over everything your team needs to maintain the site independently: documentation, logins, and a walkthrough if needed. If you want ongoing optimisation or A/B testing support, we can set that up too."
       }
     ]
   },
@@ -1182,10 +1182,10 @@
       "message_label": "Message",
       "submit": "Send message",
       "sending": "Sending…",
-      "msg_success": "Thanks — got it. I’ll get back to you within a day or two.",
+      "msg_success": "Thanks. Got it. I’ll get back to you within a day or two.",
       "msg_error": "Something went wrong sending that. Try the Calendly link instead?",
-      "msg_network": "Network hiccup — mind trying again, or use the Calendly link?",
-      "msg_not_wired": "Form isn’t wired up yet — add your Formspree endpoint in contact form action."
+      "msg_network": "Network hiccup: mind trying again, or use the Calendly link?",
+      "msg_not_wired": "Form isn’t wired up yet: add your Formspree endpoint in contact form action."
     }
   },
   "legal": {
@@ -1195,7 +1195,7 @@
     },
     "privacy": {
       "title": "Privacy Policy",
-      "content_html": "<p><em>Last updated: August 28, 2026</em></p>\n<p>This Privacy Policy explains how we collect, use, and protect your personal data in accordance with the General Data Protection Regulation (GDPR) and applicable German data protection laws.</p>\n<h2>1. Controller</h2>\n<p>Imen Bouzouita<br/>Mahlower Strasse 14<br/>12049 Berlin<br/>Germany</p>\n<h2>2. Data We Collect</h2>\n<p>This site collects only what's needed to respond to enquiries and to operate securely. Depending on how you interact with the site, this may include:</p>\n<ul>\n  <li>Identification data (e.g., name)</li>\n  <li>Contact data (e.g., email address)</li>\n  <li>Usage data (e.g., pages visited, interaction data)</li>\n  <li>Technical data (e.g., IP address, browser type, device information), logged by hosting infrastructure</li>\n</ul>\n<p>Specifically: contact form submissions (name, email, message) submitted via the contact form, processed through Formspree; Calendly booking details, handled under Calendly's own privacy policy; technical and connection data (e.g. IP address) processed by Cloudflare, our content delivery, DNS, and security provider, for every visitor as part of operating this site; messages sent to our @imenbouzouita.com address, forwarded via Cloudflare Email Routing; and, only if you accept the cookie banner, usage data collected via Google Analytics (GA4) and Contentsquare (session recordings and heatmaps).</p>\n<h2>3. Legal Basis for Processing</h2>\n<p>We process your personal data based on the following legal grounds:</p>\n<ul>\n  <li>Consent (Art. 6(1)(a) GDPR)</li>\n  <li>Contract performance (Art. 6(1)(b) GDPR)</li>\n  <li>Legal obligation (Art. 6(1)(c) GDPR)</li>\n  <li>Legitimate interests (Art. 6(1)(f) GDPR)</li>\n</ul>\n<h2>4. Purpose of Data Processing</h2>\n<p>Your data is processed for the following purposes:</p>\n<ul>\n  <li>Providing and maintaining our services</li>\n  <li>Responding to enquiries and managing booked calls</li>\n  <li>Improving user experience</li>\n  <li>Ensuring security and preventing fraud</li>\n</ul>\n<h2>5. Data Sharing</h2>\n<p>We do not sell your personal data. It isn't shared with third parties beyond what's required to operate this site, and only:</p>\n<ul>\n  <li>When required by law</li>\n  <li>With service providers under data processing agreements — currently Formspree (contact form processing), Calendly (call booking), Cloudflare (content delivery, DNS, security, email forwarding, and cookieless web analytics), and, only with your consent, Google Analytics (GA4, usage analytics) and Contentsquare (session recordings and heatmaps)</li>\n  <li>With your explicit consent</li>\n</ul>\n<h2>6. International Data Transfers</h2>\n<p>Some of our service providers, including Formspree, Calendly, Cloudflare, Google (Google Analytics), and Contentsquare, are based outside the European Economic Area (EEA). Where data is transferred outside the EEA, we ensure appropriate safeguards such as Standard Contractual Clauses (SCCs).</p>\n<h2>7. Data Retention</h2>\n<p>We retain personal data only as long as necessary for the purposes stated above or as required by law.</p>\n<h2>8. Your Rights</h2>\n<p>Under GDPR, you have the following rights:</p>\n<ul>\n  <li>Right of access (Art. 15 GDPR)</li>\n  <li>Right to rectification (Art. 16 GDPR)</li>\n  <li>Right to erasure (Art. 17 GDPR)</li>\n  <li>Right to restriction of processing (Art. 18 GDPR)</li>\n  <li>Right to data portability (Art. 20 GDPR)</li>\n  <li>Right to object (Art. 21 GDPR)</li>\n</ul>\n<p>To exercise your rights, contact us using our contact form.</p>\n<h2>9. Cookies</h2>\n<p>This site uses Google Analytics (GA4) and Contentsquare (session recordings and heatmaps) to understand how visitors use it. Both are only loaded, and only set cookies, after you actively accept the cookie banner shown on your first visit — no analytics request is made to either provider before that. You can accept, decline, or change your choice at any time via \"Cookie settings\" in the footer. Separately, Cloudflare, our content delivery and security provider, may set strictly necessary cookies (for example, to detect and block automated abuse) required to operate the site securely — these apply regardless of your cookie banner choice, since they don't require consent under applicable law. This site also uses Cloudflare Web Analytics for aggregate traffic statistics (e.g. page views, referrers, approximate location). It doesn't use cookies, local storage, or any persistent identifier, and doesn't build a profile of individual visitors, so it runs for all visitors without requiring consent. No other tracking or advertising cookies are used.</p>\n<h2>10. Data Security</h2>\n<p>We implement appropriate technical and organizational measures to protect your data.</p>\n<h2>11. Supervisory Authority</h2>\n<p>You have the right to lodge a complaint with a supervisory authority. As a Berlin-based controller, the competent authority is the Berliner Beauftragte für Datenschutz und Informationsfreiheit (Berlin Commissioner for Data Protection and Freedom of Information), or any other competent data protection authority.</p>\n<h2>12. Changes to This Policy</h2>\n<p>We may update this Privacy Policy from time to time. Updates will be posted on this page.</p>"
+      "content_html": "<p><em>Last updated: August 28, 2026</em></p>\n<p>This Privacy Policy explains how we collect, use, and protect your personal data in accordance with the General Data Protection Regulation (GDPR) and applicable German data protection laws.</p>\n<h2>1. Controller</h2>\n<p>Imen Bouzouita<br/>Mahlower Strasse 14<br/>12049 Berlin<br/>Germany</p>\n<h2>2. Data We Collect</h2>\n<p>This site collects only what's needed to respond to enquiries and to operate securely. Depending on how you interact with the site, this may include:</p>\n<ul>\n  <li>Identification data (e.g., name)</li>\n  <li>Contact data (e.g., email address)</li>\n  <li>Usage data (e.g., pages visited, interaction data)</li>\n  <li>Technical data (e.g., IP address, browser type, device information), logged by hosting infrastructure</li>\n</ul>\n<p>Specifically: contact form submissions (name, email, message) submitted via the contact form, processed through Formspree; Calendly booking details, handled under Calendly's own privacy policy; technical and connection data (e.g. IP address) processed by Cloudflare, our content delivery, DNS, and security provider, for every visitor as part of operating this site; messages sent to our @imenbouzouita.com address, forwarded via Cloudflare Email Routing; and, only if you accept the cookie banner, usage data collected via Google Analytics (GA4) and Contentsquare (session recordings and heatmaps).</p>\n<h2>3. Legal Basis for Processing</h2>\n<p>We process your personal data based on the following legal grounds:</p>\n<ul>\n  <li>Consent (Art. 6(1)(a) GDPR)</li>\n  <li>Contract performance (Art. 6(1)(b) GDPR)</li>\n  <li>Legal obligation (Art. 6(1)(c) GDPR)</li>\n  <li>Legitimate interests (Art. 6(1)(f) GDPR)</li>\n</ul>\n<h2>4. Purpose of Data Processing</h2>\n<p>Your data is processed for the following purposes:</p>\n<ul>\n  <li>Providing and maintaining our services</li>\n  <li>Responding to enquiries and managing booked calls</li>\n  <li>Improving user experience</li>\n  <li>Ensuring security and preventing fraud</li>\n</ul>\n<h2>5. Data Sharing</h2>\n<p>We do not sell your personal data. It isn't shared with third parties beyond what's required to operate this site, and only:</p>\n<ul>\n  <li>When required by law</li>\n  <li>With service providers under data processing agreements: currently Formspree (contact form processing), Calendly (call booking), Cloudflare (content delivery, DNS, security, email forwarding, and cookieless web analytics), and, only with your consent, Google Analytics (GA4, usage analytics) and Contentsquare (session recordings and heatmaps)</li>\n  <li>With your explicit consent</li>\n</ul>\n<h2>6. International Data Transfers</h2>\n<p>Some of our service providers, including Formspree, Calendly, Cloudflare, Google (Google Analytics), and Contentsquare, are based outside the European Economic Area (EEA). Where data is transferred outside the EEA, we ensure appropriate safeguards such as Standard Contractual Clauses (SCCs).</p>\n<h2>7. Data Retention</h2>\n<p>We retain personal data only as long as necessary for the purposes stated above or as required by law.</p>\n<h2>8. Your Rights</h2>\n<p>Under GDPR, you have the following rights:</p>\n<ul>\n  <li>Right of access (Art. 15 GDPR)</li>\n  <li>Right to rectification (Art. 16 GDPR)</li>\n  <li>Right to erasure (Art. 17 GDPR)</li>\n  <li>Right to restriction of processing (Art. 18 GDPR)</li>\n  <li>Right to data portability (Art. 20 GDPR)</li>\n  <li>Right to object (Art. 21 GDPR)</li>\n</ul>\n<p>To exercise your rights, contact us using our contact form.</p>\n<h2>9. Cookies</h2>\n<p>This site uses Google Analytics (GA4) and Contentsquare (session recordings and heatmaps) to understand how visitors use it. Both are only loaded, and only set cookies, after you actively accept the cookie banner shown on your first visit. No analytics request is made to either provider before that. You can accept, decline, or change your choice at any time via \"Cookie settings\" in the footer. Separately, Cloudflare, our content delivery and security provider, may set strictly necessary cookies (for example, to detect and block automated abuse) required to operate the site securely. These apply regardless of your cookie banner choice, since they don't require consent under applicable law. This site also uses Cloudflare Web Analytics for aggregate traffic statistics (e.g. page views, referrers, approximate location). It doesn't use cookies, local storage, or any persistent identifier, and doesn't build a profile of individual visitors, so it runs for all visitors without requiring consent. No other tracking or advertising cookies are used.</p>\n<h2>10. Data Security</h2>\n<p>We implement appropriate technical and organizational measures to protect your data.</p>\n<h2>11. Supervisory Authority</h2>\n<p>You have the right to lodge a complaint with a supervisory authority. As a Berlin-based controller, the competent authority is the Berliner Beauftragte für Datenschutz und Informationsfreiheit (Berlin Commissioner for Data Protection and Freedom of Information), or any other competent data protection authority.</p>\n<h2>12. Changes to This Policy</h2>\n<p>We may update this Privacy Policy from time to time. Updates will be posted on this page.</p>"
     },
     "impressum": {
       "title": "Impressum",
@@ -1209,17 +1209,17 @@
     "cta": "Back to home"
   },
   "cookie_banner": {
-    "text": "We'd like to use analytics cookies to understand how visitors use this site. We only set them with your consent — you can change your mind anytime.",
+    "text": "We'd like to use analytics cookies to understand how visitors use this site. We only set them with your consent. You can change your mind anytime.",
     "accept": "Accept All",
     "decline": "Essential Only",
     "settings_link": "Cookie settings",
     "manage_label": "Manage preferences",
     "purposes_label": "Purposes",
     "analytics_label": "Analytics",
-    "analytics_legal_basis": "Legal basis: Consent — opt-in",
+    "analytics_legal_basis": "Legal basis: Consent, opt-in",
     "analytics_desc": "Google Analytics and Contentsquare, used to understand how visitors use this site (including session recordings and heatmaps). Nothing is loaded or set unless you opt in.",
     "essential_label": "Essential",
-    "essential_legal_basis": "Legal basis: Legitimate interest — always active",
+    "essential_legal_basis": "Legal basis: Legitimate interest, always active",
     "essential_desc": "Basic hosting and security logs required to serve this website reliably.",
     "confirm": "Confirm",
     "close": "Close"

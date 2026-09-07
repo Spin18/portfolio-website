@@ -30,7 +30,7 @@
     "eyebrow": "Digitales Produkt · UX · CRO Beraterin — Berlin",
     "headline_pre": "Websites, die nicht nur gut aussehen, sondern ",
     "headline_em": "verkaufen.",
-    "subhead": "Ich helfe E-Commerce-, Wellness- und SaaS-Marken, Besucher in Käufer zu verwandeln — mit datengestützten UX- & CRO-Audits und Interfaces, die wirklich genutzt werden.",
+    "subhead": "Ich helfe E-Commerce-, Wellness- und SaaS-Marken, Besucher in Käufer zu verwandeln, mit datengestützten UX- & CRO-Audits und Interfaces, die wirklich genutzt werden.",
     "cta_primary": "Unverbindliches Erstgespräch buchen",
     "cta_secondary": "Zu den Referenzen",
     "scroll_hint": "Scrollen",
@@ -39,7 +39,7 @@
   "approach": {
     "eyebrow": "Ansatz",
     "heading": "Ich rate nicht, was funktioniert. Ich weiß, wie Menschen entscheiden.",
-    "body": "Als ehemalige Senior Consultant am Deloitte Neuroscience Institute bringe ich Heatmap-Analyse, Behavioral Neuromarketing und Entscheidungspsychologie in jedes Projekt ein. Die meisten Designer verlassen sich auf Best Practices. Ich designe für das, was deine Kunden wirklich denken — nicht für das, was sie sagen.",
+    "body": "Als ehemalige Senior Consultant am Deloitte Neuroscience Institute bringe ich Heatmap-Analyse, Behavioral Neuromarketing und Entscheidungspsychologie in jedes Projekt ein. Die meisten Designer verlassen sich auf Best Practices. Ich designe für das, was deine Kunden wirklich denken, nicht für das, was sie sagen.",
     "practice_heading": "Was das konkret heißt",
     "items": [
       "Behavioral Heuristics angewandt auf Layout & Copy",
@@ -55,18 +55,18 @@
     "items": [
       {
         "title": "UX/CRO- und SEO-Audits",
-        "pitch": "10–30 priorisierte Maßnahmen. Ich sage euch genau, was euch Conversions kostet — und wie ihr es behebt.",
+        "pitch": "10–30 priorisierte Maßnahmen. Ich sage euch genau, was euch Conversions kostet, und wie ihr es behebt.",
         "details": [
           "Vollständige Funnel-Analyse vom Einstieg bis zur Conversion",
           "Heatmaps, Session-Recordings & Analytics-Auswertung",
           "Priorisierte Maßnahmenliste nach Wirkung vs. Aufwand bewertet",
           "Optionaler A/B-Testplan für die risikoreichsten Änderungen",
-          "Die wichtigsten Fixes sollen sofort umgesetzt werden? Das übernehme ich direkt in eurem CMS — ganz ohne Übergabe."
+          "Die wichtigsten Fixes sollen sofort umgesetzt werden? Das übernehme ich direkt in eurem CMS. Ganz ohne Übergabe."
         ]
       },
       {
         "title": "UX/CRO Quick Win Sprint",
-        "pitch": "Ich finde, was nicht funktioniert, und behebe es — direkt in deinem CMS. Kein 40-Seiten-Report. Kein Handoff. Nur Ergebnisse.",
+        "pitch": "Ich finde, was nicht funktioniert, und behebe es, direkt in deinem CMS. Kein 40-Seiten-Report. Kein Handoff. Nur Ergebnisse.",
         "details": [
           "Schnelle Analyse der größten Conversion-Lecks",
           "5–7 Fixes mit dem höchsten Impact, priorisiert nach Aufwand vs. Wirkung",
@@ -85,7 +85,7 @@
       },
       {
         "title": "Komplette Website- & Shop-Erstellung",
-        "pitch": "Webflow, Shopify, Figma, Framer, WordPress, Squarespace, Wix. Vom UX-Design bis zum fertigen Build — alles aus einer Hand, auf der Plattform, die zu eurem Team passt.",
+        "pitch": "Webflow, Shopify, Figma, Framer, WordPress, Squarespace, Wix. Vom UX-Design bis zum fertigen Build, alles aus einer Hand, auf der Plattform, die zu eurem Team passt.",
         "details": [
           "Informationsarchitektur & Content-Strategie",
           "Individuelles visuelles Designsystem",
@@ -214,7 +214,7 @@
       "meta": [
         [
           "Rolle",
-          "Alles — Positionierung, Text, UX, Design, Entwicklung"
+          "Alles: Positionierung, Text, UX, Design, Entwicklung"
         ],
         [
           "Umsetzung",
@@ -229,22 +229,22 @@
       "sections": [
         [
           "Der Kontext",
-          "Ich bin somatischer Coach und arbeite mit den fünf Elementen und alchemistischen Rahmenwerken. Die meisten Praktizierenden in diesem Bereich bauen Websites, die zu Kolleginnen und Kollegen sprechen — dicht an Fachsprache, wenig Struktur und unklar darin, was ein Besucher eigentlich tun soll. Ich wollte meine Website so aufbauen, wie ich es für einen Kunden tun würde: Conversion-first, mit jedem Abschnitt, der seinen Platz im Funnel verdient."
+          "Ich bin somatischer Coach und arbeite mit den fünf Elementen und alchemistischen Rahmenwerken. Die meisten Praktizierenden in diesem Bereich bauen Websites, die zu Kolleginnen und Kollegen sprechen: dicht an Fachsprache, wenig Struktur und unklar darin, was ein Besucher eigentlich tun soll. Ich wollte meine Website so aufbauen, wie ich es für einen Kunden tun würde: Conversion-first, mit jedem Abschnitt, der seinen Platz im Funnel verdient."
         ],
         [
           "Die Entscheidungen",
           [
-            "Die Seite folgt einem einzigen Erzählbogen: Wiedererkennung → Wissensvermittlung → Glaubwürdigkeit → Handlung. Sie beginnt mit „Du bist hier, weil\" — und spiegelt den inneren Zustand des Besuchers wider, bevor irgendetwas erklärt wird. Wenn das Fünf-Elemente-Rahmenwerk erscheint, sieht sich der Besucher bereits selbst in der Arbeit. Der Über-mich-Abschnitt führt bewusst mit meinem Hintergrund in Ingenieurwesen und Neurowissenschaften, bevor die somatische Ausbildung kommt — weil die Menschen, mit denen ich arbeiten möchte, tendenziell analytische Denker sind, die die Erlaubnis brauchen, dem Körper zu vertrauen. Diese Reihenfolge ist beabsichtigt.",
-            "„Entdeckungsgespräch buchen\" erscheint viermal. Jede Platzierung folgt einem natürlichen Entscheidungspunkt, anstatt den Lesefluss zu unterbrechen — nach dem emotionalen Einstieg, nach dem Rahmenwerk, nach dem Glaubwürdigkeitsabschnitt und am Schluss. Ein CTA, eine Handlung, keine Mehrdeutigkeit."
+            "Die Seite folgt einem einzigen Erzählbogen: Wiedererkennung → Wissensvermittlung → Glaubwürdigkeit → Handlung. Sie beginnt mit „Du bist hier, weil\", und spiegelt den inneren Zustand des Besuchers wider, bevor irgendetwas erklärt wird. Wenn das Fünf-Elemente-Rahmenwerk erscheint, sieht sich der Besucher bereits selbst in der Arbeit. Der Über-mich-Abschnitt führt bewusst mit meinem Hintergrund in Ingenieurwesen und Neurowissenschaften, bevor die somatische Ausbildung kommt, weil die Menschen, mit denen ich arbeiten möchte, tendenziell analytische Denker sind, die die Erlaubnis brauchen, dem Körper zu vertrauen. Diese Reihenfolge ist beabsichtigt.",
+            "„Entdeckungsgespräch buchen\" erscheint viermal. Jede Platzierung folgt einem natürlichen Entscheidungspunkt, anstatt den Lesefluss zu unterbrechen: nach dem emotionalen Einstieg, nach dem Rahmenwerk, nach dem Glaubwürdigkeitsabschnitt und am Schluss. Ein CTA, eine Handlung, keine Mehrdeutigkeit."
           ]
         ],
         [
           "Die Umsetzung",
-          "Individuell programmiert statt mit einem Baukastensystem erstellt — zum einen, weil ich die volle Kontrolle über Performance und Struktur wollte, und zum anderen, weil der Bau mit Claude Code eine Gelegenheit war, so zu arbeiten, wie ich meinen Kunden empfehle zu denken: mit der Conversion-Logik beginnen, dann das Design danach ausrichten. Gehostet auf GitHub Pages für Geschwindigkeit und Einfachheit. Die visuelle Ausrichtung setzt auf Schwarz-Weiß-Fotografie, alchemistische Symbole und großzügigen Weißraum, um ruhige Ernsthaftigkeit zu signalisieren — ohne die Pastell-und-Schreibschrift-Ästhetik, die den Wellness-Bereich dominiert."
+          "Individuell programmiert statt mit einem Baukastensystem erstellt, zum einen, weil ich die volle Kontrolle über Performance und Struktur wollte, und zum anderen, weil der Bau mit Claude Code eine Gelegenheit war, so zu arbeiten, wie ich meinen Kunden empfehle zu denken: mit der Conversion-Logik beginnen, dann das Design danach ausrichten. Gehostet auf GitHub Pages für Geschwindigkeit und Einfachheit. Die visuelle Ausrichtung setzt auf Schwarz-Weiß-Fotografie, alchemistische Symbole und großzügigen Weißraum, um ruhige Ernsthaftigkeit zu signalisieren, ohne die Pastell-und-Schreibschrift-Ästhetik, die den Wellness-Bereich dominiert."
         ],
         [
           "Warum das in meinem Portfolio wichtig ist",
-          "Die anderen Referenzen in diesem Portfolio zeigen, wie ich über die digitalen Erlebnisse anderer Menschen denke. Diese hier zeigt, dass ich mich selbst am gleichen Maßstab messe — klare Positionierung, eine definierte Zielgruppe, ein strukturierter Funnel und Designentscheidungen, die der Conversion dienen statt der Dekoration."
+          "Die anderen Referenzen in diesem Portfolio zeigen, wie ich über die digitalen Erlebnisse anderer Menschen denke. Diese hier zeigt, dass ich mich selbst am gleichen Maßstab messe: klare Positionierung, eine definierte Zielgruppe, ein strukturierter Funnel und Designentscheidungen, die der Conversion dienen statt der Dekoration."
         ]
       ],
       "cover": "work/prima-materia/cover.jpg",
@@ -278,13 +278,13 @@
           "Eye-Tracking, Angular, HTML/CSS, A/B-Testing"
         ]
       ],
-      "summary": "Zwei voneinander unabhängige Projekte, derselbe blinde Fleck: Teams, die Produkt- und Marketingentscheidungen auf Basis dessen trafen, was Nutzer sagten, dass sie wollen — während die Zahlen immer wieder widersprachen. Die Adoptionskennzahlen eines digitalen Produktteams stimmten nicht mit dem positiven Umfragefeedback überein. Eine Marke konnte sich allein auf Basis von Stakeholder-Meinungen nicht auf ein Newsletter-Layout einigen. Der Auftrag in beiden Fällen: messen, was Nutzer nicht selbst berichten können.",
+      "summary": "Zwei voneinander unabhängige Projekte, derselbe blinde Fleck: Teams, die Produkt- und Marketingentscheidungen auf Basis dessen trafen, was Nutzer sagten, dass sie wollen, während die Zahlen immer wieder widersprachen. Die Adoptionskennzahlen eines digitalen Produktteams stimmten nicht mit dem positiven Umfragefeedback überein. Eine Marke konnte sich allein auf Basis von Stakeholder-Meinungen nicht auf ein Newsletter-Layout einigen. Der Auftrag in beiden Fällen: messen, was Nutzer nicht selbst berichten können.",
       "sections": [
         [
           "Das Problem",
           [
-            "Zwei Projekte, derselbe blinde Fleck. In beiden Fällen trafen Teams Produkt- und Marketingentscheidungen auf Basis dessen, was Nutzer sagten, dass sie wollen — und die Zahlen widersprachen immer wieder.",
-            "Projekt 1: ein digitales Produktteam mit Engagement-Problemen. Nutzer füllten Umfragen aus, gaben Feedback, klickten sich durch Prototypen. Auf dem Papier sah alles gut aus. Aber die Adoptionskennzahlen erzählten eine andere Geschichte. Das Team vermutete, dass die Diskrepanz irgendwo zwischen dem lag, was Nutzer bewusst berichteten, und dem, was ihr Verhalten tatsächlich steuerte — aber es gab keine Möglichkeit, das sichtbar zu machen.",
+            "Zwei Projekte, derselbe blinde Fleck. In beiden Fällen trafen Teams Produkt- und Marketingentscheidungen auf Basis dessen, was Nutzer sagten, dass sie wollen, und die Zahlen widersprachen immer wieder.",
+            "Projekt 1: ein digitales Produktteam mit Engagement-Problemen. Nutzer füllten Umfragen aus, gaben Feedback, klickten sich durch Prototypen. Auf dem Papier sah alles gut aus. Aber die Adoptionskennzahlen erzählten eine andere Geschichte. Das Team vermutete, dass die Diskrepanz irgendwo zwischen dem lag, was Nutzer bewusst berichteten, und dem, was ihr Verhalten tatsächlich steuerte, aber es gab keine Möglichkeit, das sichtbar zu machen.",
             "Projekt 2: eine Marke, die einen Newsletter-Relaunch vorbereitete. Drei Layoutvarianten sahen in der internen Bewertung gleich stark aus. Stakeholder hatten Meinungen. Niemand hatte Evidenz."
           ]
         ],
@@ -292,9 +292,9 @@
           "Was ich gemacht habe",
           [
             "<strong>Online-Neuromarketing-Studien (Projekt 1)</strong>",
-            "Ich entwarf und führte Online-Studien durch, die selbstberichtete Präferenzen komplett umgingen. Statt Nutzer zu fragen, was sie wollen, maß ich, was darunter passierte: implizite Aufmerksamkeitsmuster, reaktionszeitbasierte Assoziationsaufgaben und strukturierte Entscheidungsspiele, die unbewusste Treiber sichtbar machen — die Bedürfnisse und Motivationen, nach denen Nutzer handeln, die sie aber in einer Umfrage nicht artikulieren können.",
+            "Ich entwarf und führte Online-Studien durch, die selbstberichtete Präferenzen komplett umgingen. Statt Nutzer zu fragen, was sie wollen, maß ich, was darunter passierte: implizite Aufmerksamkeitsmuster, reaktionszeitbasierte Assoziationsaufgaben und strukturierte Entscheidungsspiele, die unbewusste Treiber sichtbar machen: die Bedürfnisse und Motivationen, nach denen Nutzer handeln, die sie aber in einer Umfrage nicht artikulieren können.",
             "Das Rohergebnis war kein einzelner „Gewinner\". Es waren Cluster. Nutzer gruppierten sich in unterschiedliche Segmente basierend darauf, welche unbewussten Bedürfnisse ihre Entscheidungen tatsächlich steuerten. Jedes Cluster reagierte auf andere Auslöser, andere Rahmungen, andere Wertversprechen.",
-            "Aus diesen Clustern wurde eine Reihe konkreter Anpassungsempfehlungen entwickelt: wie Messaging, Onboarding-Flow und Feature-Hierarchie des Produkts angepasst werden können, um die tatsächlichen Motivatoren jeder Gruppe anzusprechen — statt der genannten.",
+            "Aus diesen Clustern wurde eine Reihe konkreter Anpassungsempfehlungen entwickelt: wie Messaging, Onboarding-Flow und Feature-Hierarchie des Produkts angepasst werden können, um die tatsächlichen Motivatoren jeder Gruppe anzusprechen, statt der genannten.",
             "<strong>A/B/C-Eye-Tracking-Studie (Projekt 2)</strong>",
             "Für den Kunden erstellte ich drei Newsletter-Varianten in HTML/CSS und führte eine kontrollierte Eye-Tracking-Studie über alle drei durch. Jeder Teilnehmer arbeitete sich durch ein realistisches Leseszenario, während die Blickdaten Fixationsdauer, Scanpfade und die Frage erfassten, welche Inhaltsblöcke tatsächlich Aufmerksamkeit hielten und welche die Nutzer überscrollten.",
             "Die Studie wählte nicht einfach einen Gewinner. Sie zeigte, warum eine Variante besser abschnitt. Heatmaps zeigten, dass das am besten konvertierende Layout nicht dasjenige mit dem stärksten Hero-Bild oder dem auffälligsten CTA war. Es war dasjenige, bei dem die visuelle Hierarchie das Auge durch eine bestimmte Inhaltssequenz führte: zuerst Kontext, dann Beweis, dann Handlung. Die anderen beiden Varianten verteilten die Aufmerksamkeit auf konkurrierende Elemente und verloren die Leser, bevor sie den Conversion-Punkt erreichten."
@@ -309,7 +309,7 @@
         ],
         [
           "Die Erkenntnis",
-          "Standardtests erfassen, was Menschen bereit und in der Lage sind, einem zu sagen. Neuromarketing-Methoden erfassen, was sie nicht können. In beiden Projekten lag die Lücke zwischen diesen beiden genau dort, wo das Problem saß — und genau dort, wo die Lösung herkam."
+          "Standardtests erfassen, was Menschen bereit und in der Lage sind, einem zu sagen. Neuromarketing-Methoden erfassen, was sie nicht können. In beiden Projekten lag die Lücke zwischen diesen beiden genau dort, wo das Problem saß, und genau dort, wo die Lösung herkam."
         ]
       ],
       "cover": "work/neuroboost-ux/cover.jpg",
@@ -343,22 +343,22 @@
           "Hotjar, GA4, Shopify, A/B-Testing (Google Optimize), Figma"
         ]
       ],
-      "summary": "Eine Direct-to-Consumer-Marke mit gesundem Traffic, aber unterdurchschnittlicher Conversion. Als Shop-Managerin und Entwicklerin verantwortete ich den gesamten E-Commerce-Betrieb — von Produktlaunches und Shop-Optimierung bis hin zu A/B-Testing und Checkout-Verbesserungen.",
+      "summary": "Eine Direct-to-Consumer-Marke mit gesundem Traffic, aber unterdurchschnittlicher Conversion. Als Shop-Managerin und Entwicklerin verantwortete ich den gesamten E-Commerce-Betrieb: von Produktlaunches und Shop-Optimierung bis hin zu A/B-Testing und Checkout-Verbesserungen.",
       "sections": [
         [
           "Die Chance",
-          "Eine Direct-to-Consumer-Marke mit einem soliden E-Commerce-Betrieb: gesunder Traffic, stetige Verkäufe, ein Produkt, das ankam. Nichts war kaputt. Aber das Team wusste, dass es Potenzial gab, mehr des Traffics zu konvertieren, für den bereits bezahlt wurde. Der Shop war organisch gewachsen, ohne einen strukturierten Optimierungsprozess — was bedeutete, dass sich kleine Reibungspunkte im Warenkorb, Checkout, auf den Produktseiten und in der mobilen Erfahrung angesammelt hatten, ohne dass jemand deren tatsächliche Auswirkung gemessen hätte."
+          "Eine Direct-to-Consumer-Marke mit einem soliden E-Commerce-Betrieb: gesunder Traffic, stetige Verkäufe, ein Produkt, das ankam. Nichts war kaputt. Aber das Team wusste, dass es Potenzial gab, mehr des Traffics zu konvertieren, für den bereits bezahlt wurde. Der Shop war organisch gewachsen, ohne einen strukturierten Optimierungsprozess, was bedeutete, dass sich kleine Reibungspunkte im Warenkorb, Checkout, auf den Produktseiten und in der mobilen Erfahrung angesammelt hatten, ohne dass jemand deren tatsächliche Auswirkung gemessen hätte."
         ],
         [
           "Der Ansatz",
           [
-            "Als Shop-Managerin und Entwicklerin verantwortete ich den gesamten E-Commerce-Betrieb — nicht nur die Analyse. Ich kombinierte Session-Recordings und Heatmaps mit einer vollständigen Funnel-Analyse, von der Anzeigen-Landingpage bis zur Bestellbestätigung, um zu ermitteln, wo die tatsächlichen Conversion-Lücken lagen — im Vergleich zu dem, wo das Team sie vermutete.",
+            "Als Shop-Managerin und Entwicklerin verantwortete ich den gesamten E-Commerce-Betrieb, nicht nur die Analyse. Ich kombinierte Session-Recordings und Heatmaps mit einer vollständigen Funnel-Analyse, von der Anzeigen-Landingpage bis zur Bestellbestätigung, um zu ermitteln, wo die tatsächlichen Conversion-Lücken lagen, im Vergleich zu dem, wo das Team sie vermutete.",
             "Statt von außen zu auditieren und einen Bericht zu übergeben, priorisierte ich die Ergebnisse nach erwartetem Uplift versus Aufwand und setzte die Maßnahmen selbst um: Verbesserungen am Checkout-Formular, Transparenz bei den Versandkosten, Layoutanpassungen der mobilen Produktdetailseiten. Für risikoreichere Änderungen richtete ich A/B-Tests ein, um sie vor dem vollständigen Rollout zu validieren. Neue Produktlaunches liefen parallel, jeder einzelne informiert durch das, was die Daten über das Nutzerverhalten auf bestehenden Seiten zeigten."
           ]
         ],
         [
           "Was geliefert wurde",
-          "Ein systematisches Verbesserungsprogramm über Startseite, Warenkorb, Checkout, Produktdetailseiten, Teamseite und mobile Erfahrung hinweg — priorisiert, getestet und ausgerollt. Drei A/B-Tests validierten die risikoreichsten Änderungen vor der endgültigen Umsetzung. Produktlaunches wurden in den Optimierungszyklus integriert, statt als separate Ereignisse behandelt zu werden."
+          "Ein systematisches Verbesserungsprogramm über Startseite, Warenkorb, Checkout, Produktdetailseiten, Teamseite und mobile Erfahrung hinweg, priorisiert, getestet und ausgerollt. Drei A/B-Tests validierten die risikoreichsten Änderungen vor der endgültigen Umsetzung. Produktlaunches wurden in den Optimierungszyklus integriert, statt als separate Ereignisse behandelt zu werden."
         ],
         [
           "Die Wirkung",
@@ -451,16 +451,16 @@
     "eyebrow": "Über mich",
     "heading": "Hallo, ich bin Imen.",
     "paragraphs": [
-      "Ich bin UX-, CRO- und Digital-Strategy-Beraterin mit Sitz in Berlin. Ich arbeite mit E-Commerce-, Wellness- und SaaS-Marken, die wissen, dass ihr Produkt stark ist, aber vermuten, dass ihre Website Umsatz liegen lässt. Meine Aufgabe ist es herauszufinden, wo — und es zu beheben: durch Conversion-Audits, UX-Redesigns, Landing-Page-Erstellung und strukturiertes A/B-Testing. Ich arbeite hands-on in eurem CMS und setze Änderungen direkt in Webflow, Shopify, WordPress oder Wix um.",
+      "Ich bin UX-, CRO- und Digital-Strategy-Beraterin mit Sitz in Berlin. Ich arbeite mit E-Commerce-, Wellness- und SaaS-Marken, die wissen, dass ihr Produkt stark ist, aber vermuten, dass ihre Website Umsatz liegen lässt. Meine Aufgabe ist es herauszufinden, wo, und es zu beheben: durch Conversion-Audits, UX-Redesigns, Landing-Page-Erstellung und strukturiertes A/B-Testing. Ich arbeite hands-on in eurem CMS und setze Änderungen direkt in Webflow, Shopify, WordPress oder Wix um.",
       "Ich habe über 10 Jahre Erfahrung zwischen Unternehmensinnovation und selbstständiger Arbeit. Bei Deloitte, Siemens und BMW habe ich gelernt, wie große Organisationen Produkt, Research und Skalierung angehen. Auf eigene Faust habe ich gelernt, schnell zu liefern, radikal zu priorisieren und jede Empfehlung so zu formulieren, dass ein kleines Team sie tatsächlich umsetzen kann. Ich bringe beides mit.",
-      "Mein Hintergrund ist technisch — Informatik und Elektrotechnik an der TU München — und ich habe im Bereich Neuromarketing am Deloitte Neuroscience Institute gearbeitet. Das bedeutet, ich schaue nicht nur auf Heatmaps und Analytics. Ich verstehe, wie Aufmerksamkeit, Vertrauen und Entscheidungsfindung auf kognitiver Ebene funktionieren, und ich gestalte danach.",
+      "Mein Hintergrund ist technisch, Informatik und Elektrotechnik an der TU München, und ich habe im Bereich Neuromarketing am Deloitte Neuroscience Institute gearbeitet. Das bedeutet, ich schaue nicht nur auf Heatmaps und Analytics. Ich verstehe, wie Aufmerksamkeit, Vertrauen und Entscheidungsfindung auf kognitiver Ebene funktionieren, und ich gestalte danach.",
       "Fließend in Deutsch, Englisch, Französisch und Arabisch. Standort Berlin, international tätig."
     ]
   },
   "resources": {
     "eyebrow": "Ressourcen",
     "heading": "Beiträge zu UX, CRO und Digitalstrategie.",
-    "intro": "Praxisnahe Beiträge zu dem, was Conversion wirklich bewegt — aus echten Audits und Projekten, nicht aus der Theorie.",
+    "intro": "Praxisnahe Beiträge zu dem, was Conversion wirklich bewegt, aus echten Audits und Projekten, nicht aus der Theorie.",
     "empty_state": "Neue Beiträge folgen in Kürze.",
     "read_more": "Artikel lesen",
     "all_resources": "Alle Ressourcen",
@@ -492,7 +492,7 @@
       {
         "slug": "cro-audit-checklist",
         "title": "CRO-Audit-Checkliste: 20 Punkte, die du prüfen solltest, bevor du irgendetwas redesignst",
-        "excerpt": "Eine praktische 20-Punkte-Checkliste zu Analytics, Homepage-Klarheit, Checkout-Friction und Mobile UX — alles, was sich vor einem Redesign zu prüfen lohnt.",
+        "excerpt": "Eine praktische 20-Punkte-Checkliste zu Analytics, Homepage-Klarheit, Checkout-Friction und Mobile UX: alles, was sich vor einem Redesign zu prüfen lohnt.",
         "category": "CRO",
         "date": "2026-08-29",
         "sections": [
@@ -890,7 +890,7 @@
       {
         "slug": "shipping-cost-transparency",
         "title": "Versandkosten-Transparenz: Wie und wann du sie zeigen solltest",
-        "excerpt": "Unerwartete Versandkosten sind der häufigste Grund für Warenkorbabbrüche — nicht weil der Betrag unangemessen ist, sondern wegen des Zeitpunkts. Was du an jedem Punkt im Funnel zeigen solltest.",
+        "excerpt": "Unerwartete Versandkosten sind der häufigste Grund für Warenkorbabbrüche, nicht weil der Betrag unangemessen ist, sondern wegen des Zeitpunkts. Was du an jedem Punkt im Funnel zeigen solltest.",
         "category": "CRO",
         "date": "2026-08-30",
         "sections": [
@@ -1000,7 +1000,7 @@
       {
         "slug": "product-page-anatomy",
         "title": "Produktseiten-Anatomie: Was wohin gehört und warum",
-        "excerpt": "Eine Aufschlüsselung einer gut performenden Produktseite, Abschnitt für Abschnitt — kein Template zum Kopieren, sondern ein Framework, um zu verstehen, warum jedes Element seine Position verdient.",
+        "excerpt": "Eine Aufschlüsselung einer gut performenden Produktseite, Abschnitt für Abschnitt, kein Template zum Kopieren, sondern ein Framework, um zu verstehen, warum jedes Element seine Position verdient.",
         "category": "CRO",
         "date": "2026-08-30",
         "sections": [
@@ -1145,15 +1145,15 @@
       },
       {
         "q": "Wie lange dauert ein Projekt?",
-        "a": "Ein UX/CRO-Audit dauert in der Regel 2–4 Wochen. Ein Landing-Page-Redesign kann innerhalb einer Woche live sein. Komplette Website- und Shop-Builds laufen je nach Umfang über 4–8 Wochen. Ihr bekommt im Angebot einen realistischen Zeitplan — und ich melde mich frühzeitig, wenn sich etwas verschiebt."
+        "a": "Ein UX/CRO-Audit dauert in der Regel 2–4 Wochen. Ein Landing-Page-Redesign kann innerhalb einer Woche live sein. Komplette Website- und Shop-Builds laufen je nach Umfang über 4–8 Wochen. Ihr bekommt im Angebot einen realistischen Zeitplan, und ich melde mich frühzeitig, wenn sich etwas verschiebt."
       },
       {
         "q": "Kannst du auch einfach direkt umsetzen, ohne einen kompletten Audit?",
-        "a": "Ja — mit meinem Quick Win Sprint analysiere ich deine Seite gezielt und setze die wichtigsten Conversion-Fixes direkt in deinem CMS um."
+        "a": "Ja, mit meinem Quick Win Sprint analysiere ich deine Seite gezielt und setze die wichtigsten Conversion-Fixes direkt in deinem CMS um."
       },
       {
         "q": "Mit welchen Plattformen arbeitest du?",
-        "a": "Webflow, Shopify, Framer, WordPress, Squarespace und Wix. Ich empfehle die Plattform, die zu eurem Team und euren langfristigen Anforderungen passt — nicht die, die ich bevorzuge."
+        "a": "Webflow, Shopify, Framer, WordPress, Squarespace und Wix. Ich empfehle die Plattform, die zu eurem Team und euren langfristigen Anforderungen passt, nicht die, die ich bevorzuge."
       },
       {
         "q": "Was kostet das?",
@@ -1165,11 +1165,11 @@
       },
       {
         "q": "Mit wem arbeitest du am liebsten?",
-        "a": "E-Commerce-, Wellness- und SaaS-Marken, die bereits Traffic oder ein Produkt haben — aber vermuten, dass ihre Website nicht so konvertiert, wie sie sollte. Wenn ihr über die Phase „brauche einfach eine Website\" hinaus seid und bei „die Website muss performen\" angekommen seid, passen wir gut zusammen."
+        "a": "E-Commerce-, Wellness- und SaaS-Marken, die bereits Traffic oder ein Produkt haben, aber vermuten, dass ihre Website nicht so konvertiert, wie sie sollte. Wenn ihr über die Phase „brauche einfach eine Website\" hinaus seid und bei „die Website muss performen\" angekommen seid, passen wir gut zusammen."
       },
       {
         "q": "Was passiert nach dem Launch?",
-        "a": "Ich übergebe alles, was euer Team braucht, um die Website eigenständig zu pflegen — Dokumentation, Zugänge und bei Bedarf eine Einführung. Wenn ihr laufende Optimierung oder A/B-Testing-Betreuung wollt, können wir das ebenfalls einrichten."
+        "a": "Ich übergebe alles, was euer Team braucht, um die Website eigenständig zu pflegen: Dokumentation, Zugänge und bei Bedarf eine Einführung. Wenn ihr laufende Optimierung oder A/B-Testing-Betreuung wollt, können wir das ebenfalls einrichten."
       }
     ]
   },
@@ -1183,10 +1183,10 @@
       "message_label": "Nachricht",
       "submit": "Nachricht senden",
       "sending": "Sending…",
-      "msg_success": "Thanks — got it. I’ll get back to you within a day or two.",
+      "msg_success": "Thanks. Got it. I’ll get back to you within a day or two.",
       "msg_error": "Something went wrong sending that. Try the Calendly link instead?",
-      "msg_network": "Network hiccup — mind trying again, or use the Calendly link?",
-      "msg_not_wired": "Form isn’t wired up yet — add your Formspree endpoint in contact form action."
+      "msg_network": "Network hiccup: mind trying again, or use the Calendly link?",
+      "msg_not_wired": "Form isn’t wired up yet: add your Formspree endpoint in contact form action."
     }
   },
   "legal": {
@@ -1196,7 +1196,7 @@
     },
     "privacy": {
       "title": "Datenschutzerklärung",
-      "content_html": "<p><em>Zuletzt aktualisiert: 28. August 2026</em></p>\n<p>Diese Datenschutzerklärung erläutert, wie wir Ihre personenbezogenen Daten in Übereinstimmung mit der Datenschutz-Grundverordnung (DSGVO) und den geltenden deutschen Datenschutzgesetzen erheben, verwenden und schützen.</p>\n<h2>1. Verantwortliche</h2>\n<p>Imen Bouzouita<br/>Mahlower Straße 14<br/>12049 Berlin<br/>Deutschland</p>\n<h2>2. Daten, die wir erheben</h2>\n<p>Diese Website erhebt nur die Daten, die erforderlich sind, um Anfragen zu beantworten und einen sicheren Betrieb zu gewährleisten. Je nachdem, wie Sie mit der Website interagieren, kann dies Folgendes umfassen:</p>\n<ul>\n  <li>Identifikationsdaten (z. B. Name)</li>\n  <li>Kontaktdaten (z. B. E-Mail-Adresse)</li>\n  <li>Nutzungsdaten (z. B. besuchte Seiten, Interaktionsdaten)</li>\n  <li>Technische Daten (z. B. IP-Adresse, Browsertyp, Geräteinformationen), die von der Hosting-Infrastruktur protokolliert werden</li>\n</ul>\n<p>Im Einzelnen: Kontaktformular-Eingaben (Name, E-Mail, Nachricht), die über das Kontaktformular übermittelt und über Formspree verarbeitet werden; Calendly-Buchungsdaten, die gemäß der eigenen Datenschutzerklärung von Calendly verarbeitet werden; technische und Verbindungsdaten (z. B. IP-Adresse), die von Cloudflare, unserem Anbieter für Content-Delivery, DNS und Sicherheit, für jeden Besucher im Rahmen des Betriebs dieser Website verarbeitet werden; Nachrichten an unsere @imenbouzouita.com-Adresse, die über Cloudflare Email Routing weitergeleitet werden; sowie, nur bei Zustimmung im Cookie-Banner, Nutzungsdaten über Google Analytics (GA4) und Contentsquare (Session Recordings und Heatmaps).</p>\n<h2>3. Rechtsgrundlage der Verarbeitung</h2>\n<p>Wir verarbeiten Ihre personenbezogenen Daten auf folgenden Rechtsgrundlagen:</p>\n<ul>\n  <li>Einwilligung (Art. 6 Abs. 1 lit. a DSGVO)</li>\n  <li>Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO)</li>\n  <li>Rechtliche Verpflichtung (Art. 6 Abs. 1 lit. c DSGVO)</li>\n  <li>Berechtigte Interessen (Art. 6 Abs. 1 lit. f DSGVO)</li>\n</ul>\n<h2>4. Zweck der Datenverarbeitung</h2>\n<p>Ihre Daten werden zu folgenden Zwecken verarbeitet:</p>\n<ul>\n  <li>Bereitstellung und Aufrechterhaltung unserer Dienstleistungen</li>\n  <li>Beantwortung von Anfragen und Verwaltung gebuchter Gespräche</li>\n  <li>Verbesserung der Nutzererfahrung</li>\n  <li>Gewährleistung der Sicherheit und Betrugsprävention</li>\n</ul>\n<h2>5. Datenweitergabe</h2>\n<p>Wir verkaufen Ihre personenbezogenen Daten nicht. Sie werden nicht an Dritte weitergegeben, außer soweit dies für den Betrieb dieser Website erforderlich ist, und nur:</p>\n<ul>\n  <li>Wenn dies gesetzlich vorgeschrieben ist</li>\n  <li>An Dienstleister im Rahmen von Auftragsverarbeitungsverträgen — derzeit Formspree (Kontaktformularverarbeitung), Calendly (Terminbuchung), Cloudflare (Content-Delivery, DNS, Sicherheit, E-Mail-Weiterleitung und cookielose Web-Analyse) und, nur mit Ihrer Einwilligung, Google Analytics (GA4, Nutzungsanalyse) und Contentsquare (Session Recordings und Heatmaps)</li>\n  <li>Mit Ihrer ausdrücklichen Einwilligung</li>\n</ul>\n<h2>6. Internationale Datenübermittlungen</h2>\n<p>Einige unserer Dienstleister, darunter Formspree, Calendly, Cloudflare, Google (Google Analytics) und Contentsquare, haben ihren Sitz außerhalb des Europäischen Wirtschaftsraums (EWR). Wenn Daten außerhalb des EWR übertragen werden, stellen wir geeignete Schutzmaßnahmen wie Standardvertragsklauseln (SVK) sicher.</p>\n<h2>7. Datenspeicherung</h2>\n<p>Wir speichern personenbezogene Daten nur so lange, wie es für die oben genannten Zwecke erforderlich ist oder gesetzlich vorgeschrieben wird.</p>\n<h2>8. Ihre Rechte</h2>\n<p>Gemäß der DSGVO stehen Ihnen folgende Rechte zu:</p>\n<ul>\n  <li>Recht auf Auskunft (Art. 15 DSGVO)</li>\n  <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>\n  <li>Recht auf Löschung (Art. 17 DSGVO)</li>\n  <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>\n  <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>\n  <li>Recht auf Widerspruch (Art. 21 DSGVO)</li>\n</ul>\n<p>Um Ihre Rechte auszuüben, kontaktieren Sie uns über unser Kontaktformular.</p>\n<h2>9. Cookies</h2>\n<p>Diese Website verwendet Google Analytics (GA4) und Contentsquare (Session Recordings und Heatmaps), um zu verstehen, wie Besucher sie nutzen. Beide werden erst geladen und setzen erst dann Cookies, wenn Sie das beim ersten Besuch angezeigte Cookie-Banner aktiv akzeptieren — vorher wird keine Analyseanfrage an einen der beiden Anbieter gesendet. Sie können Ihre Entscheidung jederzeit über „Cookie-Einstellungen\" im Footer ändern. Unabhängig davon kann Cloudflare, unser Anbieter für Content-Delivery und Sicherheit, unbedingt erforderliche Cookies setzen (zum Beispiel zur Erkennung und Abwehr von automatisiertem Missbrauch), die für den sicheren Betrieb der Website notwendig sind — diese gelten unabhängig von Ihrer Cookie-Banner-Entscheidung, da sie nach geltendem Recht keine Einwilligung erfordern. Diese Website nutzt außerdem Cloudflare Web Analytics für aggregierte Nutzungsstatistiken (z. B. Seitenaufrufe, Referrer, ungefährer Standort). Der Dienst verwendet keine Cookies, keinen lokalen Speicher und keine dauerhaften Kennungen und erstellt kein Profil einzelner Besucher — er läuft daher für alle Besucher, ohne dass eine Einwilligung erforderlich ist. Es werden keine weiteren Tracking- oder Werbe-Cookies verwendet.</p>\n<h2>10. Datensicherheit</h2>\n<p>Wir setzen angemessene technische und organisatorische Maßnahmen zum Schutz Ihrer Daten um.</p>\n<h2>11. Aufsichtsbehörde</h2>\n<p>Sie haben das Recht, eine Beschwerde bei einer Aufsichtsbehörde einzureichen. Als Verantwortliche mit Sitz in Berlin ist die zuständige Behörde die Berliner Beauftragte für Datenschutz und Informationsfreiheit oder jede andere zuständige Datenschutzbehörde.</p>\n<h2>12. Änderungen dieser Datenschutzerklärung</h2>\n<p>Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Aktualisierungen werden auf dieser Seite veröffentlicht.</p>"
+      "content_html": "<p><em>Zuletzt aktualisiert: 28. August 2026</em></p>\n<p>Diese Datenschutzerklärung erläutert, wie wir Ihre personenbezogenen Daten in Übereinstimmung mit der Datenschutz-Grundverordnung (DSGVO) und den geltenden deutschen Datenschutzgesetzen erheben, verwenden und schützen.</p>\n<h2>1. Verantwortliche</h2>\n<p>Imen Bouzouita<br/>Mahlower Straße 14<br/>12049 Berlin<br/>Deutschland</p>\n<h2>2. Daten, die wir erheben</h2>\n<p>Diese Website erhebt nur die Daten, die erforderlich sind, um Anfragen zu beantworten und einen sicheren Betrieb zu gewährleisten. Je nachdem, wie Sie mit der Website interagieren, kann dies Folgendes umfassen:</p>\n<ul>\n  <li>Identifikationsdaten (z. B. Name)</li>\n  <li>Kontaktdaten (z. B. E-Mail-Adresse)</li>\n  <li>Nutzungsdaten (z. B. besuchte Seiten, Interaktionsdaten)</li>\n  <li>Technische Daten (z. B. IP-Adresse, Browsertyp, Geräteinformationen), die von der Hosting-Infrastruktur protokolliert werden</li>\n</ul>\n<p>Im Einzelnen: Kontaktformular-Eingaben (Name, E-Mail, Nachricht), die über das Kontaktformular übermittelt und über Formspree verarbeitet werden; Calendly-Buchungsdaten, die gemäß der eigenen Datenschutzerklärung von Calendly verarbeitet werden; technische und Verbindungsdaten (z. B. IP-Adresse), die von Cloudflare, unserem Anbieter für Content-Delivery, DNS und Sicherheit, für jeden Besucher im Rahmen des Betriebs dieser Website verarbeitet werden; Nachrichten an unsere @imenbouzouita.com-Adresse, die über Cloudflare Email Routing weitergeleitet werden; sowie, nur bei Zustimmung im Cookie-Banner, Nutzungsdaten über Google Analytics (GA4) und Contentsquare (Session Recordings und Heatmaps).</p>\n<h2>3. Rechtsgrundlage der Verarbeitung</h2>\n<p>Wir verarbeiten Ihre personenbezogenen Daten auf folgenden Rechtsgrundlagen:</p>\n<ul>\n  <li>Einwilligung (Art. 6 Abs. 1 lit. a DSGVO)</li>\n  <li>Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO)</li>\n  <li>Rechtliche Verpflichtung (Art. 6 Abs. 1 lit. c DSGVO)</li>\n  <li>Berechtigte Interessen (Art. 6 Abs. 1 lit. f DSGVO)</li>\n</ul>\n<h2>4. Zweck der Datenverarbeitung</h2>\n<p>Ihre Daten werden zu folgenden Zwecken verarbeitet:</p>\n<ul>\n  <li>Bereitstellung und Aufrechterhaltung unserer Dienstleistungen</li>\n  <li>Beantwortung von Anfragen und Verwaltung gebuchter Gespräche</li>\n  <li>Verbesserung der Nutzererfahrung</li>\n  <li>Gewährleistung der Sicherheit und Betrugsprävention</li>\n</ul>\n<h2>5. Datenweitergabe</h2>\n<p>Wir verkaufen Ihre personenbezogenen Daten nicht. Sie werden nicht an Dritte weitergegeben, außer soweit dies für den Betrieb dieser Website erforderlich ist, und nur:</p>\n<ul>\n  <li>Wenn dies gesetzlich vorgeschrieben ist</li>\n  <li>An Dienstleister im Rahmen von Auftragsverarbeitungsverträgen: derzeit Formspree (Kontaktformularverarbeitung), Calendly (Terminbuchung), Cloudflare (Content-Delivery, DNS, Sicherheit, E-Mail-Weiterleitung und cookielose Web-Analyse) und, nur mit Ihrer Einwilligung, Google Analytics (GA4, Nutzungsanalyse) und Contentsquare (Session Recordings und Heatmaps)</li>\n  <li>Mit Ihrer ausdrücklichen Einwilligung</li>\n</ul>\n<h2>6. Internationale Datenübermittlungen</h2>\n<p>Einige unserer Dienstleister, darunter Formspree, Calendly, Cloudflare, Google (Google Analytics) und Contentsquare, haben ihren Sitz außerhalb des Europäischen Wirtschaftsraums (EWR). Wenn Daten außerhalb des EWR übertragen werden, stellen wir geeignete Schutzmaßnahmen wie Standardvertragsklauseln (SVK) sicher.</p>\n<h2>7. Datenspeicherung</h2>\n<p>Wir speichern personenbezogene Daten nur so lange, wie es für die oben genannten Zwecke erforderlich ist oder gesetzlich vorgeschrieben wird.</p>\n<h2>8. Ihre Rechte</h2>\n<p>Gemäß der DSGVO stehen Ihnen folgende Rechte zu:</p>\n<ul>\n  <li>Recht auf Auskunft (Art. 15 DSGVO)</li>\n  <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>\n  <li>Recht auf Löschung (Art. 17 DSGVO)</li>\n  <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>\n  <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>\n  <li>Recht auf Widerspruch (Art. 21 DSGVO)</li>\n</ul>\n<p>Um Ihre Rechte auszuüben, kontaktieren Sie uns über unser Kontaktformular.</p>\n<h2>9. Cookies</h2>\n<p>Diese Website verwendet Google Analytics (GA4) und Contentsquare (Session Recordings und Heatmaps), um zu verstehen, wie Besucher sie nutzen. Beide werden erst geladen und setzen erst dann Cookies, wenn Sie das beim ersten Besuch angezeigte Cookie-Banner aktiv akzeptieren. Vorher wird keine Analyseanfrage an einen der beiden Anbieter gesendet. Sie können Ihre Entscheidung jederzeit über „Cookie-Einstellungen\" im Footer ändern. Unabhängig davon kann Cloudflare, unser Anbieter für Content-Delivery und Sicherheit, unbedingt erforderliche Cookies setzen (zum Beispiel zur Erkennung und Abwehr von automatisiertem Missbrauch), die für den sicheren Betrieb der Website notwendig sind. Diese gelten unabhängig von Ihrer Cookie-Banner-Entscheidung, da sie nach geltendem Recht keine Einwilligung erfordern. Diese Website nutzt außerdem Cloudflare Web Analytics für aggregierte Nutzungsstatistiken (z. B. Seitenaufrufe, Referrer, ungefährer Standort). Der Dienst verwendet keine Cookies, keinen lokalen Speicher und keine dauerhaften Kennungen und erstellt kein Profil einzelner Besucher, er läuft daher für alle Besucher, ohne dass eine Einwilligung erforderlich ist. Es werden keine weiteren Tracking- oder Werbe-Cookies verwendet.</p>\n<h2>10. Datensicherheit</h2>\n<p>Wir setzen angemessene technische und organisatorische Maßnahmen zum Schutz Ihrer Daten um.</p>\n<h2>11. Aufsichtsbehörde</h2>\n<p>Sie haben das Recht, eine Beschwerde bei einer Aufsichtsbehörde einzureichen. Als Verantwortliche mit Sitz in Berlin ist die zuständige Behörde die Berliner Beauftragte für Datenschutz und Informationsfreiheit oder jede andere zuständige Datenschutzbehörde.</p>\n<h2>12. Änderungen dieser Datenschutzerklärung</h2>\n<p>Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Aktualisierungen werden auf dieser Seite veröffentlicht.</p>"
     },
     "impressum": {
       "title": "Impressum",
@@ -1210,17 +1210,17 @@
     "cta": "Back to home"
   },
   "cookie_banner": {
-    "text": "Wir möchten Analyse-Cookies verwenden, um zu verstehen, wie Besucher diese Website nutzen. Wir setzen sie nur mit Ihrer Einwilligung — Sie können Ihre Entscheidung jederzeit ändern.",
+    "text": "Wir möchten Analyse-Cookies verwenden, um zu verstehen, wie Besucher diese Website nutzen. Wir setzen sie nur mit Ihrer Einwilligung. Sie können Ihre Entscheidung jederzeit ändern.",
     "accept": "Alle akzeptieren",
     "decline": "Nur Notwendige",
     "settings_link": "Cookie-Einstellungen",
     "manage_label": "Einstellungen verwalten",
     "purposes_label": "Zwecke",
     "analytics_label": "Analyse",
-    "analytics_legal_basis": "Rechtsgrundlage: Einwilligung — Opt-in",
+    "analytics_legal_basis": "Rechtsgrundlage: Einwilligung, Opt-in",
     "analytics_desc": "Google Analytics und Contentsquare, verwendet um zu verstehen, wie Besucher diese Website nutzen (einschließlich Session Recordings und Heatmaps). Es wird nichts geladen oder gesetzt, außer Sie stimmen zu.",
     "essential_label": "Erforderlich",
-    "essential_legal_basis": "Rechtsgrundlage: Berechtigtes Interesse — immer aktiv",
+    "essential_legal_basis": "Rechtsgrundlage: Berechtigtes Interesse, immer aktiv",
     "essential_desc": "Grundlegende Hosting- und Sicherheitsprotokolle, die für einen zuverlässigen Betrieb dieser Website erforderlich sind.",
     "confirm": "Bestätigen",
     "close": "Schließen"

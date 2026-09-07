@@ -1,6 +1,6 @@
 # Produktseiten-Anatomie: Was wohin gehört und warum
 
-Eine Aufschlüsselung einer gut performenden Produktseite, Abschnitt für Abschnitt — kein Template zum Kopieren, sondern ein Framework, um zu verstehen, warum jedes Element seine Position verdient.
+Eine Aufschlüsselung einer gut performenden Produktseite, Abschnitt für Abschnitt, kein Template zum Kopieren, sondern ein Framework, um zu verstehen, warum jedes Element seine Position verdient.
 
 Eine Produktseite hat einen Job: den Besucher von „Ich schaue mir das an" zu „Ich kaufe das" zu bewegen. Jedes Element auf der Seite hilft entweder dabei oder steht im Weg. Der Unterschied zwischen einer Seite, die konvertiert, und einer, die es nicht tut, liegt selten daran, was drauf ist. Es geht darum, wo die Dinge platziert sind und in welcher Reihenfolge der Besucher sie sieht.
 

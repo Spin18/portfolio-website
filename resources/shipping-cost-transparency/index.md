@@ -1,6 +1,6 @@
 # Shipping Cost Transparency: How and When to Show It
 
-Unexpected shipping costs are the top reason for cart abandonment — not because the amount is unreasonable, but because of when visitors find out. What to show at each stage of the funnel, and when.
+Unexpected shipping costs are the top reason for cart abandonment, not because the amount is unreasonable, but because of when visitors find out. What to show at each stage of the funnel, and when.
 
 Unexpected shipping costs are the number one reason people abandon their cart. Not a slow site. Not a confusing layout. Not a missing feature. The moment a visitor sees a cost they didn't anticipate, the product they already decided to buy suddenly feels more expensive than it did ten seconds ago, and that shift in perception is enough to kill the sale.
 

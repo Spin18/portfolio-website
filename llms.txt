@@ -2,14 +2,14 @@
 
 > I help e-commerce, wellness, and SaaS brands turn browsers into buyers with research-backed UX audits and interfaces people actually want to use.
 
-Digital Product · UX · CRO Consultant — Berlin. I'm a UX, CRO, and digital strategy consultant based in Berlin. I work with e-commerce, wellness, and SaaS brands that know their product is strong but suspect their website is leaving money on the table. My job is to find out where and fix it — through conversion audits, UX redesigns, landing page builds, and structured A/B testing. I work hands-on in your CMS by implementing changes directly in Webflow, Shopify, WordPress, or Wix etc.
+Digital Product · UX · CRO Consultant — Berlin. I'm a UX, CRO, and digital strategy consultant based in Berlin. I work with e-commerce, wellness, and SaaS brands that know their product is strong but suspect their website is leaving money on the table. My job is to find out where and fix it: through conversion audits, UX redesigns, landing page builds, and structured A/B testing. I work hands-on in your CMS by implementing changes directly in Webflow, Shopify, WordPress, or Wix etc.
 
 ## What I Do
 
-- [UX/CRO and SEO Audits](https://www.imenbouzouita.com/#work-do): 10–30 prioritized fixes. I tell you exactly what's costing you conversions — and how to fix it.
-- [UX/CRO Quick Win Sprint](https://www.imenbouzouita.com/#work-do): I find what's broken, then fix it — directly in your CMS. No 40-page report. No handoff. Just results.
+- [UX/CRO and SEO Audits](https://www.imenbouzouita.com/#work-do): 10–30 prioritized fixes. I tell you exactly what's costing you conversions, and how to fix it.
+- [UX/CRO Quick Win Sprint](https://www.imenbouzouita.com/#work-do): I find what's broken, then fix it, directly in your CMS. No 40-page report. No handoff. Just results.
 - [Landing Page Redesign](https://www.imenbouzouita.com/#work-do): From wireframe to live page in a week. Built to convert, not just to look nice.
-- [Full Website & Shop Builds](https://www.imenbouzouita.com/#work-do): Webflow, Shopify, Framer, WordPress, Wix. Structure, UX design, and build — end to end.
+- [Full Website & Shop Builds](https://www.imenbouzouita.com/#work-do): Webflow, Shopify, Framer, WordPress, Wix. Structure, UX design, and build, end to end.
 
 ## Case Studies
 
@@ -17,17 +17,17 @@ Digital Product · UX · CRO Consultant — Berlin. I'm a UX, CRO, and digital s
 - [The Collective](https://www.imenbouzouita.com/work/the-collective/): From Directory to Community Platform — A ten-year-old wellness directory in Bali with 885 referring domains, Wikipedia citations on its cultural content, and presence in over a hundred Google AI Overviews, embedded in a three-brand ecosystem alongside a physical yoga studio and an annual wellness festival under the same leadership. The site had significant domain authority and editorial content, but no defined strategic role within the ecosystem. The brief: assess the current state, define a strategic direction, and deliver a conversion-focused roadmap connecting the platform to the wider ecosystem.
 - [Prima Materia](https://www.imenbouzouita.com/work/prima-materia/): The Practitioner's Site — Applying conversion thinking to my own coaching practice.
 - [NeuroBoost UX](https://www.imenbouzouita.com/work/neuroboost-ux/): Uncovering what drives user decisions when surveys and click data can't — Two unrelated projects, the same blind spot: teams making product and marketing decisions based on what users said they wanted, while the numbers kept disagreeing. A digital product team's adoption metrics didn't match glowing survey feedback. A brand couldn't settle on a newsletter layout from stakeholder opinion alone. The brief in both cases: measure what users can't self-report.
-- [Conversion Engine](https://www.imenbouzouita.com/work/conversion-engine/): Optimising checkout, product pages, and launch strategy from inside the team — A direct-to-consumer brand with healthy traffic but underperforming conversion. As shop manager and developer, I owned the full e-commerce operation — from product launches and shop optimisation to A/B testing and checkout improvements.
+- [Conversion Engine](https://www.imenbouzouita.com/work/conversion-engine/): Optimising checkout, product pages, and launch strategy from inside the team — A direct-to-consumer brand with healthy traffic but underperforming conversion. As shop manager and developer, I owned the full e-commerce operation: from product launches and shop optimisation to A/B testing and checkout improvements.
 - [Resonance Tunes](https://www.imenbouzouita.com/work/resonance-tunes/): Conscious Tech, Grounded Design — Designing and building the business website for an ethical-AI wellness platform from scratch.
 
 ## Resources
 
-- [CRO Audit Checklist: 20 Things to Check Before You Redesign Anything](https://www.imenbouzouita.com/resources/cro-audit-checklist/): A practical, 20-point checklist covering analytics, homepage clarity, checkout friction, and mobile UX — everything worth auditing before committing to a redesign.
+- [CRO Audit Checklist: 20 Things to Check Before You Redesign Anything](https://www.imenbouzouita.com/resources/cro-audit-checklist/): A practical, 20-point checklist covering analytics, homepage clarity, checkout friction, and mobile UX: everything worth auditing before committing to a redesign.
 - [What Neuromarketing Actually Is (And Isn't)](https://www.imenbouzouita.com/resources/what-neuromarketing-actually-is/): What neuromarketing actually measures, and the assumptions people most often get wrong about it, from someone who's used eye tracking, implicit testing, and biometric methods professionally.
-- [Why Users Say They Trust Your Site but Don't Buy](https://www.imenbouzouita.com/resources/why-users-trust-your-site-but-dont-buy/): Testimonials, security badges, and trust signals often test well in usability sessions yet fail to move conversion — because visitors say they saw them without their eyes ever landing there.
+- [Why Users Say They Trust Your Site but Don't Buy](https://www.imenbouzouita.com/resources/why-users-trust-your-site-but-dont-buy/): Testimonials, security badges, and trust signals often test well in usability sessions yet fail to move conversion, because visitors say they saw them without their eyes ever landing there.
 - [Landing Page Review Framework: 10 Questions in 10 Minutes](https://www.imenbouzouita.com/resources/landing-page-review-framework/): A fast, no-audit-required framework: ten questions that surface the most common landing page conversion problems in about ten minutes, ranked by where they sit in the visitor's journey.
-- [Shipping Cost Transparency: How and When to Show It](https://www.imenbouzouita.com/resources/shipping-cost-transparency/): Unexpected shipping costs are the top reason for cart abandonment — not because the amount is unreasonable, but because of when visitors find out. What to show at each stage of the funnel, and when.
-- [Product Page Anatomy: What Goes Where and Why](https://www.imenbouzouita.com/resources/product-page-anatomy/): A section-by-section breakdown of a high-performing product page — not a template to copy, but a framework for understanding why each element earns its position.
+- [Shipping Cost Transparency: How and When to Show It](https://www.imenbouzouita.com/resources/shipping-cost-transparency/): Unexpected shipping costs are the top reason for cart abandonment, not because the amount is unreasonable, but because of when visitors find out. What to show at each stage of the funnel, and when.
+- [Product Page Anatomy: What Goes Where and Why](https://www.imenbouzouita.com/resources/product-page-anatomy/): A section-by-section breakdown of a high-performing product page, not a template to copy, but a framework for understanding why each element earns its position.
 
 ## About
 

@@ -1,6 +1,6 @@
 # Why Users Say They Trust Your Site but Don't Buy
 
-Testimonials, security badges, and trust signals often test well in usability sessions yet fail to move conversion — because visitors say they saw them without their eyes ever landing there.
+Testimonials, security badges, and trust signals often test well in usability sessions yet fail to move conversion, because visitors say they saw them without their eyes ever landing there.
 
 You've done the work. The testimonials are there. The security badges are in place. The return policy is generous and clearly stated. You run a usability test, and participants confirm: yes, they noticed the reviews. Yes, the site feels trustworthy. Yes, they'd consider buying.
 

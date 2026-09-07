@@ -314,7 +314,7 @@
       const data = new FormData(form);
 
       if (!form.action || form.action.includes('YOUR_FORM_ID')) {
-        status.textContent = msg('msgNotWired', 'Form isn’t wired up yet — add your Formspree endpoint in contact form action.');
+        status.textContent = msg('msgNotWired', 'Form isn’t wired up yet: add your Formspree endpoint in contact form action.');
         status.classList.add('visible');
         return;
       }
@@ -324,7 +324,7 @@
       // instead of a rejection that would tip it off.
       const decoy = form.querySelector('.hp-decoy');
       if (decoy && decoy.value) {
-        status.textContent = msg('msgSuccess', 'Thanks — got it. I’ll get back to you within a day or two.');
+        status.textContent = msg('msgSuccess', 'Thanks. Got it. I’ll get back to you within a day or two.');
         status.classList.add('visible');
         form.reset();
         return;
@@ -341,13 +341,13 @@
           headers: { Accept: 'application/json' },
         });
         if (res.ok) {
-          status.textContent = msg('msgSuccess', 'Thanks — got it. I’ll get back to you within a day or two.');
+          status.textContent = msg('msgSuccess', 'Thanks. Got it. I’ll get back to you within a day or two.');
           form.reset();
         } else {
           status.textContent = msg('msgError', 'Something went wrong sending that. Try the Calendly link instead?');
         }
       } catch (err) {
-        status.textContent = msg('msgNetwork', 'Network hiccup — mind trying again, or use the Calendly link?');
+        status.textContent = msg('msgNetwork', 'Network hiccup: mind trying again, or use the Calendly link?');
       } finally {
         status.classList.add('visible');
         submitBtn.disabled = false;

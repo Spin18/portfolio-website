@@ -1,6 +1,6 @@
 # CRO Audit Checklist: 20 Things to Check Before You Redesign Anything
 
-A practical, 20-point checklist covering analytics, homepage clarity, checkout friction, and mobile UX — everything worth auditing before committing to a redesign.
+A practical, 20-point checklist covering analytics, homepage clarity, checkout friction, and mobile UX: everything worth auditing before committing to a redesign.
 
 Most redesigns start with a feeling. The site looks dated. Conversion is "low." A competitor just relaunched. So the team jumps to wireframes and new layouts without understanding what's actually working, what's broken, and what's invisible.
 
