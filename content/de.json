@@ -65,6 +65,15 @@
         ]
       },
       {
+        "title": "CRO Quick Win Sprint",
+        "pitch": "Ich finde, was nicht funktioniert, und behebe es — direkt in deinem CMS. Kein 40-Seiten-Report. Kein Handoff. Nur Ergebnisse.",
+        "details": [
+          "Schnelle Analyse der größten Conversion-Lecks",
+          "5–7 Fixes mit dem höchsten Impact, priorisiert nach Aufwand vs. Wirkung",
+          "Direkte Umsetzung in deinem Editor (Webflow, Shopify, WordPress, Wix)"
+        ]
+      },
+      {
         "title": "Landing-Page-Redesign",
         "pitch": "Vom Wireframe zur fertigen Seite in einer Woche. Gebaut für Conversions, nicht nur um schön auszusehen.",
         "details": [
@@ -82,16 +91,6 @@
           "Individuelles visuelles Designsystem",
           "Umsetzung auf der Plattform, die zu eurem Team passt",
           "Übergabedokumentation, damit euer Team nach dem Launch eigenständig arbeiten kann"
-        ]
-      },
-      {
-        "title": "Neurowissenschaftlich fundierte Erkenntnisse",
-        "pitch": "Ich habe am Deloitte Neuroscience Institute gearbeitet. Ich gestalte auf Basis dessen, wie Menschen wirklich denken — nicht nur, wie sie sagen, dass sie sich verhalten.",
-        "details": [
-          "Eye-Tracking & Aufmerksamkeitsanalyse",
-          "Verhaltensbasierte Heuristiken für Layout & Text",
-          "Brücke zwischen dem, was Nutzer sagen, und dem, was sie tun",
-          "Evidenzbasierte Designbegründung für Stakeholder"
         ]
       }
     ]

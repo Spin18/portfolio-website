@@ -64,6 +64,15 @@
         ]
       },
       {
+        "title": "CRO Quick Win Sprint",
+        "pitch": "I find what's broken, then fix it — directly in your CMS. No 40-page report. No handoff. Just results.",
+        "details": [
+          "Rapid site review focused on the biggest conversion leaks",
+          "5–7 highest-impact fixes, prioritized by effort vs. return",
+          "Direct implementation in your editor (Webflow, Shopify, WordPress, Wix)"
+        ]
+      },
+      {
         "title": "Landing Page Redesign",
         "pitch": "From wireframe to live page in a week. Built to convert, not just to look nice.",
         "details": [
@@ -81,16 +90,6 @@
           "Custom visual design system",
           "Build on the platform that fits your team",
           "Handover docs so your team can self-serve after launch"
-        ]
-      },
-      {
-        "title": "Neuroscience-Backed Insights",
-        "pitch": "Worked at the Deloitte Neuroscience Institute. I design with how people actually think, not just how they say they behave.",
-        "details": [
-          "Eye-tracking & attention mapping",
-          "Behavioral heuristics applied to layout & copy",
-          "Bridging what users say vs. what they do",
-          "Evidence-backed design rationale for stakeholders"
         ]
       }
     ]
