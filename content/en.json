@@ -64,7 +64,7 @@
         ]
       },
       {
-        "title": "CRO Quick Win Sprint",
+        "title": "UX/CRO Quick Win Sprint",
         "pitch": "I find what's broken, then fix it — directly in your CMS. No 40-page report. No handoff. Just results.",
         "details": [
           "Rapid site review focused on the biggest conversion leaks",
@@ -450,7 +450,7 @@
     "eyebrow": "About",
     "heading": "Hi, I'm Imen.",
     "paragraphs": [
-      "I'm a UX, CRO, and digital strategy consultant based in Berlin. I work with e-commerce, wellness, and SaaS brands that know their product is strong but suspect their website is leaving money on the table. My job is to find out where and fix it — through conversion audits, UX redesigns, landing page builds, and structured A/B testing.",
+      "I'm a UX, CRO, and digital strategy consultant based in Berlin. I work with e-commerce, wellness, and SaaS brands that know their product is strong but suspect their website is leaving money on the table. My job is to find out where and fix it — through conversion audits, UX redesigns, landing page builds, and structured A/B testing. I work hands-on in your CMS by implementing changes directly in Webflow, Shopify, WordPress, or Wix etc.",
       "I've spent 10+ years moving between corporate innovation and independent work. At Deloitte, Siemens, and BMW I learned how large organisations approach product, research, and scale. On my own, I learned how to ship fast, prioritise ruthlessly, and make every recommendation something a small team can actually implement. I bring both.",
       "My background is technical — IT and Electrical Engineering at TU Munich — and I worked in neuromarketing at the Deloitte Neuroscience Institute, which means I don't just look at heatmaps and analytics. I understand how attention, trust, and decision-making work at a cognitive level, and I design for that.",
       "Fluent in German, English, French, and Arabic. Based in Berlin, working internationally."
@@ -1145,6 +1145,10 @@
       {
         "q": "How long does a project take?",
         "a": "A UX/CRO audit typically takes 2–4 weeks. A landing page redesign can be live within a week. Full website and shop builds run 4–8 weeks depending on scope. I'll give you a realistic timeline in the proposal — and flag it early if anything shifts."
+      },
+      {
+        "q": "Can you just fix things instead of doing a full audit?",
+        "a": "Yes — I offer a Quick Win Sprint where I identify and implement the top conversion fixes directly in your site."
       },
       {
         "q": "What platforms do you work with?",

@@ -65,7 +65,7 @@
         ]
       },
       {
-        "title": "CRO Quick Win Sprint",
+        "title": "UX/CRO Quick Win Sprint",
         "pitch": "Ich finde, was nicht funktioniert, und behebe es — direkt in deinem CMS. Kein 40-Seiten-Report. Kein Handoff. Nur Ergebnisse.",
         "details": [
           "Schnelle Analyse der größten Conversion-Lecks",
@@ -451,7 +451,7 @@
     "eyebrow": "Über mich",
     "heading": "Hallo, ich bin Imen.",
     "paragraphs": [
-      "Ich bin UX-, CRO- und Digital-Strategy-Beraterin mit Sitz in Berlin. Ich arbeite mit E-Commerce-, Wellness- und SaaS-Marken, die wissen, dass ihr Produkt stark ist, aber vermuten, dass ihre Website Umsatz liegen lässt. Meine Aufgabe ist es herauszufinden, wo — und es zu beheben: durch Conversion-Audits, UX-Redesigns, Landing-Page-Erstellung und strukturiertes A/B-Testing.",
+      "Ich bin UX-, CRO- und Digital-Strategy-Beraterin mit Sitz in Berlin. Ich arbeite mit E-Commerce-, Wellness- und SaaS-Marken, die wissen, dass ihr Produkt stark ist, aber vermuten, dass ihre Website Umsatz liegen lässt. Meine Aufgabe ist es herauszufinden, wo — und es zu beheben: durch Conversion-Audits, UX-Redesigns, Landing-Page-Erstellung und strukturiertes A/B-Testing. Ich arbeite hands-on in eurem CMS und setze Änderungen direkt in Webflow, Shopify, WordPress oder Wix um.",
       "Ich habe über 10 Jahre Erfahrung zwischen Unternehmensinnovation und selbstständiger Arbeit. Bei Deloitte, Siemens und BMW habe ich gelernt, wie große Organisationen Produkt, Research und Skalierung angehen. Auf eigene Faust habe ich gelernt, schnell zu liefern, radikal zu priorisieren und jede Empfehlung so zu formulieren, dass ein kleines Team sie tatsächlich umsetzen kann. Ich bringe beides mit.",
       "Mein Hintergrund ist technisch — Informatik und Elektrotechnik an der TU München — und ich habe im Bereich Neuromarketing am Deloitte Neuroscience Institute gearbeitet. Das bedeutet, ich schaue nicht nur auf Heatmaps und Analytics. Ich verstehe, wie Aufmerksamkeit, Vertrauen und Entscheidungsfindung auf kognitiver Ebene funktionieren, und ich gestalte danach.",
       "Fließend in Deutsch, Englisch, Französisch und Arabisch. Standort Berlin, international tätig."
@@ -1146,6 +1146,10 @@
       {
         "q": "Wie lange dauert ein Projekt?",
         "a": "Ein UX/CRO-Audit dauert in der Regel 2–4 Wochen. Ein Landing-Page-Redesign kann innerhalb einer Woche live sein. Komplette Website- und Shop-Builds laufen je nach Umfang über 4–8 Wochen. Ihr bekommt im Angebot einen realistischen Zeitplan — und ich melde mich frühzeitig, wenn sich etwas verschiebt."
+      },
+      {
+        "q": "Kannst du auch einfach direkt umsetzen, ohne einen kompletten Audit?",
+        "a": "Ja — mit meinem Quick Win Sprint analysiere ich deine Seite gezielt und setze die wichtigsten Conversion-Fixes direkt in deinem CMS um."
       },
       {
         "q": "Mit welchen Plattformen arbeitest du?",
