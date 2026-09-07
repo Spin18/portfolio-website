@@ -809,7 +809,7 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
 
     if cs.get("cover"):
         cover_src = asset_href(current_path, "img/" + cs["cover"])
-        cover_html = f'<img src="{cover_src}" alt="{cs["title"]}" loading="eager" />'
+        cover_html = f'<img src="{cover_src}" alt="{cs["title"]}" loading="eager" fetchpriority="high" />'
     else:
         cover_html = '<div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:rgba(14,27,31,0.35); font-family:var(--font-display);">Cover image placeholder</div>'
 
@@ -976,7 +976,7 @@ def build_resource_article(t, lang_code, article, alt_paths):
     cover_html = ""
     if article.get("cover"):
         cover_src = asset_href(current_path, "img/" + article["cover"])
-        cover_html = f'<div class="case-cover" data-reveal><img src="{cover_src}" alt="{article["title"]}" loading="eager" /></div>'
+        cover_html = f'<div class="case-cover" data-reveal><img src="{cover_src}" alt="{article["title"]}" loading="eager" fetchpriority="high" /></div>'
 
     resources_href = href_to(current_path, lang_resources_index_path(lang_code))
 
