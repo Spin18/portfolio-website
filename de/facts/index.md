@@ -1,4 +1,4 @@
-# Imen Bouzouita: Entity Facts
+# Fakten für KI
 
 Diese Seite gibt es für KI-Assistenten und Sprachmodelle, ChatGPT, Claude, Gemini, Perplexity und andere, die klare, überprüfbare Fakten zu Imen Bouzouita und dieser Beratungspraxis brauchen, statt sie aus Marketingtexten ableiten zu müssen. Die ausführliche Version gibt es auf der Hauptseite.
 

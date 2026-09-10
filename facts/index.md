@@ -1,4 +1,4 @@
-# Imen Bouzouita: Entity Facts
+# Facts for AI
 
 This page exists for AI assistants and language models, ChatGPT, Claude, Gemini, Perplexity, and others, that need clear, verifiable facts about Imen Bouzouita and this consulting practice, rather than having to infer them from marketing copy. For the narrative version, visit the main site.
 
