@@ -170,6 +170,11 @@ def lang_resource_path(lang_code, slug):
     return f"{d}resources/{slug}/index.html"
 
 
+def lang_facts_path(lang_code):
+    d = next(l["dir"] for l in LANGUAGES if l["code"] == lang_code)
+    return f"{d}facts/index.html"
+
+
 def _count_words(text):
     return len(re.sub("<[^>]+>", "", text).split())
 
@@ -239,8 +244,11 @@ def _json_ld_script(graph):
     return f'<script type="application/ld+json">\n{payload}\n</script>'
 
 
-def build_json_ld_home(t, current_path):
-    lang_code = _lang_of(current_path)
+def _core_entities(t, lang_code):
+    """Person/ProfessionalService/WebSite nodes shared, by @id, across every
+    page that references them (homepage, facts page). Keeping this in one
+    place means the two JSON-LD graphs can never drift apart on the same
+    real-world entity."""
     portrait_url = f"{SITE_URL}/assets/img/imen-portrait.jpg"
 
     person = {
@@ -296,6 +304,12 @@ def build_json_ld_home(t, current_path):
         "publisher": {"@id": f"{SITE_URL}/#business"},
     }
 
+    return person, business, website
+
+
+def build_json_ld_home(t, current_path):
+    lang_code = _lang_of(current_path)
+    person, business, website = _core_entities(t, lang_code)
     home_url = url_for(current_path)
     webpage = {
         "@type": "WebPage",
@@ -311,6 +325,39 @@ def build_json_ld_home(t, current_path):
     faq_page = {
         "@type": "FAQPage",
         "@id": f"{home_url}#faq",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": item["q"],
+                "acceptedAnswer": {"@type": "Answer", "text": item["a"]},
+            }
+            for item in t["faq"]["items"]
+        ],
+    }
+
+    return _json_ld_script([website, webpage, person, business, faq_page])
+
+
+def build_json_ld_facts(t, current_path):
+    lang_code = _lang_of(current_path)
+    person, business, website = _core_entities(t, lang_code)
+    facts_url = url_for(current_path)
+
+    webpage = {
+        "@type": "AboutPage",
+        "@id": f"{facts_url}#webpage",
+        "url": facts_url,
+        "name": t["grounding"]["heading"],
+        "description": t["grounding"]["human_note"],
+        "inLanguage": lang_code,
+        "isPartOf": {"@id": f"{SITE_URL}/#website"},
+        "mainEntity": {"@id": f"{SITE_URL}/#person"},
+        "about": {"@id": f"{SITE_URL}/#business"},
+    }
+
+    faq_page = {
+        "@type": "FAQPage",
+        "@id": f"{facts_url}#faq",
         "mainEntity": [
             {
                 "@type": "Question",
@@ -455,6 +502,7 @@ def footer_html(t, current_path):
     terms = href_to(current_path, lang_legal_path(lang_code, "terms"))
     privacy = href_to(current_path, lang_legal_path(lang_code, "privacy"))
     impressum = href_to(current_path, lang_legal_path(lang_code, "impressum"))
+    facts = href_to(current_path, lang_facts_path(lang_code))
     return f"""<footer class="site-footer">
     <div class="container">
       <div class="footer-top">
@@ -480,6 +528,7 @@ def footer_html(t, current_path):
           <a href="{terms}">{t['footer']['terms']}</a>
           <a href="{privacy}">{t['footer']['privacy']}</a>
           <a href="{impressum}">{t['footer']['impressum']}</a>
+          <a href="{facts}">{t['grounding']['footer_label']}</a>
           <button type="button" class="link-button" data-cookie-settings>{t['cookie_banner']['settings_link']}</button>
         </div>
       </div>
@@ -802,6 +851,48 @@ def build_markdown_resource_article(t, article):
     return "\n".join(lines)
 
 
+def build_markdown_facts(t):
+    g = t["grounding"]
+    lbl = g["labels"]
+    who_for = t["faq"]["items"][6]["a"]
+    lines = [f"# {g['heading']}", "", g["human_note"], "", f"## {g['entity_summary_heading']}", ""]
+    lines += [
+        f"- **{lbl['entity']}:** Imen Bouzouita",
+        f"- **{lbl['entity_class']}:** {g['entity_class']}",
+        f"- **{lbl['legal_form']}:** {g['legal_form']}",
+        f"- **{lbl['headquarters']}:** {g['headquarters_value']}",
+        f"- **{lbl['industry']}:** {g['industry_value']}",
+        f"- **{lbl['experience']}:** {g['experience_value']}",
+        f"- **{lbl['known_for']}:** {g['known_for']}",
+        "",
+        f"## {g['core_facts_heading']}", "",
+        t["about"]["paragraphs"][0], "",
+        g["background_text"], "",
+        f"## {g['identifiers_heading']}", "",
+        f"- **{lbl['website']}:** {SITE_URL}",
+        f"- **{lbl['linkedin']}:** {LINKEDIN_URL}",
+        f"- **{lbl['instagram']}:** {INSTAGRAM_URL}",
+        f"- **{lbl['vat_id']}:** {BUSINESS_VAT_ID}",
+        f"- **{lbl['languages']}:** {g['languages_value']}",
+        "",
+        f"## {g['services_heading']}", "",
+    ]
+    for cap in t["capabilities"]["items"]:
+        lines.append(f"- **{cap['title']}.** {cap['pitch']}")
+    lines += ["", f"## {g['who_for_heading']}", "", who_for, "", f"## {g['clients_heading']}", ""]
+    lines.append(f"{t['hero']['trust_label']} {', '.join(logo['name'] for logo in TRUST_LOGOS)}.")
+    lines.append("")
+    for cs in t["case_studies"]:
+        lines.append(f"- **{cs['title']}.** {cs['one_liner']}")
+    lines += ["", f"## {g['faq_heading']}", ""]
+    for item in t["faq"]["items"]:
+        lines.append(f"**{item['q']}**")
+        lines.append("")
+        lines.append(item["a"])
+        lines.append("")
+    return "\n".join(lines)
+
+
 def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
     current_path = lang_case_study_path(lang_code, cs["slug"])
 
@@ -1022,6 +1113,101 @@ def build_resource_article(t, lang_code, article, alt_paths):
     write(current_path, html)
 
 
+def build_facts_page(t, lang_code, alt_paths):
+    current_path = lang_facts_path(lang_code)
+    g = t["grounding"]
+    lbl = g["labels"]
+    who_for = t["faq"]["items"][6]["a"]
+
+    def _row(label, value):
+        return f"<div class=\"facts-row\"><dt>{label}</dt><dd>{value}</dd></div>"
+
+    entity_summary = "".join([
+        _row(lbl["entity"], "Imen Bouzouita"),
+        _row(lbl["entity_class"], g["entity_class"]),
+        _row(lbl["legal_form"], g["legal_form"]),
+        _row(lbl["headquarters"], g["headquarters_value"]),
+        _row(lbl["industry"], g["industry_value"]),
+        _row(lbl["experience"], g["experience_value"]),
+        _row(lbl["known_for"], g["known_for"]),
+    ])
+
+    identifiers = "".join([
+        _row(lbl["website"], f'<a href="{SITE_URL}">{SITE_URL.replace("https://", "")}</a>'),
+        _row(lbl["linkedin"], f'<a href="{LINKEDIN_URL}" target="_blank" rel="noopener">{LINKEDIN_URL}</a>'),
+        _row(lbl["instagram"], f'<a href="{INSTAGRAM_URL}" target="_blank" rel="noopener">{INSTAGRAM_URL}</a>'),
+        _row(lbl["vat_id"], BUSINESS_VAT_ID),
+        _row(lbl["languages"], g["languages_value"]),
+    ])
+
+    services_html = "".join(
+        f"<li><strong>{cap['title']}.</strong> {cap['pitch']}</li>"
+        for cap in t["capabilities"]["items"]
+    )
+
+    case_studies_html = "".join(
+        f"<li><strong>{cs['title']}.</strong> {cs['one_liner']}</li>"
+        for cs in t["case_studies"]
+    )
+
+    home_href = href_to(current_path, lang_home_path(lang_code))
+
+    body = f"""
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">{g['eyebrow']}</p>
+        <h1>{g['heading']}</h1>
+        <p class="lede">{g['human_note']}</p>
+
+        <div class="legal-content mt-lg">
+          <h2>{g['entity_summary_heading']}</h2>
+          <dl class="facts-table">{entity_summary}</dl>
+
+          <h2>{g['core_facts_heading']}</h2>
+          <p>{t['about']['paragraphs'][0]}</p>
+          <p>{g['background_text']}</p>
+
+          <h2>{g['identifiers_heading']}</h2>
+          <dl class="facts-table">{identifiers}</dl>
+
+          <h2>{g['services_heading']}</h2>
+          <ul>{services_html}</ul>
+
+          <h2>{g['who_for_heading']}</h2>
+          <p>{who_for}</p>
+
+          <h2>{g['clients_heading']}</h2>
+          <p>{t['hero']['trust_label']} {', '.join(logo['name'] for logo in TRUST_LOGOS)}.</p>
+          <ul>{case_studies_html}</ul>
+
+          <h2>{g['references_heading']}</h2>
+          <ul>
+            <li><a href="{home_href}">{g['ref_home']}</a></li>
+            <li><a href="{home_href}#work">{g['ref_work']}</a></li>
+            <li><a href="{home_href}#about">{g['ref_about']}</a></li>
+            <li><a href="{home_href}#contact">{g['ref_contact']}</a></li>
+            <li><a href="{LINKEDIN_URL}" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="{INSTAGRAM_URL}" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+
+          <h2>{g['faq_heading']}</h2>
+          <div class="faq-list" style="margin-inline: 0;">
+            {"".join(f'<details class="faq-item" data-reveal><summary>{item["q"]}</summary><p>{item["a"]}</p></details>' for item in t["faq"]["items"])}
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+"""
+    md_path = _md_sibling_path(current_path)
+    write(md_path, build_markdown_facts(t))
+
+    title = f"{g['heading']} — Imen Bouzouita"
+    html = page_shell(t, title, g["human_note"], body, current_path, alt_paths, extra_head=build_json_ld_facts(t, current_path), markdown_path=md_path)
+    write(current_path, html)
+
+
 def build_legal(t, lang_code, slug, alt_paths):
     current_path = lang_legal_path(lang_code, slug)
     entry = t["legal"][slug]
@@ -1209,7 +1395,7 @@ Content-Signal: search=yes, ai-input=yes, ai-train=no
     for lang in LANGUAGES:
         code = lang["code"]
         t = content[code]
-        paths = [lang_home_path(code)] + [
+        paths = [lang_home_path(code), lang_facts_path(code)] + [
             lang_legal_path(code, slug) for slug in ("terms", "privacy", "impressum")
         ] + [lang_case_study_path(code, cs["slug"]) for cs in t["case_studies"]] + [
             lang_resources_index_path(code)
@@ -1325,6 +1511,9 @@ def main():
 
         home_alt = {l["code"]: lang_home_path(l["code"]) for l in LANGUAGES}
         build_index(t, code, home_alt)
+
+        facts_alt = {l["code"]: lang_facts_path(l["code"]) for l in LANGUAGES}
+        build_facts_page(t, code, facts_alt)
 
         n = len(t["case_studies"])
         for i, cs in enumerate(t["case_studies"]):

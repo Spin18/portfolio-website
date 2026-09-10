@@ -906,6 +906,21 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .legal-content li { padding-left: 1.2rem; position: relative; }
 .legal-content li::before { content: '—'; position: absolute; left: 0; color: var(--moonstone); }
 
+/* ---------- facts / grounding page ---------- */
+.facts-table { display: grid; gap: 0; margin-block: 1.2rem 1.8rem; }
+.facts-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1rem;
+  padding-block: 0.8rem;
+  border-bottom: 1px solid rgba(14,27,31,0.08);
+}
+.facts-row dt { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--moonstone-deep); }
+.facts-row dd { margin: 0; color: var(--ink-soft); word-break: break-word; }
+@media (max-width: 640px) {
+  .facts-row { grid-template-columns: 1fr; gap: 0.3rem; }
+}
+
 /* ---------- resources ---------- */
 .resources-hero h1 { margin-bottom: 1.6rem; }
 .resources-hero .mt-lg { margin-top: 4.2rem; }
@@ -1096,6 +1111,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <a href="terms.html">Terms</a>
           <a href="privacy.html">Privacy</a>
           <a href="impressum.html">Impressum</a>
+          <a href="facts/">Facts</a>
           <button type="button" class="link-button" data-cookie-settings>Cookie settings</button>
         </div>
       </div>

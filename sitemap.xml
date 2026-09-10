@@ -11,6 +11,16 @@
       <xhtml:link rel="alternate" hreflang="de" href="https://www.imenbouzouita.com/de/" />
   </url>
   <url>
+    <loc>https://www.imenbouzouita.com/facts/</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/facts/" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://www.imenbouzouita.com/de/facts/" />
+  </url>
+  <url>
+    <loc>https://www.imenbouzouita.com/de/facts/</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/facts/" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://www.imenbouzouita.com/de/facts/" />
+  </url>
+  <url>
     <loc>https://www.imenbouzouita.com/terms.html</loc>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.imenbouzouita.com/terms.html" />
       <xhtml:link rel="alternate" hreflang="de" href="https://www.imenbouzouita.com/de/terms.html" />
