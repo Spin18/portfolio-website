@@ -2,7 +2,7 @@
 
 A fast, no-audit-required framework: ten questions that surface the most common landing page conversion problems in about ten minutes, ranked by where they sit in the visitor's journey.
 
-You don't need a three-week audit to know whether a landing page is working. Most of the problems that kill conversion are visible within minutes, if you know what to look for.
+You don't need a <a href="https://www.imenbouzouita.com/resources/cro-audit-checklist/">three-week audit</a> to know whether a landing page is working. Most of the problems that kill conversion are visible within minutes, if you know what to look for.
 
 This framework gives you ten questions to run through on any landing page, yours or a client's. Each one targets a specific failure mode. The whole thing takes about ten minutes, and by the end you'll have a clear picture of where the page is strong, where it's leaking, and what to fix first.
 

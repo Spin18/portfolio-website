@@ -42,7 +42,7 @@ Where does the main reason to buy actually sit on the page? If visitors have to 
 
 ### 8. Social proof: present vs. visible
 
-Having testimonials on the page isn't enough. Track whether visitors actually see them. In my eye-tracking work, I've consistently found that users self-report noticing trust signals that their eyes never landed on. If your reviews sit below three screens of content, they're decoration.
+Having testimonials on the page isn't enough. Track whether visitors actually see them. In my eye-tracking work, I've consistently found that users self-report noticing <a href="https://www.imenbouzouita.com/resources/why-users-trust-your-site-but-dont-buy/">trust signals</a> that their eyes never landed on. If your reviews sit below three screens of content, they're decoration.
 
 ### 9. Image and media quality
 
@@ -60,7 +60,7 @@ Can visitors easily see what's in their cart without leaving the page they're on
 
 ### 12. Surprise costs
 
-The number one reason for cart abandonment is unexpected costs appearing at checkout. Audit every step from product page to order confirmation: when does the visitor first see shipping costs, taxes, and fees? The later these appear, the higher your drop-off. Show them early.
+The number one reason for cart abandonment is unexpected costs appearing at checkout. Audit every step from product page to order confirmation: when does the visitor first see <a href="https://www.imenbouzouita.com/resources/shipping-cost-transparency/">shipping costs</a>, taxes, and fees? The later these appear, the higher your drop-off. Show them early.
 
 ### 13. Checkout form length
 

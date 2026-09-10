@@ -40,7 +40,7 @@ Der Add-to-Cart-Button ist das wichtigste Element auf der Seite. Er muss visuell
 
 Direkt unter oder neben dem Add-to-Cart-Button platzierst du die Informationen, die Last-Second-Zögern adressieren:
 
-**Versandkosten und Lieferzeit.** „Versand ab 5 € | Lieferung in 2-5 Werktagen" in einer Zeile. Der Besucher ist kurz davor, sich zu entscheiden. Unbeantwortete Fragen zu Kosten und Timing sind die häufigsten Gründe, warum er es nicht tut.
+**<a href="https://www.imenbouzouita.com/de/resources/shipping-cost-transparency/">Versandkosten und Lieferzeit.</a>** „Versand ab 5 € | Lieferung in 2-5 Werktagen" in einer Zeile. Der Besucher ist kurz davor, sich zu entscheiden. Unbeantwortete Fragen zu Kosten und Timing sind die häufigsten Gründe, warum er es nicht tut.
 
 **Rückgaberecht.** „Kostenlose Retoure innerhalb von 30 Tagen" oder was auch immer gilt. Das reduziert das wahrgenommene Risiko in dem Moment, in dem das Risiko am höchsten empfunden wird.
 

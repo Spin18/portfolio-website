@@ -885,6 +885,8 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 }
 .case-body h2 { color: var(--ink); margin-top: 1.4rem; font-size: clamp(1.5rem, 2.6vw, 2rem); }
 .case-body h3 { color: var(--moonstone-deep); margin-top: 0.6rem; font-size: clamp(1.1rem, 1.8vw, 1.3rem); }
+.case-body a { color: var(--coral-text); text-decoration: underline; text-underline-offset: 2px; }
+.case-body a:hover { text-decoration-thickness: 2px; }
 .case-highlight {
   font-family: var(--font-display);
   font-style: italic;
@@ -908,6 +910,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .legal-content li::before { content: '—'; position: absolute; left: 0; color: var(--moonstone); }
 
 /* ---------- facts / grounding page ---------- */
+.facts-meta-line { font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.6rem; }
 .facts-table { display: grid; gap: 0; margin-block: 1.2rem 1.8rem; }
 .facts-row {
   display: grid;
@@ -1124,7 +1127,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
         <p>Das passiert hier: Menschen erzählen dir die Wahrheit über das, was sie <em>glauben</em> erlebt zu haben, aber dieser Glaube stimmt nicht mit dem überein, was tatsächlich passiert ist. Das ist keine Unehrlichkeit. So funktioniert menschliche Wahrnehmung.</p>
         <p>Wenn jemand in einem Usability Test einen Checkout-Flow durchgeht und du fragst „Hast du die Trust Badges bemerkt?", macht das Gehirn etwas Interessantes. Es durchsucht die Erinnerung, findet das allgemeine Konzept „Trust Badges gibt es auf Websites", verbindet das mit dem vagen Gefühl, dass dieser Checkout normal wirkte, und produziert ein überzeugtes „Ja." Die Person glaubt tatsächlich, sie gesehen zu haben.</p>
         <p>Aber wenn du trackst, wohin ihre Augen tatsächlich gewandert sind, sieht die Geschichte anders aus. Ihr Blick ging vom Produktbild zum Preis zum „In den Warenkorb"-Button zu den Formularfeldern. Die Trust Badges in der Sidebar oder unterhalb des sichtbaren Bereichs haben keine einzige Fixation erhalten. Der Nutzer hat die Seite verarbeitet, ohne jemals auf die Elemente zu achten, die du genau dafür platziert hast, Vertrauen aufzubauen.</p>
-        <p>Das ist kein Einzelfall. Das ist der Normalzustand. Die Lücke zwischen selbstberichteter Wahrnehmung und tatsächlicher visueller Aufmerksamkeit ist eine der am besten dokumentierten Erkenntnisse der Verhaltensforschung, und sie zeigt sich auf fast jeder Seite, die ich auditiert habe.</p>
+        <p>Das ist kein Einzelfall. Das ist der Normalzustand. Die Lücke zwischen selbstberichteter Wahrnehmung und tatsächlicher visueller Aufmerksamkeit ist eine der am besten dokumentierten Erkenntnisse der <a href="https://www.imenbouzouita.com/de/resources/what-neuromarketing-actually-is/">Verhaltensforschung</a>, und sie zeigt sich auf fast jeder Seite, die ich auditiert habe.</p>
         <h2>Warum das für die Conversion wichtig ist</h2>
         <p>Vertrauen ist nicht binär. Ein Besucher kommt nicht auf deine Seite, bewertet deine Trust Signals, stellt fest „vertrauenswürdig" und kauft. Vertrauen entsteht durch eine Abfolge von Mikrobestätigungen, die passieren (oder nicht), während der Nutzer sich durch deinen Flow bewegt. Jede einzelne reduziert die Friction ein Stück. Jede verpasste hinterlässt eine kleine Lücke.</p>
         <p>Das Problem ist, dass die meisten dieser Bestätigungen unbewusst verarbeitet werden. Der Nutzer denkt nicht „Ich sehe vier Sterne und 200 Bewertungen, also vertraue ich diesem Produkt." Er streift einen Bereich, der dem Muster „Social Proof" entspricht, sein Gehirn registriert ein schwaches positives Signal, und er scrollt weiter. Wenn seine Augen nie auf diesem Bereich landen, feuert das Signal nie.</p>
@@ -1189,7 +1192,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <a href="../../terms.html">AGB</a>
           <a href="../../privacy.html">Datenschutz</a>
           <a href="../../impressum.html">Impressum</a>
-          <a href="../../facts/">Fakten</a>
+          <a href="../../facts/">Fakten für KI</a>
           <button type="button" class="link-button" data-cookie-settings>Cookie-Einstellungen</button>
         </div>
       </div>

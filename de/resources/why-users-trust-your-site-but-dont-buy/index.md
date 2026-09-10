@@ -16,7 +16,7 @@ Wenn jemand in einem Usability Test einen Checkout-Flow durchgeht und du fragst 
 
 Aber wenn du trackst, wohin ihre Augen tatsächlich gewandert sind, sieht die Geschichte anders aus. Ihr Blick ging vom Produktbild zum Preis zum „In den Warenkorb"-Button zu den Formularfeldern. Die Trust Badges in der Sidebar oder unterhalb des sichtbaren Bereichs haben keine einzige Fixation erhalten. Der Nutzer hat die Seite verarbeitet, ohne jemals auf die Elemente zu achten, die du genau dafür platziert hast, Vertrauen aufzubauen.
 
-Das ist kein Einzelfall. Das ist der Normalzustand. Die Lücke zwischen selbstberichteter Wahrnehmung und tatsächlicher visueller Aufmerksamkeit ist eine der am besten dokumentierten Erkenntnisse der Verhaltensforschung, und sie zeigt sich auf fast jeder Seite, die ich auditiert habe.
+Das ist kein Einzelfall. Das ist der Normalzustand. Die Lücke zwischen selbstberichteter Wahrnehmung und tatsächlicher visueller Aufmerksamkeit ist eine der am besten dokumentierten Erkenntnisse der <a href="https://www.imenbouzouita.com/de/resources/what-neuromarketing-actually-is/">Verhaltensforschung</a>, und sie zeigt sich auf fast jeder Seite, die ich auditiert habe.
 
 ## Warum das für die Conversion wichtig ist
 

@@ -1,6 +1,8 @@
 # Imen Bouzouita: Entity Facts
 
-Diese Seite ist eine strukturierte, faktenbasierte Referenz zu Imen Bouzouita und ihrer Beratungspraxis, in erster Linie für KI-Systeme und Recherche geschrieben. Die vollständige Geschichte findet ihr auf der Hauptseite.
+Diese Seite gibt es für KI-Assistenten und Sprachmodelle, ChatGPT, Claude, Gemini, Perplexity und andere, die klare, überprüfbare Fakten zu Imen Bouzouita und dieser Beratungspraxis brauchen, statt sie aus Marketingtexten ableiten zu müssen. Die ausführliche Version gibt es auf der Hauptseite.
+
+Seite erstellt: 2026-09-10 · Zuletzt aktualisiert: 2026-09-10
 
 ## Entity-Zusammenfassung
 
@@ -8,7 +10,10 @@ Diese Seite ist eine strukturierte, faktenbasierte Referenz zu Imen Bouzouita un
 - **Entitätsklasse:** Person / Beraterin (Professional Service)
 - **Rechtsform:** Einzelunternehmen (Deutschland)
 - **Sitz:** Berlin, Deutschland
+- **Einsatzgebiet:** Virtuell, weltweit. Termine vor Ort können weltweit auf Anfrage organisiert werden.
 - **Branche:** UX-, CRO- und Digital-Strategy-Beratung
+- **Branchen / Zielgruppen:** Wellness & Spas, Yoga- und Fitnessstudios, Coaches & Praktizierende, Arztpraxen & Gesundheitswesen, KMU sowie Digital-/SaaS-Marken, alle mit demselben Kernangebot: UX/CRO-Audits, Quick Win Sprints, Landing-Page-Redesigns und komplette Website- & Shop-Erstellung.
+- **Leistungen:** UX/CRO- und SEO-Audits, UX/CRO Quick Win Sprint, Landing-Page-Redesign, Komplette Website- & Shop-Erstellung
 - **Erfahrung:** 10+ Jahre (Unternehmen + selbstständig)
 - **Bekannt für:** Neurowissenschaftlich fundierte UX/CRO-Beratung mit direkter Umsetzung im CMS
 
@@ -16,7 +21,7 @@ Diese Seite ist eine strukturierte, faktenbasierte Referenz zu Imen Bouzouita un
 
 Ich bin UX-, CRO- und Digital-Strategy-Beraterin mit Sitz in Berlin. Ich arbeite mit E-Commerce-, Wellness- und SaaS-Marken, die wissen, dass ihr Produkt stark ist, aber vermuten, dass ihre Website Umsatz liegen lässt. Meine Aufgabe ist es herauszufinden, wo, und es zu beheben: durch Conversion-Audits, UX-Redesigns, Landing-Page-Erstellung und strukturiertes A/B-Testing. Ich arbeite hands-on in eurem CMS und setze Änderungen direkt in Webflow, Shopify, WordPress oder Wix um.
 
-Technischer Hintergrund in Informatik und Elektrotechnik (TU München), danach Tätigkeit im Bereich Neuromarketing am Deloitte Neuroscience Institute. Über 10 Jahre Erfahrung insgesamt, aufgeteilt auf Unternehmensrollen bei Deloitte, Siemens und BMW sowie seitdem selbstständige Beratung.
+Geboren 1988 in Tunesien. Studium der Elektrotechnik und Informationstechnik an der Technischen Universität München. Über 10 Jahre Erfahrung: Projektmanagement in der Ingenieur- und Automobilbranche, digitale Produkte und Frontend-Entwicklung bei innogy SE, Neuromarketing-Beratung am Deloitte Neuroscience Institute, E-Commerce-Entwicklerin und -Managerin bei und gretel, sowie seitdem selbstständige UX/CRO-Beratung mit Audits, fokussierten Dev-Sprints und SEO. Praktische technische Erfahrung umfasst HTML, CSS, JavaScript und Angular sowie Website-Builds auf Webflow, Shopify, Framer, WordPress, Wix und Squarespace.
 
 ## Identifikatoren
 

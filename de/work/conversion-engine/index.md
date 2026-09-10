@@ -17,7 +17,7 @@ Eine Direct-to-Consumer-Marke mit einem soliden E-Commerce-Betrieb: gesunder Tra
 
 Als Shop-Managerin und Entwicklerin verantwortete ich den gesamten E-Commerce-Betrieb, nicht nur die Analyse. Ich kombinierte Session-Recordings und Heatmaps mit einer vollständigen Funnel-Analyse, von der Anzeigen-Landingpage bis zur Bestellbestätigung, um zu ermitteln, wo die tatsächlichen Conversion-Lücken lagen, im Vergleich zu dem, wo das Team sie vermutete.
 
-Statt von außen zu auditieren und einen Bericht zu übergeben, priorisierte ich die Ergebnisse nach erwartetem Uplift versus Aufwand und setzte die Maßnahmen selbst um: Verbesserungen am Checkout-Formular, Transparenz bei den Versandkosten, Layoutanpassungen der mobilen Produktdetailseiten. Für risikoreichere Änderungen richtete ich A/B-Tests ein, um sie vor dem vollständigen Rollout zu validieren. Neue Produktlaunches liefen parallel, jeder einzelne informiert durch das, was die Daten über das Nutzerverhalten auf bestehenden Seiten zeigten.
+Statt von außen zu auditieren und einen Bericht zu übergeben, priorisierte ich die Ergebnisse nach erwartetem Uplift versus Aufwand und setzte die Maßnahmen selbst um: Verbesserungen am Checkout-Formular, <a href="https://www.imenbouzouita.com/de/resources/shipping-cost-transparency/">Transparenz bei den Versandkosten</a>, <a href="https://www.imenbouzouita.com/de/resources/product-page-anatomy/">Layoutanpassungen der mobilen Produktdetailseiten</a>. Für risikoreichere Änderungen richtete ich A/B-Tests ein, um sie vor dem vollständigen Rollout zu validieren. Neue Produktlaunches liefen parallel, jeder einzelne informiert durch das, was die Daten über das Nutzerverhalten auf bestehenden Seiten zeigten.
 
 ## Was geliefert wurde
 

@@ -34,7 +34,7 @@ Wenn Menschen „Neuromarketing" hören, stellen sie sich jemanden im fMRT vor, 
 
 **EEG** (Elektroenzephalographie) misst die elektrische Gehirnaktivität und wird manchmal eingesetzt, um Aufmerksamkeit, Engagement und kognitive Belastung zu bewerten. Es ist häufiger in akademischen und Enterprise-Kontexten anzutreffen, weil es kontrollierte Laborbedingungen und spezialisierte Interpretation erfordert.
 
-Nicht jedes Projekt braucht all diese Methoden. Ich habe hands-on mit Eye Tracking, impliziten Assoziationstests, EEG und strukturierten Verhaltensstudien gearbeitet, aber diese Methoden erfordern dedizierte Hardware oder eigens entwickelte Tools und erheblichen Aufwand in der Vorbereitung. Für die meisten digitalen Produkt- und Marketingentscheidungen bieten Behavioural-Analytics-Tools wie Hotjar, Contentsquare und Crazy Egg eine praktische Alternative: Heatmaps, Scroll Maps und Session Recordings erfassen echte Aufmerksamkeitsmuster im großen Maßstab, ohne den Overhead eines Lab-Setups. Sie sind nicht so präzise wie Eye Tracking, aber sie beantworten dieselbe Kernfrage: Wo schaut der Nutzer tatsächlich hin, und was ignoriert er?
+Nicht jedes Projekt braucht all diese Methoden. Ich habe <a href="https://www.imenbouzouita.com/de/work/neuroboost-ux/">hands-on mit Eye Tracking, impliziten Assoziationstests</a>, EEG und strukturierten Verhaltensstudien gearbeitet, aber diese Methoden erfordern dedizierte Hardware oder eigens entwickelte Tools und erheblichen Aufwand in der Vorbereitung. Für die meisten digitalen Produkt- und Marketingentscheidungen bieten Behavioural-Analytics-Tools wie Hotjar, Contentsquare und Crazy Egg eine praktische Alternative: Heatmaps, Scroll Maps und Session Recordings erfassen echte Aufmerksamkeitsmuster im großen Maßstab, ohne den Overhead eines Lab-Setups. Sie sind nicht so präzise wie Eye Tracking, aber sie beantworten dieselbe Kernfrage: Wo schaut der Nutzer tatsächlich hin, und was ignoriert er?
 
 ## Was Neuromarketing nicht ist
 
@@ -52,7 +52,7 @@ Nicht jedes Projekt braucht all diese Methoden. Ich habe hands-on mit Eye Tracki
 
 Neuromarketing bringt den größten Mehrwert, wenn es eine Lücke gibt zwischen dem, was deine qualitative Forschung sagt, und dem, was deine quantitativen Daten zeigen. Einige typische Situationen:
 
-**Nutzer sagen, sie vertrauen deiner Seite, aber sie konvertieren nicht.** Umfragen kommen positiv zurück. Usability Tests sehen sauber aus. Aber die Conversion bleibt flach. Eye Tracking und implizite Tests können zeigen, ob Nutzer deine Trust Signals tatsächlich verarbeiten oder einfach daran vorbeiscrollen.
+**<a href="https://www.imenbouzouita.com/de/resources/why-users-trust-your-site-but-dont-buy/">Nutzer sagen, sie vertrauen deiner Seite, aber sie konvertieren nicht.</a>** Umfragen kommen positiv zurück. Usability Tests sehen sauber aus. Aber die Conversion bleibt flach. Eye Tracking und implizite Tests können zeigen, ob Nutzer deine Trust Signals tatsächlich verarbeiten oder einfach daran vorbeiscrollen.
 
 **Du hast mehrere Designrichtungen und keine Grundlage für eine Entscheidung.** Intern sind die Meinungen gespalten. Jeder denkt, seine bevorzugte Version „fühlt sich richtig an." Eine kontrollierte Studie mit Gaze-Daten oder impliziter Reaktionsmessung gibt dir eine Entscheidung, die auf Evidenz basiert statt auf Hierarchie.
 

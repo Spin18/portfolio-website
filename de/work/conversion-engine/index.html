@@ -884,6 +884,8 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 }
 .case-body h2 { color: var(--ink); margin-top: 1.4rem; font-size: clamp(1.5rem, 2.6vw, 2rem); }
 .case-body h3 { color: var(--moonstone-deep); margin-top: 0.6rem; font-size: clamp(1.1rem, 1.8vw, 1.3rem); }
+.case-body a { color: var(--coral-text); text-decoration: underline; text-underline-offset: 2px; }
+.case-body a:hover { text-decoration-thickness: 2px; }
 .case-highlight {
   font-family: var(--font-display);
   font-style: italic;
@@ -907,6 +909,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .legal-content li::before { content: '—'; position: absolute; left: 0; color: var(--moonstone); }
 
 /* ---------- facts / grounding page ---------- */
+.facts-meta-line { font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.6rem; }
 .facts-table { display: grid; gap: 0; margin-block: 1.2rem 1.8rem; }
 .facts-row {
   display: grid;
@@ -1129,7 +1132,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
         <p>Eine Direct-to-Consumer-Marke mit einem soliden E-Commerce-Betrieb: gesunder Traffic, stetige Verkäufe, ein Produkt, das ankam. Nichts war kaputt. Aber das Team wusste, dass es Potenzial gab, mehr des Traffics zu konvertieren, für den bereits bezahlt wurde. Der Shop war organisch gewachsen, ohne einen strukturierten Optimierungsprozess, was bedeutete, dass sich kleine Reibungspunkte im Warenkorb, Checkout, auf den Produktseiten und in der mobilen Erfahrung angesammelt hatten, ohne dass jemand deren tatsächliche Auswirkung gemessen hätte.</p>
         <h2>Der Ansatz</h2>
         <p>Als Shop-Managerin und Entwicklerin verantwortete ich den gesamten E-Commerce-Betrieb, nicht nur die Analyse. Ich kombinierte Session-Recordings und Heatmaps mit einer vollständigen Funnel-Analyse, von der Anzeigen-Landingpage bis zur Bestellbestätigung, um zu ermitteln, wo die tatsächlichen Conversion-Lücken lagen, im Vergleich zu dem, wo das Team sie vermutete.</p>
-        <p>Statt von außen zu auditieren und einen Bericht zu übergeben, priorisierte ich die Ergebnisse nach erwartetem Uplift versus Aufwand und setzte die Maßnahmen selbst um: Verbesserungen am Checkout-Formular, Transparenz bei den Versandkosten, Layoutanpassungen der mobilen Produktdetailseiten. Für risikoreichere Änderungen richtete ich A/B-Tests ein, um sie vor dem vollständigen Rollout zu validieren. Neue Produktlaunches liefen parallel, jeder einzelne informiert durch das, was die Daten über das Nutzerverhalten auf bestehenden Seiten zeigten.</p>
+        <p>Statt von außen zu auditieren und einen Bericht zu übergeben, priorisierte ich die Ergebnisse nach erwartetem Uplift versus Aufwand und setzte die Maßnahmen selbst um: Verbesserungen am Checkout-Formular, <a href="https://www.imenbouzouita.com/de/resources/shipping-cost-transparency/">Transparenz bei den Versandkosten</a>, <a href="https://www.imenbouzouita.com/de/resources/product-page-anatomy/">Layoutanpassungen der mobilen Produktdetailseiten</a>. Für risikoreichere Änderungen richtete ich A/B-Tests ein, um sie vor dem vollständigen Rollout zu validieren. Neue Produktlaunches liefen parallel, jeder einzelne informiert durch das, was die Daten über das Nutzerverhalten auf bestehenden Seiten zeigten.</p>
         <h2>Was geliefert wurde</h2>
         <p>Ein systematisches Verbesserungsprogramm über Startseite, Warenkorb, Checkout, Produktdetailseiten, Teamseite und mobile Erfahrung hinweg, priorisiert, getestet und ausgerollt. Drei A/B-Tests validierten die risikoreichsten Änderungen vor der endgültigen Umsetzung. Produktlaunches wurden in den Optimierungszyklus integriert, statt als separate Ereignisse behandelt zu werden.</p>
         <h2>Die Wirkung</h2>
@@ -1178,7 +1181,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <a href="../../terms.html">AGB</a>
           <a href="../../privacy.html">Datenschutz</a>
           <a href="../../impressum.html">Impressum</a>
-          <a href="../../facts/">Fakten</a>
+          <a href="../../facts/">Fakten für KI</a>
           <button type="button" class="link-button" data-cookie-settings>Cookie-Einstellungen</button>
         </div>
       </div>

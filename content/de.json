@@ -309,7 +309,7 @@
         ],
         [
           "Die Erkenntnis",
-          "Standardtests erfassen, was Menschen bereit und in der Lage sind, einem zu sagen. Neuromarketing-Methoden erfassen, was sie nicht können. In beiden Projekten lag die Lücke zwischen diesen beiden genau dort, wo das Problem saß, und genau dort, wo die Lösung herkam."
+          "Standardtests erfassen, was Menschen bereit und in der Lage sind, einem zu sagen. <a href=\"https://www.imenbouzouita.com/de/resources/what-neuromarketing-actually-is/\">Neuromarketing-Methoden</a> erfassen, was sie nicht können. In beiden Projekten lag die Lücke zwischen diesen beiden genau dort, wo das Problem saß, und genau dort, wo die Lösung herkam."
         ]
       ],
       "cover": "work/neuroboost-ux/cover.jpg",
@@ -353,7 +353,7 @@
           "Der Ansatz",
           [
             "Als Shop-Managerin und Entwicklerin verantwortete ich den gesamten E-Commerce-Betrieb, nicht nur die Analyse. Ich kombinierte Session-Recordings und Heatmaps mit einer vollständigen Funnel-Analyse, von der Anzeigen-Landingpage bis zur Bestellbestätigung, um zu ermitteln, wo die tatsächlichen Conversion-Lücken lagen, im Vergleich zu dem, wo das Team sie vermutete.",
-            "Statt von außen zu auditieren und einen Bericht zu übergeben, priorisierte ich die Ergebnisse nach erwartetem Uplift versus Aufwand und setzte die Maßnahmen selbst um: Verbesserungen am Checkout-Formular, Transparenz bei den Versandkosten, Layoutanpassungen der mobilen Produktdetailseiten. Für risikoreichere Änderungen richtete ich A/B-Tests ein, um sie vor dem vollständigen Rollout zu validieren. Neue Produktlaunches liefen parallel, jeder einzelne informiert durch das, was die Daten über das Nutzerverhalten auf bestehenden Seiten zeigten."
+            "Statt von außen zu auditieren und einen Bericht zu übergeben, priorisierte ich die Ergebnisse nach erwartetem Uplift versus Aufwand und setzte die Maßnahmen selbst um: Verbesserungen am Checkout-Formular, <a href=\"https://www.imenbouzouita.com/de/resources/shipping-cost-transparency/\">Transparenz bei den Versandkosten</a>, <a href=\"https://www.imenbouzouita.com/de/resources/product-page-anatomy/\">Layoutanpassungen der mobilen Produktdetailseiten</a>. Für risikoreichere Änderungen richtete ich A/B-Tests ein, um sie vor dem vollständigen Rollout zu validieren. Neue Produktlaunches liefen parallel, jeder einzelne informiert durch das, was die Daten über das Nutzerverhalten auf bestehenden Seiten zeigten."
           ]
         ],
         [
@@ -545,7 +545,7 @@
               },
               {
                 "heading": "8. Social Proof: vorhanden vs. sichtbar",
-                "body": "Testimonials auf der Seite zu haben reicht nicht. Prüfe, ob Besucher sie tatsächlich sehen. In meiner Eye-Tracking-Arbeit habe ich immer wieder festgestellt, dass Nutzer angeben, Trust Signals wahrgenommen zu haben, die ihre Augen nie fixiert haben. Wenn deine Bewertungen drei Bildschirmlängen unter dem Content sitzen, sind sie Dekoration."
+                "body": "Testimonials auf der Seite zu haben reicht nicht. Prüfe, ob Besucher sie tatsächlich sehen. In meiner Eye-Tracking-Arbeit habe ich immer wieder festgestellt, dass Nutzer angeben, <a href=\"https://www.imenbouzouita.com/de/resources/why-users-trust-your-site-but-dont-buy/\">Trust Signals</a> wahrgenommen zu haben, die ihre Augen nie fixiert haben. Wenn deine Bewertungen drei Bildschirmlängen unter dem Content sitzen, sind sie Dekoration."
               },
               {
                 "heading": "9. Bild- und Medienqualität",
@@ -566,7 +566,7 @@
               },
               {
                 "heading": "12. Überraschungskosten",
-                "body": "Der häufigste Grund für Warenkorbabbrüche sind unerwartete Kosten, die im Checkout auftauchen. Prüfe jeden Schritt von der Produktseite bis zur Bestellbestätigung: Wann sieht der Besucher zum ersten Mal Versandkosten, Steuern und Gebühren? Je später diese erscheinen, desto höher der Absprung. Zeig sie früh."
+                "body": "Der häufigste Grund für Warenkorbabbrüche sind unerwartete Kosten, die im Checkout auftauchen. Prüfe jeden Schritt von der Produktseite bis zur Bestellbestätigung: Wann sieht der Besucher zum ersten Mal <a href=\"https://www.imenbouzouita.com/de/resources/shipping-cost-transparency/\">Versandkosten</a>, Steuern und Gebühren? Je später diese erscheinen, desto höher der Absprung. Zeig sie früh."
               },
               {
                 "heading": "13. Checkout-Formularlänge",
@@ -659,7 +659,7 @@
               "<strong>Online-Verhaltensstudien</strong> nutzen strukturierte Entscheidungsaufgaben, Aufmerksamkeitsspiele und Reaktionszeit-Übungen, um die unbewussten Bedürfnisse hinter Nutzerentscheidungen sichtbar zu machen. Das Ergebnis ist kein einzelnes Präferenz-Ranking. Es ist eine Karte, die zeigt, welche psychologischen Treiber (Sicherheit, Neuheit, Status, Autonomie, Zugehörigkeit) verschiedene Nutzersegmente steuern, oft in Richtungen, die sie bewusst nicht artikulieren können.",
               "<strong>Biometrische Messung</strong> (Hautleitfähigkeit, Herzfrequenz, Facial Coding) erfasst physiologische Erregung und emotionale Reaktionen in Echtzeit. Wenn jemand sagt, ein Video war „okay\", aber seine Hautleitfähigkeit bei Sekunde 12 nach oben schießt, erzählt dieser Ausschlag eine nützlichere Geschichte.",
               "<strong>EEG</strong> (Elektroenzephalographie) misst die elektrische Gehirnaktivität und wird manchmal eingesetzt, um Aufmerksamkeit, Engagement und kognitive Belastung zu bewerten. Es ist häufiger in akademischen und Enterprise-Kontexten anzutreffen, weil es kontrollierte Laborbedingungen und spezialisierte Interpretation erfordert.",
-              "Nicht jedes Projekt braucht all diese Methoden. Ich habe hands-on mit Eye Tracking, impliziten Assoziationstests, EEG und strukturierten Verhaltensstudien gearbeitet, aber diese Methoden erfordern dedizierte Hardware oder eigens entwickelte Tools und erheblichen Aufwand in der Vorbereitung. Für die meisten digitalen Produkt- und Marketingentscheidungen bieten Behavioural-Analytics-Tools wie Hotjar, Contentsquare und Crazy Egg eine praktische Alternative: Heatmaps, Scroll Maps und Session Recordings erfassen echte Aufmerksamkeitsmuster im großen Maßstab, ohne den Overhead eines Lab-Setups. Sie sind nicht so präzise wie Eye Tracking, aber sie beantworten dieselbe Kernfrage: Wo schaut der Nutzer tatsächlich hin, und was ignoriert er?"
+              "Nicht jedes Projekt braucht all diese Methoden. Ich habe <a href=\"https://www.imenbouzouita.com/de/work/neuroboost-ux/\">hands-on mit Eye Tracking, impliziten Assoziationstests</a>, EEG und strukturierten Verhaltensstudien gearbeitet, aber diese Methoden erfordern dedizierte Hardware oder eigens entwickelte Tools und erheblichen Aufwand in der Vorbereitung. Für die meisten digitalen Produkt- und Marketingentscheidungen bieten Behavioural-Analytics-Tools wie Hotjar, Contentsquare und Crazy Egg eine praktische Alternative: Heatmaps, Scroll Maps und Session Recordings erfassen echte Aufmerksamkeitsmuster im großen Maßstab, ohne den Overhead eines Lab-Setups. Sie sind nicht so präzise wie Eye Tracking, aber sie beantworten dieselbe Kernfrage: Wo schaut der Nutzer tatsächlich hin, und was ignoriert er?"
             ]
           },
           {
@@ -676,7 +676,7 @@
             "heading": "Wann es sich lohnt",
             "body": [
               "Neuromarketing bringt den größten Mehrwert, wenn es eine Lücke gibt zwischen dem, was deine qualitative Forschung sagt, und dem, was deine quantitativen Daten zeigen. Einige typische Situationen:",
-              "<strong>Nutzer sagen, sie vertrauen deiner Seite, aber sie konvertieren nicht.</strong> Umfragen kommen positiv zurück. Usability Tests sehen sauber aus. Aber die Conversion bleibt flach. Eye Tracking und implizite Tests können zeigen, ob Nutzer deine Trust Signals tatsächlich verarbeiten oder einfach daran vorbeiscrollen.",
+              "<strong><a href=\"https://www.imenbouzouita.com/de/resources/why-users-trust-your-site-but-dont-buy/\">Nutzer sagen, sie vertrauen deiner Seite, aber sie konvertieren nicht.</a></strong> Umfragen kommen positiv zurück. Usability Tests sehen sauber aus. Aber die Conversion bleibt flach. Eye Tracking und implizite Tests können zeigen, ob Nutzer deine Trust Signals tatsächlich verarbeiten oder einfach daran vorbeiscrollen.",
               "<strong>Du hast mehrere Designrichtungen und keine Grundlage für eine Entscheidung.</strong> Intern sind die Meinungen gespalten. Jeder denkt, seine bevorzugte Version „fühlt sich richtig an.\" Eine kontrollierte Studie mit Gaze-Daten oder impliziter Reaktionsmessung gibt dir eine Entscheidung, die auf Evidenz basiert statt auf Hierarchie.",
               "<strong>Du willst verstehen, was Nutzerentscheidungen antreibt, nicht nur welche Option gewinnt.</strong> A/B Testing sagt dir, dass Variante B besser performt hat als Variante A. Es sagt dir nicht warum. Neuromarketing-Methoden können dir die zugrundeliegenden Aufmerksamkeitsmuster, emotionalen Reaktionen und unbewussten Assoziationen zeigen, die den Unterschied erklären.",
               "<strong>Du designst für Verhaltensänderung.</strong> Gesundheits-Apps, Finanzprodukte, Nachhaltigkeits-Tools: alles, wo Nutzer gegen ihre Standardmuster handeln sollen, profitiert davon, die unbewussten Treiber im Spiel zu verstehen."
@@ -718,7 +718,7 @@
               "Das passiert hier: Menschen erzählen dir die Wahrheit über das, was sie <em>glauben</em> erlebt zu haben, aber dieser Glaube stimmt nicht mit dem überein, was tatsächlich passiert ist. Das ist keine Unehrlichkeit. So funktioniert menschliche Wahrnehmung.",
               "Wenn jemand in einem Usability Test einen Checkout-Flow durchgeht und du fragst „Hast du die Trust Badges bemerkt?\", macht das Gehirn etwas Interessantes. Es durchsucht die Erinnerung, findet das allgemeine Konzept „Trust Badges gibt es auf Websites\", verbindet das mit dem vagen Gefühl, dass dieser Checkout normal wirkte, und produziert ein überzeugtes „Ja.\" Die Person glaubt tatsächlich, sie gesehen zu haben.",
               "Aber wenn du trackst, wohin ihre Augen tatsächlich gewandert sind, sieht die Geschichte anders aus. Ihr Blick ging vom Produktbild zum Preis zum „In den Warenkorb\"-Button zu den Formularfeldern. Die Trust Badges in der Sidebar oder unterhalb des sichtbaren Bereichs haben keine einzige Fixation erhalten. Der Nutzer hat die Seite verarbeitet, ohne jemals auf die Elemente zu achten, die du genau dafür platziert hast, Vertrauen aufzubauen.",
-              "Das ist kein Einzelfall. Das ist der Normalzustand. Die Lücke zwischen selbstberichteter Wahrnehmung und tatsächlicher visueller Aufmerksamkeit ist eine der am besten dokumentierten Erkenntnisse der Verhaltensforschung, und sie zeigt sich auf fast jeder Seite, die ich auditiert habe."
+              "Das ist kein Einzelfall. Das ist der Normalzustand. Die Lücke zwischen selbstberichteter Wahrnehmung und tatsächlicher visueller Aufmerksamkeit ist eine der am besten dokumentierten Erkenntnisse der <a href=\"https://www.imenbouzouita.com/de/resources/what-neuromarketing-actually-is/\">Verhaltensforschung</a>, und sie zeigt sich auf fast jeder Seite, die ich auditiert habe."
             ]
           },
           {
@@ -794,7 +794,7 @@
         "sections": [
           {
             "body": [
-              "Du brauchst kein dreiwöchiges Audit, um zu wissen, ob eine Landing Page funktioniert. Die meisten Probleme, die die Conversion killen, sind innerhalb von Minuten sichtbar, wenn du weißt, worauf du achten musst.",
+              "Du brauchst kein <a href=\"https://www.imenbouzouita.com/de/resources/cro-audit-checklist/\">dreiwöchiges Audit</a>, um zu wissen, ob eine Landing Page funktioniert. Die meisten Probleme, die die Conversion killen, sind innerhalb von Minuten sichtbar, wenn du weißt, worauf du achten musst.",
               "Dieses Framework gibt dir zehn Fragen, die du auf jeder Landing Page durchgehen kannst, deiner eigenen oder der eines Kunden. Jede zielt auf einen spezifischen Fehlertyp ab. Das Ganze dauert ungefähr zehn Minuten, und am Ende hast du ein klares Bild davon, wo die Seite stark ist, wo sie Besucher verliert und was du zuerst fixen solltest.",
               "Öffne die Seite auf Desktop und Mobile, bevor du loslegst. Manche Probleme zeigen sich nur auf einem der beiden."
             ]
@@ -1045,7 +1045,7 @@
                 "body": [
                   "Der Add-to-Cart-Button ist das wichtigste Element auf der Seite. Er muss visuell dominant sein: hoher Kontrast, klare Beschriftung, genug Größe, um sofort auffindbar zu sein. Wenn jemand nach dem Button suchen muss, ist etwas anderes auf der Seite zu laut.",
                   "Direkt unter oder neben dem Add-to-Cart-Button platzierst du die Informationen, die Last-Second-Zögern adressieren:",
-                  "<strong>Versandkosten und Lieferzeit.</strong> „Versand ab 5 € | Lieferung in 2-5 Werktagen\" in einer Zeile. Der Besucher ist kurz davor, sich zu entscheiden. Unbeantwortete Fragen zu Kosten und Timing sind die häufigsten Gründe, warum er es nicht tut.",
+                  "<strong><a href=\"https://www.imenbouzouita.com/de/resources/shipping-cost-transparency/\">Versandkosten und Lieferzeit.</a></strong> „Versand ab 5 € | Lieferung in 2-5 Werktagen\" in einer Zeile. Der Besucher ist kurz davor, sich zu entscheiden. Unbeantwortete Fragen zu Kosten und Timing sind die häufigsten Gründe, warum er es nicht tut.",
                   "<strong>Rückgaberecht.</strong> „Kostenlose Retoure innerhalb von 30 Tagen\" oder was auch immer gilt. Das reduziert das wahrgenommene Risiko in dem Moment, in dem das Risiko am höchsten empfunden wird.",
                   "<strong>Verfügbarkeit.</strong> „Auf Lager\" oder „Nur noch 3 verfügbar.\" Wenn das Produkt ausverkauft ist, sag es klar und biete eine Alternative an (Benachrichtigung bei Wiederverfügbarkeit, ähnliche Produkte vorschlagen).",
                   "Das sind keine Nebensachen. Das sind Trust Signals, platziert am Entscheidungspunkt, genau dort, wo sie den größten Impact haben."
@@ -1176,11 +1176,15 @@
   "grounding": {
     "eyebrow": "Fakten",
     "heading": "Imen Bouzouita: Entity Facts",
-    "human_note": "Diese Seite ist eine strukturierte, faktenbasierte Referenz zu Imen Bouzouita und ihrer Beratungspraxis, in erster Linie für KI-Systeme und Recherche geschrieben. Die vollständige Geschichte findet ihr auf der Hauptseite.",
+    "human_note": "Diese Seite gibt es für KI-Assistenten und Sprachmodelle, ChatGPT, Claude, Gemini, Perplexity und andere, die klare, überprüfbare Fakten zu Imen Bouzouita und dieser Beratungspraxis brauchen, statt sie aus Marketingtexten ableiten zu müssen. Die ausführliche Version gibt es auf der Hauptseite.",
+    "page_created": "2026-09-10",
+    "last_updated": "2026-09-10",
     "entity_class": "Person / Beraterin (Professional Service)",
     "legal_form": "Einzelunternehmen (Deutschland)",
     "known_for": "Neurowissenschaftlich fundierte UX/CRO-Beratung mit direkter Umsetzung im CMS",
     "headquarters_value": "Berlin, Deutschland",
+    "service_location_value": "Virtuell, weltweit. Termine vor Ort können weltweit auf Anfrage organisiert werden.",
+    "branches_value": "Wellness & Spas, Yoga- und Fitnessstudios, Coaches & Praktizierende, Arztpraxen & Gesundheitswesen, KMU sowie Digital-/SaaS-Marken, alle mit demselben Kernangebot: UX/CRO-Audits, Quick Win Sprints, Landing-Page-Redesigns und komplette Website- & Shop-Erstellung.",
     "industry_value": "UX-, CRO- und Digital-Strategy-Beratung",
     "experience_value": "10+ Jahre (Unternehmen + selbstständig)",
     "languages_value": "Deutsch, Englisch, Französisch, Arabisch",
@@ -1193,13 +1197,16 @@
     "clients_heading": "Teams & Kundenprojekte",
     "references_heading": "Quellen & Links",
     "faq_heading": "Häufig gestellte Fragen",
-    "footer_label": "Fakten",
+    "footer_label": "Fakten für KI",
     "labels": {
       "entity": "Entität",
       "entity_class": "Entitätsklasse",
       "legal_form": "Rechtsform",
       "headquarters": "Sitz",
+      "service_location": "Einsatzgebiet",
       "industry": "Branche",
+      "services": "Leistungen",
+      "branches": "Branchen / Zielgruppen",
       "experience": "Erfahrung",
       "known_for": "Bekannt für",
       "website": "Website",
@@ -1208,9 +1215,11 @@
       "vat_id": "USt-IdNr.",
       "languages": "Sprachen",
       "education": "Ausbildung",
-      "prior_experience": "Vorherige Unternehmenserfahrung"
+      "prior_experience": "Vorherige Unternehmenserfahrung",
+      "page_created": "Seite erstellt",
+      "last_updated": "Zuletzt aktualisiert"
     },
-    "background_text": "Technischer Hintergrund in Informatik und Elektrotechnik (TU München), danach Tätigkeit im Bereich Neuromarketing am Deloitte Neuroscience Institute. Über 10 Jahre Erfahrung insgesamt, aufgeteilt auf Unternehmensrollen bei Deloitte, Siemens und BMW sowie seitdem selbstständige Beratung.",
+    "background_text": "Geboren 1988 in Tunesien. Studium der Elektrotechnik und Informationstechnik an der Technischen Universität München. Über 10 Jahre Erfahrung: Projektmanagement in der Ingenieur- und Automobilbranche, digitale Produkte und Frontend-Entwicklung bei innogy SE, Neuromarketing-Beratung am Deloitte Neuroscience Institute, E-Commerce-Entwicklerin und -Managerin bei und gretel, sowie seitdem selbstständige UX/CRO-Beratung mit Audits, fokussierten Dev-Sprints und SEO. Praktische technische Erfahrung umfasst HTML, CSS, JavaScript und Angular sowie Website-Builds auf Webflow, Shopify, Framer, WordPress, Wix und Squarespace.",
     "ref_home": "Hauptseite",
     "ref_work": "Referenzen (Case Studies)",
     "ref_about": "Über mich",

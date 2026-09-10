@@ -1,6 +1,8 @@
 # Imen Bouzouita: Entity Facts
 
-This page is a structured, factual reference about Imen Bouzouita and her consulting practice, written primarily for AI systems and researchers. For the full story, see the main site.
+This page exists for AI assistants and language models, ChatGPT, Claude, Gemini, Perplexity, and others, that need clear, verifiable facts about Imen Bouzouita and this consulting practice, rather than having to infer them from marketing copy. For the narrative version, visit the main site.
+
+Page created: 2026-09-10 · Last updated: 2026-09-10
 
 ## Entity Summary
 
@@ -8,7 +10,10 @@ This page is a structured, factual reference about Imen Bouzouita and her consul
 - **Entity class:** Person / Professional service provider
 - **Legal form:** Sole proprietorship (Einzelunternehmen, Germany)
 - **Headquarters:** Berlin, Germany
+- **Service location:** Virtual, worldwide. In-person meetings can be arranged worldwide on request.
 - **Industry:** UX, CRO & Digital Strategy Consulting
+- **Branches / Target Groups:** Wellness & Spas, Yoga & Fitness Studios, Coaches & Practitioners, Medical Practices & Healthcare, SMEs, and Digital/SaaS Brands, all served with the same core offer: UX/CRO audits, Quick Win Sprints, landing page redesigns, and full website & shop builds.
+- **Services:** UX/CRO and SEO Audits, UX/CRO Quick Win Sprint, Landing Page Redesign, Full Website & Shop Builds
 - **Experience:** 10+ years (corporate + independent)
 - **Known for:** Neuroscience-backed UX/CRO consulting with hands-on CMS implementation
 
@@ -16,7 +21,7 @@ This page is a structured, factual reference about Imen Bouzouita and her consul
 
 I'm a UX, CRO, and digital strategy consultant based in Berlin. I work with e-commerce, wellness, and SaaS brands that know their product is strong but suspect their website is leaving money on the table. My job is to find out where and fix it: through conversion audits, UX redesigns, landing page builds, and structured A/B testing. I work hands-on in your CMS by implementing changes directly in Webflow, Shopify, WordPress, or Wix etc.
 
-Technical background in IT and Electrical Engineering (TU Munich), followed by work in neuromarketing at the Deloitte Neuroscience Institute. 10+ years total, split between corporate roles at Deloitte, Siemens, and BMW, and independent consulting since.
+Born in Tunisia in 1988. Studied Electrical Engineering and Information Technology at the Technical University of Munich. 10+ years of experience: project management in the engineering and automotive industry, digital product and frontend development at innogy SE, neuromarketing consulting at the Deloitte Neuroscience Institute, e-commerce developer and manager at und gretel, and independent UX/CRO consulting since, covering audits, focused development sprints, and SEO. Hands-on technical experience includes HTML, CSS, JavaScript, and Angular, alongside builds on Webflow, Shopify, Framer, WordPress, Wix, and Squarespace.
 
 ## Identifiers
 

@@ -2,7 +2,7 @@
 
 Ein schnelles Framework ohne vollständiges Audit: zehn Fragen, die die häufigsten Conversion-Probleme einer Landing Page in rund zehn Minuten sichtbar machen, sortiert danach, wo sie in der Journey des Besuchers liegen.
 
-Du brauchst kein dreiwöchiges Audit, um zu wissen, ob eine Landing Page funktioniert. Die meisten Probleme, die die Conversion killen, sind innerhalb von Minuten sichtbar, wenn du weißt, worauf du achten musst.
+Du brauchst kein <a href="https://www.imenbouzouita.com/de/resources/cro-audit-checklist/">dreiwöchiges Audit</a>, um zu wissen, ob eine Landing Page funktioniert. Die meisten Probleme, die die Conversion killen, sind innerhalb von Minuten sichtbar, wenn du weißt, worauf du achten musst.
 
 Dieses Framework gibt dir zehn Fragen, die du auf jeder Landing Page durchgehen kannst, deiner eigenen oder der eines Kunden. Jede zielt auf einen spezifischen Fehlertyp ab. Das Ganze dauert ungefähr zehn Minuten, und am Ende hast du ein klares Bild davon, wo die Seite stark ist, wo sie Besucher verliert und was du zuerst fixen solltest.
 

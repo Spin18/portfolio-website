@@ -17,7 +17,7 @@ A direct-to-consumer brand with a solid e-commerce operation: healthy traffic, s
 
 As shop manager and developer, I owned the full e-commerce operation, not just the analysis. I combined session recordings and heatmaps with a full funnel teardown, from ad landing to order confirmation, to pinpoint where the real conversion gaps were versus where the team assumed they might be.
 
-Instead of auditing from outside and handing over a report, I prioritised findings by expected lift versus effort and shipped the fixes myself: checkout form improvements, shipping-cost transparency, mobile PDP layout adjustments. For higher-risk changes, I set up A/B tests to validate before full rollout. New product launches ran in parallel, each one informed by what the data was showing about user behaviour on existing pages.
+Instead of auditing from outside and handing over a report, I prioritised findings by expected lift versus effort and shipped the fixes myself: checkout form improvements, <a href="https://www.imenbouzouita.com/resources/shipping-cost-transparency/">shipping-cost transparency</a>, <a href="https://www.imenbouzouita.com/resources/product-page-anatomy/">mobile PDP layout adjustments</a>. For higher-risk changes, I set up A/B tests to validate before full rollout. New product launches ran in parallel, each one informed by what the data was showing about user behaviour on existing pages.
 
 ## What shipped
 

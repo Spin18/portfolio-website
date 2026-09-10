@@ -308,7 +308,7 @@
         ],
         [
           "The takeaway",
-          "Standard testing captures what people are willing and able to tell you. Neuromarketing methods capture what they can't. In both projects, the gap between those two was exactly where the problem lived, and exactly where the solution came from."
+          "Standard testing captures what people are willing and able to tell you. <a href=\"https://www.imenbouzouita.com/resources/what-neuromarketing-actually-is/\">Neuromarketing methods</a> capture what they can't. In both projects, the gap between those two was exactly where the problem lived, and exactly where the solution came from."
         ]
       ],
       "cover": "work/neuroboost-ux/cover.jpg",
@@ -352,7 +352,7 @@
           "The approach",
           [
             "As shop manager and developer, I owned the full e-commerce operation, not just the analysis. I combined session recordings and heatmaps with a full funnel teardown, from ad landing to order confirmation, to pinpoint where the real conversion gaps were versus where the team assumed they might be.",
-            "Instead of auditing from outside and handing over a report, I prioritised findings by expected lift versus effort and shipped the fixes myself: checkout form improvements, shipping-cost transparency, mobile PDP layout adjustments. For higher-risk changes, I set up A/B tests to validate before full rollout. New product launches ran in parallel, each one informed by what the data was showing about user behaviour on existing pages."
+            "Instead of auditing from outside and handing over a report, I prioritised findings by expected lift versus effort and shipped the fixes myself: checkout form improvements, <a href=\"https://www.imenbouzouita.com/resources/shipping-cost-transparency/\">shipping-cost transparency</a>, <a href=\"https://www.imenbouzouita.com/resources/product-page-anatomy/\">mobile PDP layout adjustments</a>. For higher-risk changes, I set up A/B tests to validate before full rollout. New product launches ran in parallel, each one informed by what the data was showing about user behaviour on existing pages."
           ]
         ],
         [
@@ -544,7 +544,7 @@
               },
               {
                 "heading": "8. Social proof: present vs. visible",
-                "body": "Having testimonials on the page isn't enough. Track whether visitors actually see them. In my eye-tracking work, I've consistently found that users self-report noticing trust signals that their eyes never landed on. If your reviews sit below three screens of content, they're decoration."
+                "body": "Having testimonials on the page isn't enough. Track whether visitors actually see them. In my eye-tracking work, I've consistently found that users self-report noticing <a href=\"https://www.imenbouzouita.com/resources/why-users-trust-your-site-but-dont-buy/\">trust signals</a> that their eyes never landed on. If your reviews sit below three screens of content, they're decoration."
               },
               {
                 "heading": "9. Image and media quality",
@@ -565,7 +565,7 @@
               },
               {
                 "heading": "12. Surprise costs",
-                "body": "The number one reason for cart abandonment is unexpected costs appearing at checkout. Audit every step from product page to order confirmation: when does the visitor first see shipping costs, taxes, and fees? The later these appear, the higher your drop-off. Show them early."
+                "body": "The number one reason for cart abandonment is unexpected costs appearing at checkout. Audit every step from product page to order confirmation: when does the visitor first see <a href=\"https://www.imenbouzouita.com/resources/shipping-cost-transparency/\">shipping costs</a>, taxes, and fees? The later these appear, the higher your drop-off. Show them early."
               },
               {
                 "heading": "13. Checkout form length",
@@ -658,7 +658,7 @@
               "<strong>Online behavioural studies</strong> use structured decision tasks, attention games, and response-time exercises to surface the subconscious needs driving user decisions. The output isn't a single preference ranking. It's a map of which psychological drivers (security, novelty, status, autonomy, belonging) are steering different user segments, often in directions they can't consciously articulate.",
               "<strong>Biometric measurement</strong> (galvanic skin response, heart rate, facial coding) tracks physiological arousal and emotional responses in real time. When someone says a video was \"fine\" but their skin conductance spiked at the 12-second mark, that spike tells a more useful story.",
               "<strong>EEG</strong> (electroencephalography) measures brain electrical activity and is sometimes used to assess attention, engagement, and cognitive load. It's more common in academic and large-enterprise settings because it requires controlled lab conditions and specialist interpretation.",
-              "Not every project needs all of these. I've worked hands-on with eye tracking, implicit association tests, EEG and structured behavioural studies, but those methods require dedicated hardware or custom-built tools and significant setup time. For most digital product and marketing decisions, behavioural analytics tools like Hotjar, Contentsquare and Crazy Egg offer a practical alternative: heatmaps, scroll maps, and session recordings capture real attention patterns at scale, without the overhead of a lab setup. They're not as precise as eye tracking, but they answer the same core question: where is the user actually looking, and what are they ignoring?"
+              "Not every project needs all of these. I've worked hands-on with <a href=\"https://www.imenbouzouita.com/work/neuroboost-ux/\">eye tracking, implicit association tests</a>, EEG and structured behavioural studies, but those methods require dedicated hardware or custom-built tools and significant setup time. For most digital product and marketing decisions, behavioural analytics tools like Hotjar, Contentsquare and Crazy Egg offer a practical alternative: heatmaps, scroll maps, and session recordings capture real attention patterns at scale, without the overhead of a lab setup. They're not as precise as eye tracking, but they answer the same core question: where is the user actually looking, and what are they ignoring?"
             ]
           },
           {
@@ -675,7 +675,7 @@
             "heading": "When it's worth using",
             "body": [
               "Neuromarketing adds the most value when there's a gap between what your qualitative research says and what your quantitative data shows. Some common situations:",
-              "<strong>Users say they trust your site, but they don't convert.</strong> Surveys come back positive. Usability tests look clean. But conversion stays flat. Eye tracking and implicit testing can reveal whether users actually process your trust signals or just scroll past them.",
+              "<strong><a href=\"https://www.imenbouzouita.com/resources/why-users-trust-your-site-but-dont-buy/\">Users say they trust your site, but they don't convert.</a></strong> Surveys come back positive. Usability tests look clean. But conversion stays flat. Eye tracking and implicit testing can reveal whether users actually process your trust signals or just scroll past them.",
               "<strong>You have multiple design directions and no way to choose.</strong> Internal opinions are split. Everyone thinks their preferred version \"feels right.\" A controlled study with gaze data or implicit response measurement gives you a decision backed by evidence instead of hierarchy.",
               "<strong>You want to understand what's driving user decisions, not just which option wins.</strong> A/B testing tells you that Variant B outperformed Variant A. It doesn't tell you why. Neuromarketing methods can show you the underlying attention patterns, emotional responses, and subconscious associations that explain the difference.",
               "<strong>You're designing for behaviour change.</strong> Health apps, financial products, sustainability tools: anything where you need users to act against their default patterns benefits from understanding the subconscious drivers at play."
@@ -717,7 +717,7 @@
               "Here's what's happening: people are telling you the truth about what they <em>believe</em> they experienced, but that belief doesn't match what actually happened. This isn't dishonesty. It's how human perception works.",
               "When someone walks through a checkout flow in a usability test and you ask \"Did you notice the trust badges?\", their brain does something interesting. It scans their memory, finds the general concept of \"trust badges exist on websites,\" connects that to the vague feeling that this checkout seemed normal, and produces a confident \"yes.\" They genuinely believe they saw them.",
               "But if you track where their eyes actually went, the story is different. Their gaze moved from product image to price to the \"Add to Cart\" button to the form fields. The trust badges, sitting in the sidebar or below the fold, never received a single fixation. The user processed the page without ever attending to the elements you put there specifically to build trust.",
-              "This isn't an edge case. It's the default. The gap between self-reported awareness and actual visual attention is one of the most well-documented findings in behavioural research, and it shows up on nearly every site I've audited."
+              "This isn't an edge case. It's the default. The gap between self-reported awareness and actual visual attention is one of the most well-documented findings in <a href=\"https://www.imenbouzouita.com/resources/what-neuromarketing-actually-is/\">behavioural research</a>, and it shows up on nearly every site I've audited."
             ]
           },
           {
@@ -793,7 +793,7 @@
         "sections": [
           {
             "body": [
-              "You don't need a three-week audit to know whether a landing page is working. Most of the problems that kill conversion are visible within minutes, if you know what to look for.",
+              "You don't need a <a href=\"https://www.imenbouzouita.com/resources/cro-audit-checklist/\">three-week audit</a> to know whether a landing page is working. Most of the problems that kill conversion are visible within minutes, if you know what to look for.",
               "This framework gives you ten questions to run through on any landing page, yours or a client's. Each one targets a specific failure mode. The whole thing takes about ten minutes, and by the end you'll have a clear picture of where the page is strong, where it's leaking, and what to fix first.",
               "Grab the page on both desktop and mobile before you start. Some of these only show up on one or the other."
             ]
@@ -1044,7 +1044,7 @@
                 "body": [
                   "The Add to Cart button is the most important element on the page. It needs to be visually dominant: high contrast, clear label, enough size to be immediately findable. If someone has to search for the button, something else on the page is too loud.",
                   "Directly below or beside the Add to Cart button, place the information that addresses last-second hesitation:",
-                  "<strong>Shipping cost and delivery time.</strong> \"Versand ab 5 € | Lieferung in 2-5 Werktagen\" in one line. The visitor is about to commit. Unanswered questions about cost and timing are the most common reasons they don't.",
+                  "<strong><a href=\"https://www.imenbouzouita.com/resources/shipping-cost-transparency/\">Shipping cost and delivery time.</a></strong> \"Versand ab 5 € | Lieferung in 2-5 Werktagen\" in one line. The visitor is about to commit. Unanswered questions about cost and timing are the most common reasons they don't.",
                   "<strong>Return policy.</strong> \"Kostenlose Retoure innerhalb von 30 Tagen\" or whatever applies. This reduces perceived risk at the moment risk feels highest.",
                   "<strong>Availability.</strong> \"Auf Lager\" or \"Nur noch 3 verfügbar.\" If the product is out of stock, say so clearly and offer an alternative (notify when back in stock, suggest similar products).",
                   "These aren't afterthoughts. They're trust signals placed at the decision point, which is exactly where they have the most impact."
@@ -1175,11 +1175,15 @@
   "grounding": {
     "eyebrow": "Facts",
     "heading": "Imen Bouzouita: Entity Facts",
-    "human_note": "This page is a structured, factual reference about Imen Bouzouita and her consulting practice, written primarily for AI systems and researchers. For the full story, see the main site.",
+    "human_note": "This page exists for AI assistants and language models, ChatGPT, Claude, Gemini, Perplexity, and others, that need clear, verifiable facts about Imen Bouzouita and this consulting practice, rather than having to infer them from marketing copy. For the narrative version, visit the main site.",
+    "page_created": "2026-09-10",
+    "last_updated": "2026-09-10",
     "entity_class": "Person / Professional service provider",
     "legal_form": "Sole proprietorship (Einzelunternehmen, Germany)",
     "known_for": "Neuroscience-backed UX/CRO consulting with hands-on CMS implementation",
     "headquarters_value": "Berlin, Germany",
+    "service_location_value": "Virtual, worldwide. In-person meetings can be arranged worldwide on request.",
+    "branches_value": "Wellness & Spas, Yoga & Fitness Studios, Coaches & Practitioners, Medical Practices & Healthcare, SMEs, and Digital/SaaS Brands, all served with the same core offer: UX/CRO audits, Quick Win Sprints, landing page redesigns, and full website & shop builds.",
     "industry_value": "UX, CRO & Digital Strategy Consulting",
     "experience_value": "10+ years (corporate + independent)",
     "languages_value": "German, English, French, Arabic",
@@ -1192,13 +1196,16 @@
     "clients_heading": "Teams & Client Work",
     "references_heading": "References",
     "faq_heading": "Frequently Asked Questions",
-    "footer_label": "Facts",
+    "footer_label": "Facts for AI",
     "labels": {
       "entity": "Entity",
       "entity_class": "Entity class",
       "legal_form": "Legal form",
       "headquarters": "Headquarters",
+      "service_location": "Service location",
       "industry": "Industry",
+      "services": "Services",
+      "branches": "Branches / Target Groups",
       "experience": "Experience",
       "known_for": "Known for",
       "website": "Website",
@@ -1207,9 +1214,11 @@
       "vat_id": "VAT ID",
       "languages": "Languages",
       "education": "Education",
-      "prior_experience": "Prior corporate experience"
+      "prior_experience": "Prior corporate experience",
+      "page_created": "Page created",
+      "last_updated": "Last updated"
     },
-    "background_text": "Technical background in IT and Electrical Engineering (TU Munich), followed by work in neuromarketing at the Deloitte Neuroscience Institute. 10+ years total, split between corporate roles at Deloitte, Siemens, and BMW, and independent consulting since.",
+    "background_text": "Born in Tunisia in 1988. Studied Electrical Engineering and Information Technology at the Technical University of Munich. 10+ years of experience: project management in the engineering and automotive industry, digital product and frontend development at innogy SE, neuromarketing consulting at the Deloitte Neuroscience Institute, e-commerce developer and manager at und gretel, and independent UX/CRO consulting since, covering audits, focused development sprints, and SEO. Hands-on technical experience includes HTML, CSS, JavaScript, and Angular, alongside builds on Webflow, Shopify, Framer, WordPress, Wix, and Squarespace.",
     "ref_home": "Main site",
     "ref_work": "Case studies",
     "ref_about": "About",

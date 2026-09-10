@@ -885,6 +885,8 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 }
 .case-body h2 { color: var(--ink); margin-top: 1.4rem; font-size: clamp(1.5rem, 2.6vw, 2rem); }
 .case-body h3 { color: var(--moonstone-deep); margin-top: 0.6rem; font-size: clamp(1.1rem, 1.8vw, 1.3rem); }
+.case-body a { color: var(--coral-text); text-decoration: underline; text-underline-offset: 2px; }
+.case-body a:hover { text-decoration-thickness: 2px; }
 .case-highlight {
   font-family: var(--font-display);
   font-style: italic;
@@ -908,6 +910,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .legal-content li::before { content: '—'; position: absolute; left: 0; color: var(--moonstone); }
 
 /* ---------- facts / grounding page ---------- */
+.facts-meta-line { font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.6rem; }
 .facts-table { display: grid; gap: 0; margin-block: 1.2rem 1.8rem; }
 .facts-row {
   display: grid;
@@ -1139,7 +1142,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
         <h3>7. Platzierung des Werteversprechens</h3>
           <p>Wo steht der Hauptgrund zu kaufen tatsächlich auf der Seite? Wenn Besucher erst an einem Stockfoto, einem Markenslogan und drei Absätzen Unternehmensgeschichte vorbeiscrollen müssen, bevor sie erfahren, was das Produkt für sie tut, hast du bereits einen Teil deiner Zielgruppe verloren. Das Werteversprechen gehört above the fold, in klarer Sprache.</p>
         <h3>8. Social Proof: vorhanden vs. sichtbar</h3>
-          <p>Testimonials auf der Seite zu haben reicht nicht. Prüfe, ob Besucher sie tatsächlich sehen. In meiner Eye-Tracking-Arbeit habe ich immer wieder festgestellt, dass Nutzer angeben, Trust Signals wahrgenommen zu haben, die ihre Augen nie fixiert haben. Wenn deine Bewertungen drei Bildschirmlängen unter dem Content sitzen, sind sie Dekoration.</p>
+          <p>Testimonials auf der Seite zu haben reicht nicht. Prüfe, ob Besucher sie tatsächlich sehen. In meiner Eye-Tracking-Arbeit habe ich immer wieder festgestellt, dass Nutzer angeben, <a href="https://www.imenbouzouita.com/de/resources/why-users-trust-your-site-but-dont-buy/">Trust Signals</a> wahrgenommen zu haben, die ihre Augen nie fixiert haben. Wenn deine Bewertungen drei Bildschirmlängen unter dem Content sitzen, sind sie Dekoration.</p>
         <h3>9. Bild- und Medienqualität</h3>
           <p>Produktbilder haben mehr Einfluss auf die Conversion als die meisten Textänderungen. Prüfe einheitliche Größen, Zoom-Funktionalität auf Mobile, Lifestyle-Kontext (das Produkt im Einsatz, nicht nur auf Weiß) und Ladezeit. Ein schönes Bild, das auf Mobile vier Sekunden zum Laden braucht, ist schlechter als ein solides, das sofort da ist.</p>
         <h3>10. CTA-Klarheit und Kontrast</h3>
@@ -1149,7 +1152,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
         <h3>11. Warenkorb-Sichtbarkeit und Bearbeitbarkeit</h3>
           <p>Können Besucher einfach sehen, was in ihrem Warenkorb liegt, ohne die aktuelle Seite zu verlassen? Können sie Mengen ändern oder Artikel entfernen, ohne Friction? Ein Warenkorb, der für eine Mengenänderung einen kompletten Seitenreload braucht, ist ein Warenkorb, den Leute abbrechen.</p>
         <h3>12. Überraschungskosten</h3>
-          <p>Der häufigste Grund für Warenkorbabbrüche sind unerwartete Kosten, die im Checkout auftauchen. Prüfe jeden Schritt von der Produktseite bis zur Bestellbestätigung: Wann sieht der Besucher zum ersten Mal Versandkosten, Steuern und Gebühren? Je später diese erscheinen, desto höher der Absprung. Zeig sie früh.</p>
+          <p>Der häufigste Grund für Warenkorbabbrüche sind unerwartete Kosten, die im Checkout auftauchen. Prüfe jeden Schritt von der Produktseite bis zur Bestellbestätigung: Wann sieht der Besucher zum ersten Mal <a href="https://www.imenbouzouita.com/de/resources/shipping-cost-transparency/">Versandkosten</a>, Steuern und Gebühren? Je später diese erscheinen, desto höher der Absprung. Zeig sie früh.</p>
         <h3>13. Checkout-Formularlänge</h3>
           <p>Zähle die Felder. Dann zähle die, die tatsächlich für die Transaktion erforderlich sind. Name, E-Mail, Adresse, Zahlung. Alles andere ist eine Frage, die du den Besuchern stellst, bevor sie dir Geld geben können. Jedes unnötige Feld ist eine kleine Ausgangstür.</p>
         <h3>14. Gast-Checkout</h3>
@@ -1208,7 +1211,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <a href="../../terms.html">AGB</a>
           <a href="../../privacy.html">Datenschutz</a>
           <a href="../../impressum.html">Impressum</a>
-          <a href="../../facts/">Fakten</a>
+          <a href="../../facts/">Fakten für KI</a>
           <button type="button" class="link-button" data-cookie-settings>Cookie-Einstellungen</button>
         </div>
       </div>

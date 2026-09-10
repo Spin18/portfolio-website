@@ -40,4 +40,4 @@ Project 2: A clear recommendation backed by physiological data, not stakeholder 
 
 ## The takeaway
 
-Standard testing captures what people are willing and able to tell you. Neuromarketing methods capture what they can't. In both projects, the gap between those two was exactly where the problem lived, and exactly where the solution came from.
+Standard testing captures what people are willing and able to tell you. <a href="https://www.imenbouzouita.com/resources/what-neuromarketing-actually-is/">Neuromarketing methods</a> capture what they can't. In both projects, the gap between those two was exactly where the problem lived, and exactly where the solution came from.

@@ -885,6 +885,8 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 }
 .case-body h2 { color: var(--ink); margin-top: 1.4rem; font-size: clamp(1.5rem, 2.6vw, 2rem); }
 .case-body h3 { color: var(--moonstone-deep); margin-top: 0.6rem; font-size: clamp(1.1rem, 1.8vw, 1.3rem); }
+.case-body a { color: var(--coral-text); text-decoration: underline; text-underline-offset: 2px; }
+.case-body a:hover { text-decoration-thickness: 2px; }
 .case-highlight {
   font-family: var(--font-display);
   font-style: italic;
@@ -908,6 +910,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .legal-content li::before { content: '—'; position: absolute; left: 0; color: var(--moonstone); }
 
 /* ---------- facts / grounding page ---------- */
+.facts-meta-line { font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.6rem; }
 .facts-table { display: grid; gap: 0; margin-block: 1.2rem 1.8rem; }
 .facts-row {
   display: grid;
@@ -1117,7 +1120,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
         
         <div class="case-body" data-reveal>
           <p class="lede">Ein schnelles Framework ohne vollständiges Audit: zehn Fragen, die die häufigsten Conversion-Probleme einer Landing Page in rund zehn Minuten sichtbar machen, sortiert danach, wo sie in der Journey des Besuchers liegen.</p>
-          <p>Du brauchst kein dreiwöchiges Audit, um zu wissen, ob eine Landing Page funktioniert. Die meisten Probleme, die die Conversion killen, sind innerhalb von Minuten sichtbar, wenn du weißt, worauf du achten musst.</p>
+          <p>Du brauchst kein <a href="https://www.imenbouzouita.com/de/resources/cro-audit-checklist/">dreiwöchiges Audit</a>, um zu wissen, ob eine Landing Page funktioniert. Die meisten Probleme, die die Conversion killen, sind innerhalb von Minuten sichtbar, wenn du weißt, worauf du achten musst.</p>
         <p>Dieses Framework gibt dir zehn Fragen, die du auf jeder Landing Page durchgehen kannst, deiner eigenen oder der eines Kunden. Jede zielt auf einen spezifischen Fehlertyp ab. Das Ganze dauert ungefähr zehn Minuten, und am Ende hast du ein klares Bild davon, wo die Seite stark ist, wo sie Besucher verliert und was du zuerst fixen solltest.</p>
         <p>Öffne die Seite auf Desktop und Mobile, bevor du loslegst. Manche Probleme zeigen sich nur auf einem der beiden.</p>
         <h2>1. Kann ein Fremder innerhalb von fünf Sekunden sagen, worum es auf dieser Seite geht?</h2>
@@ -1195,7 +1198,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <a href="../../terms.html">AGB</a>
           <a href="../../privacy.html">Datenschutz</a>
           <a href="../../impressum.html">Impressum</a>
-          <a href="../../facts/">Fakten</a>
+          <a href="../../facts/">Fakten für KI</a>
           <button type="button" class="link-button" data-cookie-settings>Cookie-Einstellungen</button>
         </div>
       </div>

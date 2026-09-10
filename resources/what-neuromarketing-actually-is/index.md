@@ -34,7 +34,7 @@ When people hear "neuromarketing," they picture someone in an fMRI machine watch
 
 **EEG** (electroencephalography) measures brain electrical activity and is sometimes used to assess attention, engagement, and cognitive load. It's more common in academic and large-enterprise settings because it requires controlled lab conditions and specialist interpretation.
 
-Not every project needs all of these. I've worked hands-on with eye tracking, implicit association tests, EEG and structured behavioural studies, but those methods require dedicated hardware or custom-built tools and significant setup time. For most digital product and marketing decisions, behavioural analytics tools like Hotjar, Contentsquare and Crazy Egg offer a practical alternative: heatmaps, scroll maps, and session recordings capture real attention patterns at scale, without the overhead of a lab setup. They're not as precise as eye tracking, but they answer the same core question: where is the user actually looking, and what are they ignoring?
+Not every project needs all of these. I've worked hands-on with <a href="https://www.imenbouzouita.com/work/neuroboost-ux/">eye tracking, implicit association tests</a>, EEG and structured behavioural studies, but those methods require dedicated hardware or custom-built tools and significant setup time. For most digital product and marketing decisions, behavioural analytics tools like Hotjar, Contentsquare and Crazy Egg offer a practical alternative: heatmaps, scroll maps, and session recordings capture real attention patterns at scale, without the overhead of a lab setup. They're not as precise as eye tracking, but they answer the same core question: where is the user actually looking, and what are they ignoring?
 
 ## What neuromarketing is not
 
@@ -52,7 +52,7 @@ Not every project needs all of these. I've worked hands-on with eye tracking, im
 
 Neuromarketing adds the most value when there's a gap between what your qualitative research says and what your quantitative data shows. Some common situations:
 
-**Users say they trust your site, but they don't convert.** Surveys come back positive. Usability tests look clean. But conversion stays flat. Eye tracking and implicit testing can reveal whether users actually process your trust signals or just scroll past them.
+**<a href="https://www.imenbouzouita.com/resources/why-users-trust-your-site-but-dont-buy/">Users say they trust your site, but they don't convert.</a>** Surveys come back positive. Usability tests look clean. But conversion stays flat. Eye tracking and implicit testing can reveal whether users actually process your trust signals or just scroll past them.
 
 **You have multiple design directions and no way to choose.** Internal opinions are split. Everyone thinks their preferred version "feels right." A controlled study with gaze data or implicit response measurement gives you a decision backed by evidence instead of hierarchy.
 

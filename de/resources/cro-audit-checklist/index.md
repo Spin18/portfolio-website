@@ -42,7 +42,7 @@ Wo steht der Hauptgrund zu kaufen tatsächlich auf der Seite? Wenn Besucher erst
 
 ### 8. Social Proof: vorhanden vs. sichtbar
 
-Testimonials auf der Seite zu haben reicht nicht. Prüfe, ob Besucher sie tatsächlich sehen. In meiner Eye-Tracking-Arbeit habe ich immer wieder festgestellt, dass Nutzer angeben, Trust Signals wahrgenommen zu haben, die ihre Augen nie fixiert haben. Wenn deine Bewertungen drei Bildschirmlängen unter dem Content sitzen, sind sie Dekoration.
+Testimonials auf der Seite zu haben reicht nicht. Prüfe, ob Besucher sie tatsächlich sehen. In meiner Eye-Tracking-Arbeit habe ich immer wieder festgestellt, dass Nutzer angeben, <a href="https://www.imenbouzouita.com/de/resources/why-users-trust-your-site-but-dont-buy/">Trust Signals</a> wahrgenommen zu haben, die ihre Augen nie fixiert haben. Wenn deine Bewertungen drei Bildschirmlängen unter dem Content sitzen, sind sie Dekoration.
 
 ### 9. Bild- und Medienqualität
 
@@ -60,7 +60,7 @@ Können Besucher einfach sehen, was in ihrem Warenkorb liegt, ohne die aktuelle 
 
 ### 12. Überraschungskosten
 
-Der häufigste Grund für Warenkorbabbrüche sind unerwartete Kosten, die im Checkout auftauchen. Prüfe jeden Schritt von der Produktseite bis zur Bestellbestätigung: Wann sieht der Besucher zum ersten Mal Versandkosten, Steuern und Gebühren? Je später diese erscheinen, desto höher der Absprung. Zeig sie früh.
+Der häufigste Grund für Warenkorbabbrüche sind unerwartete Kosten, die im Checkout auftauchen. Prüfe jeden Schritt von der Produktseite bis zur Bestellbestätigung: Wann sieht der Besucher zum ersten Mal <a href="https://www.imenbouzouita.com/de/resources/shipping-cost-transparency/">Versandkosten</a>, Steuern und Gebühren? Je später diese erscheinen, desto höher der Absprung. Zeig sie früh.
 
 ### 13. Checkout-Formularlänge
 

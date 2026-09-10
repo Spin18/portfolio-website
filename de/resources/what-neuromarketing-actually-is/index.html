@@ -885,6 +885,8 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 }
 .case-body h2 { color: var(--ink); margin-top: 1.4rem; font-size: clamp(1.5rem, 2.6vw, 2rem); }
 .case-body h3 { color: var(--moonstone-deep); margin-top: 0.6rem; font-size: clamp(1.1rem, 1.8vw, 1.3rem); }
+.case-body a { color: var(--coral-text); text-decoration: underline; text-underline-offset: 2px; }
+.case-body a:hover { text-decoration-thickness: 2px; }
 .case-highlight {
   font-family: var(--font-display);
   font-style: italic;
@@ -908,6 +910,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .legal-content li::before { content: '—'; position: absolute; left: 0; color: var(--moonstone); }
 
 /* ---------- facts / grounding page ---------- */
+.facts-meta-line { font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.6rem; }
 .facts-table { display: grid; gap: 0; margin-block: 1.2rem 1.8rem; }
 .facts-row {
   display: grid;
@@ -1133,7 +1136,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
         <p><strong>Online-Verhaltensstudien</strong> nutzen strukturierte Entscheidungsaufgaben, Aufmerksamkeitsspiele und Reaktionszeit-Übungen, um die unbewussten Bedürfnisse hinter Nutzerentscheidungen sichtbar zu machen. Das Ergebnis ist kein einzelnes Präferenz-Ranking. Es ist eine Karte, die zeigt, welche psychologischen Treiber (Sicherheit, Neuheit, Status, Autonomie, Zugehörigkeit) verschiedene Nutzersegmente steuern, oft in Richtungen, die sie bewusst nicht artikulieren können.</p>
         <p><strong>Biometrische Messung</strong> (Hautleitfähigkeit, Herzfrequenz, Facial Coding) erfasst physiologische Erregung und emotionale Reaktionen in Echtzeit. Wenn jemand sagt, ein Video war „okay", aber seine Hautleitfähigkeit bei Sekunde 12 nach oben schießt, erzählt dieser Ausschlag eine nützlichere Geschichte.</p>
         <p><strong>EEG</strong> (Elektroenzephalographie) misst die elektrische Gehirnaktivität und wird manchmal eingesetzt, um Aufmerksamkeit, Engagement und kognitive Belastung zu bewerten. Es ist häufiger in akademischen und Enterprise-Kontexten anzutreffen, weil es kontrollierte Laborbedingungen und spezialisierte Interpretation erfordert.</p>
-        <p>Nicht jedes Projekt braucht all diese Methoden. Ich habe hands-on mit Eye Tracking, impliziten Assoziationstests, EEG und strukturierten Verhaltensstudien gearbeitet, aber diese Methoden erfordern dedizierte Hardware oder eigens entwickelte Tools und erheblichen Aufwand in der Vorbereitung. Für die meisten digitalen Produkt- und Marketingentscheidungen bieten Behavioural-Analytics-Tools wie Hotjar, Contentsquare und Crazy Egg eine praktische Alternative: Heatmaps, Scroll Maps und Session Recordings erfassen echte Aufmerksamkeitsmuster im großen Maßstab, ohne den Overhead eines Lab-Setups. Sie sind nicht so präzise wie Eye Tracking, aber sie beantworten dieselbe Kernfrage: Wo schaut der Nutzer tatsächlich hin, und was ignoriert er?</p>
+        <p>Nicht jedes Projekt braucht all diese Methoden. Ich habe <a href="https://www.imenbouzouita.com/de/work/neuroboost-ux/">hands-on mit Eye Tracking, impliziten Assoziationstests</a>, EEG und strukturierten Verhaltensstudien gearbeitet, aber diese Methoden erfordern dedizierte Hardware oder eigens entwickelte Tools und erheblichen Aufwand in der Vorbereitung. Für die meisten digitalen Produkt- und Marketingentscheidungen bieten Behavioural-Analytics-Tools wie Hotjar, Contentsquare und Crazy Egg eine praktische Alternative: Heatmaps, Scroll Maps und Session Recordings erfassen echte Aufmerksamkeitsmuster im großen Maßstab, ohne den Overhead eines Lab-Setups. Sie sind nicht so präzise wie Eye Tracking, aber sie beantworten dieselbe Kernfrage: Wo schaut der Nutzer tatsächlich hin, und was ignoriert er?</p>
         <h2>Was Neuromarketing nicht ist</h2>
         <p><strong>Es ist kein Gedankenlesen.</strong> Keine Methode verrät dir genau, was jemand denkt. Sie zeigt dir, worauf jemand achtet, wie schnell er reagiert und welche Assoziationen unterhalb der bewussten Wahrnehmung aktiv sind. Das ist extrem nützlich, aber es ist Messung, keine Telepathie.</p>
         <p><strong>Es ist keine Manipulation.</strong> Das ist die Sorge, die am häufigsten aufkommt. Neuromarketing gibt dir keinen Knopf, den du drückst und Menschen kaufen. Es gibt dir bessere Daten darüber, warum sie kaufen oder nicht. Genauso wie A/B Testing dir hilft, eine bessere Headline zu finden, hilft dir Neuromarketing zu verstehen, warum eine Headline funktioniert und eine andere nicht. Die Ethik liegt darin, was du mit der Erkenntnis machst, nicht in der Methode selbst.</p>
@@ -1142,7 +1145,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
         <p><strong>Es ist nicht „einfach nur Psychologie."</strong> Verhaltenspsychologie und Neuromarketing überlappen sich, aber Neuromarketing misst spezifisch physiologische und kognitive Reaktionen, statt sich auf selbstberichtetes Verhalten zu verlassen. Zu wissen, dass der Ankereffekt existiert, ist Psychologie. Zu messen, ob deine Pricing-Seite ihn bei deinen Nutzern tatsächlich auslöst, ist Neuromarketing.</p>
         <h2>Wann es sich lohnt</h2>
         <p>Neuromarketing bringt den größten Mehrwert, wenn es eine Lücke gibt zwischen dem, was deine qualitative Forschung sagt, und dem, was deine quantitativen Daten zeigen. Einige typische Situationen:</p>
-        <p><strong>Nutzer sagen, sie vertrauen deiner Seite, aber sie konvertieren nicht.</strong> Umfragen kommen positiv zurück. Usability Tests sehen sauber aus. Aber die Conversion bleibt flach. Eye Tracking und implizite Tests können zeigen, ob Nutzer deine Trust Signals tatsächlich verarbeiten oder einfach daran vorbeiscrollen.</p>
+        <p><strong><a href="https://www.imenbouzouita.com/de/resources/why-users-trust-your-site-but-dont-buy/">Nutzer sagen, sie vertrauen deiner Seite, aber sie konvertieren nicht.</a></strong> Umfragen kommen positiv zurück. Usability Tests sehen sauber aus. Aber die Conversion bleibt flach. Eye Tracking und implizite Tests können zeigen, ob Nutzer deine Trust Signals tatsächlich verarbeiten oder einfach daran vorbeiscrollen.</p>
         <p><strong>Du hast mehrere Designrichtungen und keine Grundlage für eine Entscheidung.</strong> Intern sind die Meinungen gespalten. Jeder denkt, seine bevorzugte Version „fühlt sich richtig an." Eine kontrollierte Studie mit Gaze-Daten oder impliziter Reaktionsmessung gibt dir eine Entscheidung, die auf Evidenz basiert statt auf Hierarchie.</p>
         <p><strong>Du willst verstehen, was Nutzerentscheidungen antreibt, nicht nur welche Option gewinnt.</strong> A/B Testing sagt dir, dass Variante B besser performt hat als Variante A. Es sagt dir nicht warum. Neuromarketing-Methoden können dir die zugrundeliegenden Aufmerksamkeitsmuster, emotionalen Reaktionen und unbewussten Assoziationen zeigen, die den Unterschied erklären.</p>
         <p><strong>Du designst für Verhaltensänderung.</strong> Gesundheits-Apps, Finanzprodukte, Nachhaltigkeits-Tools: alles, wo Nutzer gegen ihre Standardmuster handeln sollen, profitiert davon, die unbewussten Treiber im Spiel zu verstehen.</p>
@@ -1185,7 +1188,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
           <a href="../../terms.html">AGB</a>
           <a href="../../privacy.html">Datenschutz</a>
           <a href="../../impressum.html">Impressum</a>
-          <a href="../../facts/">Fakten</a>
+          <a href="../../facts/">Fakten für KI</a>
           <button type="button" class="link-button" data-cookie-settings>Cookie-Einstellungen</button>
         </div>
       </div>

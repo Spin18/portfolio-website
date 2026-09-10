@@ -40,7 +40,7 @@ The Add to Cart button is the most important element on the page. It needs to be
 
 Directly below or beside the Add to Cart button, place the information that addresses last-second hesitation:
 
-**Shipping cost and delivery time.** "Versand ab 5 € | Lieferung in 2-5 Werktagen" in one line. The visitor is about to commit. Unanswered questions about cost and timing are the most common reasons they don't.
+**<a href="https://www.imenbouzouita.com/resources/shipping-cost-transparency/">Shipping cost and delivery time.</a>** "Versand ab 5 € | Lieferung in 2-5 Werktagen" in one line. The visitor is about to commit. Unanswered questions about cost and timing are the most common reasons they don't.
 
 **Return policy.** "Kostenlose Retoure innerhalb von 30 Tagen" or whatever applies. This reduces perceived risk at the moment risk feels highest.
 

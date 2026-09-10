@@ -40,4 +40,4 @@ Projekt 2: Eine klare Empfehlung, gestützt auf physiologische Daten statt auf S
 
 ## Die Erkenntnis
 
-Standardtests erfassen, was Menschen bereit und in der Lage sind, einem zu sagen. Neuromarketing-Methoden erfassen, was sie nicht können. In beiden Projekten lag die Lücke zwischen diesen beiden genau dort, wo das Problem saß, und genau dort, wo die Lösung herkam.
+Standardtests erfassen, was Menschen bereit und in der Lage sind, einem zu sagen. <a href="https://www.imenbouzouita.com/de/resources/what-neuromarketing-actually-is/">Neuromarketing-Methoden</a> erfassen, was sie nicht können. In beiden Projekten lag die Lücke zwischen diesen beiden genau dort, wo das Problem saß, und genau dort, wo die Lösung herkam.

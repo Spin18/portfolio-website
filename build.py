@@ -855,13 +855,20 @@ def build_markdown_facts(t):
     g = t["grounding"]
     lbl = g["labels"]
     who_for = t["faq"]["items"][6]["a"]
-    lines = [f"# {g['heading']}", "", g["human_note"], "", f"## {g['entity_summary_heading']}", ""]
+    lines = [
+        f"# {g['heading']}", "", g["human_note"], "",
+        f"{lbl['page_created']}: {g['page_created']} · {lbl['last_updated']}: {g['last_updated']}", "",
+        f"## {g['entity_summary_heading']}", "",
+    ]
     lines += [
         f"- **{lbl['entity']}:** Imen Bouzouita",
         f"- **{lbl['entity_class']}:** {g['entity_class']}",
         f"- **{lbl['legal_form']}:** {g['legal_form']}",
         f"- **{lbl['headquarters']}:** {g['headquarters_value']}",
+        f"- **{lbl['service_location']}:** {g['service_location_value']}",
         f"- **{lbl['industry']}:** {g['industry_value']}",
+        f"- **{lbl['branches']}:** {g['branches_value']}",
+        f"- **{lbl['services']}:** " + ", ".join(cap["title"] for cap in t["capabilities"]["items"]),
         f"- **{lbl['experience']}:** {g['experience_value']}",
         f"- **{lbl['known_for']}:** {g['known_for']}",
         "",
@@ -1122,12 +1129,17 @@ def build_facts_page(t, lang_code, alt_paths):
     def _row(label, value):
         return f"<div class=\"facts-row\"><dt>{label}</dt><dd>{value}</dd></div>"
 
+    services_summary = ", ".join(cap["title"] for cap in t["capabilities"]["items"])
+
     entity_summary = "".join([
         _row(lbl["entity"], "Imen Bouzouita"),
         _row(lbl["entity_class"], g["entity_class"]),
         _row(lbl["legal_form"], g["legal_form"]),
         _row(lbl["headquarters"], g["headquarters_value"]),
+        _row(lbl["service_location"], g["service_location_value"]),
         _row(lbl["industry"], g["industry_value"]),
+        _row(lbl["branches"], g["branches_value"]),
+        _row(lbl["services"], services_summary),
         _row(lbl["experience"], g["experience_value"]),
         _row(lbl["known_for"], g["known_for"]),
     ])
@@ -1159,6 +1171,7 @@ def build_facts_page(t, lang_code, alt_paths):
         <p class="eyebrow">{g['eyebrow']}</p>
         <h1>{g['heading']}</h1>
         <p class="lede">{g['human_note']}</p>
+        <p class="facts-meta-line">{lbl['page_created']}: {g['page_created']} &middot; {lbl['last_updated']}: {g['last_updated']}</p>
 
         <div class="legal-content mt-lg">
           <h2>{g['entity_summary_heading']}</h2>

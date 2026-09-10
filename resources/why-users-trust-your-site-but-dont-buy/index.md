@@ -16,7 +16,7 @@ When someone walks through a checkout flow in a usability test and you ask "Did 
 
 But if you track where their eyes actually went, the story is different. Their gaze moved from product image to price to the "Add to Cart" button to the form fields. The trust badges, sitting in the sidebar or below the fold, never received a single fixation. The user processed the page without ever attending to the elements you put there specifically to build trust.
 
-This isn't an edge case. It's the default. The gap between self-reported awareness and actual visual attention is one of the most well-documented findings in behavioural research, and it shows up on nearly every site I've audited.
+This isn't an edge case. It's the default. The gap between self-reported awareness and actual visual attention is one of the most well-documented findings in <a href="https://www.imenbouzouita.com/resources/what-neuromarketing-actually-is/">behavioural research</a>, and it shows up on nearly every site I've audited.
 
 ## Why this matters for conversion
 
