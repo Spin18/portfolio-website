@@ -293,6 +293,7 @@ def _core_entities(t, lang_code):
         "areaServed": "Worldwide",
         "founder": {"@id": f"{SITE_URL}/#person"},
         "makesOffer": offers,
+        "sameAs": [LINKEDIN_URL, INSTAGRAM_URL],
     }
 
     website = {
