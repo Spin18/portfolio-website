@@ -609,21 +609,27 @@ def page_shell(t, title, description, body, current_path, alt_paths, extra_head=
 def build_index(t, lang_code, alt_paths):
     current_path = lang_home_path(lang_code)
 
-    def _trust_logo_html(logo, lazy):
+    def _trust_logo_html(logo, lazy, high_priority=False):
         src = asset_href(current_path, "img/logos/" + logo["file"])
         size_class = f" trust-logo--{logo['size']}" if logo.get("size") else ""
         loading = "lazy" if lazy else "eager"
+        fetchpriority = ' fetchpriority="high"' if high_priority else ""
         return (
             f'<img class="trust-logo{size_class}" src="{src}" alt="{logo["name"]}" '
-            f'width="{logo["w"]}" height="{logo["h"]}" loading="{loading}" />'
+            f'width="{logo["w"]}" height="{logo["h"]}" loading="{loading}"{fetchpriority} />'
         )
 
     # The first pass sits directly below the hero and is visible on first
-    # paint at most viewport sizes, so it loads eagerly. The duplicate pass
-    # exists only for the seamless infinite-scroll loop and is genuinely
-    # off-screen until the animation has scrolled through the first pass,
-    # so it's safe (and preferable) to keep that one lazy.
-    trust_track = " ".join(_trust_logo_html(logo, lazy=False) for logo in TRUST_LOGOS)
+    # paint at most viewport sizes, so it loads eagerly, and the very first
+    # image in DOM order (what Lighthouse's LCP-image check looks at) also
+    # gets fetchpriority="high". The duplicate pass exists only for the
+    # seamless infinite-scroll loop and is genuinely off-screen until the
+    # animation has scrolled through the first pass, so it's safe (and
+    # preferable) to keep that one lazy and default-priority.
+    trust_track = " ".join(
+        _trust_logo_html(logo, lazy=False, high_priority=(i == 0))
+        for i, logo in enumerate(TRUST_LOGOS)
+    )
     trust_track_lazy = " ".join(_trust_logo_html(logo, lazy=True) for logo in TRUST_LOGOS)
     trust_track_full = trust_track + " " + trust_track_lazy  # duplicate for seamless marquee
 
