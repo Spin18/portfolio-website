@@ -1,0 +1,22 @@
+{
+  "name": "Imen Bouzouita \u2014 Digital Product, UX & CRO Consultant, Berlin",
+  "short_name": "Imen Bouzouita",
+  "description": "I help e-commerce, wellness, and SaaS brands turn browsers into buyers with research-backed UX audits and interfaces people actually want to use.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0E1B1F",
+  "theme_color": "#0E1B1F",
+  "icons": [
+    {
+      "src": "/assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

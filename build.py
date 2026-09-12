@@ -464,6 +464,7 @@ def head(t, lang_code, title, description, current_path, alt_paths, article_date
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="{asset_href(current_path, 'img/favicon.svg')}" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="{asset_href(current_path, 'img/apple-touch-icon.png')}" />
+  <link rel="manifest" href="{href_to(current_path, 'manifest.json')}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link id="fonts-link" rel="stylesheet" href="{FONTS_URL}" media="print" />
@@ -1507,6 +1508,30 @@ Canonical: {SITE_URL}/.well-known/security.txt
     write("security.txt", security_txt)
 
 
+def build_manifest(content):
+    """Minimal web app manifest. This site isn't an installable app, but the
+    manifest is what unlocks "Add to Home Screen"/install-prompt eligibility
+    in Chromium browsers and gives Android a proper icon/splash screen
+    instead of a generic one — worth the few lines even without full PWA
+    features (no service worker, offline support, etc.)."""
+    t = content["en"]
+    manifest = {
+        "name": t["meta"]["site_title"],
+        "short_name": "Imen Bouzouita",
+        "description": t["meta"]["site_description"],
+        "start_url": "/",
+        "scope": "/",
+        "display": "standalone",
+        "background_color": "#0E1B1F",
+        "theme_color": "#0E1B1F",
+        "icons": [
+            {"src": "/assets/img/icon-192.png", "sizes": "192x192", "type": "image/png"},
+            {"src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png"},
+        ],
+    }
+    write("manifest.json", json.dumps(manifest, indent=2) + "\n")
+
+
 def build_llms_txt(content):
     """llms.txt (https://llmstxt.org/) — a plain-markdown site summary aimed
     at LLMs/AI crawlers, generated from the same English content data as the
@@ -1612,6 +1637,7 @@ def main():
     build_404(content["en"])
     build_robots_sitemap(content)
     build_security_txt()
+    build_manifest(content)
     build_llms_txt(content)
     print("\nBuild complete.")
 
