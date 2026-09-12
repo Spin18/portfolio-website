@@ -1,7 +1,7 @@
 {
   "_translation_status": "The entire site is now real German content, except: meta.site_title/site_description (SEO/meta tags) and the contact form's dynamic status messages (sending/success/error/network/not_wired). Edit the string values in this file (keep keys and structure identical to en.json) and rerun python3 build.py.",
   "meta": {
-    "site_title": "Imen Bouzouita — Digital Product, UX & CRO Consultant, Berlin",
+    "site_title": "Imen Bouzouita — Digital Product, UX/CRO Consultant, Berlin",
     "site_description": "I help e-commerce, wellness, and SaaS brands turn browsers into buyers with research-backed UX audits and interfaces people actually want to use.",
     "case_study_label": "Referenz",
     "legal_meta_suffix": "for imenbouzouita.com",
