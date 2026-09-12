@@ -1,6 +1,8 @@
 # ai.txt for https://www.imenbouzouita.com
 #
-# No AI training on this site's content.
+# AI training is allowed for OpenAI, Anthropic, and Google. Other
+# AI/data-scraping crawlers are blocked — see /robots.txt for the full,
+# per-crawler breakdown.
 #
 # There is no formal, widely-adopted standard for ai.txt yet. The
 # directives that crawlers actually honour live in /robots.txt, which
@@ -8,10 +10,13 @@
 # below via the Content-Signal convention:
 # https://developers.cloudflare.com/bots/additional-configurations/content-signals-policy/
 
-Content-Signal: search=yes, ai-input=yes, ai-train=no
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
-# search=yes   -- this content may be indexed for search results
-# ai-input=yes -- AI assistants may read this content to answer a
-#                 user's question about it (RAG, citation, live browsing)
-# ai-train=no  -- this content may NOT be used to train, fine-tune, or
-#                 otherwise improve any AI/ML model
+# search=yes    -- this content may be indexed for search results
+# ai-input=yes  -- AI assistants may read this content to answer a
+#                  user's question about it (RAG, citation, live browsing)
+# ai-train=yes  -- this content may be used to train or fine-tune AI/ML
+#                  models — allowed for OpenAI, Anthropic, and Google
+#                  specifically (see the named Allow rules in
+#                  /robots.txt); other AI-training/data-scraping
+#                  crawlers are still individually blocked there.

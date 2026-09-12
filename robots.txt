@@ -1,24 +1,43 @@
 User-agent: *
 Allow: /
 
-Content-Signal: search=yes, ai-input=yes, ai-train=no
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
-# AI-training crawlers are blocked below. Agents that browse or answer
-# questions on behalf of a live user (e.g. when someone asks an AI
-# assistant about this site) are a separate, permitted use — see
-# /ai.txt and the Content-Signal line above.
+# Explicitly allowed: AI assistants browsing or answering a live user's
+# question about this site (a separate, permitted use from training —
+# see /ai.txt and the Content-Signal line above). Already covered by
+# the wildcard rule, listed explicitly for clarity.
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Explicitly allowed: AI training for OpenAI, Anthropic, and Google.
 
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: ClaudeBot
-Disallow: /
+Allow: /
 
 User-agent: anthropic-ai
-Disallow: /
+Allow: /
 
 User-agent: Google-Extended
-Disallow: /
+Allow: /
+
+# Other AI-training/data-scraping crawlers are still blocked below.
 
 User-agent: CCBot
 Disallow: /

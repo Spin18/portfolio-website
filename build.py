@@ -1366,10 +1366,6 @@ def build_404(t):
 
 
 AI_TRAINING_BOTS = [
-    "GPTBot",
-    "ClaudeBot",
-    "anthropic-ai",
-    "Google-Extended",
     "CCBot",
     "Bytespider",
     "Meta-ExternalAgent",
@@ -1382,18 +1378,48 @@ AI_TRAINING_BOTS = [
     "cohere-ai",
 ]
 
+# The live-browsing/search-indexing counterparts of the training bots
+# above — already permitted by the default "User-agent: *" rule, listed
+# explicitly here too for clarity and robustness rather than relying
+# solely on the wildcard.
+AI_INPUT_BOTS = [
+    "OAI-SearchBot",
+    "ChatGPT-User",
+    "Claude-User",
+    "Claude-SearchBot",
+    "PerplexityBot",
+]
+
+# Training crawlers explicitly allowed (opted back in): OpenAI, Anthropic
+# (both its current bot, ClaudeBot, and its older/alternate identifier,
+# anthropic-ai), and Google's training bot.
+AI_TRAINING_BOTS_ALLOWED = [
+    "GPTBot",
+    "ClaudeBot",
+    "anthropic-ai",
+    "Google-Extended",
+]
+
 
 def build_robots_sitemap(content):
     bot_blocks = "\n".join(f"User-agent: {bot}\nDisallow: /\n" for bot in AI_TRAINING_BOTS)
+    allow_blocks = "\n".join(f"User-agent: {bot}\nAllow: /\n" for bot in AI_INPUT_BOTS)
+    training_allow_blocks = "\n".join(f"User-agent: {bot}\nAllow: /\n" for bot in AI_TRAINING_BOTS_ALLOWED)
     robots_txt = f"""User-agent: *
 Allow: /
 
-Content-Signal: search=yes, ai-input=yes, ai-train=no
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
-# AI-training crawlers are blocked below. Agents that browse or answer
-# questions on behalf of a live user (e.g. when someone asks an AI
-# assistant about this site) are a separate, permitted use — see
-# /ai.txt and the Content-Signal line above.
+# Explicitly allowed: AI assistants browsing or answering a live user's
+# question about this site (a separate, permitted use from training —
+# see /ai.txt and the Content-Signal line above). Already covered by
+# the wildcard rule, listed explicitly for clarity.
+
+{allow_blocks}
+# Explicitly allowed: AI training for OpenAI, Anthropic, and Google.
+
+{training_allow_blocks}
+# Other AI-training/data-scraping crawlers are still blocked below.
 
 {bot_blocks}
 Sitemap: {SITE_URL}/sitemap.xml
@@ -1402,7 +1428,9 @@ Sitemap: {SITE_URL}/sitemap.xml
 
     write("ai.txt", f"""# ai.txt for {SITE_URL}
 #
-# No AI training on this site's content.
+# AI training is allowed for OpenAI, Anthropic, and Google. Other
+# AI/data-scraping crawlers are blocked — see /robots.txt for the full,
+# per-crawler breakdown.
 #
 # There is no formal, widely-adopted standard for ai.txt yet. The
 # directives that crawlers actually honour live in /robots.txt, which
@@ -1410,13 +1438,16 @@ Sitemap: {SITE_URL}/sitemap.xml
 # below via the Content-Signal convention:
 # https://developers.cloudflare.com/bots/additional-configurations/content-signals-policy/
 
-Content-Signal: search=yes, ai-input=yes, ai-train=no
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
-# search=yes   -- this content may be indexed for search results
-# ai-input=yes -- AI assistants may read this content to answer a
-#                 user's question about it (RAG, citation, live browsing)
-# ai-train=no  -- this content may NOT be used to train, fine-tune, or
-#                 otherwise improve any AI/ML model
+# search=yes    -- this content may be indexed for search results
+# ai-input=yes  -- AI assistants may read this content to answer a
+#                  user's question about it (RAG, citation, live browsing)
+# ai-train=yes  -- this content may be used to train or fine-tune AI/ML
+#                  models — allowed for OpenAI, Anthropic, and Google
+#                  specifically (see the named Allow rules in
+#                  /robots.txt); other AI-training/data-scraping
+#                  crawlers are still individually blocked there.
 """)
 
     all_paths = []
