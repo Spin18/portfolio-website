@@ -89,13 +89,14 @@ const SECURITY_HEADERS = {
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
   'Cross-Origin-Opener-Policy': 'same-origin',
-  // Report-Only for now, unlike the others above: 'require-corp' blocks
-  // ANY cross-origin resource whose server doesn't send back its own
-  // Cross-Origin-Resource-Policy header — including, potentially, the
-  // Formspree contact-form fetch(), GA4, Contentsquare, and the
-  // Cloudflare beacon. Verify none of those break before switching this
-  // to the enforcing 'Cross-Origin-Embedder-Policy' header.
-  'Cross-Origin-Embedder-Policy-Report-Only': 'require-corp',
+  // Verified in Report-Only mode first: GA4, Contentsquare, the
+  // Cloudflare beacon, and Google Fonts (CSS + font files) all already
+  // send Cross-Origin-Resource-Policy: cross-origin. The Formspree
+  // contact-form fetch() doesn't send that header, but doesn't need to —
+  // confirmed empirically (response type "cors" with a valid
+  // Access-Control-Allow-Origin) that fetch()'s default CORS mode
+  // satisfies require-corp on its own, independent of CORP headers.
+  'Cross-Origin-Embedder-Policy': 'require-corp',
 };
 
 export default {
