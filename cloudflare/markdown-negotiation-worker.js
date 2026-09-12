@@ -50,7 +50,7 @@ const CSP = [
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com",
   "img-src 'self' data:",
-  "connect-src 'self' https://formspree.io https://analytics.google.com https://*.google-analytics.com https://*.contentsquare.net",
+  "connect-src 'self' https://formspree.io https://analytics.google.com https://*.google-analytics.com https://*.contentsquare.net https://cloudflareinsights.com",
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self' https://formspree.io",
