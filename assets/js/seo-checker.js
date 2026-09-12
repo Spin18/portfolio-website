@@ -14,7 +14,7 @@
   const emailStatus = root.querySelector('[data-email-status]');
 
   const API_URL = '/api/check';
-  const FORMSPREE_ACTION = 'https://formspree.io/f/xdenkldz';
+  const FORMSPREE_ACTION = 'https://formspree.io/f/mnpqyeel';
   const SEVERITY_ORDER = { severe: 0, medium: 1, low: 2 };
 
   // All localizable UI strings come from data-* attributes build.py renders
