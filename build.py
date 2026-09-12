@@ -463,6 +463,7 @@ def head(t, lang_code, title, description, current_path, alt_paths, article_date
   <meta property="og:image" content="{SITE_URL}/assets/img/og-cover.jpg" />{article_meta}
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="{asset_href(current_path, 'img/favicon.svg')}" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="{asset_href(current_path, 'img/apple-touch-icon.png')}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link id="fonts-link" rel="stylesheet" href="{FONTS_URL}" media="print" />
