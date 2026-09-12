@@ -1448,7 +1448,7 @@ def build_404(t):
         <h1>{nf['heading']}</h1>
         <p class="lede">{nf['lede']}</p>
         <div class="hero-ctas mt-lg" style="justify-content:center;">
-          <a href="./" class="btn btn-primary">{nf['cta']}</a>
+          <a href="/" class="btn btn-primary">{nf['cta']}</a>
         </div>
       </div>
     </section>
