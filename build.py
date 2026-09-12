@@ -56,13 +56,13 @@ with open(os.path.join(ROOT, "assets/js/main.js"), "rb") as _f:
 
 TRUST_LOGOS = [
     {"name": "Siemens", "file": "siemens.svg", "w": 1200, "h": 800},
-    {"name": "BMW", "file": "bmw.webp", "w": 100, "h": 100},
+    {"name": "BMW", "file": "bmw.webp", "w": 76, "h": 76},
     {"name": "Deloitte", "file": "deloitte.svg", "w": 2500, "h": 543},
     {"name": "innogy", "file": "innogy.svg", "w": 442, "h": 652},
     {"name": "und gretel", "file": "und-gretel.svg", "w": 152, "h": 84},
-    {"name": "BaliSpirit", "file": "balispirit.webp", "w": 100, "h": 100},
-    {"name": "yogabarn", "file": "yogabarn.webp", "size": "lg", "w": 145, "h": 155},
-    {"name": "Rikepa", "file": "rikepa.webp", "w": 99, "h": 98},
+    {"name": "BaliSpirit", "file": "balispirit.webp", "w": 76, "h": 76},
+    {"name": "yogabarn", "file": "yogabarn.webp", "size": "lg", "w": 109, "h": 116},
+    {"name": "Rikepa", "file": "rikepa.webp", "w": 76, "h": 75},
 ]
 
 LANGUAGES = [
