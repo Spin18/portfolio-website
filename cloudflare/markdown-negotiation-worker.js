@@ -44,19 +44,21 @@
 //     functional loss.
 //   - Cloudflare itself (not our own code) injects a small inline
 //     <script>window.__CF$cv$params={...}</script> on every page for its
-//     own challenge-platform/bot-management feature. Its hash was
-//     verified stable across multiple fresh page loads, so it's pinned
-//     below rather than reached for 'unsafe-inline'. If Cloudflare ever
-//     changes that script, this will start showing a new script-src
-//     violation in the console (report-only) or console+broken bot
-//     challenge (enforcing) — re-check via browser console and update
-//     the hash if that happens.
+//     own challenge-platform/bot-management feature. Its content (and
+//     hence its hash) rotates on some cadence — confirmed by seeing two
+//     different hashes across two test sessions a few minutes apart —
+//     so hash-pinning isn't viable (it would need constant, reactive
+//     updates and silently break the challenge platform for real
+//     visitors in between fixes). 'unsafe-inline' is accepted here as
+//     the practical choice; note it only permits *inline* script
+//     execution, external <script src> is still restricted to the
+//     domains listed below.
 // Currently Report-Only: logs violations to the browser console instead
 // of blocking anything, so this can be verified against real traffic
 // before switching to the enforcing header (drop "-Report-Only").
 const CSP = [
   "default-src 'self'",
-  "script-src 'self' 'sha256-MjH1Vrk7slztB18Abkn3zF0HJMithK7FLRuW9G+h+10=' https://static.cloudflareinsights.com https://www.googletagmanager.com https://*.contentsquare.net",
+  "script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com https://*.contentsquare.net",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com",
   "img-src 'self' data:",
