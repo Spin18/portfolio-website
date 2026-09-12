@@ -68,6 +68,12 @@ LANGUAGES = [
     {"code": "de", "dir": "de/", "label": "DE"},
 ]
 
+# og:locale needs a language_TERRITORY tag, not the bare "en"/"de" used
+# elsewhere (html lang, hreflang). en_US as the neutral default for
+# undifferentiated English content (no single English-speaking market is
+# targeted); de_DE matches the business's actual Berlin address.
+OG_LOCALE = {"en": "en_US", "de": "de_DE"}
+
 def _nav_entries(t, current_path):
     lang_code = _lang_of(current_path)
     home = href_to(current_path, lang_home_path(lang_code))
@@ -521,6 +527,7 @@ def head(t, lang_code, title, description, current_path, alt_paths, article_date
   <meta property="og:title" content="{title}" />
   <meta property="og:description" content="{description}" />
   <meta property="og:url" content="{canonical}" />
+  <meta property="og:locale" content="{OG_LOCALE[lang_code]}" />
   <meta property="og:image" content="{SITE_URL}/assets/img/og-cover.jpg" />
   <meta property="og:image:width" content="{OG_COVER_W}" />
   <meta property="og:image:height" content="{OG_COVER_H}" />{article_meta}
