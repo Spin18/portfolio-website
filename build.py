@@ -292,6 +292,14 @@ def _core_entities(t, lang_code):
         "vatID": BUSINESS_VAT_ID,
         "areaServed": "Worldwide",
         "founder": {"@id": f"{SITE_URL}/#person"},
+        "knowsAbout": [
+            "User Experience (UX) Design",
+            "Conversion Rate Optimization (CRO)",
+            "Search Engine Optimization (SEO)",
+            "Landing Page Design",
+            "A/B Testing",
+            "Web Analytics",
+        ],
         "makesOffer": offers,
         "sameAs": [LINKEDIN_URL, INSTAGRAM_URL],
     }
