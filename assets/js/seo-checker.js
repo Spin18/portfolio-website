@@ -123,7 +123,7 @@
     const topFails = report.checks
       .filter((c) => !c.passed)
       .sort((a, b) => SEVERITY_ORDER[a.severity] - SEVERITY_ORDER[b.severity])
-      .slice(0, 3);
+      .slice(0, 5);
     const findingsEl = root.querySelector('[data-top-findings]');
     findingsEl.innerHTML = '';
     if (topFails.length === 0) {
