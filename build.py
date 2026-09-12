@@ -1644,8 +1644,14 @@ def build_manifest(content):
         "background_color": "#0E1B1F",
         "theme_color": "#0E1B1F",
         "icons": [
-            {"src": "/assets/img/icon-192.png", "sizes": "192x192", "type": "image/png"},
-            {"src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png"},
+            {"src": "/assets/img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+            {"src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+            # A dedicated maskable icon, not just the "any" ones relabeled:
+            # Android crops adaptive icons into a circle/squircle, so the
+            # logomark here is scaled down to sit inside that safe zone —
+            # reusing the full-bleed icons above would clip the letter and
+            # dot at the edges once masked.
+            {"src": "/assets/img/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
         ],
     }
     write("manifest.json", json.dumps(manifest, indent=2) + "\n")
