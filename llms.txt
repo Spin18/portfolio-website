@@ -40,6 +40,7 @@ Digital Product · UX · CRO Consultant — Berlin. I'm a UX, CRO, and digital s
 
 ## Optional
 
+- [llms-full.txt](https://www.imenbouzouita.com/llms-full.txt): full content of every page, for agents that won't crawl deeper
 - [Terms](https://www.imenbouzouita.com/terms.html)
 - [Privacy](https://www.imenbouzouita.com/privacy.html)
 - [Impressum](https://www.imenbouzouita.com/impressum.html)

@@ -1752,6 +1752,7 @@ def build_llms_txt(content):
         "",
         "## Optional",
         "",
+        f"- [llms-full.txt]({SITE_URL}/llms-full.txt): full content of every page, for agents that won't crawl deeper",
         f"- [Terms]({url_for(lang_legal_path('en', 'terms'))})",
         f"- [Privacy]({url_for(lang_legal_path('en', 'privacy'))})",
         f"- [Impressum]({url_for(lang_legal_path('en', 'impressum'))})",
@@ -1759,6 +1760,57 @@ def build_llms_txt(content):
         "",
     ]
     write("llms.txt", "\n".join(lines))
+
+
+def build_llms_full_txt(content):
+    """llms-full.txt (https://llmstxt.org/) — the fuller companion to
+    llms.txt, for agents that fetch a single file rather than crawling:
+    the complete body content of every page, not just links and one-line
+    summaries. Reuses the same per-page Markdown builders as each page's
+    own .md sibling, so there's one source of truth for "full content of
+    this page" rather than a third copy that could drift."""
+    t = content["en"]
+
+    lines = [
+        f"# {t['meta']['site_title']}",
+        "",
+        f"> {t['meta']['site_description']}",
+        "",
+        "Full content of every page on this site, for AI agents that fetch",
+        "a single file rather than crawling. See /llms.txt for a shorter",
+        "summary with links, or fetch any page directly with",
+        "`Accept: text/markdown` for just that page.",
+        "",
+        "---",
+        "",
+        f"## {url_for(lang_facts_path('en'))}",
+        "",
+        build_markdown_facts(t),
+        "",
+        "---",
+    ]
+
+    for cs in t["case_studies"]:
+        lines += [
+            "",
+            f"## {url_for(lang_case_study_path('en', cs['slug']))}",
+            "",
+            build_markdown_case_study(t, cs),
+            "",
+            "---",
+        ]
+
+    for article in t["resources"]["items"]:
+        lines += [
+            "",
+            f"## {url_for(lang_resource_path('en', article['slug']))}",
+            "",
+            build_markdown_resource_article(t, article),
+            "",
+            "---",
+        ]
+
+    write("llms-full.txt", "\n".join(lines))
 
 
 def write(rel_path, content):
@@ -1814,6 +1866,7 @@ def main():
     build_security_txt()
     build_manifest(content)
     build_llms_txt(content)
+    build_llms_full_txt(content)
     print("\nBuild complete.")
 
 
