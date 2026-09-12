@@ -54,6 +54,9 @@ FONTS_URL = "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,
 with open(os.path.join(ROOT, "assets/js/main.js"), "rb") as _f:
     MAIN_JS_VERSION = hashlib.md5(_f.read()).hexdigest()[:8]
 
+with open(os.path.join(ROOT, "assets/js/seo-checker.js"), "rb") as _f:
+    SEO_CHECKER_JS_VERSION = hashlib.md5(_f.read()).hexdigest()[:8]
+
 TRUST_LOGOS = [
     {"name": "Siemens", "file": "siemens.svg", "w": 1200, "h": 800},
     {"name": "BMW", "file": "bmw.webp", "w": 76, "h": 76},
@@ -242,6 +245,11 @@ def lang_resource_path(lang_code, slug):
 def lang_facts_path(lang_code):
     d = next(l["dir"] for l in LANGUAGES if l["code"] == lang_code)
     return f"{d}facts/index.html"
+
+
+def lang_seo_checker_path(lang_code):
+    d = next(l["dir"] for l in LANGUAGES if l["code"] == lang_code)
+    return f"{d}tools/seo-checker/index.html"
 
 
 def _count_words(text):
@@ -590,7 +598,9 @@ def lang_switcher_html(current_path, alt_paths):
 
 
 def header_html(t, current_path, alt_paths):
-    home = href_to(current_path, lang_home_path(_lang_of(current_path)))
+    lang_code = _lang_of(current_path)
+    home = href_to(current_path, lang_home_path(lang_code))
+    seo_checker_href = href_to(current_path, lang_seo_checker_path(lang_code))
     links = "\n      ".join(
         f'<li><a href="{href}">{label}</a></li>' for label, href in _nav_entries(t, current_path)
     )
@@ -600,6 +610,7 @@ def header_html(t, current_path, alt_paths):
       <nav>
         <ul class="nav-links">
           {links}
+          <li class="nav-cta"><a href="{seo_checker_href}" class="btn btn-ghost">{t['nav']['seo_checker']}</a></li>
           <li class="nav-cta"><a href="{CALENDLY}" class="btn btn-primary" target="_blank" rel="noopener">{t['nav']['book_call']}</a></li>
           <li>{lang_switcher_html(current_path, alt_paths)}</li>
         </ul>
@@ -721,6 +732,7 @@ def page_shell(t, title, description, body, current_path, alt_paths, extra_head=
 
 def build_index(t, lang_code, alt_paths):
     current_path = lang_home_path(lang_code)
+    seo_checker_href = href_to(current_path, lang_seo_checker_path(lang_code))
 
     def _trust_logo_html(logo, lazy, high_priority=False):
         src = asset_href(current_path, "img/logos/" + logo["file"])
@@ -870,6 +882,17 @@ def build_index(t, lang_code, alt_paths):
           <h2>{t['work']['heading']}</h2>
         </div>
         <div class="work-grid">{work_cards}
+        </div>
+      </div>
+    </section>
+
+    <section class="checker-promo-section">
+      <div class="container">
+        <div class="checker-promo" data-reveal>
+          <p class="eyebrow">{t['seo_checker']['home_promo_eyebrow']}</p>
+          <h2>{t['seo_checker']['home_promo_heading']}</h2>
+          <p>{t['seo_checker']['home_promo_body']}</p>
+          <a href="{seo_checker_href}" class="btn btn-primary">{t['seo_checker']['home_promo_cta']}</a>
         </div>
       </div>
     </section>
@@ -1410,6 +1433,114 @@ def build_legal(t, lang_code, slug, alt_paths):
     write(current_path, html)
 
 
+def build_seo_checker_page(t, lang_code, alt_paths):
+    """Free SEO/GEO/CRO checker — a lead-magnet tool page. Page chrome
+    (copy, labels, buttons) is fully bilingual via content/{en,de}.json's
+    seo_checker section. The audit *findings* themselves (category names,
+    per-check detail/tip text) come back from the Cloudflare Worker at
+    /api/check in English only — localizing those would mean rewriting the
+    Worker's string generation bilingually, not worth it for a v1 tool.
+    assets/js/seo-checker.js reads all its localizable UI strings from
+    data-* attributes on the root element (same pattern main.js already
+    uses for the contact form's status messages) rather than hardcoding
+    English."""
+    sc = t["seo_checker"]
+    current_path = lang_seo_checker_path(lang_code)
+    privacy_href = href_to(current_path, lang_legal_path(lang_code, "privacy"))
+
+    loading_messages_json = json.dumps(sc["loading_messages"]).replace('"', "&quot;")
+
+    body = f"""
+  <main id="main">
+    <section class="page-hero text-center checker-hero">
+      <div class="container">
+        <p class="eyebrow" style="justify-content:center;">{sc['eyebrow']}</p>
+        <h1>{sc['heading']}</h1>
+        <p class="lede" style="margin-inline:auto;">{sc['lede']}</p>
+        <div data-seo-checker class="checker"
+          data-loading-messages="{loading_messages_json}"
+          data-error-generic="{sc['error_generic']}"
+          data-error-network="{sc['error_network']}"
+          data-no-issues-message="{sc['no_issues_message']}"
+          data-priority-empty="{sc['priority_empty']}"
+          data-all-tab-label="{sc['all_tab_label']}"
+          data-severity-severe="{sc['severity_severe']}"
+          data-severity-medium="{sc['severity_medium']}"
+          data-severity-low="{sc['severity_low']}"
+          data-status-pass="{sc['status_pass']}"
+          data-status-fail="{sc['status_fail']}"
+          data-unlock-label="{sc['unlock_label']}"
+          data-unlocking-label="{sc['unlocking_label']}"
+          data-email-error="{sc['email_error']}">
+          <form data-check-form class="checker-form">
+            <input data-check-input type="text" inputmode="url" autocomplete="off" spellcheck="false"
+              placeholder="{sc['input_placeholder']}" aria-label="{sc['input_aria_label']}" required />
+            <button type="submit" class="btn btn-primary">{sc['submit_label']}</button>
+          </form>
+          <p class="checker-consent-note">{sc['consent_note']} <a href="{privacy_href}">{t['legal']['privacy']['title']}</a></p>
+          <p data-check-error class="checker-error" hidden></p>
+
+          <div data-check-loading class="checker-loading" hidden>
+            <span class="checker-spinner" aria-hidden="true"></span>
+            <p data-loading-text>{sc['loading_messages'][0]}</p>
+          </div>
+
+          <div data-check-results class="checker-results" hidden>
+            <p class="checker-disclaimer">{sc['disclaimer_note']}</p>
+            <div data-teaser class="checker-teaser">
+              <div class="checker-score-card">
+                <div data-score-grade class="checker-grade-circle">A</div>
+                <div>
+                  <p data-score-pct class="checker-score-pct"></p>
+                  <p data-score-url class="checker-score-url"></p>
+                </div>
+              </div>
+
+              <div data-category-chips class="checker-chips"></div>
+
+              <div class="checker-findings-card">
+                <p class="checker-findings-label">{sc['top_issues_label']}</p>
+                <ul data-top-findings class="checker-findings-list"></ul>
+              </div>
+
+              <div class="checker-gate">
+                <h2>{sc['gate_heading']}</h2>
+                <p>{sc['gate_body']}</p>
+                <form data-email-form class="checker-email-form">
+                  <input data-email-input type="email" autocomplete="email" placeholder="{sc['email_placeholder']}" aria-label="{sc['email_aria_label']}" required />
+                  <button type="submit" class="btn btn-primary">{sc['unlock_label']}</button>
+                </form>
+                <p data-email-status class="checker-error" hidden></p>
+              </div>
+            </div>
+
+            <div data-full class="checker-full" hidden>
+              <div class="checker-priority-card">
+                <p class="checker-findings-label">{sc['priority_label']}</p>
+                <ol data-priority-list class="checker-priority-list"></ol>
+              </div>
+
+              <div data-category-tabs class="checker-tabs"></div>
+              <div data-categories class="checker-categories"></div>
+
+              <div class="checker-footer-cta">
+                <p class="checker-footer-byline">{sc['footer_byline']}</p>
+                <p>{sc['footer_cta_lede']}</p>
+                <a href="{CALENDLY}" class="btn btn-primary" target="_blank" rel="noopener">{sc['footer_cta_button']}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+"""
+
+    extra_head = f'<script src="{asset_href(current_path, "js/seo-checker.js")}?v={SEO_CHECKER_JS_VERSION}" defer></script>'
+    html = page_shell(t, sc["meta_title"], sc["meta_description"], body, current_path, alt_paths, extra_head=extra_head)
+    write(current_path, html)
+
+
 def build_json_ld_legal(t, entry, current_path):
     lang_code = _lang_of(current_path)
     page_url = url_for(current_path)
@@ -1841,6 +1972,9 @@ def main():
 
         facts_alt = {l["code"]: lang_facts_path(l["code"]) for l in LANGUAGES}
         build_facts_page(t, code, facts_alt)
+
+        seo_checker_alt = {l["code"]: lang_seo_checker_path(l["code"]) for l in LANGUAGES}
+        build_seo_checker_page(t, code, seo_checker_alt)
 
         n = len(t["case_studies"])
         for i, cs in enumerate(t["case_studies"]):
