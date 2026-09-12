@@ -35,18 +35,28 @@
 //     to a second subdomain (c.ba.contentsquare.net) and may use others
 //     for session recording that weren't observed in one test session.
 //   - Deliberately NOT allowing the GA4 "Google signals"/ads-audiences
-//     ping (a per-visitor-country google.<tld>/ads/ga-audiences request):
-//     it's an ads-remarketing signal unrelated to core pageview tracking
-//     (which uses the stable analytics.google.com), the site runs no
-//     Google Ads, and the destination domain varies by country so it
-//     can't be allowlisted completely anyway. Blocking it is a privacy
-//     positive, not a functional loss.
+//     ping (a per-visitor-country google.<tld>/ads/ga-audiences request,
+//     loaded as a tracking pixel via img-src): it's an ads-remarketing
+//     signal unrelated to core pageview tracking (which uses the stable
+//     analytics.google.com), the site runs no Google Ads, and the
+//     destination domain varies by country so it can't be allowlisted
+//     completely anyway. Blocking it is a privacy positive, not a
+//     functional loss.
+//   - Cloudflare itself (not our own code) injects a small inline
+//     <script>window.__CF$cv$params={...}</script> on every page for its
+//     own challenge-platform/bot-management feature. Its hash was
+//     verified stable across multiple fresh page loads, so it's pinned
+//     below rather than reached for 'unsafe-inline'. If Cloudflare ever
+//     changes that script, this will start showing a new script-src
+//     violation in the console (report-only) or console+broken bot
+//     challenge (enforcing) — re-check via browser console and update
+//     the hash if that happens.
 // Currently Report-Only: logs violations to the browser console instead
 // of blocking anything, so this can be verified against real traffic
 // before switching to the enforcing header (drop "-Report-Only").
 const CSP = [
   "default-src 'self'",
-  "script-src 'self' https://static.cloudflareinsights.com https://www.googletagmanager.com https://*.contentsquare.net",
+  "script-src 'self' 'sha256-MjH1Vrk7slztB18Abkn3zF0HJMithK7FLRuW9G+h+10=' https://static.cloudflareinsights.com https://www.googletagmanager.com https://*.contentsquare.net",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com",
   "img-src 'self' data:",
