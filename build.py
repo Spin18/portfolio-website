@@ -268,6 +268,28 @@ def _as_list(value):
     return value if isinstance(value, list) else [value]
 
 
+def meta_description(short, long, target=155):
+    """A meta description built from a short tagline plus a longer summary
+    — short taglines alone (a case study's one-liner) are too brief for a
+    search snippet on their own, but always exist and are already good
+    copy, so extend rather than replace them. Stops at a full sentence
+    within the target length where one exists, else the last whole word,
+    so it never cuts off mid-word."""
+    short = short.rstrip(".!?")
+    if len(short) >= target:
+        return short[:target].rsplit(" ", 1)[0].rstrip(".,;:") + "…"
+
+    combined = f"{short}. {long}"
+    if len(combined) <= target:
+        return combined
+
+    truncated = combined[:target]
+    last_period = truncated.rfind(". ")
+    if last_period > len(short):
+        return truncated[: last_period + 1]
+    return truncated.rsplit(" ", 1)[0].rstrip(".,;:") + "…"
+
+
 def _inline_to_markdown(text):
     """The only inline HTML this site's content ever uses is <strong>/<em>
     for emphasis — converted to real Markdown syntax rather than left as
@@ -1111,7 +1133,8 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
     write(md_path, build_markdown_case_study(t, cs))
 
     title = f"{cs['title']} — {t['meta']['case_study_label']} — Imen Bouzouita"
-    html = page_shell(t, title, cs["one_liner"], body, current_path, alt_paths, extra_head=build_json_ld_case_study(t, cs, current_path), markdown_path=md_path)
+    description = meta_description(cs["one_liner"], cs["summary"])
+    html = page_shell(t, title, description, body, current_path, alt_paths, extra_head=build_json_ld_case_study(t, cs, current_path), markdown_path=md_path)
     write(current_path, html)
 
 
@@ -1347,6 +1370,16 @@ def build_facts_page(t, lang_code, alt_paths):
     write(current_path, html)
 
 
+LEGAL_META_DESCRIPTIONS = {
+    ("en", "terms"): "General Terms and Conditions for UX, CRO, and digital strategy consulting services provided by Imen Bouzouita, covering engagement terms and deliverables.",
+    ("en", "privacy"): "How imenbouzouita.com collects, uses, and protects your personal data, including analytics, cookies, and the contact form, and your rights under GDPR.",
+    ("en", "impressum"): "Legal notice (Impressum) for Imen Bouzouita, independent UX, CRO & digital strategy consultant based in Berlin, Germany — company and contact details.",
+    ("de", "terms"): "Allgemeine Geschäftsbedingungen für UX-, CRO- und Digitalstrategie-Beratungsleistungen von Imen Bouzouita — Vertragsbedingungen, Leistungen und Pflichten.",
+    ("de", "privacy"): "Wie imenbouzouita.com personenbezogene Daten erhebt, nutzt und schützt, inklusive Analyse-Tools, Cookies und Kontaktformular, sowie Ihre Rechte nach DSGVO.",
+    ("de", "impressum"): "Impressum von Imen Bouzouita, selbstständige UX-, CRO- und Digitalstrategie-Beraterin mit Sitz in Berlin — Angaben gemäß § 5 TMG und Kontaktdaten.",
+}
+
+
 def build_legal(t, lang_code, slug, alt_paths):
     current_path = lang_legal_path(lang_code, slug)
     entry = t["legal"][slug]
@@ -1364,7 +1397,7 @@ def build_legal(t, lang_code, slug, alt_paths):
   </main>
 """
     title = f"{entry['title']} — Imen Bouzouita"
-    description = f"{entry['title']} {t['meta']['legal_meta_suffix']}"
+    description = LEGAL_META_DESCRIPTIONS[(lang_code, slug)]
     html = page_shell(t, title, description, body, current_path, alt_paths, extra_head=build_json_ld_legal(t, entry, current_path))
     write(current_path, html)
 
