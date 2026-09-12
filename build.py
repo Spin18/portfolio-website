@@ -268,6 +268,12 @@ def _as_list(value):
     return value if isinstance(value, list) else [value]
 
 
+def _format_date(iso_date):
+    """'2026-08-29' -> 'Aug 29, 2026', for display alongside the
+    machine-readable datetime= attribute on a <time> element."""
+    return datetime.date.fromisoformat(iso_date).strftime("%b %-d, %Y")
+
+
 def meta_description(short, long, target=155):
     """A meta description built from a short tagline plus a longer summary
     — short taglines alone (a case study's one-liner) are too brief for a
@@ -1105,7 +1111,7 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
   <main id="main">
     <section class="page-hero">
       <div class="container">
-        <div class="tag-row"><span class="work-tag" style="position:static;">{cs['tag']}</span></div>
+        <div class="tag-row"><span class="work-tag" style="position:static;">{cs['tag']}</span><time class="resource-date" datetime="{CASE_STUDIES_DATE_PUBLISHED}">{_format_date(CASE_STUDIES_DATE_PUBLISHED)}</time></div>
         <p class="eyebrow">{t['meta']['case_study_label']}</p>
         <h1>{cs['title']}</h1>
         <p class="lede">{cs['one_liner']}</p>
@@ -1249,7 +1255,7 @@ def build_resource_article(t, lang_code, article, alt_paths):
   <main id="main">
     <section class="page-hero resources-hero">
       <div class="container">
-        <div class="tag-row">{category_html}<span class="resource-date">{read_time}</span></div>
+        <div class="tag-row">{category_html}<time class="resource-date" datetime="{article['date']}">{_format_date(article['date'])}</time><span class="resource-date">&middot; {read_time}</span></div>
         <h1>{article['title']}</h1>
         {cover_html}
         <div class="case-body" data-reveal>
