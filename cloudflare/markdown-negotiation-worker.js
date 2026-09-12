@@ -171,6 +171,28 @@ export default {
     }
     const assetCache = assetCacheControl(url.pathname);
     if (assetCache) headers.set('Cache-Control', assetCache);
+
+    // GitHub Pages sends Last-Modified on HTML pages but no ETag (and,
+    // inconsistently, neither header at all on some other file types).
+    // Google's crawler docs prefer ETag for revalidation, so synthesize
+    // a real content-hash one here rather than a fake/timestamp-based
+    // stand-in — it's exact (only changes when the bytes do) and lets
+    // us honour If-None-Match with a genuine 304, saving Googlebot (and
+    // everyone else) the response body on an unchanged re-crawl.
+    if ((headers.get('Content-Type') || '').includes('text/html')) {
+      const body = await response.arrayBuffer();
+      const digest = await crypto.subtle.digest('SHA-1', body);
+      const etag = `"${[...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('')}"`;
+      headers.set('ETag', etag);
+
+      const ifNoneMatch = request.headers.get('If-None-Match');
+      if (ifNoneMatch && ifNoneMatch.split(',').map((s) => s.trim()).includes(etag)) {
+        headers.delete('Content-Length');
+        return new Response(null, { status: 304, statusText: 'Not Modified', headers });
+      }
+      return new Response(body, { status: response.status, statusText: response.statusText, headers });
+    }
+
     return new Response(response.body, {
       status: response.status,
       statusText: response.statusText,
