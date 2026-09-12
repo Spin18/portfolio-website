@@ -23,7 +23,8 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-# Explicitly allowed: AI training for OpenAI, Anthropic, and Google.
+# Explicitly allowed: AI training for OpenAI, Anthropic, Google, Meta,
+# and Apple.
 
 User-agent: GPTBot
 Allow: /
@@ -37,18 +38,18 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 # Other AI-training/data-scraping crawlers are still blocked below.
 
 User-agent: CCBot
 Disallow: /
 
 User-agent: Bytespider
-Disallow: /
-
-User-agent: Meta-ExternalAgent
-Disallow: /
-
-User-agent: Applebot-Extended
 Disallow: /
 
 User-agent: Amazonbot

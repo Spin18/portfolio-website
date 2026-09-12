@@ -1463,8 +1463,6 @@ def build_404(t):
 AI_TRAINING_BOTS = [
     "CCBot",
     "Bytespider",
-    "Meta-ExternalAgent",
-    "Applebot-Extended",
     "Amazonbot",
     "Diffbot",
     "Omgilibot",
@@ -1487,12 +1485,14 @@ AI_INPUT_BOTS = [
 
 # Training crawlers explicitly allowed (opted back in): OpenAI, Anthropic
 # (both its current bot, ClaudeBot, and its older/alternate identifier,
-# anthropic-ai), and Google's training bot.
+# anthropic-ai), Google, Meta, and Apple's training bots.
 AI_TRAINING_BOTS_ALLOWED = [
     "GPTBot",
     "ClaudeBot",
     "anthropic-ai",
     "Google-Extended",
+    "Meta-ExternalAgent",
+    "Applebot-Extended",
 ]
 
 
@@ -1540,7 +1540,8 @@ Content-Signal: search=yes, ai-input=yes, ai-train=yes
 # the wildcard rule, listed explicitly for clarity.
 
 {allow_blocks}
-# Explicitly allowed: AI training for OpenAI, Anthropic, and Google.
+# Explicitly allowed: AI training for OpenAI, Anthropic, Google, Meta,
+# and Apple.
 
 {training_allow_blocks}
 # Other AI-training/data-scraping crawlers are still blocked below.
@@ -1552,9 +1553,9 @@ Sitemap: {SITE_URL}/sitemap.xml
 
     write("ai.txt", f"""# ai.txt for {SITE_URL}
 #
-# AI training is allowed for OpenAI, Anthropic, and Google. Other
-# AI/data-scraping crawlers are blocked — see /robots.txt for the full,
-# per-crawler breakdown.
+# AI training is allowed for OpenAI, Anthropic, Google, Meta, and
+# Apple. Other AI/data-scraping crawlers are blocked — see /robots.txt
+# for the full, per-crawler breakdown.
 #
 # There is no formal, widely-adopted standard for ai.txt yet. The
 # directives that crawlers actually honour live in /robots.txt, which
@@ -1568,10 +1569,11 @@ Content-Signal: search=yes, ai-input=yes, ai-train=yes
 # ai-input=yes  -- AI assistants may read this content to answer a
 #                  user's question about it (RAG, citation, live browsing)
 # ai-train=yes  -- this content may be used to train or fine-tune AI/ML
-#                  models — allowed for OpenAI, Anthropic, and Google
-#                  specifically (see the named Allow rules in
-#                  /robots.txt); other AI-training/data-scraping
-#                  crawlers are still individually blocked there.
+#                  models — allowed for OpenAI, Anthropic, Google,
+#                  Meta, and Apple specifically (see the named Allow
+#                  rules in /robots.txt); other AI-training/data-
+#                  scraping crawlers are still individually blocked
+#                  there.
 """)
 
     all_paths = []

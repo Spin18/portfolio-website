@@ -1,8 +1,8 @@
 # ai.txt for https://www.imenbouzouita.com
 #
-# AI training is allowed for OpenAI, Anthropic, and Google. Other
-# AI/data-scraping crawlers are blocked — see /robots.txt for the full,
-# per-crawler breakdown.
+# AI training is allowed for OpenAI, Anthropic, Google, Meta, and
+# Apple. Other AI/data-scraping crawlers are blocked — see /robots.txt
+# for the full, per-crawler breakdown.
 #
 # There is no formal, widely-adopted standard for ai.txt yet. The
 # directives that crawlers actually honour live in /robots.txt, which
@@ -16,7 +16,8 @@ Content-Signal: search=yes, ai-input=yes, ai-train=yes
 # ai-input=yes  -- AI assistants may read this content to answer a
 #                  user's question about it (RAG, citation, live browsing)
 # ai-train=yes  -- this content may be used to train or fine-tune AI/ML
-#                  models — allowed for OpenAI, Anthropic, and Google
-#                  specifically (see the named Allow rules in
-#                  /robots.txt); other AI-training/data-scraping
-#                  crawlers are still individually blocked there.
+#                  models — allowed for OpenAI, Anthropic, Google,
+#                  Meta, and Apple specifically (see the named Allow
+#                  rules in /robots.txt); other AI-training/data-
+#                  scraping crawlers are still individually blocked
+#                  there.
