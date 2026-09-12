@@ -19,6 +19,45 @@
  * the dashboard editor is sufficient for a worker this small.
  */
 
+// Content-Security-Policy for the whole zone. Verified empirically against
+// the live site's actual third-party network calls (GA4, Contentsquare,
+// Cloudflare Web Analytics, Formspree) rather than guessed:
+//   - script-src needs no 'unsafe-inline': the one inline event handler
+//     that used to require it (the async font-swap trick) was refactored
+//     into assets/js/main.js.
+//   - style-src still needs 'unsafe-inline': the whole stylesheet is
+//     inlined into every page's <head>, plus several inline style="..."
+//     attributes. Rewriting all of that to avoid it is a much bigger,
+//     riskier change for a low-severity threat class (CSS injection, not
+//     arbitrary code execution) — not worth it here.
+//   - connect-src/script-src use https://*.contentsquare.net (not just
+//     t.contentsquare.net) since Contentsquare's collection traffic goes
+//     to a second subdomain (c.ba.contentsquare.net) and may use others
+//     for session recording that weren't observed in one test session.
+//   - Deliberately NOT allowing the GA4 "Google signals"/ads-audiences
+//     ping (a per-visitor-country google.<tld>/ads/ga-audiences request):
+//     it's an ads-remarketing signal unrelated to core pageview tracking
+//     (which uses the stable analytics.google.com), the site runs no
+//     Google Ads, and the destination domain varies by country so it
+//     can't be allowlisted completely anyway. Blocking it is a privacy
+//     positive, not a functional loss.
+// Currently Report-Only: logs violations to the browser console instead
+// of blocking anything, so this can be verified against real traffic
+// before switching to the enforcing header (drop "-Report-Only").
+const CSP = [
+  "default-src 'self'",
+  "script-src 'self' https://static.cloudflareinsights.com https://www.googletagmanager.com https://*.contentsquare.net",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  "font-src 'self' https://fonts.gstatic.com",
+  "img-src 'self' data:",
+  "connect-src 'self' https://formspree.io https://analytics.google.com https://*.google-analytics.com https://*.contentsquare.net",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self' https://formspree.io",
+  "frame-ancestors 'self'",
+  "upgrade-insecure-requests",
+].join('; ');
+
 export default {
   async fetch(request) {
     const accept = request.headers.get('Accept') || '';
@@ -42,6 +81,7 @@ export default {
             'Content-Type': 'text/markdown; charset=utf-8',
             'Vary': 'Accept',
             'content-signal': 'search=yes, ai-input=yes, ai-train=no',
+            'Content-Security-Policy-Report-Only': CSP,
           },
         });
       }
@@ -52,6 +92,7 @@ export default {
     const response = await fetch(request);
     const headers = new Headers(response.headers);
     headers.set('Vary', 'Accept');
+    headers.set('Content-Security-Policy-Report-Only', CSP);
     return new Response(response.body, {
       status: response.status,
       statusText: response.statusText,

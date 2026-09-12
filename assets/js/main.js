@@ -4,6 +4,22 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
 
+  /* ---------- async font stylesheet swap ----------
+     Replaces the old inline onload="this.media='all'" handler so
+     script-src can stay free of 'unsafe-inline'. Since this script is
+     deferred, the print-media stylesheet may already have finished
+     loading (and fired its load event) before this runs — check
+     link.sheet first rather than relying solely on the event. */
+  (() => {
+    const link = document.getElementById('fonts-link');
+    if (!link) return;
+    if (link.sheet) {
+      link.media = 'all';
+    } else {
+      link.addEventListener('load', () => { link.media = 'all'; }, { once: true });
+    }
+  })();
+
   /* ---------- cookie consent + consent-gated analytics ----------
      GA4 and Contentsquare are never requested until a visitor explicitly
      accepts — no script tag, no request, nothing set — until then. This

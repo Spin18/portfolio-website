@@ -457,7 +457,7 @@ def head(t, lang_code, title, description, current_path, alt_paths, article_date
   <link rel="icon" href="{asset_href(current_path, 'img/favicon.svg')}" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="{FONTS_URL}" media="print" onload="this.media='all'; this.onload=null;" />
+  <link id="fonts-link" rel="stylesheet" href="{FONTS_URL}" media="print" />
   <noscript><link rel="stylesheet" href="{FONTS_URL}" /></noscript>
   <style>{inline_css(current_path)}</style>
   <meta name="theme-color" content="#0E1B1F" />"""
