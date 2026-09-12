@@ -1512,8 +1512,8 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
                 data-msg-success="Thanks. Got it. I’ll get back to you within a day or two."
                 data-msg-error="Something went wrong sending that. Try the Calendly link instead?"
                 data-msg-network="Network hiccup: mind trying again, or use the Calendly link?">
-                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-                <input type="text" name="company" class="hp-decoy" style="display:none" tabindex="-1" autocomplete="off" />
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field blank" />
+                <input type="text" name="company" class="hp-decoy" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field blank" />
                 <div class="form-field">
                   <label for="name">Name</label>
                   <input type="text" id="name" name="name" required />
@@ -1587,7 +1587,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
               <p class="cookie-legal-basis">Legal basis: Consent, opt-in</p>
             </div>
             <label class="cookie-toggle">
-              <input type="checkbox" data-cookie-toggle-analytics />
+              <input type="checkbox" data-cookie-toggle-analytics aria-label="Analytics" />
               <span class="cookie-toggle-track"></span>
             </label>
           </div>
@@ -1600,7 +1600,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
               <p class="cookie-legal-basis">Legal basis: Legitimate interest, always active</p>
             </div>
             <label class="cookie-toggle cookie-toggle--disabled">
-              <input type="checkbox" checked disabled />
+              <input type="checkbox" checked disabled aria-label="Essential" />
               <span class="cookie-toggle-track"></span>
             </label>
           </div>

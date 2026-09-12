@@ -671,7 +671,7 @@ def page_shell(t, title, description, body, current_path, alt_paths, extra_head=
               <p class="cookie-legal-basis">{cb['analytics_legal_basis']}</p>
             </div>
             <label class="cookie-toggle">
-              <input type="checkbox" data-cookie-toggle-analytics />
+              <input type="checkbox" data-cookie-toggle-analytics aria-label="{cb['analytics_label']}" />
               <span class="cookie-toggle-track"></span>
             </label>
           </div>
@@ -684,7 +684,7 @@ def page_shell(t, title, description, body, current_path, alt_paths, extra_head=
               <p class="cookie-legal-basis">{cb['essential_legal_basis']}</p>
             </div>
             <label class="cookie-toggle cookie-toggle--disabled">
-              <input type="checkbox" checked disabled />
+              <input type="checkbox" checked disabled aria-label="{cb['essential_label']}" />
               <span class="cookie-toggle-track"></span>
             </label>
           </div>
@@ -914,8 +914,8 @@ def build_index(t, lang_code, alt_paths):
                 data-msg-success="{form['msg_success']}"
                 data-msg-error="{form['msg_error']}"
                 data-msg-network="{form['msg_network']}">
-                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-                <input type="text" name="company" class="hp-decoy" style="display:none" tabindex="-1" autocomplete="off" />
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field blank" />
+                <input type="text" name="company" class="hp-decoy" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field blank" />
                 <div class="form-field">
                   <label for="name">{form['name_label']}</label>
                   <input type="text" id="name" name="name" required />
