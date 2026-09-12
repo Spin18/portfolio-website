@@ -97,6 +97,14 @@ const SECURITY_HEADERS = {
   // Access-Control-Allow-Origin) that fetch()'s default CORS mode
   // satisfies require-corp on its own, independent of CORP headers.
   'Cross-Origin-Embedder-Policy': 'require-corp',
+  // 'cross-origin' rather than the stricter 'same-origin': this site's
+  // own resources (images, scripts) are all public, non-sensitive
+  // assets, so there's no real data-leak risk either way, but
+  // 'same-origin' could plausibly break Contentsquare's own session-
+  // replay/heatmap dashboard if it reconstructs recorded sessions by
+  // loading this site's live images cross-origin from its own domain —
+  // not something testable without logging into that dashboard.
+  'Cross-Origin-Resource-Policy': 'cross-origin',
 };
 
 export default {
