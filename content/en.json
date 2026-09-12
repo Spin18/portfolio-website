@@ -1227,10 +1227,10 @@
   },
   "seo_checker": {
     "meta_title": "Free SEO, GEO & CRO Website Checker — Imen Bouzouita",
-    "meta_description": "Run a free SEO, AI-search (GEO), and conversion audit on any website — up to 65 checks in under 30 seconds. See what's costing you visibility and conversions.",
+    "meta_description": "Run a free SEO, AI-search (GEO), and conversion audit on any website — up to 65 checks in under a minute. See what's costing you visibility and conversions.",
     "eyebrow": "Free tool · Beta",
     "heading": "How healthy is your website, really?",
-    "lede": "A free SEO, GEO (AI-search readiness), and conversion audit with up to 65 checks in under 30 seconds. See exactly what's costing you visibility and conversions.",
+    "lede": "A free SEO, GEO (AI-search readiness), and conversion audit with up to 65 checks in under a minute. See exactly what's costing you visibility and conversions.",
     "input_placeholder": "yourwebsite.com",
     "input_aria_label": "Website URL to check",
     "submit_label": "Check my site",
@@ -1266,7 +1266,7 @@
     "footer_cta_button": "Book a free 15-min call",
     "home_promo_eyebrow": "Free tool",
     "home_promo_heading": "Curious how your own site stacks up?",
-    "home_promo_body": "Run a free SEO, GEO (AI-search), and conversion audit with up to 65 checks in under 30 seconds, no signup required.",
+    "home_promo_body": "Run a free SEO, GEO (AI-search), and conversion audit with up to 65 checks in under a minute, no signup required.",
     "home_promo_cta": "Check my website free",
     "consent_note": "By clicking \"Check my site\", you agree that only the page's publicly visible content is read. Your IP is used to prevent abuse (max 5 checks per hour), and results are cached for up to 15 minutes so repeat checks are faster. Nothing is stored beyond that.",
     "disclaimer_note": "This is an automated check. It's a good starting point, not a substitute for a full professional audit."

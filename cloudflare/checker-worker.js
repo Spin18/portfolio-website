@@ -39,7 +39,12 @@
 
 const USER_AGENT = "GEO-SEO-Checker/1.0 (+https://www.imenbouzouita.com/tools/seo-checker/; free audit tool)";
 const FETCH_TIMEOUT_MS = 12_000;
-const PSI_TIMEOUT_MS = 55_000;
+// Cloudflare's own edge proxy generally closes a long-idle HTTP connection
+// around 100s; staying well under that keeps a slow PSI response ending in
+// our own clean AbortError handling below (a graceful, single-check "Low"
+// failure) rather than a raw connection drop the visitor's browser can't
+// explain.
+const PSI_TIMEOUT_MS = 80_000;
 const PSI_ENDPOINT = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed";
 
 const RATE_LIMIT_PER_HOUR = 5;
@@ -885,7 +890,7 @@ async function runChecks(url, { skipVitals = false, psiApiKey = null, psiStrateg
 
     if (psiData === null) {
       add("cwv_data_available", "Core Web Vitals", "low", false, `PageSpeed Insights (Lighthouse) request failed: ${psiError}`,
-        "This is often a temporary Google PSI rate limit on anonymous requests. Try again shortly.");
+        "PageSpeed Insights occasionally times out or briefly throttles requests, even with an API key configured. This check usually passes on a retry.");
     } else {
       add("cwv_data_available", "Core Web Vitals", "low", true, `Lighthouse data retrieved via PageSpeed Insights (${psiStrategy} strategy)`);
 
