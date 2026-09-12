@@ -287,8 +287,17 @@
 
       const fd = new FormData();
       fd.append('email', email);
-      fd.append('_subject', `SEO Checker lead: ${lastReport.url} (${lastReport.grade}, ${lastReport.score_pct}%)`);
-      fd.append('message', `Checked: ${lastReport.url}\nScore: ${lastReport.score_pct}% (${lastReport.grade})\nPassed: ${lastReport.passed}/${lastReport.total}`);
+      fd.append('_subject', `Website Checker report request for ${lastReport.url}`);
+      // Written as a plain sentence rather than a raw key:value dump — the
+      // previous rigid "Checked: X\nScore: Y\nPassed: Z" template, plus the
+      // bare URL, reads a lot like the shape of content spam filters are
+      // tuned to catch, which is a likely reason submissions were landing
+      // in Formspree's spam folder even on a brand-new form.
+      fd.append(
+        'message',
+        `Someone unlocked the full Website Checker report for ${lastReport.url}. ` +
+          `They scored ${lastReport.score_pct}% (grade ${lastReport.grade}), passing ${lastReport.passed} of ${lastReport.total} checks.`
+      );
 
       try {
         const resp = await fetch(FORMSPREE_ACTION, { method: 'POST', body: fd, headers: { Accept: 'application/json' } });
