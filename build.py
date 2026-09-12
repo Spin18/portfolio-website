@@ -1134,7 +1134,7 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
 
     title = f"{cs['title']} — {t['meta']['case_study_label']} — Imen Bouzouita"
     description = meta_description(cs["one_liner"], cs["summary"])
-    html = page_shell(t, title, description, body, current_path, alt_paths, extra_head=build_json_ld_case_study(t, cs, current_path), markdown_path=md_path)
+    html = page_shell(t, title, description, body, current_path, alt_paths, extra_head=build_json_ld_case_study(t, cs, current_path), article_date=CASE_STUDIES_DATE_PUBLISHED, markdown_path=md_path)
     write(current_path, html)
 
 
