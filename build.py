@@ -16,10 +16,12 @@ same keys as en.json) and rerun this script.
 
 Run: python3 build.py
 """
+import datetime
 import hashlib
 import json
 import os
 import re
+import subprocess
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SITE_URL = "https://www.imenbouzouita.com"
@@ -1494,6 +1496,35 @@ AI_TRAINING_BOTS_ALLOWED = [
 ]
 
 
+_LASTMOD_CACHE = {}
+
+
+def _lastmod(rel_path):
+    """Sitemap <lastmod> for the output file at `rel_path`: the date of the
+    last commit that actually changed it. Each generated HTML file is its
+    own git blob (even though several share one content/en.json source), so
+    this stays accurate per page rather than bumping every page's date on
+    any content edit. Falls back to today for a file with no commit yet
+    (new page, not committed) or if git isn't available."""
+    if rel_path in _LASTMOD_CACHE:
+        return _LASTMOD_CACHE[rel_path]
+
+    date = None
+    try:
+        result = subprocess.run(
+            ["git", "log", "-1", "--format=%aI", "--", rel_path],
+            cwd=ROOT, capture_output=True, text=True, timeout=5,
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            date = result.stdout.strip()[:10]
+    except (OSError, subprocess.SubprocessError):
+        pass
+
+    date = date or datetime.date.today().isoformat()
+    _LASTMOD_CACHE[rel_path] = date
+    return date
+
+
 def build_robots_sitemap(content):
     bot_blocks = "\n".join(f"User-agent: {bot}\nDisallow: /\n" for bot in AI_TRAINING_BOTS)
     allow_blocks = "\n".join(f"User-agent: {bot}\nAllow: /\n" for bot in AI_INPUT_BOTS)
@@ -1569,7 +1600,10 @@ Content-Signal: search=yes, ai-input=yes, ai-train=yes
                 f'<xhtml:link rel="alternate" hreflang="{alt_code}" href="{url_for(alt_p)}" />'
                 for alt_code, alt_p in variants.items()
             )
-            entries.append(f"  <url>\n    <loc>{url_for(p)}</loc>\n      {alt_links}\n  </url>")
+            entries.append(
+                f"  <url>\n    <loc>{url_for(p)}</loc>\n    <lastmod>{_lastmod(p)}</lastmod>\n"
+                f"      {alt_links}\n  </url>"
+            )
 
     sitemap = f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
