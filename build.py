@@ -776,7 +776,7 @@ def build_index(t, lang_code, alt_paths):
                 srcset = f'srcset="{mobile_src} 480w, {src} {w}w" sizes="(max-width: 640px) 100vw, 33vw" '
             else:
                 srcset = ""
-            cover_html = f'<img class="cover" src="{src}" {srcset}alt="" width="{w}" height="{h}" loading="lazy" />'
+            cover_html = f'<img class="cover" src="{src}" {srcset}alt="{cs["title"]}" width="{w}" height="{h}" loading="lazy" />'
         else:
             cover_html = '<div class="cover" style="background: linear-gradient(140deg, var(--moonstone), var(--lilac)); position:absolute; inset:0; height:112%;"></div>'
         work_cards += f"""
