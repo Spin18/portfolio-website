@@ -53,9 +53,9 @@
 //     the practical choice; note it only permits *inline* script
 //     execution, external <script src> is still restricted to the
 //     domains listed below.
-// Currently Report-Only: logs violations to the browser console instead
-// of blocking anything, so this can be verified against real traffic
-// before switching to the enforcing header (drop "-Report-Only").
+// Verified in Report-Only mode against real traffic (GA4, Contentsquare,
+// Cloudflare Web Analytics, Formspree all confirmed working) before
+// switching to this enforcing header.
 const CSP = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com https://*.contentsquare.net",
@@ -93,7 +93,7 @@ export default {
             'Content-Type': 'text/markdown; charset=utf-8',
             'Vary': 'Accept',
             'content-signal': 'search=yes, ai-input=yes, ai-train=no',
-            'Content-Security-Policy-Report-Only': CSP,
+            'Content-Security-Policy': CSP,
           },
         });
       }
@@ -104,7 +104,7 @@ export default {
     const response = await fetch(request);
     const headers = new Headers(response.headers);
     headers.set('Vary', 'Accept');
-    headers.set('Content-Security-Policy-Report-Only', CSP);
+    headers.set('Content-Security-Policy', CSP);
     return new Response(response.body, {
       status: response.status,
       statusText: response.statusText,
