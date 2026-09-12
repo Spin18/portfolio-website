@@ -738,7 +738,23 @@ def build_index(t, lang_code, alt_paths):
         card_image = cs.get("card_cover") or cs.get("cover")
         if card_image:
             w, h = image_size(card_image)
-            cover_html = f'<img class="cover" src="{asset_href(current_path, "img/" + card_image)}" alt="" width="{w}" height="{h}" loading="lazy" />'
+            src = asset_href(current_path, "img/" + card_image)
+            # A "-480w" sibling, where one exists on disk, is a lighter
+            # variant for the single-column mobile layout — the 3-column
+            # desktop grid's per-card width is close enough to what mobile
+            # needs (~366px at the widest desktop breakpoint) that the
+            # full-size file alone is already reasonably right-sized for
+            # desktop; only mobile visitors need the smaller one.
+            mobile_variant = card_image.replace("card-cover.webp", "card-cover-480w.webp")
+            has_mobile_variant = mobile_variant != card_image and os.path.exists(
+                os.path.join(ROOT, "assets", "img", mobile_variant)
+            )
+            if has_mobile_variant:
+                mobile_src = asset_href(current_path, "img/" + mobile_variant)
+                srcset = f'srcset="{mobile_src} 480w, {src} {w}w" sizes="(max-width: 640px) 100vw, 33vw" '
+            else:
+                srcset = ""
+            cover_html = f'<img class="cover" src="{src}" {srcset}alt="" width="{w}" height="{h}" loading="lazy" />'
         else:
             cover_html = '<div class="cover" style="background: linear-gradient(140deg, var(--moonstone), var(--lilac)); position:absolute; inset:0; height:112%;"></div>'
         work_cards += f"""
