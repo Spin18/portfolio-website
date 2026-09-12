@@ -171,6 +171,9 @@ def image_size(sub_path):
     return size
 
 
+OG_COVER_W, OG_COVER_H = image_size("og-cover.jpg")
+
+
 _CSS_TEMPLATE = None
 
 
@@ -518,7 +521,9 @@ def head(t, lang_code, title, description, current_path, alt_paths, article_date
   <meta property="og:title" content="{title}" />
   <meta property="og:description" content="{description}" />
   <meta property="og:url" content="{canonical}" />
-  <meta property="og:image" content="{SITE_URL}/assets/img/og-cover.jpg" />{article_meta}
+  <meta property="og:image" content="{SITE_URL}/assets/img/og-cover.jpg" />
+  <meta property="og:image:width" content="{OG_COVER_W}" />
+  <meta property="og:image:height" content="{OG_COVER_H}" />{article_meta}
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="{asset_href(current_path, 'img/favicon.svg')}" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="{asset_href(current_path, 'img/apple-touch-icon.png')}" />
