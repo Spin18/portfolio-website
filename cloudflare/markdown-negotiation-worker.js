@@ -107,6 +107,31 @@ const SECURITY_HEADERS = {
   'Cross-Origin-Resource-Policy': 'cross-origin',
 };
 
+// GitHub Pages (the origin behind this zone) sends every response —
+// pages and static assets alike — a flat Cache-Control: max-age=14400
+// (4 hours), which isn't configurable from a repo (no nginx/_headers
+// support there). Static assets under /assets/ can safely go much
+// longer, they just need different treatment depending on whether
+// they're cache-busted:
+//   - assets/js/main.js is requested with a content-hash query string
+//     (?v=<md5>, see MAIN_JS_VERSION in build.py) that changes whenever
+//     the file's content does, so the URL itself is versioned — a
+//     year-long "immutable" cache can never serve stale JS.
+//   - Everything else under /assets/ (images, fonts, icons, the
+//     standalone style.css, which isn't even linked from any page and
+//     exists only for build.py to inline) has no such versioning: the
+//     same URL keeps its filename if a logo or photo is ever swapped.
+//     A long-but-not-immutable week-long cache gets most of the win
+//     without risking a visitor being stuck on a stale image for a year.
+const ASSET_VERSIONED = /\/assets\/js\/main\.js$/;
+const ASSET_STATIC = /\/assets\/(css|js|img)\//;
+
+function assetCacheControl(pathname) {
+  if (ASSET_VERSIONED.test(pathname)) return 'public, max-age=31536000, immutable';
+  if (ASSET_STATIC.test(pathname)) return 'public, max-age=604800';
+  return null;
+}
+
 export default {
   async fetch(request) {
     const accept = request.headers.get('Accept') || '';
@@ -144,6 +169,8 @@ export default {
     for (const [name, value] of Object.entries(SECURITY_HEADERS)) {
       headers.set(name, value);
     }
+    const assetCache = assetCacheControl(url.pathname);
+    if (assetCache) headers.set('Cache-Control', assetCache);
     return new Response(response.body, {
       status: response.status,
       statusText: response.statusText,
