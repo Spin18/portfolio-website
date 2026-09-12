@@ -130,6 +130,23 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 }
 .btn-line:hover { transform: none; color: var(--moonstone-deep); }
 
+/* ---------- skip link ---------- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 200;
+  padding: 0.8em 1.4em;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  color: var(--bone);
+  font-weight: 600;
+  transition: top var(--dur-fast) var(--ease-out);
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
 /* ---------- nav ---------- */
 /* The scrolled state's blur/tint lives on ::before, not .site-header itself:
    backdrop-filter (like transform/filter) on an ancestor creates a new

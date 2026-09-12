@@ -701,6 +701,7 @@ def page_shell(t, title, description, body, current_path, alt_paths, extra_head=
   {extra_head}
 </head>
 <body data-ga4-id="{GA4_MEASUREMENT_ID}" data-contentsquare-src="{CONTENTSQUARE_SRC}">
+  <a class="skip-link" href="#main">{t['meta']['skip_link_label']}</a>
   {header_html(t, current_path, alt_paths)}
   {body}
   {footer_html(t, current_path)}
@@ -806,7 +807,7 @@ def build_index(t, lang_code, alt_paths):
     form = contact["form"]
 
     body = f"""
-  <main>
+  <main id="main">
     <section class="hero">
       <div class="hero-blob b1" data-parallax="0.08"></div>
       <div class="hero-blob b2" data-parallax="0.15"></div>
@@ -1101,7 +1102,7 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
     home_href = href_to(current_path, lang_home_path(lang_code))
 
     body = f"""
-  <main>
+  <main id="main">
     <section class="page-hero">
       <div class="container">
         <div class="tag-row"><span class="work-tag" style="position:static;">{cs['tag']}</span></div>
@@ -1198,7 +1199,7 @@ def build_resources_index(t, lang_code, alt_paths):
         list_html = f'<p class="resource-empty">{res["empty_state"]}</p>'
 
     body = f"""
-  <main>
+  <main id="main">
     <section class="page-hero resources-hero">
       <div class="container">
         <p class="eyebrow">{res['eyebrow']}</p>
@@ -1245,7 +1246,7 @@ def build_resource_article(t, lang_code, article, alt_paths):
     resources_href = href_to(current_path, lang_resources_index_path(lang_code))
 
     body = f"""
-  <main>
+  <main id="main">
     <section class="page-hero resources-hero">
       <div class="container">
         <div class="tag-row">{category_html}<span class="resource-date">{read_time}</span></div>
@@ -1315,7 +1316,7 @@ def build_facts_page(t, lang_code, alt_paths):
     home_href = href_to(current_path, lang_home_path(lang_code))
 
     body = f"""
-  <main>
+  <main id="main">
     <section class="page-hero">
       <div class="container">
         <p class="eyebrow">{g['eyebrow']}</p>
@@ -1385,7 +1386,7 @@ def build_legal(t, lang_code, slug, alt_paths):
     current_path = lang_legal_path(lang_code, slug)
     entry = t["legal"][slug]
     body = f"""
-  <main>
+  <main id="main">
     <section class="page-hero">
       <div class="container">
         <p class="eyebrow">{t['meta']['legal_label']}</p>
@@ -1493,7 +1494,7 @@ def build_404(t):
     current_path = "404.html"
     nf = t["not_found"]
     body = f"""
-  <main>
+  <main id="main">
     <section class="page-hero text-center">
       <div class="container">
         <p class="eyebrow" style="justify-content:center;">{nf['eyebrow']}</p>

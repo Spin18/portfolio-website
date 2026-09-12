@@ -8,7 +8,8 @@
     "not_found_description": "Page not found.",
     "legal_label": "Rechtliches",
     "visit_live_site_label": "Live-Website ansehen",
-    "logo_aria_label": "Imen Bouzouita — Startseite"
+    "logo_aria_label": "Imen Bouzouita — Startseite",
+    "skip_link_label": "Zum Inhalt springen"
   },
   "nav": {
     "what_i_do": "Was ich mache",

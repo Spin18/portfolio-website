@@ -7,7 +7,8 @@
     "not_found_description": "Page not found.",
     "legal_label": "Legal",
     "visit_live_site_label": "Visit live site",
-    "logo_aria_label": "Imen Bouzouita — home"
+    "logo_aria_label": "Imen Bouzouita — home",
+    "skip_link_label": "Skip to content"
   },
   "nav": {
     "what_i_do": "What I Do",
