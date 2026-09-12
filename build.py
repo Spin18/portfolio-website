@@ -542,6 +542,7 @@ def head(t, lang_code, title, description, current_path, alt_paths, article_date
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content="{description}" />
+  <meta name="author" content="Imen Bouzouita" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="canonical" href="{canonical}" />
   {hreflang_links}
