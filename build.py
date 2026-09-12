@@ -113,6 +113,64 @@ def asset_href(current_path, sub_path):
     return href_to(current_path, f"assets/{sub_path}")
 
 
+_IMAGE_SIZE_CACHE = {}
+
+
+def image_size(sub_path):
+    """Intrinsic (width, height) of assets/img/<sub_path>, read straight from
+    the file's own header — stdlib only, no Pillow dependency for a one-line
+    lookup. Covers exactly the two raster formats this site uses (JPEG,
+    WebP); SVGs/PNGs are only ever used where dimensions are already known
+    up front (TRUST_LOGOS' hardcoded w/h, the hand-set portrait/signature
+    attributes), so they're not needed here."""
+    if sub_path in _IMAGE_SIZE_CACHE:
+        return _IMAGE_SIZE_CACHE[sub_path]
+
+    with open(os.path.join(ROOT, "assets", "img", sub_path), "rb") as f:
+        data = f.read()
+
+    if data[:2] == b"\xff\xd8":
+        i, n = 2, len(data)
+        size = None
+        while i < n:
+            if data[i] != 0xFF:
+                i += 1
+                continue
+            marker = data[i + 1]
+            if marker in (0xD8, 0xD9) or 0xD0 <= marker <= 0xD7:
+                i += 2
+                continue
+            if marker in (0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF):
+                height = (data[i + 5] << 8) + data[i + 6]
+                width = (data[i + 7] << 8) + data[i + 8]
+                size = (width, height)
+                break
+            length = (data[i + 2] << 8) + data[i + 3]
+            i += 2 + length
+        if size is None:
+            raise ValueError(f"no JPEG SOF marker found in {sub_path}")
+    elif data[:4] == b"RIFF" and data[8:12] == b"WEBP":
+        chunk_type = data[12:16]
+        if chunk_type == b"VP8 ":
+            width = (data[26] | (data[27] << 8)) & 0x3FFF
+            height = (data[28] | (data[29] << 8)) & 0x3FFF
+        elif chunk_type == b"VP8L":
+            b0, b1, b2, b3 = data[21], data[22], data[23], data[24]
+            width = 1 + (((b1 & 0x3F) << 8) | b0)
+            height = 1 + (((b3 & 0xF) << 10) | (b2 << 2) | (b1 >> 6))
+        elif chunk_type == b"VP8X":
+            width = 1 + (data[24] | (data[25] << 8) | (data[26] << 16))
+            height = 1 + (data[27] | (data[28] << 8) | (data[29] << 16))
+        else:
+            raise ValueError(f"unrecognised WebP chunk {chunk_type!r} in {sub_path}")
+        size = (width, height)
+    else:
+        raise ValueError(f"unsupported image format for {sub_path}")
+
+    _IMAGE_SIZE_CACHE[sub_path] = size
+    return size
+
+
 _CSS_TEMPLATE = None
 
 
@@ -665,7 +723,8 @@ def build_index(t, lang_code, alt_paths):
         cs_path = lang_case_study_path(lang_code, cs["slug"])
         card_image = cs.get("card_cover") or cs.get("cover")
         if card_image:
-            cover_html = f'<img class="cover" src="{asset_href(current_path, "img/" + card_image)}" alt="" loading="lazy" />'
+            w, h = image_size(card_image)
+            cover_html = f'<img class="cover" src="{asset_href(current_path, "img/" + card_image)}" alt="" width="{w}" height="{h}" loading="lazy" />'
         else:
             cover_html = '<div class="cover" style="background: linear-gradient(140deg, var(--moonstone), var(--lilac)); position:absolute; inset:0; height:112%;"></div>'
         work_cards += f"""
@@ -948,7 +1007,11 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
 
     if cs.get("cover"):
         cover_src = asset_href(current_path, "img/" + cs["cover"])
-        cover_html = f'<img src="{cover_src}" alt="{cs["title"]}" loading="eager" fetchpriority="high" />'
+        cover_w, cover_h = image_size(cs["cover"])
+        cover_html = (
+            f'<img src="{cover_src}" alt="{cs["title"]}" width="{cover_w}" height="{cover_h}" '
+            f'loading="eager" fetchpriority="high" />'
+        )
     else:
         cover_html = '<div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:rgba(14,27,31,0.35); font-family:var(--font-display);">Cover image placeholder</div>'
 
@@ -963,7 +1026,11 @@ def build_case_study(t, lang_code, cs, prev_cs, next_cs, alt_paths):
             # of sitting side by side — force single-column sizing for pairs
             # so both always land in the same row.
             cls = ' class="wide"' if wide and not is_pair else ""
-            return f'<img{cls} src="{asset_href(current_path, "img/" + src)}" alt="{cs["title"]}" loading="lazy" />'
+            w, h = image_size(src)
+            return (
+                f'<img{cls} src="{asset_href(current_path, "img/" + src)}" alt="{cs["title"]}" '
+                f'width="{w}" height="{h}" loading="lazy" />'
+            )
 
         gallery_items = "\n          ".join(_gallery_img(g) for g in cs["gallery"])
         gallery_cls = "case-gallery"
@@ -1115,7 +1182,11 @@ def build_resource_article(t, lang_code, article, alt_paths):
     cover_html = ""
     if article.get("cover"):
         cover_src = asset_href(current_path, "img/" + article["cover"])
-        cover_html = f'<div class="case-cover" data-reveal><img src="{cover_src}" alt="{article["title"]}" loading="eager" fetchpriority="high" /></div>'
+        cover_w, cover_h = image_size(article["cover"])
+        cover_html = (
+            f'<div class="case-cover" data-reveal><img src="{cover_src}" alt="{article["title"]}" '
+            f'width="{cover_w}" height="{cover_h}" loading="eager" fetchpriority="high" /></div>'
+        )
 
     resources_href = href_to(current_path, lang_resources_index_path(lang_code))
 
