@@ -70,6 +70,26 @@ const CSP = [
   "upgrade-insecure-requests",
 ].join('; ');
 
+// Other standard security headers, applied zone-wide alongside CSP.
+// All low-risk/no compatibility surprises (unlike CSP, none of these
+// needed empirical Report-Only testing):
+//   - HSTS was previously max-age=0 (a leftover from the original domain
+//     migration that actively told browsers to stop enforcing HTTPS) —
+//     replaced with a real policy. No "preload" flag: that requires
+//     submission to hstspreload.org and is hard to reverse once shipped
+//     in browsers, a bigger commitment than fixing the header itself.
+//   - X-Frame-Options is redundant with CSP's frame-ancestors 'self' for
+//     modern browsers, kept as a fallback for older ones that don't
+//     support frame-ancestors.
+const SECURITY_HEADERS = {
+  'Content-Security-Policy': CSP,
+  'X-Content-Type-Options': 'nosniff',
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+  'X-Frame-Options': 'SAMEORIGIN',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+};
+
 export default {
   async fetch(request) {
     const accept = request.headers.get('Accept') || '';
@@ -93,7 +113,7 @@ export default {
             'Content-Type': 'text/markdown; charset=utf-8',
             'Vary': 'Accept',
             'content-signal': 'search=yes, ai-input=yes, ai-train=no',
-            'Content-Security-Policy': CSP,
+            ...SECURITY_HEADERS,
           },
         });
       }
@@ -104,7 +124,9 @@ export default {
     const response = await fetch(request);
     const headers = new Headers(response.headers);
     headers.set('Vary', 'Accept');
-    headers.set('Content-Security-Policy', CSP);
+    for (const [name, value] of Object.entries(SECURITY_HEADERS)) {
+      headers.set(name, value);
+    }
     return new Response(response.body, {
       status: response.status,
       statusText: response.statusText,
