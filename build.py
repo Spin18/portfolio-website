@@ -1487,15 +1487,16 @@ def build_seo_checker_page(t, lang_code, alt_paths):
 
           <div data-check-results class="checker-results" hidden>
             <p class="checker-disclaimer">{sc['disclaimer_note']}</p>
-            <div data-teaser class="checker-teaser">
-              <div class="checker-score-card">
-                <div data-score-grade class="checker-grade-circle">A</div>
-                <div>
-                  <p data-score-pct class="checker-score-pct"></p>
-                  <p data-score-url class="checker-score-url"></p>
-                </div>
-              </div>
 
+            <div class="checker-score-card">
+              <div data-score-grade class="checker-grade-circle">A</div>
+              <div>
+                <p data-score-pct class="checker-score-pct"></p>
+                <p data-score-url class="checker-score-url"></p>
+              </div>
+            </div>
+
+            <div data-teaser class="checker-teaser">
               <div data-category-chips class="checker-chips"></div>
 
               <div class="checker-findings-card">
