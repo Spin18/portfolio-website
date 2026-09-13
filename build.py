@@ -1664,6 +1664,25 @@ AI_TRAINING_BOTS = [
     "cohere-ai",
 ]
 
+# Major search engines and AI-answer crawlers (the live-search/citation
+# kind, not training) — already permitted by the default "User-agent: *"
+# rule, listed explicitly for clarity/robustness rather than relying
+# solely on the wildcard. Amzn-SearchBot and Meta-WebIndexer are each
+# independently controlled from their respective company's AI-training
+# bot (Amazonbot, Meta-ExternalAgent) and don't feed model training.
+SEARCH_AND_ANSWER_BOTS = [
+    "Googlebot",
+    "Bingbot",
+    "Applebot",
+    "YandexBot",
+    "Baiduspider",
+    "Meta-WebIndexer",
+    "Amzn-SearchBot",
+    "TikTokSpider",
+    "DuckAssistBot",
+    "Bravebot",
+]
+
 # The live-browsing/search-indexing counterparts of the training bots
 # above — already permitted by the default "User-agent: *" rule, listed
 # explicitly here too for clarity and robustness rather than relying
@@ -1720,6 +1739,7 @@ def _lastmod(rel_path):
 
 def build_robots_sitemap(content):
     bot_blocks = "\n".join(f"User-agent: {bot}\nDisallow: /\n" for bot in AI_TRAINING_BOTS)
+    search_answer_blocks = "\n".join(f"User-agent: {bot}\nAllow: /\n" for bot in SEARCH_AND_ANSWER_BOTS)
     allow_blocks = "\n".join(f"User-agent: {bot}\nAllow: /\n" for bot in AI_INPUT_BOTS)
     training_allow_blocks = "\n".join(f"User-agent: {bot}\nAllow: /\n" for bot in AI_TRAINING_BOTS_ALLOWED)
     robots_txt = f"""User-agent: *
@@ -1727,6 +1747,11 @@ Allow: /
 
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
+# Explicitly allowed: major search engines and AI-answer/citation
+# crawlers. Already covered by the wildcard rule, listed explicitly
+# for clarity.
+
+{search_answer_blocks}
 # Explicitly allowed: AI assistants browsing or answering a live user's
 # question about this site (a separate, permitted use from training —
 # see /ai.txt and the Content-Signal line above). Already covered by
