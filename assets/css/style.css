@@ -1194,6 +1194,25 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   font: inherit;
 }
 .checker-email-form input:focus { outline: 2px solid var(--coral); outline-offset: 2px; }
+.checker-marketing-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6em;
+  flex-basis: 100%;
+  text-align: left;
+  font-size: 0.82rem;
+  color: rgba(247,245,240,0.75);
+  cursor: pointer;
+}
+.checker-marketing-consent input {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin: 0.15em 0 0;
+  padding: 0;
+  border-radius: 3px;
+  max-width: none;
+}
 
 .checker-priority-list { display: flex; flex-direction: column; gap: 0.8rem; }
 .checker-priority-item {

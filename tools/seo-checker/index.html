@@ -1224,6 +1224,25 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   font: inherit;
 }
 .checker-email-form input:focus { outline: 2px solid var(--coral); outline-offset: 2px; }
+.checker-marketing-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6em;
+  flex-basis: 100%;
+  text-align: left;
+  font-size: 0.82rem;
+  color: rgba(247,245,240,0.75);
+  cursor: pointer;
+}
+.checker-marketing-consent input {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin: 0.15em 0 0;
+  padding: 0;
+  border-radius: 3px;
+  max-width: none;
+}
 
 .checker-priority-list { display: flex; flex-direction: column; gap: 0.8rem; }
 .checker-priority-item {
@@ -1355,7 +1374,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 }
 </style>
   <meta name="theme-color" content="#0E1B1F" />
-  <script src="../../assets/js/seo-checker.js?v=c9f7bb93" defer></script>
+  <script src="../../assets/js/seo-checker.js?v=c2fcf869" defer></script>
 </head>
 <body data-ga4-id="G-G78M71MS8D" data-contentsquare-src="https://t.contentsquare.net/uxa/eebaa999b0989.js">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -1438,6 +1457,10 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
                 <form data-email-form class="checker-email-form">
                   <input data-email-input type="email" autocomplete="email" placeholder="you@company.com" aria-label="Email address" required />
                   <button type="submit" class="btn btn-primary">Unlock full report</button>
+                  <label class="checker-marketing-consent">
+                    <input type="checkbox" data-marketing-consent />
+                    Also send me occasional tips on improving my website's SEO, GEO & CRO (optional, unsubscribe anytime).
+                  </label>
                 </form>
                 <p data-email-status class="checker-error" hidden></p>
               </div>

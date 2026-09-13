@@ -1224,6 +1224,25 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   font: inherit;
 }
 .checker-email-form input:focus { outline: 2px solid var(--coral); outline-offset: 2px; }
+.checker-marketing-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6em;
+  flex-basis: 100%;
+  text-align: left;
+  font-size: 0.82rem;
+  color: rgba(247,245,240,0.75);
+  cursor: pointer;
+}
+.checker-marketing-consent input {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin: 0.15em 0 0;
+  padding: 0;
+  border-radius: 3px;
+  max-width: none;
+}
 
 .checker-priority-list { display: flex; flex-direction: column; gap: 0.8rem; }
 .checker-priority-item {
@@ -1416,7 +1435,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   <li>Nutzungsdaten (z. B. besuchte Seiten, Interaktionsdaten)</li>
   <li>Technische Daten (z. B. IP-Adresse, Browsertyp, Geräteinformationen), die von der Hosting-Infrastruktur protokolliert werden</li>
 </ul>
-<p>Im Einzelnen: Kontaktformular-Eingaben (Name, E-Mail, Nachricht), die über das Kontaktformular übermittelt und über Formspree verarbeitet werden; Calendly-Buchungsdaten, die gemäß der eigenen Datenschutzerklärung von Calendly verarbeitet werden; technische und Verbindungsdaten (z. B. IP-Adresse), die von Cloudflare, unserem Anbieter für Content-Delivery, DNS und Sicherheit, für jeden Besucher im Rahmen des Betriebs dieser Website verarbeitet werden; Nachrichten an unsere @imenbouzouita.com-Adresse, die über Cloudflare Email Routing weitergeleitet werden; sowie, nur bei Zustimmung im Cookie-Banner, Nutzungsdaten über Google Analytics (GA4) und Contentsquare (Session Recordings und Heatmaps). Wenn Sie unser kostenloses Website-Checker-Tool nutzen, werden die von Ihnen eingegebene URL und der daraus resultierende Bericht für bis zu 15 Minuten im Cloudflare-KV-Speicher zwischengespeichert, um wiederholte Prüfungen zu beschleunigen, und Ihre IP-Adresse wird auf die gleiche Weise wie oben zur Missbrauchsprävention genutzt; Performance-Prüfungen rufen die PageSpeed-Insights-API von Google auf, der nur die geprüfte URL übermittelt wird; und, nur wenn Sie sich entscheiden, den vollständigen Bericht freizuschalten, wird Ihre E-Mail-Adresse über Formspree übermittelt.</p>
+<p>Im Einzelnen: Kontaktformular-Eingaben (Name, E-Mail, Nachricht), die über das Kontaktformular übermittelt und über Formspree verarbeitet werden; Calendly-Buchungsdaten, die gemäß der eigenen Datenschutzerklärung von Calendly verarbeitet werden; technische und Verbindungsdaten (z. B. IP-Adresse), die von Cloudflare, unserem Anbieter für Content-Delivery, DNS und Sicherheit, für jeden Besucher im Rahmen des Betriebs dieser Website verarbeitet werden; Nachrichten an unsere @imenbouzouita.com-Adresse, die über Cloudflare Email Routing weitergeleitet werden; sowie, nur bei Zustimmung im Cookie-Banner, Nutzungsdaten über Google Analytics (GA4) und Contentsquare (Session Recordings und Heatmaps). Wenn Sie unser kostenloses Website-Checker-Tool nutzen, werden die von Ihnen eingegebene URL und der daraus resultierende Bericht für bis zu 15 Minuten im Cloudflare-KV-Speicher zwischengespeichert, um wiederholte Prüfungen zu beschleunigen, und Ihre IP-Adresse wird auf die gleiche Weise wie oben zur Missbrauchsprävention genutzt; Performance-Prüfungen rufen die PageSpeed-Insights-API von Google auf, der nur die geprüfte URL übermittelt wird; und, nur wenn Sie sich entscheiden, den vollständigen Bericht freizuschalten, wird Ihre E-Mail-Adresse über Formspree übermittelt; wenn Sie zusätzlich das optionale Marketing-Kontrollkästchen neben diesem E-Mail-Feld aktivieren, wird auch diese Entscheidung gespeichert, und nur dann dürfen wir Ihre E-Mail-Adresse für gelegentliche Marketing-E-Mails verwenden, die Sie jederzeit abbestellen können.</p>
 <h2>3. Rechtsgrundlage der Verarbeitung</h2>
 <p>Wir verarbeiten Ihre personenbezogenen Daten auf folgenden Rechtsgrundlagen:</p>
 <ul>
@@ -1432,6 +1451,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   <li>Beantwortung von Anfragen und Verwaltung gebuchter Gespräche</li>
   <li>Verbesserung der Nutzererfahrung</li>
   <li>Gewährleistung der Sicherheit und Betrugsprävention</li>
+  <li>Versand von Marketing-Kommunikation, nur bei Ihrer Einwilligung</li>
 </ul>
 <h2>5. Datenweitergabe</h2>
 <p>Wir verkaufen Ihre personenbezogenen Daten nicht. Sie werden nicht an Dritte weitergegeben, außer soweit dies für den Betrieb dieser Website erforderlich ist, und nur:</p>

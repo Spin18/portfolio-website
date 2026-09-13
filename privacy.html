@@ -1224,6 +1224,25 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   font: inherit;
 }
 .checker-email-form input:focus { outline: 2px solid var(--coral); outline-offset: 2px; }
+.checker-marketing-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6em;
+  flex-basis: 100%;
+  text-align: left;
+  font-size: 0.82rem;
+  color: rgba(247,245,240,0.75);
+  cursor: pointer;
+}
+.checker-marketing-consent input {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin: 0.15em 0 0;
+  padding: 0;
+  border-radius: 3px;
+  max-width: none;
+}
 
 .checker-priority-list { display: flex; flex-direction: column; gap: 0.8rem; }
 .checker-priority-item {
@@ -1416,7 +1435,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   <li>Usage data (e.g., pages visited, interaction data)</li>
   <li>Technical data (e.g., IP address, browser type, device information), logged by hosting infrastructure</li>
 </ul>
-<p>Specifically: contact form submissions (name, email, message) submitted via the contact form, processed through Formspree; Calendly booking details, handled under Calendly's own privacy policy; technical and connection data (e.g. IP address) processed by Cloudflare, our content delivery, DNS, and security provider, for every visitor as part of operating this site; messages sent to our @imenbouzouita.com address, forwarded via Cloudflare Email Routing; and, only if you accept the cookie banner, usage data collected via Google Analytics (GA4) and Contentsquare (session recordings and heatmaps). If you use our free Website Checker tool, the URL you submit and the resulting report are cached for up to 15 minutes in Cloudflare KV storage to speed up repeat checks, and your IP address is used the same way as above to prevent abuse; performance checks call Google's PageSpeed Insights API with only the checked URL; and, only if you choose to unlock the full report, your email address is submitted via Formspree.</p>
+<p>Specifically: contact form submissions (name, email, message) submitted via the contact form, processed through Formspree; Calendly booking details, handled under Calendly's own privacy policy; technical and connection data (e.g. IP address) processed by Cloudflare, our content delivery, DNS, and security provider, for every visitor as part of operating this site; messages sent to our @imenbouzouita.com address, forwarded via Cloudflare Email Routing; and, only if you accept the cookie banner, usage data collected via Google Analytics (GA4) and Contentsquare (session recordings and heatmaps). If you use our free Website Checker tool, the URL you submit and the resulting report are cached for up to 15 minutes in Cloudflare KV storage to speed up repeat checks, and your IP address is used the same way as above to prevent abuse; performance checks call Google's PageSpeed Insights API with only the checked URL; and, only if you choose to unlock the full report, your email address is submitted via Formspree; if you also tick the optional marketing checkbox next to that email field, that choice is recorded too, and only then may we use your email to send occasional marketing emails, which you can unsubscribe from at any time.</p>
 <h2>3. Legal Basis for Processing</h2>
 <p>We process your personal data based on the following legal grounds:</p>
 <ul>
@@ -1432,6 +1451,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   <li>Responding to enquiries and managing booked calls</li>
   <li>Improving user experience</li>
   <li>Ensuring security and preventing fraud</li>
+  <li>Sending marketing communications, only if you've opted in</li>
 </ul>
 <h2>5. Data Sharing</h2>
 <p>We do not sell your personal data. It isn't shared with third parties beyond what's required to operate this site, and only:</p>

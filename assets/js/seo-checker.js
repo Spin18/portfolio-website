@@ -278,6 +278,7 @@
       if (!lastReport) return;
       const emailInput = emailForm.querySelector('[data-email-input]');
       const submitBtn = emailForm.querySelector('button[type="submit"]');
+      const marketingConsent = emailForm.querySelector('[data-marketing-consent]');
       const email = emailInput.value.trim();
       if (!email) return;
 
@@ -298,6 +299,9 @@
         `Someone unlocked the full Website Checker report for ${lastReport.url}. ` +
           `They scored ${lastReport.score_pct}% (grade ${lastReport.grade}), passing ${lastReport.passed} of ${lastReport.total} checks.`
       );
+      // Sent either way (not just when checked) so there's always a clear
+      // record of whether marketing consent was given for this lead.
+      fd.append('marketing_consent', marketingConsent && marketingConsent.checked ? 'yes' : 'no');
 
       try {
         const resp = await fetch(FORMSPREE_ACTION, { method: 'POST', body: fd, headers: { Accept: 'application/json' } });

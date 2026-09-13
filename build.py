@@ -1510,6 +1510,10 @@ def build_seo_checker_page(t, lang_code, alt_paths):
                 <form data-email-form class="checker-email-form">
                   <input data-email-input type="email" autocomplete="email" placeholder="{sc['email_placeholder']}" aria-label="{sc['email_aria_label']}" required />
                   <button type="submit" class="btn btn-primary">{sc['unlock_label']}</button>
+                  <label class="checker-marketing-consent">
+                    <input type="checkbox" data-marketing-consent />
+                    {sc['marketing_consent_label']}
+                  </label>
                 </form>
                 <p data-email-status class="checker-error" hidden></p>
               </div>
