@@ -486,6 +486,7 @@ def build_json_ld_facts(t, current_path):
 
 def build_json_ld_case_study(t, cs, current_path):
     lang_code = _lang_of(current_path)
+    person, business, website = _core_entities(t, lang_code)
     page_url = url_for(current_path)
     home_url = url_for(lang_home_path(lang_code))
 
@@ -526,7 +527,7 @@ def build_json_ld_case_study(t, cs, current_path):
         "breadcrumb": {"@id": f"{page_url}#breadcrumb"},
     }
 
-    return _json_ld_script([breadcrumb, webpage, work])
+    return _json_ld_script([breadcrumb, webpage, work, person, business, website])
 
 
 def head(t, lang_code, title, description, current_path, alt_paths, article_date=None, markdown_path=None):
@@ -1284,6 +1285,16 @@ def build_resource_article(t, lang_code, article, alt_paths):
           <p class="lede">{article['excerpt']}</p>
           {sections_html}
         </div>
+        <div class="author-bio" data-reveal>
+          <picture>
+            <source srcset="{asset_href(current_path, 'img/imen-portrait.webp')}" type="image/webp" />
+            <img class="author-bio-avatar" src="{asset_href(current_path, 'img/imen-portrait.jpg')}" alt="Imen Bouzouita" loading="lazy" width="840" height="1120" />
+          </picture>
+          <div>
+            <p class="author-bio-label">{res['author_bio_heading']}</p>
+            <p>{res['author_bio_text']}</p>
+          </div>
+        </div>
         <div class="case-nav" style="justify-content:flex-start;">
           <a href="{resources_href}" class="btn btn-ghost">&larr; {res['all_resources']}</a>
         </div>
@@ -1547,6 +1558,7 @@ def build_seo_checker_page(t, lang_code, alt_paths):
 
 def build_json_ld_legal(t, entry, current_path):
     lang_code = _lang_of(current_path)
+    person, business, website = _core_entities(t, lang_code)
     page_url = url_for(current_path)
     webpage = {
         "@type": "WebPage",
@@ -1557,11 +1569,12 @@ def build_json_ld_legal(t, entry, current_path):
         "isPartOf": {"@id": f"{SITE_URL}/#website"},
         "about": {"@id": f"{SITE_URL}/#business"},
     }
-    return _json_ld_script([webpage])
+    return _json_ld_script([webpage, business, website, person])
 
 
 def build_json_ld_resources_index(t, current_path):
     lang_code = _lang_of(current_path)
+    person, business, website = _core_entities(t, lang_code)
     page_url = url_for(current_path)
     blog = {
         "@type": "Blog",
@@ -1582,11 +1595,12 @@ def build_json_ld_resources_index(t, current_path):
         "isPartOf": {"@id": f"{SITE_URL}/#website"},
         "about": {"@id": f"{SITE_URL}/#business"},
     }
-    return _json_ld_script([webpage, blog])
+    return _json_ld_script([webpage, blog, business, website, person])
 
 
 def build_json_ld_resource_article(t, article, current_path):
     lang_code = _lang_of(current_path)
+    person, business, website = _core_entities(t, lang_code)
     page_url = url_for(current_path)
     home_url = url_for(lang_home_path(lang_code))
     resources_url = url_for(lang_resources_index_path(lang_code))
@@ -1628,7 +1642,7 @@ def build_json_ld_resource_article(t, article, current_path):
         "breadcrumb": {"@id": f"{page_url}#breadcrumb"},
     }
 
-    return _json_ld_script([breadcrumb, webpage, post])
+    return _json_ld_script([breadcrumb, webpage, post, person, business, website])
 
 
 def build_404(t):

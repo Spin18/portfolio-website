@@ -926,6 +926,35 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   display: flex; justify-content: space-between; align-items: center;
   margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(14,27,31,0.1);
 }
+.author-bio {
+  max-width: 760px;
+  margin-inline: auto;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(14,27,31,0.1);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.author-bio-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.author-bio-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.3rem;
+}
+.author-bio p:not(.author-bio-label) { color: var(--ink-soft); font-size: 0.95rem; }
+@media (max-width: 560px) {
+  .author-bio { flex-direction: column; align-items: flex-start; text-align: left; }
+}
 
 /* ---------- legal pages ---------- */
 .legal-content { max-width: 760px; display: grid; gap: 1.2rem; }
@@ -1437,6 +1466,117 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
       "mainEntityOfPage": {
         "@id": "https://www.imenbouzouita.com/resources/product-page-anatomy/#webpage"
       }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.imenbouzouita.com/#person",
+      "name": "Imen Bouzouita",
+      "jobTitle": "UX, CRO & Digital Strategy Consultant",
+      "description": "I'm a UX, CRO, and digital strategy consultant based in Berlin. I work with e-commerce, wellness, and SaaS brands that know their product is strong but suspect their website is leaving money on the table. My job is to find out where and fix it: through conversion audits, UX redesigns, landing page builds, and structured A/B testing. I work hands-on in your CMS by implementing changes directly in Webflow, Shopify, WordPress, or Wix etc.",
+      "url": "https://www.imenbouzouita.com",
+      "image": "https://www.imenbouzouita.com/assets/img/imen-portrait.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mahlower Strasse 14",
+        "postalCode": "12049",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      },
+      "knowsLanguage": [
+        "German",
+        "English",
+        "French",
+        "Arabic"
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Technical University of Munich"
+        }
+      ],
+      "worksFor": {
+        "@id": "https://www.imenbouzouita.com/#business"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/imen-bouzouita-b65051107/",
+        "https://www.instagram.com/ima_gi_n/"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.imenbouzouita.com/#business",
+      "name": "Imen Bouzouita — Digital Product, UX & CRO Consultant",
+      "description": "I help e-commerce, wellness, and SaaS brands turn browsers into buyers with research-backed UX audits and interfaces people actually want to use.",
+      "url": "https://www.imenbouzouita.com",
+      "image": "https://www.imenbouzouita.com/assets/img/imen-portrait.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mahlower Strasse 14",
+        "postalCode": "12049",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      },
+      "vatID": "DE367654068",
+      "areaServed": "Worldwide",
+      "founder": {
+        "@id": "https://www.imenbouzouita.com/#person"
+      },
+      "knowsAbout": [
+        "User Experience (UX) Design",
+        "Conversion Rate Optimization (CRO)",
+        "Search Engine Optimization (SEO)",
+        "Landing Page Design",
+        "A/B Testing",
+        "Web Analytics"
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "UX/CRO and SEO Audits",
+            "description": "10–30 prioritized fixes. I tell you exactly what's costing you conversions, and how to fix it."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "UX/CRO Quick Win Sprint",
+            "description": "I find what's broken, then fix it, directly in your CMS. No 40-page report. No handoff. Just results."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Landing Page Redesign",
+            "description": "From wireframe to live page in a week. Built to convert, not just to look nice."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Full Website & Shop Builds",
+            "description": "Webflow, Shopify, Framer, WordPress, Wix. Structure, UX design, and build, end to end."
+          }
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/imen-bouzouita-b65051107/",
+        "https://www.instagram.com/ima_gi_n/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.imenbouzouita.com/#website",
+      "url": "https://www.imenbouzouita.com",
+      "name": "Imen Bouzouita — Digital Product, UX/CRO Consultant, Berlin",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://www.imenbouzouita.com/#business"
+      }
     }
   ]
 }
@@ -1535,6 +1675,16 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
         <p>Instead, use it as a diagnostic. Open your product page and check each section against this structure. Ask: is this element in the right position relative to the visitor's decision flow? Is it earning its space, or is it there because someone thought it should be?</p>
         <p>The elements that matter most (images, price, CTA, shipping info, return policy) need to be above the fold or immediately accessible. Everything else supports the decision but shouldn't compete with it. When in doubt, remove before you add. A cleaner page with five strong elements outperforms a cluttered page with fifteen mediocre ones.</p>
         
+        </div>
+        <div class="author-bio" data-reveal>
+          <picture>
+            <source srcset="../../assets/img/imen-portrait.webp" type="image/webp" />
+            <img class="author-bio-avatar" src="../../assets/img/imen-portrait.jpg" alt="Imen Bouzouita" loading="lazy" width="840" height="1120" />
+          </picture>
+          <div>
+            <p class="author-bio-label">About the author</p>
+            <p>Imen Bouzouita is a UX, CRO, and digital strategy consultant based in Berlin, working hands-on with e-commerce, wellness, and SaaS brands to find and fix what's costing them conversions.</p>
+          </div>
         </div>
         <div class="case-nav" style="justify-content:flex-start;">
           <a href="../" class="btn btn-ghost">&larr; All resources</a>

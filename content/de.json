@@ -1134,7 +1134,9 @@
         ],
         "cluster": "ecommerce-optimisation"
       }
-    ]
+    ],
+    "author_bio_heading": "Über die Autorin",
+    "author_bio_text": "Imen Bouzouita ist UX-, CRO- und Digital-Strategy-Beraterin mit Sitz in Berlin. Sie arbeitet praxisnah mit E-Commerce-, Wellness- und SaaS-Marken zusammen, um herauszufinden, was sie Conversions kostet, und es zu beheben."
   },
   "faq": {
     "eyebrow": "FAQ",

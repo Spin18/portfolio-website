@@ -895,6 +895,35 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   display: flex; justify-content: space-between; align-items: center;
   margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(14,27,31,0.1);
 }
+.author-bio {
+  max-width: 760px;
+  margin-inline: auto;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(14,27,31,0.1);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.author-bio-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.author-bio-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.3rem;
+}
+.author-bio p:not(.author-bio-label) { color: var(--ink-soft); font-size: 0.95rem; }
+@media (max-width: 560px) {
+  .author-bio { flex-direction: column; align-items: flex-start; text-align: left; }
+}
 
 /* ---------- legal pages ---------- */
 .legal-content { max-width: 760px; display: grid; gap: 1.2rem; }
