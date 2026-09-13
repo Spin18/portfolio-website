@@ -1522,12 +1522,12 @@ def build_seo_checker_page(t, lang_code, alt_paths):
 
               <div data-category-tabs class="checker-tabs"></div>
               <div data-categories class="checker-categories"></div>
+            </div>
 
-              <div class="checker-footer-cta">
-                <p class="checker-footer-byline">{sc['footer_byline']}</p>
-                <p>{sc['footer_cta_lede']}</p>
-                <a href="{CALENDLY}" class="btn btn-primary" target="_blank" rel="noopener">{sc['footer_cta_button']}</a>
-              </div>
+            <div class="checker-footer-cta">
+              <p class="checker-footer-byline">{sc['footer_byline']}</p>
+              <p>{sc['footer_cta_lede']}</p>
+              <a href="{CALENDLY}" class="btn btn-primary" target="_blank" rel="noopener">{sc['footer_cta_button']}</a>
             </div>
           </div>
         </div>
