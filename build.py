@@ -368,7 +368,6 @@ def _core_entities(t, lang_code):
         "knowsLanguage": ["German", "English", "French", "Arabic"],
         "alumniOf": [
             {"@type": "CollegeOrUniversity", "name": "Technical University of Munich"},
-            {"@type": "EducationalOrganization", "name": "Deloitte Neuroscience Institute"},
         ],
         "worksFor": {"@id": f"{SITE_URL}/#business"},
         "sameAs": [LINKEDIN_URL, INSTAGRAM_URL],
