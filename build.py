@@ -1798,7 +1798,7 @@ Content-Signal: search=yes, ai-input=yes, ai-train=yes
     for lang in LANGUAGES:
         code = lang["code"]
         t = content[code]
-        paths = [lang_home_path(code), lang_facts_path(code)] + [
+        paths = [lang_home_path(code), lang_facts_path(code), lang_seo_checker_path(code)] + [
             lang_legal_path(code, slug) for slug in ("terms", "privacy", "impressum")
         ] + [lang_case_study_path(code, cs["slug"]) for cs in t["case_studies"]] + [
             lang_resources_index_path(code)
