@@ -27,10 +27,16 @@
  *   2. Add a secret PSI_API_KEY (Settings -> Variables -> Secrets) with a
  *      free Google PageSpeed Insights key:
  *      https://developers.google.com/speed/docs/insights/v5/get-started
- *   3. Bind a route: www.imenbouzouita.com/api/check* — more specific than
+ *   3. Add a secret RESEND_API_KEY with a Resend API key (resend.com) —
+ *      powers POST /api/check/email, which emails a copy of an already-run
+ *      report to the address someone enters to unlock it. Requires a
+ *      verified sending domain in Resend; update RESEND_FROM below to
+ *      match whatever address you verify there.
+ *   4. Bind a route: www.imenbouzouita.com/api/check* — more specific than
  *      the existing www.imenbouzouita.com/* route on
  *      markdown-negotiation-worker.js, so Cloudflare routes /api/check
- *      here and everything else still goes to that worker/GitHub Pages.
+ *      (and /api/check/email) here and everything else still goes to that
+ *      worker/GitHub Pages.
  */
 
 // --------------------------------------------------------------------------
@@ -49,6 +55,12 @@ const PSI_ENDPOINT = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed
 
 const RATE_LIMIT_PER_HOUR = 5;
 const CACHE_TTL_SECONDS = 900;
+
+const RESEND_ENDPOINT = "https://api.resend.com/emails";
+// Update once a domain is verified in Resend — see the deploy note above.
+const RESEND_FROM = "Website Checker <reports@mail.imenbouzouita.com>";
+const EMAIL_RATE_LIMIT_PER_HOUR = 5;
+const SEVERITY_ORDER = { severe: 0, medium: 1, low: 2 };
 
 // Bots behind live AI answer/search surfaces: content they crawl can plausibly
 // get cited or linked back to the source, so blocking them has a real
@@ -1034,18 +1046,165 @@ function clientIp(request) {
   return request.headers.get("CF-Connecting-IP") || request.headers.get("X-Forwarded-For") || "unknown";
 }
 
-async function isRateLimited(kv, ip) {
-  const key = `rl:${ip}`;
+async function isRateLimited(kv, keyPrefix, ip, limit) {
+  const key = `${keyPrefix}:${ip}`;
   const raw = await kv.get(key);
   const count = raw ? parseInt(raw, 10) : 0;
-  if (count >= RATE_LIMIT_PER_HOUR) return true;
+  if (count >= limit) return true;
   await kv.put(key, String(count + 1), { expirationTtl: 3600 });
   return false;
+}
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function isValidEmail(str) {
+  return typeof str === "string" && str.length <= 254 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(str);
+}
+
+/** Plain-text + HTML bodies for the "email me my report" feature — same
+ * report data the browser already shows, reformatted for an inbox. Reuses
+ * the browser widget's own severity ordering / top-N logic so the emailed
+ * copy matches what someone already unlocked on the page. */
+function buildReportEmail(report) {
+  const priority = report.checks
+    .filter((c) => !c.passed)
+    .sort((a, b) => SEVERITY_ORDER[a.severity] - SEVERITY_ORDER[b.severity])
+    .slice(0, 5);
+
+  const textLines = [
+    `Your Website Checker report for ${report.url}`,
+    "",
+    `Score: ${report.score_pct}% (grade ${report.grade}) — ${report.passed}/${report.total} checks passed`,
+    "",
+  ];
+  if (priority.length) {
+    textLines.push("Priority fixes:");
+    priority.forEach((c, i) => {
+      textLines.push(`${i + 1}. [${c.severity}] ${c.label} — ${c.detail}`);
+      if (c.tip) textLines.push(`   Fix: ${c.tip}`);
+    });
+  } else {
+    textLines.push("No severe or medium issues outstanding — nice work.");
+  }
+  textLines.push("", "See the full breakdown any time at https://www.imenbouzouita.com/tools/website-checker/");
+  textLines.push("", "Want help implementing these fixes? Book a discovery call: https://calendly.com/imenbouzouita/1-1-discovery-call");
+  const text = textLines.join("\n");
+
+  const priorityHtml = priority.length
+    ? `<ol style="padding-left:1.2em;margin:0;">${priority
+        .map(
+          (c) => `<li style="margin-bottom:0.9em;"><strong>${escapeHtml(c.label)}</strong> (${escapeHtml(c.severity)}) — ${escapeHtml(c.detail)}${
+            c.tip ? `<br/><span style="color:#5b6b6e;">Fix: ${escapeHtml(c.tip)}</span>` : ""
+          }</li>`
+        )
+        .join("")}</ol>`
+    : `<p>No severe or medium issues outstanding — nice work.</p>`;
+
+  const html = `<!doctype html>
+<html>
+  <body style="font-family:Arial,Helvetica,sans-serif;color:#17282d;max-width:560px;margin:0 auto;padding:24px;">
+    <h1 style="font-size:1.3em;">Your Website Checker report</h1>
+    <p style="color:#5b6b6e;word-break:break-all;">${escapeHtml(report.url)}</p>
+    <p style="font-size:1.1em;font-weight:bold;">${report.score_pct}% (grade ${escapeHtml(report.grade)}) — ${report.passed}/${report.total} checks passed</p>
+    <h2 style="font-size:1em;text-transform:uppercase;letter-spacing:0.04em;color:#5b6b6e;">Priority fixes</h2>
+    ${priorityHtml}
+    <p style="margin-top:2em;">See the full breakdown any time on the
+      <a href="https://www.imenbouzouita.com/tools/website-checker/">Website Checker page</a>.</p>
+    <p>Want help implementing these fixes?
+      <a href="https://calendly.com/imenbouzouita/1-1-discovery-call">Book a discovery call</a>.</p>
+  </body>
+</html>`;
+
+  return { subject: `Your Website Checker report for ${report.url}`, html, text };
+}
+
+async function sendReportEmail(env, toEmail, report) {
+  const { subject, html, text } = buildReportEmail(report);
+  const resp = await fetch(RESEND_ENDPOINT, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ from: RESEND_FROM, to: toEmail, subject, html, text }),
+  });
+  if (!resp.ok) {
+    const errText = await resp.text().catch(() => "");
+    throw new Error(`Resend API error (${resp.status}): ${errText.slice(0, 200)}`);
+  }
+}
+
+async function handleEmailReport(request, env) {
+  if (request.method !== "POST") {
+    return new Response(JSON.stringify({ error: "Method not allowed" }), { status: 405, headers: { "Content-Type": "application/json" } });
+  }
+  if (!env.RESEND_API_KEY) {
+    return new Response(JSON.stringify({ error: "Email delivery isn't configured yet." }), { status: 503, headers: { "Content-Type": "application/json" } });
+  }
+
+  const ip = clientIp(request);
+  if (env.CHECKER_KV) {
+    const limited = await isRateLimited(env.CHECKER_KV, "email-rl", ip, EMAIL_RATE_LIMIT_PER_HOUR);
+    if (limited) {
+      return new Response(JSON.stringify({ error: "Rate limit exceeded. Please try again later." }), {
+        status: 429, headers: { "Content-Type": "application/json" },
+      });
+    }
+  }
+
+  let data;
+  try {
+    data = await request.json();
+  } catch {
+    data = {};
+  }
+  const email = (data.email || "").trim();
+  const rawUrl = (data.url || "").trim();
+  if (!isValidEmail(email)) {
+    return new Response(JSON.stringify({ error: "Invalid email address" }), { status: 400, headers: { "Content-Type": "application/json" } });
+  }
+  if (!rawUrl) {
+    return new Response(JSON.stringify({ error: "Missing 'url'" }), { status: 400, headers: { "Content-Type": "application/json" } });
+  }
+
+  // Reuses the already-computed report from the /api/check cache rather
+  // than re-running ~65 checks (and another PSI call) just to send an
+  // email — this only works because it's called right after a check the
+  // same visitor just ran, so the cache entry is still fresh.
+  const cacheKey = `cache:${rawUrl.toLowerCase().replace(/\/$/, "")}`;
+  if (!env.CHECKER_KV) {
+    return new Response(JSON.stringify({ error: "Report cache isn't configured" }), { status: 503, headers: { "Content-Type": "application/json" } });
+  }
+  const report = await env.CHECKER_KV.get(cacheKey, "json");
+  if (!report) {
+    return new Response(JSON.stringify({ error: "That report has expired. Please re-run the check first." }), {
+      status: 404, headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  try {
+    await sendReportEmail(env, email, report);
+  } catch (err) {
+    return new Response(JSON.stringify({ error: String(err && err.message || err) }), { status: 502, headers: { "Content-Type": "application/json" } });
+  }
+
+  return new Response(JSON.stringify({ ok: true }), { headers: { "Content-Type": "application/json" } });
 }
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+
+    if (url.pathname === "/api/check/email") {
+      return handleEmailReport(request, env);
+    }
 
     if (url.pathname !== "/api/check") {
       return new Response("Not found", { status: 404 });
@@ -1056,7 +1215,7 @@ export default {
 
     const ip = clientIp(request);
     if (env.CHECKER_KV) {
-      const limited = await isRateLimited(env.CHECKER_KV, ip);
+      const limited = await isRateLimited(env.CHECKER_KV, "rl", ip, RATE_LIMIT_PER_HOUR);
       if (limited) {
         return new Response(JSON.stringify({ error: "Rate limit exceeded. Please try again later." }), {
           status: 429, headers: { "Content-Type": "application/json" },
