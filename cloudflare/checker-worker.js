@@ -1,5 +1,5 @@
 /**
- * SEO / GEO / CRO Checker API — backend for the /tools/seo-checker/ widget.
+ * SEO / GEO / CRO Checker API — backend for the /tools/website-checker/ widget.
  *
  * A Cloudflare Worker port of seo_geo_cro_checker.py (see
  * https://github.com/ — vendored copy at geo-checker-web/backend/). Same
@@ -37,7 +37,7 @@
 // Constants
 // --------------------------------------------------------------------------
 
-const USER_AGENT = "GEO-SEO-Checker/1.0 (+https://www.imenbouzouita.com/tools/seo-checker/; free audit tool)";
+const USER_AGENT = "GEO-SEO-Checker/1.0 (+https://www.imenbouzouita.com/tools/website-checker/; free audit tool)";
 const FETCH_TIMEOUT_MS = 12_000;
 // Cloudflare's own edge proxy generally closes a long-idle HTTP connection
 // around 100s; staying well under that keeps a slow PSI response ending in

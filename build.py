@@ -249,7 +249,7 @@ def lang_facts_path(lang_code):
 
 def lang_seo_checker_path(lang_code):
     d = next(l["dir"] for l in LANGUAGES if l["code"] == lang_code)
-    return f"{d}tools/seo-checker/index.html"
+    return f"{d}tools/website-checker/index.html"
 
 
 def _count_words(text):
