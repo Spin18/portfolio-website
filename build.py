@@ -1518,7 +1518,7 @@ def build_seo_checker_page(t, lang_code, alt_paths):
 
               <div class="checker-gate">
                 <h2>{sc['gate_heading']}</h2>
-                <p>{sc['gate_body']}</p>
+                <p class="checker-gate-body">{sc['gate_body']}</p>
                 <form data-email-form class="checker-email-form">
                   <label class="checker-marketing-consent">
                     <input type="checkbox" data-marketing-consent />

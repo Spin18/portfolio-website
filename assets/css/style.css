@@ -1227,8 +1227,9 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   color: var(--bone);
   text-align: center;
 }
-.checker-gate h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-.checker-gate p { color: rgba(247,245,240,0.75); max-width: 46ch; margin-inline: auto; }
+.checker-gate h2 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+.checker-gate p { color: rgba(247,245,240,0.75); }
+.checker-gate-body { text-align: left; }
 .checker-email-form {
   display: flex;
   gap: 0.6rem;
@@ -1250,6 +1251,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   align-items: flex-start;
   gap: 0.6em;
   flex-basis: 100%;
+  margin-bottom: 1rem;
   text-align: left;
   font-size: 0.82rem;
   color: rgba(247,245,240,0.75);
