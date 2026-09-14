@@ -204,7 +204,13 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   backdrop-filter: blur(10px);
   box-shadow: 0 1px 0 rgba(14,27,31,0.08);
 }
-.site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.site-header .container {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  /* Tighter than the shared --gutter: the nav needs its width back more
+     than the header needs the same breathing room as page content,
+     especially with German's longer nav labels (e.g. "Ressourcen"). */
+  padding-inline: clamp(1rem, 2.5vw, 1.75rem);
+}
 .logo {
   font-family: var(--font-display);
   font-weight: 700;
@@ -218,11 +224,11 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: clamp(1.2rem, 2vw, 2.2rem);
-  font-size: 0.95rem;
+  gap: clamp(0.8rem, 1.3vw, 1.5rem);
+  font-size: 0.92rem;
   font-weight: 500;
 }
-.nav-links a { position: relative; padding-block: 0.3rem; }
+.nav-links a { position: relative; padding-block: 0.3rem; white-space: nowrap; }
 .nav-links a::after {
   content: '';
   position: absolute; left: 0; right: 0; bottom: 0;
@@ -231,7 +237,8 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   transition: transform var(--dur-fast) var(--ease-out);
 }
 .nav-links a:hover::after { transform: scaleX(1); }
-.nav-cta { margin-left: 0.5rem; }
+.nav-ctas { display: flex; align-items: center; gap: 0.5rem; margin-left: 0.5rem; }
+.nav-ctas .btn { padding: 0.7em 1.25em; font-size: 0.88rem; }
 .lang-switch {
   display: flex;
   align-items: center;
@@ -270,7 +277,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .nav-toggle[aria-expanded="true"] span::before { background: var(--bone); transform: translateY(7px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] span::after { background: var(--bone); transform: translateY(-7px) rotate(-45deg); }
 
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
   .nav-links {
     position: fixed;
     inset: 0;
@@ -286,7 +293,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   .nav-links.is-open { transform: translateX(0); }
   .nav-links a { color: var(--bone); }
   .nav-links a::after { background: var(--coral); }
-  .nav-cta { margin-left: 0; margin-top: 1rem; }
+  .nav-ctas { flex-direction: column; gap: 0.8rem; margin-left: 0; margin-top: 1rem; }
   .nav-toggle { display: flex; z-index: 101; }
   .lang-switch { justify-content: center; margin-left: 0; margin-top: 1.25rem; font-size: 1rem; }
   .nav-links .lang-switch a { font-size: 1rem; color: var(--bone); }
@@ -1552,9 +1559,10 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
       <li><a href="resources/">Resources</a></li>
       <li><a href="./#about">About</a></li>
       <li><a href="./#faq">FAQ</a></li>
-      <li><a href="./#contact">Contact</a></li>
-          <li class="nav-cta"><a href="tools/website-checker/" class="btn btn-ghost">Website Checker</a></li>
-          <li class="nav-cta"><a href="https://calendly.com/imenbouzouita/1-1-discovery-call" class="btn btn-primary" target="_blank" rel="noopener">Book a call</a></li>
+          <li class="nav-ctas">
+            <a href="tools/website-checker/" class="btn btn-ghost">Website Checker</a>
+            <a href="https://calendly.com/imenbouzouita/1-1-discovery-call" class="btn btn-primary" target="_blank" rel="noopener">Book a call</a>
+          </li>
           <li><div class="lang-switch"><span class="lang-switch-current" aria-current="true">EN</span><a href="de/privacy.html" class="">DE</a></div></li>
         </ul>
       </nav>
@@ -1580,7 +1588,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   <li>Usage data (e.g., pages visited, interaction data)</li>
   <li>Technical data (e.g., IP address, browser type, device information), logged by hosting infrastructure</li>
 </ul>
-<p>Specifically: contact form submissions (name, email, message) submitted via the contact form, processed through Formspree; Calendly booking details, handled under Calendly's own privacy policy; technical and connection data (e.g. IP address) processed by Cloudflare, our content delivery, DNS, and security provider, for every visitor as part of operating this site; messages sent to our @imenbouzouita.com address, forwarded via Cloudflare Email Routing; and, only if you accept the cookie banner, usage data collected via Google Analytics (GA4) and Contentsquare (session recordings and heatmaps). If you use our free Website Checker tool, the URL you submit and the resulting report are cached for up to 15 minutes in Cloudflare KV storage to speed up repeat checks, and your IP address is used the same way as above to prevent abuse; performance checks call Google's PageSpeed Insights API with only the checked URL; and, only if you choose to unlock the full report, your email address is submitted via Formspree; if you also tick the optional marketing checkbox next to that email field, that choice is recorded too, and only then may we use your email to send occasional marketing emails, which you can unsubscribe from at any time.</p>
+<p>Specifically: contact form submissions (name, email, message) submitted via the contact form, processed through Formspree; Calendly booking details, handled under Calendly's own privacy policy; technical and connection data (e.g. IP address) processed by Cloudflare, our content delivery, DNS, and security provider, for every visitor as part of operating this site; messages sent to our @imenbouzouita.com address, forwarded via Cloudflare Email Routing; and, only if you accept the cookie banner, usage data collected via Google Analytics (GA4) and Contentsquare (session recordings and heatmaps). If you use our free Website Checker tool, the URL you submit and the resulting report are cached for up to 15 minutes in Cloudflare KV storage to speed up repeat checks, and your IP address is used the same way as above to prevent abuse; performance checks call Google's PageSpeed Insights API with only the checked URL; and, only if you choose to unlock the full report, your email address is submitted via Formspree and used, via Resend, to send you a one-time copy of that specific report, since that's the deliverable you asked for; if you also tick the optional marketing checkbox next to that email field, that choice is recorded too, and only then may we use your email to send occasional marketing emails, which you can unsubscribe from at any time.</p>
 <h2>3. Legal Basis for Processing</h2>
 <p>We process your personal data based on the following legal grounds:</p>
 <ul>
@@ -1602,11 +1610,11 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 <p>We do not sell your personal data. It isn't shared with third parties beyond what's required to operate this site, and only:</p>
 <ul>
   <li>When required by law</li>
-  <li>With service providers under data processing agreements: currently Formspree (contact form processing and Website Checker report unlocks), Calendly (call booking), Cloudflare (content delivery, DNS, security, email forwarding, cookieless web analytics, and the Website Checker's rate limiting and report caching), Google (PageSpeed Insights API, used only within the Website Checker tool), and, only with your consent, Google Analytics (GA4, usage analytics) and Contentsquare (session recordings and heatmaps)</li>
+  <li>With service providers under data processing agreements: currently Formspree (contact form processing and Website Checker report unlocks), Calendly (call booking), Cloudflare (content delivery, DNS, security, email forwarding, cookieless web analytics, and the Website Checker's rate limiting and report caching), Google (PageSpeed Insights API, used only within the Website Checker tool), Resend (delivering your Website Checker report copy by email), and, only with your consent, Google Analytics (GA4, usage analytics) and Contentsquare (session recordings and heatmaps)</li>
   <li>With your explicit consent</li>
 </ul>
 <h2>6. International Data Transfers</h2>
-<p>Some of our service providers, including Formspree, Calendly, Cloudflare, Google (Google Analytics and PageSpeed Insights), and Contentsquare, are based outside the European Economic Area (EEA). Where data is transferred outside the EEA, we ensure appropriate safeguards such as Standard Contractual Clauses (SCCs).</p>
+<p>Some of our service providers, including Formspree, Calendly, Cloudflare, Google (Google Analytics and PageSpeed Insights), Resend, and Contentsquare, are based outside the European Economic Area (EEA). Where data is transferred outside the EEA, we ensure appropriate safeguards such as Standard Contractual Clauses (SCCs).</p>
 <h2>7. Data Retention</h2>
 <p>We retain personal data only as long as necessary for the purposes stated above or as required by law.</p>
 <h2>8. Your Rights</h2>

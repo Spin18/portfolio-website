@@ -89,7 +89,6 @@ def _nav_entries(t, current_path):
         (t["nav"]["resources"], resources_href),
         (t["nav"]["about"], f"{home}#about"),
         (t["nav"]["faq"], f"{home}#faq"),
-        (t["nav"]["contact"], f"{home}#contact"),
     ]
 
 
@@ -610,8 +609,10 @@ def header_html(t, current_path, alt_paths):
       <nav>
         <ul class="nav-links">
           {links}
-          <li class="nav-cta"><a href="{seo_checker_href}" class="btn btn-ghost">{t['nav']['seo_checker']}</a></li>
-          <li class="nav-cta"><a href="{CALENDLY}" class="btn btn-primary" target="_blank" rel="noopener">{t['nav']['book_call']}</a></li>
+          <li class="nav-ctas">
+            <a href="{seo_checker_href}" class="btn btn-ghost">{t['nav']['seo_checker']}</a>
+            <a href="{CALENDLY}" class="btn btn-primary" target="_blank" rel="noopener">{t['nav']['book_call']}</a>
+          </li>
           <li>{lang_switcher_html(current_path, alt_paths)}</li>
         </ul>
       </nav>

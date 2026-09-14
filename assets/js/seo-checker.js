@@ -12,8 +12,10 @@
   const full = root.querySelector('[data-full]');
   const emailForm = root.querySelector('[data-email-form]');
   const emailStatus = root.querySelector('[data-email-status]');
+  const emailSentNote = root.querySelector('[data-email-sent-note]');
 
   const API_URL = '/api/check';
+  const EMAIL_REPORT_URL = '/api/check/email';
   const FORMSPREE_ACTION = 'https://formspree.io/f/mnpqyeel';
   const SEVERITY_ORDER = { severe: 0, medium: 1, low: 2 };
 
@@ -310,6 +312,25 @@
           full.hidden = false;
           renderFull(lastReport);
           full.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          // Best-effort: a copy of the report emailed to the address that
+          // was just used to unlock it. This is a transactional delivery
+          // of the thing they explicitly asked for, independent of the
+          // separate marketing-consent checkbox above — so it's fired
+          // regardless of that checkbox's state, and its failure must
+          // never block or roll back the unlock that already succeeded.
+          try {
+            const emailResp = await fetch(EMAIL_REPORT_URL, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, url: lastReport.url }),
+            });
+            if (emailResp.ok && emailSentNote) {
+              emailSentNote.hidden = false;
+            }
+          } catch (err) {
+            // Silent — the in-browser unlock is the primary promise here.
+          }
         } else {
           emailStatus.textContent = i18n.emailError;
           emailStatus.hidden = false;

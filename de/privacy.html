@@ -204,7 +204,13 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   backdrop-filter: blur(10px);
   box-shadow: 0 1px 0 rgba(14,27,31,0.08);
 }
-.site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.site-header .container {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  /* Tighter than the shared --gutter: the nav needs its width back more
+     than the header needs the same breathing room as page content,
+     especially with German's longer nav labels (e.g. "Ressourcen"). */
+  padding-inline: clamp(1rem, 2.5vw, 1.75rem);
+}
 .logo {
   font-family: var(--font-display);
   font-weight: 700;
@@ -218,11 +224,11 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: clamp(1.2rem, 2vw, 2.2rem);
-  font-size: 0.95rem;
+  gap: clamp(0.8rem, 1.3vw, 1.5rem);
+  font-size: 0.92rem;
   font-weight: 500;
 }
-.nav-links a { position: relative; padding-block: 0.3rem; }
+.nav-links a { position: relative; padding-block: 0.3rem; white-space: nowrap; }
 .nav-links a::after {
   content: '';
   position: absolute; left: 0; right: 0; bottom: 0;
@@ -231,7 +237,8 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   transition: transform var(--dur-fast) var(--ease-out);
 }
 .nav-links a:hover::after { transform: scaleX(1); }
-.nav-cta { margin-left: 0.5rem; }
+.nav-ctas { display: flex; align-items: center; gap: 0.5rem; margin-left: 0.5rem; }
+.nav-ctas .btn { padding: 0.7em 1.25em; font-size: 0.88rem; }
 .lang-switch {
   display: flex;
   align-items: center;
@@ -270,7 +277,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 .nav-toggle[aria-expanded="true"] span::before { background: var(--bone); transform: translateY(7px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] span::after { background: var(--bone); transform: translateY(-7px) rotate(-45deg); }
 
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
   .nav-links {
     position: fixed;
     inset: 0;
@@ -286,7 +293,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   .nav-links.is-open { transform: translateX(0); }
   .nav-links a { color: var(--bone); }
   .nav-links a::after { background: var(--coral); }
-  .nav-cta { margin-left: 0; margin-top: 1rem; }
+  .nav-ctas { flex-direction: column; gap: 0.8rem; margin-left: 0; margin-top: 1rem; }
   .nav-toggle { display: flex; z-index: 101; }
   .lang-switch { justify-content: center; margin-left: 0; margin-top: 1.25rem; font-size: 1rem; }
   .nav-links .lang-switch a { font-size: 1rem; color: var(--bone); }
@@ -1552,9 +1559,10 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
       <li><a href="resources/">Ressourcen</a></li>
       <li><a href="./#about">Über mich</a></li>
       <li><a href="./#faq">FAQ</a></li>
-      <li><a href="./#contact">Kontakt</a></li>
-          <li class="nav-cta"><a href="tools/website-checker/" class="btn btn-ghost">Website-Checker</a></li>
-          <li class="nav-cta"><a href="https://calendly.com/imenbouzouita/1-1-discovery-call" class="btn btn-primary" target="_blank" rel="noopener">Gespräch buchen</a></li>
+          <li class="nav-ctas">
+            <a href="tools/website-checker/" class="btn btn-ghost">Website-Checker</a>
+            <a href="https://calendly.com/imenbouzouita/1-1-discovery-call" class="btn btn-primary" target="_blank" rel="noopener">Gespräch buchen</a>
+          </li>
           <li><div class="lang-switch"><a href="../privacy.html" class="">EN</a><span class="lang-switch-current" aria-current="true">DE</span></div></li>
         </ul>
       </nav>
@@ -1580,7 +1588,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   <li>Nutzungsdaten (z. B. besuchte Seiten, Interaktionsdaten)</li>
   <li>Technische Daten (z. B. IP-Adresse, Browsertyp, Geräteinformationen), die von der Hosting-Infrastruktur protokolliert werden</li>
 </ul>
-<p>Im Einzelnen: Kontaktformular-Eingaben (Name, E-Mail, Nachricht), die über das Kontaktformular übermittelt und über Formspree verarbeitet werden; Calendly-Buchungsdaten, die gemäß der eigenen Datenschutzerklärung von Calendly verarbeitet werden; technische und Verbindungsdaten (z. B. IP-Adresse), die von Cloudflare, unserem Anbieter für Content-Delivery, DNS und Sicherheit, für jeden Besucher im Rahmen des Betriebs dieser Website verarbeitet werden; Nachrichten an unsere @imenbouzouita.com-Adresse, die über Cloudflare Email Routing weitergeleitet werden; sowie, nur bei Zustimmung im Cookie-Banner, Nutzungsdaten über Google Analytics (GA4) und Contentsquare (Session Recordings und Heatmaps). Wenn Sie unser kostenloses Website-Checker-Tool nutzen, werden die von Ihnen eingegebene URL und der daraus resultierende Bericht für bis zu 15 Minuten im Cloudflare-KV-Speicher zwischengespeichert, um wiederholte Prüfungen zu beschleunigen, und Ihre IP-Adresse wird auf die gleiche Weise wie oben zur Missbrauchsprävention genutzt; Performance-Prüfungen rufen die PageSpeed-Insights-API von Google auf, der nur die geprüfte URL übermittelt wird; und, nur wenn Sie sich entscheiden, den vollständigen Bericht freizuschalten, wird Ihre E-Mail-Adresse über Formspree übermittelt; wenn Sie zusätzlich das optionale Marketing-Kontrollkästchen neben diesem E-Mail-Feld aktivieren, wird auch diese Entscheidung gespeichert, und nur dann dürfen wir Ihre E-Mail-Adresse für gelegentliche Marketing-E-Mails verwenden, die Sie jederzeit abbestellen können.</p>
+<p>Im Einzelnen: Kontaktformular-Eingaben (Name, E-Mail, Nachricht), die über das Kontaktformular übermittelt und über Formspree verarbeitet werden; Calendly-Buchungsdaten, die gemäß der eigenen Datenschutzerklärung von Calendly verarbeitet werden; technische und Verbindungsdaten (z. B. IP-Adresse), die von Cloudflare, unserem Anbieter für Content-Delivery, DNS und Sicherheit, für jeden Besucher im Rahmen des Betriebs dieser Website verarbeitet werden; Nachrichten an unsere @imenbouzouita.com-Adresse, die über Cloudflare Email Routing weitergeleitet werden; sowie, nur bei Zustimmung im Cookie-Banner, Nutzungsdaten über Google Analytics (GA4) und Contentsquare (Session Recordings und Heatmaps). Wenn Sie unser kostenloses Website-Checker-Tool nutzen, werden die von Ihnen eingegebene URL und der daraus resultierende Bericht für bis zu 15 Minuten im Cloudflare-KV-Speicher zwischengespeichert, um wiederholte Prüfungen zu beschleunigen, und Ihre IP-Adresse wird auf die gleiche Weise wie oben zur Missbrauchsprävention genutzt; Performance-Prüfungen rufen die PageSpeed-Insights-API von Google auf, der nur die geprüfte URL übermittelt wird; und, nur wenn Sie sich entscheiden, den vollständigen Bericht freizuschalten, wird Ihre E-Mail-Adresse über Formspree übermittelt und über Resend genutzt, um Ihnen einmalig eine Kopie genau dieses Berichts zuzusenden, da dies die von Ihnen angeforderte Leistung ist; wenn Sie zusätzlich das optionale Marketing-Kontrollkästchen neben diesem E-Mail-Feld aktivieren, wird auch diese Entscheidung gespeichert, und nur dann dürfen wir Ihre E-Mail-Adresse für gelegentliche Marketing-E-Mails verwenden, die Sie jederzeit abbestellen können.</p>
 <h2>3. Rechtsgrundlage der Verarbeitung</h2>
 <p>Wir verarbeiten Ihre personenbezogenen Daten auf folgenden Rechtsgrundlagen:</p>
 <ul>
@@ -1602,11 +1610,11 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 <p>Wir verkaufen Ihre personenbezogenen Daten nicht. Sie werden nicht an Dritte weitergegeben, außer soweit dies für den Betrieb dieser Website erforderlich ist, und nur:</p>
 <ul>
   <li>Wenn dies gesetzlich vorgeschrieben ist</li>
-  <li>An Dienstleister im Rahmen von Auftragsverarbeitungsverträgen: derzeit Formspree (Kontaktformularverarbeitung und Freischaltung des Website-Checker-Berichts), Calendly (Terminbuchung), Cloudflare (Content-Delivery, DNS, Sicherheit, E-Mail-Weiterleitung, cookielose Web-Analyse sowie Ratenbegrenzung und Zwischenspeicherung des Website-Checker-Tools), Google (PageSpeed-Insights-API, ausschließlich innerhalb des Website-Checker-Tools genutzt) und, nur mit Ihrer Einwilligung, Google Analytics (GA4, Nutzungsanalyse) und Contentsquare (Session Recordings und Heatmaps)</li>
+  <li>An Dienstleister im Rahmen von Auftragsverarbeitungsverträgen: derzeit Formspree (Kontaktformularverarbeitung und Freischaltung des Website-Checker-Berichts), Calendly (Terminbuchung), Cloudflare (Content-Delivery, DNS, Sicherheit, E-Mail-Weiterleitung, cookielose Web-Analyse sowie Ratenbegrenzung und Zwischenspeicherung des Website-Checker-Tools), Google (PageSpeed-Insights-API, ausschließlich innerhalb des Website-Checker-Tools genutzt), Resend (Zustellung Ihrer Website-Checker-Berichtskopie per E-Mail) und, nur mit Ihrer Einwilligung, Google Analytics (GA4, Nutzungsanalyse) und Contentsquare (Session Recordings und Heatmaps)</li>
   <li>Mit Ihrer ausdrücklichen Einwilligung</li>
 </ul>
 <h2>6. Internationale Datenübermittlungen</h2>
-<p>Einige unserer Dienstleister, darunter Formspree, Calendly, Cloudflare, Google (Google Analytics und PageSpeed Insights) und Contentsquare, haben ihren Sitz außerhalb des Europäischen Wirtschaftsraums (EWR). Wenn Daten außerhalb des EWR übertragen werden, stellen wir geeignete Schutzmaßnahmen wie Standardvertragsklauseln (SVK) sicher.</p>
+<p>Einige unserer Dienstleister, darunter Formspree, Calendly, Cloudflare, Google (Google Analytics und PageSpeed Insights), Resend und Contentsquare, haben ihren Sitz außerhalb des Europäischen Wirtschaftsraums (EWR). Wenn Daten außerhalb des EWR übertragen werden, stellen wir geeignete Schutzmaßnahmen wie Standardvertragsklauseln (SVK) sicher.</p>
 <h2>7. Datenspeicherung</h2>
 <p>Wir speichern personenbezogene Daten nur so lange, wie es für die oben genannten Zwecke erforderlich ist oder gesetzlich vorgeschrieben wird.</p>
 <h2>8. Ihre Rechte</h2>
