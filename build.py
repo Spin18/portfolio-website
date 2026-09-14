@@ -449,7 +449,22 @@ def build_json_ld_home(t, current_path):
         ],
     }
 
-    return _json_ld_script([website, webpage, person, business, faq_page])
+    # ProfilePage: a distinct rich-result type from WebPage above — the
+    # homepage is fundamentally about Imen as a person/consultant, so both
+    # can legitimately describe the same URL. dateCreated/dateModified are
+    # required by Google's ProfilePage guidelines; sourced from this file's
+    # own git history rather than hardcoded so they stay accurate.
+    profile_page = {
+        "@type": "ProfilePage",
+        "@id": f"{home_url}#profile",
+        "url": home_url,
+        "name": t["meta"]["site_title"],
+        "dateCreated": _first_commit_date(current_path),
+        "dateModified": _lastmod(current_path),
+        "mainEntity": {"@id": f"{SITE_URL}/#person"},
+    }
+
+    return _json_ld_script([website, webpage, person, business, faq_page, profile_page])
 
 
 def build_json_ld_facts(t, current_path):
@@ -1751,6 +1766,33 @@ def _lastmod(rel_path):
 
     date = date or datetime.date.today().isoformat()
     _LASTMOD_CACHE[rel_path] = date
+    return date
+
+
+_FIRST_COMMIT_CACHE = {}
+
+
+def _first_commit_date(rel_path):
+    """ProfilePage's required `dateCreated`: the date of the *first* commit
+    that touched this file, i.e. when this page was first published. Falls
+    back to today for a file with no commit yet or if git isn't available —
+    same fallback logic as _lastmod above."""
+    if rel_path in _FIRST_COMMIT_CACHE:
+        return _FIRST_COMMIT_CACHE[rel_path]
+
+    date = None
+    try:
+        result = subprocess.run(
+            ["git", "log", "--follow", "--format=%aI", "--", rel_path],
+            cwd=ROOT, capture_output=True, text=True, timeout=5,
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            date = result.stdout.strip().splitlines()[-1][:10]
+    except (OSError, subprocess.SubprocessError):
+        pass
+
+    date = date or datetime.date.today().isoformat()
+    _FIRST_COMMIT_CACHE[rel_path] = date
     return date
 
 
