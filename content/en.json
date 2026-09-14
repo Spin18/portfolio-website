@@ -1249,7 +1249,7 @@
     "top_issues_label": "Top issues found",
     "no_issues_message": "No major issues found in the free preview — nice. Unlock the full report to see the full breakdown.",
     "gate_heading": "Get your full report",
-    "gate_body": "Up to 65 checks, prioritized fixes, and what to do about each one, unlocked here and sent to your inbox.",
+    "gate_body": "Up to 65 checks, prioritized fixes, and what to do about each one, unlocked here and sent to your inbox. Your email is only used to send this report, not marketing, unless you check the box to opt in.",
     "email_placeholder": "you@company.com",
     "email_aria_label": "Email address",
     "unlock_label": "Unlock full report",

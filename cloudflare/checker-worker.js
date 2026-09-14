@@ -1069,14 +1069,22 @@ function isValidEmail(str) {
 }
 
 /** Plain-text + HTML bodies for the "email me my report" feature — same
- * report data the browser already shows, reformatted for an inbox. Reuses
- * the browser widget's own severity ordering / top-N logic so the emailed
- * copy matches what someone already unlocked on the page. */
+ * report data the browser already shows, reformatted for an inbox. Every
+ * failing check is included (not just a top-N), grouped by category in
+ * the same order the on-page full report uses, so the emailed copy is a
+ * complete mirror of what unlocking on the page shows rather than a
+ * trimmed summary. */
 function buildReportEmail(report) {
-  const priority = report.checks
-    .filter((c) => !c.passed)
-    .sort((a, b) => SEVERITY_ORDER[a.severity] - SEVERITY_ORDER[b.severity])
-    .slice(0, 5);
+  const failing = report.checks.filter((c) => !c.passed);
+
+  const byCategory = new Map();
+  for (const c of failing) {
+    if (!byCategory.has(c.category)) byCategory.set(c.category, []);
+    byCategory.get(c.category).push(c);
+  }
+  for (const list of byCategory.values()) {
+    list.sort((a, b) => SEVERITY_ORDER[a.severity] - SEVERITY_ORDER[b.severity]);
+  }
 
   const textLines = [
     `Your Website Checker report for ${report.url}`,
@@ -1084,28 +1092,37 @@ function buildReportEmail(report) {
     `Score: ${report.score_pct}% (grade ${report.grade}) — ${report.passed}/${report.total} checks passed`,
     "",
   ];
-  if (priority.length) {
-    textLines.push("Priority fixes:");
-    priority.forEach((c, i) => {
-      textLines.push(`${i + 1}. [${c.severity}] ${c.label} — ${c.detail}`);
-      if (c.tip) textLines.push(`   Fix: ${c.tip}`);
-    });
+  if (byCategory.size) {
+    textLines.push(`All findings (${failing.length}):`);
+    for (const [category, checks] of byCategory) {
+      textLines.push("", `${category}:`);
+      checks.forEach((c) => {
+        textLines.push(`- [${c.severity}] ${c.label} — ${c.detail}`);
+        if (c.tip) textLines.push(`  Fix: ${c.tip}`);
+      });
+    }
   } else {
-    textLines.push("No severe or medium issues outstanding — nice work.");
+    textLines.push("No issues outstanding — nice work.");
   }
   textLines.push("", "See the full breakdown any time at https://www.imenbouzouita.com/tools/website-checker/");
   textLines.push("", "Want help implementing these fixes? Book a discovery call: https://calendly.com/imenbouzouita/1-1-discovery-call");
   const text = textLines.join("\n");
 
-  const priorityHtml = priority.length
-    ? `<ol style="padding-left:1.2em;margin:0;">${priority
+  const findingsHtml = byCategory.size
+    ? [...byCategory.entries()]
         .map(
-          (c) => `<li style="margin-bottom:0.9em;"><strong>${escapeHtml(c.label)}</strong> (${escapeHtml(c.severity)}) — ${escapeHtml(c.detail)}${
-            c.tip ? `<br/><span style="color:#5b6b6e;">Fix: ${escapeHtml(c.tip)}</span>` : ""
-          }</li>`
+          ([category, checks]) => `
+    <h2 style="font-size:1em;text-transform:uppercase;letter-spacing:0.04em;color:#5b6b6e;margin-top:1.4em;">${escapeHtml(category)}</h2>
+    <ul style="padding-left:1.2em;margin:0;">${checks
+      .map(
+        (c) => `<li style="margin-bottom:0.9em;"><strong>${escapeHtml(c.label)}</strong> (${escapeHtml(c.severity)}) — ${escapeHtml(c.detail)}${
+          c.tip ? `<br/><span style="color:#5b6b6e;">Fix: ${escapeHtml(c.tip)}</span>` : ""
+        }</li>`
+      )
+      .join("")}</ul>`
         )
-        .join("")}</ol>`
-    : `<p>No severe or medium issues outstanding — nice work.</p>`;
+        .join("")
+    : `<p>No issues outstanding — nice work.</p>`;
 
   const html = `<!doctype html>
 <html>
@@ -1113,8 +1130,8 @@ function buildReportEmail(report) {
     <h1 style="font-size:1.3em;">Your Website Checker report</h1>
     <p style="color:#5b6b6e;word-break:break-all;">${escapeHtml(report.url)}</p>
     <p style="font-size:1.1em;font-weight:bold;">${report.score_pct}% (grade ${escapeHtml(report.grade)}) — ${report.passed}/${report.total} checks passed</p>
-    <h2 style="font-size:1em;text-transform:uppercase;letter-spacing:0.04em;color:#5b6b6e;">Priority fixes</h2>
-    ${priorityHtml}
+    <p style="color:#5b6b6e;font-size:0.9em;">All ${failing.length} finding${failing.length === 1 ? "" : "s"}, grouped by category:</p>
+    ${findingsHtml}
     <p style="margin-top:2em;">See the full breakdown any time on the
       <a href="https://www.imenbouzouita.com/tools/website-checker/">Website Checker page</a>.</p>
     <p>Want help implementing these fixes?

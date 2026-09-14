@@ -1250,7 +1250,7 @@
     "top_issues_label": "Wichtigste Probleme",
     "no_issues_message": "Keine größeren Probleme in der kostenlosen Vorschau gefunden — sehr gut. Schalte den vollständigen Bericht frei, um die vollständige Auswertung zu sehen.",
     "gate_heading": "Vollständigen Bericht erhalten",
-    "gate_body": "Bis zu 65 Checks, priorisierte Fixes und was bei jedem zu tun ist, hier freigeschaltet und in dein Postfach geschickt.",
+    "gate_body": "Bis zu 65 Checks, priorisierte Fixes und was bei jedem zu tun ist, hier freigeschaltet und in dein Postfach geschickt. Deine E-Mail-Adresse wird nur genutzt, um diesen Bericht zu senden, nicht für Marketing, außer du aktivierst das Kontrollkästchen zur Einwilligung.",
     "email_placeholder": "du@unternehmen.de",
     "email_aria_label": "E-Mail-Adresse",
     "unlock_label": "Vollständigen Bericht freischalten",
