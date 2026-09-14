@@ -1506,6 +1506,7 @@ def build_seo_checker_page(t, lang_code, alt_paths):
                 <p data-score-url class="checker-score-url"></p>
               </div>
             </div>
+            <p data-email-sent-note class="checker-email-sent-note" hidden>{sc['email_sent_note']}</p>
 
             <div data-teaser class="checker-teaser">
               <div data-category-chips class="checker-chips"></div>
