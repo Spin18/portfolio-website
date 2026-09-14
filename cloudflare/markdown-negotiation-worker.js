@@ -132,11 +132,24 @@ function assetCacheControl(pathname) {
   return null;
 }
 
+// Own-domain redirect for the Calendly booking link. Exists so outbound
+// links in transactional email (the checker report, see
+// cloudflare/checker-worker.js) point at this zone rather than a
+// third-party domain — Resend flags cross-domain links in email bodies as
+// a deliverability/phishing signal. Keep this a 302 (not 301): the
+// destination is a link this Worker owns and may change without
+// permanently baking the redirect into browsers/mail clients.
+const CALENDLY_URL = 'https://calendly.com/imenbouzouita/1-1-discovery-call';
+
 export default {
   async fetch(request) {
     const accept = request.headers.get('Accept') || '';
     const wantsMarkdown = accept.includes('text/markdown');
     const url = new URL(request.url);
+
+    if (url.pathname === '/book-a-call' || url.pathname === '/book-a-call/') {
+      return Response.redirect(CALENDLY_URL, 302);
+    }
 
     // Every path on this site that has a .md sibling is directory-style
     // (ends in "/"): the homepage, and every work/<slug>/ and

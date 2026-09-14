@@ -28,6 +28,8 @@ SITE_URL = "https://www.imenbouzouita.com"
 CALENDLY = "https://calendly.com/imenbouzouita/1-1-discovery-call"
 LINKEDIN_URL = "https://www.linkedin.com/in/imen-bouzouita-b65051107/"
 INSTAGRAM_URL = "https://www.instagram.com/ima_gi_n/"
+MALT_URL = "https://www.malt.de/profile/imenbouzouita"
+FREELANCERMAP_URL = "https://www.freelancermap.de/profil/imen-bouzouita"
 FORMSPREE_ACTION = "https://formspree.io/f/xdenkldz"
 # Replace with the real Measurement ID from analytics.google.com (Admin >
 # Data Streams > your stream). GA4 is never loaded until a visitor accepts
@@ -369,7 +371,7 @@ def _core_entities(t, lang_code):
             {"@type": "CollegeOrUniversity", "name": "Technical University of Munich"},
         ],
         "worksFor": {"@id": f"{SITE_URL}/#business"},
-        "sameAs": [LINKEDIN_URL, INSTAGRAM_URL],
+        "sameAs": [LINKEDIN_URL, INSTAGRAM_URL, MALT_URL, FREELANCERMAP_URL],
     }
 
     offers = [
@@ -404,7 +406,7 @@ def _core_entities(t, lang_code):
             "Web Analytics",
         ],
         "makesOffer": offers,
-        "sameAs": [LINKEDIN_URL, INSTAGRAM_URL],
+        "sameAs": [LINKEDIN_URL, INSTAGRAM_URL, MALT_URL, FREELANCERMAP_URL],
     }
 
     website = {

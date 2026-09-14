@@ -53,13 +53,13 @@ const FETCH_TIMEOUT_MS = 12_000;
 const PSI_TIMEOUT_MS = 80_000;
 const PSI_ENDPOINT = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed";
 
-const RATE_LIMIT_PER_HOUR = 5;
+const RATE_LIMIT_PER_HOUR = 50; // TEMP: raised for testing, revert to 5 before considering this done
 const CACHE_TTL_SECONDS = 900;
 
 const RESEND_ENDPOINT = "https://api.resend.com/emails";
 // Update once a domain is verified in Resend — see the deploy note above.
 const RESEND_FROM = "Website Checker <reports@mail.imenbouzouita.com>";
-const EMAIL_RATE_LIMIT_PER_HOUR = 5;
+const EMAIL_RATE_LIMIT_PER_HOUR = 50; // TEMP: raised for testing, revert to 5 before considering this done
 const SEVERITY_ORDER = { severe: 0, medium: 1, low: 2 };
 
 // Bots behind live AI answer/search surfaces: content they crawl can plausibly
@@ -256,6 +256,7 @@ function makePageState() {
     _labelDepth: 0,
     _jsonldBuf: "",
     _skipDepth: 0, // inside script/style/noscript — text there isn't visible body text
+    _svgDepth: 0, // inside <svg> — its own <title> child is an icon a11y label, not the page title
     _insideAnchor: false,
     _insideButton: false,
   };
@@ -292,9 +293,20 @@ async function parsePage(html) {
         if (lang) state.htmlLang = lang;
       },
     })
+    .on("svg", {
+      element(el) {
+        state._svgDepth += 1;
+        el.onEndTag(() => { if (state._svgDepth > 0) state._svgDepth -= 1; });
+      },
+    })
     .on("title", {
-      element() { state.title = ""; },
-      text(chunk) { state.title += chunk.text; },
+      // SVG has its own <title> child element (an icon's accessible name,
+      // e.g. "Expand" on a dropdown arrow) — same tag name as the page's
+      // real <head><title>, but a completely different thing. Without this
+      // guard, whichever <title> happens to appear last in the document
+      // (often an icon's) silently overwrites the real page title.
+      element() { if (state._svgDepth === 0) state.title = ""; },
+      text(chunk) { if (state._svgDepth === 0) state.title += chunk.text; },
     })
     .on("meta", {
       element(el) { state.metas.push(attrsToObject(el)); },
@@ -1105,7 +1117,7 @@ function buildReportEmail(report) {
     textLines.push("No issues outstanding — nice work.");
   }
   textLines.push("", "See the full breakdown any time at https://www.imenbouzouita.com/tools/website-checker/");
-  textLines.push("", "Want help implementing these fixes? Book a discovery call: https://calendly.com/imenbouzouita/1-1-discovery-call");
+  textLines.push("", "Want help implementing these fixes? Book a discovery call: https://www.imenbouzouita.com/book-a-call/");
   const text = textLines.join("\n");
 
   const findingsHtml = byCategory.size
@@ -1135,7 +1147,7 @@ function buildReportEmail(report) {
     <p style="margin-top:2em;">See the full breakdown any time on the
       <a href="https://www.imenbouzouita.com/tools/website-checker/">Website Checker page</a>.</p>
     <p>Want help implementing these fixes?
-      <a href="https://calendly.com/imenbouzouita/1-1-discovery-call">Book a discovery call</a>.</p>
+      <a href="https://www.imenbouzouita.com/book-a-call/">Book a discovery call</a>.</p>
   </body>
 </html>`;
 
