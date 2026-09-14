@@ -1115,6 +1115,16 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
   text-align: center;
   margin-bottom: 1.4rem;
 }
+.checker-email-sent-note {
+  margin-top: 0.9rem;
+  padding: 0.7em 1em;
+  border-radius: var(--radius-sm);
+  background: rgba(41,122,142,0.14);
+  color: var(--good);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+}
 .checker-error {
   margin-top: 0.9rem;
   padding: 0.8em 1em;
@@ -1497,12 +1507,12 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
                 <h2>Vollständigen Bericht erhalten</h2>
                 <p>Bis zu 65 Checks, priorisierte Fixes und was bei jedem zu tun ist, hier freigeschaltet und in dein Postfach geschickt.</p>
                 <form data-email-form class="checker-email-form">
-                  <input data-email-input type="email" autocomplete="email" placeholder="du@unternehmen.de" aria-label="E-Mail-Adresse" required />
-                  <button type="submit" class="btn btn-primary">Vollständigen Bericht freischalten</button>
                   <label class="checker-marketing-consent">
                     <input type="checkbox" data-marketing-consent />
                     Schick mir außerdem gelegentlich Tipps zu SEO, GEO & CRO für meine Website (optional, jederzeit abbestellbar).
                   </label>
+                  <input data-email-input type="email" autocomplete="email" placeholder="du@unternehmen.de" aria-label="E-Mail-Adresse" required />
+                  <button type="submit" class="btn btn-primary">Vollständigen Bericht freischalten</button>
                 </form>
                 <p data-email-status class="checker-error" hidden></p>
               </div>
