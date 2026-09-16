@@ -1374,7 +1374,7 @@ def build_facts_page(t, lang_code, alt_paths):
 
     body = f"""
   <main id="main">
-    <section class="page-hero">
+    <section class="page-hero facts-hero">
       <div class="container">
         <p class="eyebrow">{g['eyebrow']}</p>
         <h1>{g['heading']}</h1>
