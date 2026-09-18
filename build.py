@@ -459,8 +459,8 @@ def build_json_ld_home(t, current_path):
         "@id": f"{home_url}#profile",
         "url": home_url,
         "name": t["meta"]["site_title"],
-        "dateCreated": _first_commit_date(current_path),
-        "dateModified": _lastmod(current_path),
+        "dateCreated": _first_commit_datetime(current_path),
+        "dateModified": _lastmod_datetime(current_path),
         "mainEntity": {"@id": f"{SITE_URL}/#person"},
     }
 
@@ -1794,6 +1794,58 @@ def _first_commit_date(rel_path):
     date = date or datetime.date.today().isoformat()
     _FIRST_COMMIT_CACHE[rel_path] = date
     return date
+
+
+_LASTMOD_DATETIME_CACHE = {}
+
+
+def _lastmod_datetime(rel_path):
+    """Full ISO-8601 datetime (with time + offset) version of _lastmod, for
+    schema.org properties typed as DateTime rather than Date — e.g.
+    ProfilePage's dateModified, which Google's structured data validator
+    rejects as "Invalid datetime value" when given a date-only string."""
+    if rel_path in _LASTMOD_DATETIME_CACHE:
+        return _LASTMOD_DATETIME_CACHE[rel_path]
+
+    dt = None
+    try:
+        result = subprocess.run(
+            ["git", "log", "-1", "--format=%aI", "--", rel_path],
+            cwd=ROOT, capture_output=True, text=True, timeout=5,
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            dt = result.stdout.strip()
+    except (OSError, subprocess.SubprocessError):
+        pass
+
+    dt = dt or datetime.datetime.now().astimezone().isoformat(timespec="seconds")
+    _LASTMOD_DATETIME_CACHE[rel_path] = dt
+    return dt
+
+
+_FIRST_COMMIT_DATETIME_CACHE = {}
+
+
+def _first_commit_datetime(rel_path):
+    """Full ISO-8601 datetime version of _first_commit_date, for the same
+    DateTime-typed-property reason as _lastmod_datetime above."""
+    if rel_path in _FIRST_COMMIT_DATETIME_CACHE:
+        return _FIRST_COMMIT_DATETIME_CACHE[rel_path]
+
+    dt = None
+    try:
+        result = subprocess.run(
+            ["git", "log", "--follow", "--format=%aI", "--", rel_path],
+            cwd=ROOT, capture_output=True, text=True, timeout=5,
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            dt = result.stdout.strip().splitlines()[-1]
+    except (OSError, subprocess.SubprocessError):
+        pass
+
+    dt = dt or datetime.datetime.now().astimezone().isoformat(timespec="seconds")
+    _FIRST_COMMIT_DATETIME_CACHE[rel_path] = dt
+    return dt
 
 
 def build_robots_sitemap(content):
