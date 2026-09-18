@@ -492,6 +492,7 @@
       {
         "slug": "cro-audit-checklist",
         "title": "CRO Audit Checklist: 20 Things to Check Before You Redesign Anything",
+        "meta_title": "20-Point CRO Audit Checklist",
         "excerpt": "A practical, 20-point checklist covering analytics, homepage clarity, checkout friction, and mobile UX: everything worth auditing before committing to a redesign.",
         "category": "CRO",
         "date": "2026-08-29",
@@ -625,6 +626,7 @@
       {
         "slug": "what-neuromarketing-actually-is",
         "title": "What Neuromarketing Actually Is (And Isn't)",
+        "meta_title": "What Neuromarketing Really Is",
         "excerpt": "What neuromarketing actually measures, and the assumptions people most often get wrong about it, from someone who's used eye tracking, implicit testing, and biometric methods professionally.",
         "category": "Neuromarketing",
         "date": "2026-08-29",
@@ -701,6 +703,7 @@
       {
         "slug": "why-users-trust-your-site-but-dont-buy",
         "title": "Why Users Say They Trust Your Site but Don't Buy",
+        "meta_title": "Trust Doesn't Always Mean Sales",
         "excerpt": "Testimonials, security badges, and trust signals often test well in usability sessions yet fail to move conversion, because visitors say they saw them without their eyes ever landing there.",
         "category": "CRO",
         "date": "2026-08-29",
@@ -788,6 +791,7 @@
       {
         "slug": "landing-page-review-framework",
         "title": "Landing Page Review Framework: 10 Questions in 10 Minutes",
+        "meta_title": "10-Question Landing Page Review",
         "excerpt": "A fast, no-audit-required framework: ten questions that surface the most common landing page conversion problems in about ten minutes, ranked by where they sit in the visitor's journey.",
         "category": "CRO",
         "date": "2026-08-30",
@@ -890,6 +894,7 @@
       {
         "slug": "shipping-cost-transparency",
         "title": "Shipping Cost Transparency: How and When to Show It",
+        "meta_title": "Shipping Cost Transparency",
         "excerpt": "Unexpected shipping costs are the top reason for cart abandonment, not because the amount is unreasonable, but because of when visitors find out. What to show at each stage of the funnel, and when.",
         "category": "CRO",
         "date": "2026-08-30",
@@ -1000,6 +1005,7 @@
       {
         "slug": "product-page-anatomy",
         "title": "Product Page Anatomy: What Goes Where and Why",
+        "meta_title": "Product Page Anatomy Explained",
         "excerpt": "A section-by-section breakdown of a high-performing product page, not a template to copy, but a framework for understanding why each element earns its position.",
         "category": "CRO",
         "date": "2026-08-30",

@@ -493,6 +493,7 @@
       {
         "slug": "cro-audit-checklist",
         "title": "CRO-Audit-Checkliste: 20 Punkte, die du prüfen solltest, bevor du irgendetwas redesignst",
+        "meta_title": "CRO-Audit: 20 Checkpunkte",
         "excerpt": "Eine praktische 20-Punkte-Checkliste zu Analytics, Homepage-Klarheit, Checkout-Friction und Mobile UX: alles, was sich vor einem Redesign zu prüfen lohnt.",
         "category": "CRO",
         "date": "2026-08-29",
@@ -626,6 +627,7 @@
       {
         "slug": "what-neuromarketing-actually-is",
         "title": "Was Neuromarketing wirklich ist (und was nicht)",
+        "meta_title": "Neuromarketing erklärt",
         "excerpt": "Was Neuromarketing tatsächlich misst, und welche Annahmen darüber am häufigsten falsch sind, von jemandem, der Eye Tracking, implizite Tests und biometrische Methoden beruflich einsetzt.",
         "category": "Neuromarketing",
         "date": "2026-08-29",
@@ -702,6 +704,7 @@
       {
         "slug": "why-users-trust-your-site-but-dont-buy",
         "title": "Warum Nutzer sagen, sie vertrauen deiner Seite, aber trotzdem nicht kaufen",
+        "meta_title": "Vertrauen heißt nicht kaufen",
         "excerpt": "Testimonials, Sicherheitsbadges und Trust Signals schneiden in Usability-Tests oft gut ab, bewegen aber die Conversion nicht, weil Besucher sagen, sie hätten sie gesehen, obwohl ihre Augen nie dort gelandet sind.",
         "category": "CRO",
         "date": "2026-08-29",
@@ -789,6 +792,7 @@
       {
         "slug": "landing-page-review-framework",
         "title": "Landing Page Review Framework: 10 Fragen in 10 Minuten",
+        "meta_title": "Landing-Page-Review in 10 Min.",
         "excerpt": "Ein schnelles Framework ohne vollständiges Audit: zehn Fragen, die die häufigsten Conversion-Probleme einer Landing Page in rund zehn Minuten sichtbar machen, sortiert danach, wo sie in der Journey des Besuchers liegen.",
         "category": "CRO",
         "date": "2026-08-30",
@@ -891,6 +895,7 @@
       {
         "slug": "shipping-cost-transparency",
         "title": "Versandkosten-Transparenz: Wie und wann du sie zeigen solltest",
+        "meta_title": "Versandkosten transparent",
         "excerpt": "Unerwartete Versandkosten sind der häufigste Grund für Warenkorbabbrüche, nicht weil der Betrag unangemessen ist, sondern wegen des Zeitpunkts. Was du an jedem Punkt im Funnel zeigen solltest.",
         "category": "CRO",
         "date": "2026-08-30",
@@ -1001,6 +1006,7 @@
       {
         "slug": "product-page-anatomy",
         "title": "Produktseiten-Anatomie: Was wohin gehört und warum",
+        "meta_title": "Produktseiten-Anatomie erklärt",
         "excerpt": "Eine Aufschlüsselung einer gut performenden Produktseite, Abschnitt für Abschnitt, kein Template zum Kopieren, sondern ein Framework, um zu verstehen, warum jedes Element seine Position verdient.",
         "category": "CRO",
         "date": "2026-08-30",

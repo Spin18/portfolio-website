@@ -1323,7 +1323,10 @@ def build_resource_article(t, lang_code, article, alt_paths):
     md_path = _md_sibling_path(current_path)
     write(md_path, build_markdown_resource_article(t, article))
 
-    title = f"{article['title']} — {res['eyebrow']} — Imen Bouzouita"
+    # meta_title (short) is distinct from title (the long, descriptive on-page
+    # H1): reusing the H1 verbatim as <title> pushed several articles past
+    # 100 characters, well beyond the ~60-char SEO guideline.
+    title = f"{article['meta_title']} — {res['eyebrow']} — Imen Bouzouita"
     html = page_shell(t, title, article["excerpt"], body, current_path, alt_paths, extra_head=build_json_ld_resource_article(t, article, current_path), article_date=article["date"], markdown_path=md_path)
     write(current_path, html)
 
