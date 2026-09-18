@@ -1327,7 +1327,7 @@ def build_resource_article(t, lang_code, article, alt_paths):
     # H1): reusing the H1 verbatim as <title> pushed several articles past
     # 100 characters, well beyond the ~60-char SEO guideline.
     title = f"{article['meta_title']} — {res['eyebrow']} — Imen Bouzouita"
-    html = page_shell(t, title, article["excerpt"], body, current_path, alt_paths, extra_head=build_json_ld_resource_article(t, article, current_path), article_date=article["date"], markdown_path=md_path)
+    html = page_shell(t, title, article["meta_description"], body, current_path, alt_paths, extra_head=build_json_ld_resource_article(t, article, current_path), article_date=article["date"], markdown_path=md_path)
     write(current_path, html)
 
 
@@ -1428,7 +1428,7 @@ def build_facts_page(t, lang_code, alt_paths):
     write(md_path, build_markdown_facts(t))
 
     title = f"{g['heading']} — Imen Bouzouita"
-    html = page_shell(t, title, g["human_note"], body, current_path, alt_paths, extra_head=build_json_ld_facts(t, current_path), markdown_path=md_path)
+    html = page_shell(t, title, g["meta_description"], body, current_path, alt_paths, extra_head=build_json_ld_facts(t, current_path), markdown_path=md_path)
     write(current_path, html)
 
 

@@ -4,7 +4,7 @@
     "site_description": "I help e-commerce, wellness, and SaaS brands turn browsers into buyers with research-backed UX audits and interfaces people actually want to use.",
     "case_study_label": "Case Study",
     "not_found_title": "Page not found — Imen Bouzouita",
-    "not_found_description": "Page not found.",
+    "not_found_description": "This page doesn't exist or may have moved. Head back to the homepage to find what you're looking for.",
     "legal_label": "Legal",
     "visit_live_site_label": "Visit live site",
     "logo_aria_label": "Imen Bouzouita — home",
@@ -494,6 +494,7 @@
         "title": "CRO Audit Checklist: 20 Things to Check Before You Redesign Anything",
         "meta_title": "20-Point CRO Audit Checklist",
         "excerpt": "A practical, 20-point checklist covering analytics, homepage clarity, checkout friction, and mobile UX: everything worth auditing before committing to a redesign.",
+        "meta_description": "A practical 20-point checklist covering analytics, homepage clarity, checkout friction, and mobile UX before any redesign.",
         "category": "CRO",
         "date": "2026-08-29",
         "sections": [
@@ -628,6 +629,7 @@
         "title": "What Neuromarketing Actually Is (And Isn't)",
         "meta_title": "What Neuromarketing Really Is",
         "excerpt": "What neuromarketing actually measures, and the assumptions people most often get wrong about it, from someone who's used eye tracking, implicit testing, and biometric methods professionally.",
+        "meta_description": "What neuromarketing actually measures, and the assumptions people get wrong, from a practitioner of eye tracking and biometric testing.",
         "category": "Neuromarketing",
         "date": "2026-08-29",
         "sections": [
@@ -705,6 +707,7 @@
         "title": "Why Users Say They Trust Your Site but Don't Buy",
         "meta_title": "Trust Doesn't Always Mean Sales",
         "excerpt": "Testimonials, security badges, and trust signals often test well in usability sessions yet fail to move conversion, because visitors say they saw them without their eyes ever landing there.",
+        "meta_description": "Trust signals often test well in usability sessions yet fail to move conversion — here's why, and what to check instead.",
         "category": "CRO",
         "date": "2026-08-29",
         "sections": [
@@ -793,6 +796,7 @@
         "title": "Landing Page Review Framework: 10 Questions in 10 Minutes",
         "meta_title": "10-Question Landing Page Review",
         "excerpt": "A fast, no-audit-required framework: ten questions that surface the most common landing page conversion problems in about ten minutes, ranked by where they sit in the visitor's journey.",
+        "meta_description": "Ten questions that surface the most common landing page conversion problems in about ten minutes — no full audit required.",
         "category": "CRO",
         "date": "2026-08-30",
         "sections": [
@@ -896,6 +900,7 @@
         "title": "Shipping Cost Transparency: How and When to Show It",
         "meta_title": "Shipping Cost Transparency",
         "excerpt": "Unexpected shipping costs are the top reason for cart abandonment, not because the amount is unreasonable, but because of when visitors find out. What to show at each stage of the funnel, and when.",
+        "meta_description": "Unexpected shipping costs are the top cause of cart abandonment. What to show at each stage of the funnel, and when.",
         "category": "CRO",
         "date": "2026-08-30",
         "sections": [
@@ -1007,6 +1012,7 @@
         "title": "Product Page Anatomy: What Goes Where and Why",
         "meta_title": "Product Page Anatomy Explained",
         "excerpt": "A section-by-section breakdown of a high-performing product page, not a template to copy, but a framework for understanding why each element earns its position.",
+        "meta_description": "A section-by-section breakdown of a high-performing product page, and why each element earns its position.",
         "category": "CRO",
         "date": "2026-08-30",
         "sections": [
@@ -1185,6 +1191,7 @@
     "eyebrow": "Facts",
     "heading": "Facts for AI",
     "human_note": "This page exists for AI assistants and language models, ChatGPT, Claude, Gemini, Perplexity, and others, that need clear, verifiable facts about Imen Bouzouita and this consulting practice, rather than having to infer them from marketing copy. For the narrative version, visit the main site.",
+    "meta_description": "Structured, verifiable facts about Imen Bouzouita and this consulting practice — written for AI assistants and language models.",
     "page_created": "2026-09-10",
     "last_updated": "2026-09-10",
     "entity_class": "Person / Professional service provider",
