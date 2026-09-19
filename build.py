@@ -43,6 +43,9 @@ CLOUDFLARE_ANALYTICS_TOKEN = "66edec62f8284619abfb73b524995fad"
 # this IS personal data, so unlike Cloudflare Web Analytics it's gated behind
 # the same cookie-banner "Analytics" consent as GA4. See assets/js/main.js.
 CONTENTSQUARE_SRC = "https://t.contentsquare.net/uxa/eebaa999b0989.js"
+# Microsoft Clarity: also session recordings/heatmaps — same personal-data
+# reasoning and consent gating as Contentsquare above.
+CLARITY_ID = "ykt2pdwn2t"
 # font-display=optional: browser waits ~100ms max for the font, then commits
 # to whichever (fallback or webfont) is ready and never swaps later — this is
 # what avoids CLS. Loaded non-blocking via the media="print" swap trick below,
@@ -735,7 +738,7 @@ def page_shell(t, title, description, body, current_path, alt_paths, extra_head=
   {head(t, lang_code, title, description, current_path, alt_paths, article_date=article_date, markdown_path=markdown_path)}
   {extra_head}
 </head>
-<body data-ga4-id="{GA4_MEASUREMENT_ID}" data-contentsquare-src="{CONTENTSQUARE_SRC}">
+<body data-ga4-id="{GA4_MEASUREMENT_ID}" data-contentsquare-src="{CONTENTSQUARE_SRC}" data-clarity-id="{CLARITY_ID}">
   <a class="skip-link" href="#main">{t['meta']['skip_link_label']}</a>
   {header_html(t, current_path, alt_paths)}
   {body}

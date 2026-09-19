@@ -45,6 +45,15 @@
 //     separate domain from *.contentsquare.net used for Contentsquare's
 //     own install-verification ping (unrelated to actual session-
 //     recording data collection, which already worked without it).
+//   - Microsoft Clarity (session recordings/heatmaps, same consent-gated
+//     treatment as Contentsquare — see assets/js/main.js) needs
+//     https://*.clarity.ms wildcarded in BOTH script-src and connect-src:
+//     the small www.clarity.ms/tag/<id> bootstrap script itself loads the
+//     real tracking bundle from a versioned scripts.clarity.ms URL, and
+//     its data-collection traffic goes to yet other subdomains. Confirmed
+//     empirically (a www.clarity.ms-only script-src would have silently
+//     blocked the bundle load) — same lesson as the doubleclick.net
+//     incident above: don't assume a single fixed vendor domain.
 //   - Deliberately NOT allowing the GA4 "Google signals"/ads-audiences
 //     ping (a per-visitor-country google.<tld>/ads/ga-audiences request,
 //     loaded as a tracking pixel via img-src): it's an ads-remarketing
@@ -68,11 +77,11 @@
 // switching to this enforcing header.
 const CSP = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com https://*.contentsquare.net",
+  "script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com https://*.contentsquare.net https://*.clarity.ms",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com",
   "img-src 'self' data:",
-  "connect-src 'self' https://formspree.io https://analytics.google.com https://*.google-analytics.com https://stats.g.doubleclick.net https://*.contentsquare.net https://tcvsapi.contentsquare.com https://cloudflareinsights.com",
+  "connect-src 'self' https://formspree.io https://analytics.google.com https://*.google-analytics.com https://stats.g.doubleclick.net https://*.contentsquare.net https://tcvsapi.contentsquare.com https://*.clarity.ms https://cloudflareinsights.com",
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self' https://formspree.io",

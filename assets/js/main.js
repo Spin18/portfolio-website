@@ -31,6 +31,7 @@
   (() => {
     const ga4Id = document.body.dataset.ga4Id;
     const contentsquareSrc = document.body.dataset.contentsquareSrc;
+    const clarityId = document.body.dataset.clarityId;
     const CONSENT_KEY = 'cookie-consent';
     const banner = document.getElementById('cookie-banner');
 
@@ -74,9 +75,20 @@
       document.head.appendChild(script);
     };
 
+    const loadClarity = () => {
+      if (!clarityId || window.__clarityLoaded) return;
+      window.__clarityLoaded = true;
+      (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+        t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i + '?ref=bwt';
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', clarityId);
+    };
+
     const loadAnalytics = () => {
       loadGA4();
       loadContentsquare();
+      loadClarity();
     };
 
     const analyticsToggle = banner?.querySelector('[data-cookie-toggle-analytics]');
