@@ -1859,8 +1859,6 @@ def build_robots_sitemap(content):
     robots_txt = f"""User-agent: *
 Allow: /
 
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
-
 # Explicitly allowed: major search engines and AI-answer/citation
 # crawlers. Already covered by the wildcard rule, listed explicitly
 # for clarity.
@@ -1868,8 +1866,8 @@ Content-Signal: search=yes, ai-input=yes, ai-train=yes
 {search_answer_blocks}
 # Explicitly allowed: AI assistants browsing or answering a live user's
 # question about this site (a separate, permitted use from training —
-# see /ai.txt and the Content-Signal line above). Already covered by
-# the wildcard rule, listed explicitly for clarity.
+# see /ai.txt). Already covered by the wildcard rule, listed
+# explicitly for clarity.
 
 {allow_blocks}
 # Explicitly allowed: AI training for OpenAI, Anthropic, Google, Meta,
