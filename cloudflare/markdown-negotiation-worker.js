@@ -34,14 +34,24 @@
 //     t.contentsquare.net) since Contentsquare's collection traffic goes
 //     to a second subdomain (c.ba.contentsquare.net) and may use others
 //     for session recording that weren't observed in one test session.
+//   - connect-src allows https://stats.g.doubleclick.net: once Google
+//     Ads/Signals linking is active on a GA4 property, Google silently
+//     starts routing the actual g/collect measurement hit through this
+//     domain (in addition to, sometimes instead of, google-analytics.com/
+//     analytics.google.com). Missing it here caused a real, several-day
+//     total analytics outage — every hit was blocked, confirmed via
+//     browser console CSP violation errors, not just low real traffic.
+//   - connect-src also allows https://tcvsapi.contentsquare.com, a
+//     separate domain from *.contentsquare.net used for Contentsquare's
+//     own install-verification ping (unrelated to actual session-
+//     recording data collection, which already worked without it).
 //   - Deliberately NOT allowing the GA4 "Google signals"/ads-audiences
 //     ping (a per-visitor-country google.<tld>/ads/ga-audiences request,
 //     loaded as a tracking pixel via img-src): it's an ads-remarketing
-//     signal unrelated to core pageview tracking (which uses the stable
-//     analytics.google.com), the site runs no Google Ads, and the
-//     destination domain varies by country so it can't be allowlisted
-//     completely anyway. Blocking it is a privacy positive, not a
-//     functional loss.
+//     signal unrelated to core pageview tracking, the site runs no
+//     Google Ads campaigns, and the destination domain varies by
+//     country so it can't be allowlisted completely anyway. Blocking it
+//     is a privacy positive, not a functional loss.
 //   - Cloudflare itself (not our own code) injects a small inline
 //     <script>window.__CF$cv$params={...}</script> on every page for its
 //     own challenge-platform/bot-management feature. Its content (and
@@ -62,7 +72,7 @@ const CSP = [
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com",
   "img-src 'self' data:",
-  "connect-src 'self' https://formspree.io https://analytics.google.com https://*.google-analytics.com https://*.contentsquare.net https://cloudflareinsights.com",
+  "connect-src 'self' https://formspree.io https://analytics.google.com https://*.google-analytics.com https://stats.g.doubleclick.net https://*.contentsquare.net https://tcvsapi.contentsquare.com https://cloudflareinsights.com",
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self' https://formspree.io",
