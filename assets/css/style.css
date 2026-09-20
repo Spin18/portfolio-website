@@ -792,7 +792,7 @@ h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
 /* ---------- scroll reveal ---------- */
 [data-reveal] {
   transform: translateY(24px);
-  transition: transform 0.7s var(--ease-out);
+  transition: transform 0.4s var(--ease-out);
 }
 [data-reveal].is-visible { transform: translateY(0); }
 @media (prefers-reduced-motion: reduce) {

@@ -194,7 +194,15 @@
     });
   }
 
-  /* ---------- scroll reveal ---------- */
+  /* ---------- scroll reveal ----------
+     rootMargin is positive on the bottom (extends the trigger zone below
+     the actual viewport) so the reveal starts while an element is still
+     off-screen, giving the transition time to finish before it scrolls
+     into view. A negative/shrunk margin (the previous -8%) only starts
+     the animation once the element is already on screen, so a fast
+     scroll always outruns it — the element visibly finishes animating
+     well after the user has scrolled past, which reads as a bug rather
+     than a reveal effect. */
   const revealEls = document.querySelectorAll('[data-reveal]');
   if (revealEls.length && 'IntersectionObserver' in window && !reduceMotion) {
     const io = new IntersectionObserver(
@@ -206,10 +214,10 @@
           }
         });
       },
-      { threshold: 0.15, rootMargin: '0px 0px -8% 0px' }
+      { threshold: 0, rootMargin: '0px 0px 20% 0px' }
     );
     revealEls.forEach((el, i) => {
-      el.style.transitionDelay = `${Math.min(i % 4, 3) * 90}ms`;
+      el.style.transitionDelay = `${Math.min(i % 4, 3) * 50}ms`;
       io.observe(el);
     });
   } else {
