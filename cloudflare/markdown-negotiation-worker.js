@@ -160,6 +160,23 @@ function assetCacheControl(pathname) {
 // permanently baking the redirect into browsers/mail clients.
 const CALENDLY_URL = 'https://calendly.com/imenbouzouita/1-1-discovery-call';
 
+// Permanent redirects for the Website Checker tool's old URL
+// (/tools/seo-checker/, renamed to /tools/website-checker/ — see commit
+// c9ba049). Skipping a redirect at rename time seemed fine since the tool
+// had only launched the night before with negligible exposure, but Google
+// had already indexed the old URL first: with the old path 404ing and no
+// redirect linking old -> new, Google kept treating the dead old URL as
+// canonical and refused to index the new one (GSC: "Duplicate, Google
+// chose different canonical than user"). A real 301 (not 302, unlike the
+// Calendly redirect above) is required here so Google actually
+// consolidates its canonical signal onto the new URL.
+const OLD_CHECKER_REDIRECTS = {
+  '/tools/seo-checker': '/tools/website-checker/',
+  '/tools/seo-checker/': '/tools/website-checker/',
+  '/de/tools/seo-checker': '/de/tools/website-checker/',
+  '/de/tools/seo-checker/': '/de/tools/website-checker/',
+};
+
 export default {
   async fetch(request) {
     const accept = request.headers.get('Accept') || '';
@@ -168,6 +185,10 @@ export default {
 
     if (url.pathname === '/book-a-call' || url.pathname === '/book-a-call/') {
       return Response.redirect(CALENDLY_URL, 302);
+    }
+
+    if (url.pathname in OLD_CHECKER_REDIRECTS) {
+      return Response.redirect(new URL(OLD_CHECKER_REDIRECTS[url.pathname], url.origin), 301);
     }
 
     // Every path on this site that has a .md sibling is directory-style
